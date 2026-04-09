@@ -61,6 +61,10 @@
     "skeleton": "To już wszystko!",
     "endOfFeed": "To już wszystko!"
   },
+  "viewMode": {
+    "grid": "Siatka",
+    "list": "Lista"
+  },
   "card": {
     "views": "{count} wyświetleń",
     "likes": "{count} polubień",

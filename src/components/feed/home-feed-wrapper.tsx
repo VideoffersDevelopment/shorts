@@ -1,16 +1,23 @@
 "use client"
 
-import { useCallback, useState } from 'react'
+import { useCallback, useState, type ReactNode } from 'react'
 import { FeedGrid } from './feed-grid'
-import type { FeedFilters, FeedResponse } from '@/lib/types/feed'
+import { FeedList } from './feed-list'
+import { ViewModeToggle } from './view-mode-toggle'
+import { useViewMode } from '@/hooks/use-view-mode'
+import type { FeedFilters, FeedResponse, ViewMode } from '@/lib/types/feed'
 
 interface HomeFeedWrapperProps {
   initialData: FeedResponse | null
   filters: FeedFilters
+  defaultViewMode?: ViewMode
+  /** Optional header (breadcrumb, title, chips) rendered inside the list scroll container */
+  header?: ReactNode
 }
 
-export function HomeFeedWrapper({ initialData, filters }: HomeFeedWrapperProps) {
+export function HomeFeedWrapper({ initialData, filters, defaultViewMode = 'grid', header }: HomeFeedWrapperProps) {
   const [currentFilters, setCurrentFilters] = useState<FeedFilters>(filters)
+  const { viewMode, setViewMode } = useViewMode(defaultViewMode)
 
   const handleExpandRadius = useCallback(() => {
     setCurrentFilters(prev => ({
@@ -31,12 +38,38 @@ export function HomeFeedWrapper({ initialData, filters }: HomeFeedWrapperProps) 
     })
   }, [])
 
+  const toggle = <ViewModeToggle viewMode={viewMode} onChange={setViewMode} />
+
+  // List mode: full-bleed layout (removes parent padding), snap-scroll viewport
+  if (viewMode === 'list') {
+    return (
+      <div data-full-bleed>
+        <FeedList
+          initialData={initialData ?? undefined}
+          filters={currentFilters}
+          onExpandRadius={handleExpandRadius}
+          onClearFilters={handleClearFilters}
+          header={header}
+          viewModeToggle={toggle}
+        />
+      </div>
+    )
+  }
+
+  // Grid mode: standard padded layout
   return (
-    <FeedGrid
-      initialData={initialData ?? undefined}
-      filters={currentFilters}
-      onExpandRadius={handleExpandRadius}
-      onClearFilters={handleClearFilters}
-    />
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        {header ?? <div />}
+        {toggle}
+      </div>
+
+      <FeedGrid
+        initialData={initialData ?? undefined}
+        filters={currentFilters}
+        onExpandRadius={handleExpandRadius}
+        onClearFilters={handleClearFilters}
+      />
+    </div>
   )
 }

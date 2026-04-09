@@ -61,6 +61,10 @@
     "skeleton": "That's all!",
     "endOfFeed": "That's all!"
   },
+  "viewMode": {
+    "grid": "Grid",
+    "list": "List"
+  },
   "card": {
     "views": "{count} views",
     "likes": "{count} likes",

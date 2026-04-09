@@ -60,6 +60,10 @@
     "more": "Mehr laden...",
     "skeleton": "Das war alles!"
   },
+  "viewMode": {
+    "grid": "Raster",
+    "list": "Liste"
+  },
   "card": {
     "views": "{count} Aufrufe",
     "likes": "{count} Likes",

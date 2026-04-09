@@ -60,6 +60,10 @@
     "more": "Cargando más...",
     "skeleton": "¡Eso es todo!"
   },
+  "viewMode": {
+    "grid": "Cuadrícula",
+    "list": "Lista"
+  },
   "card": {
     "views": "{count} vistas",
     "likes": "{count} me gusta",

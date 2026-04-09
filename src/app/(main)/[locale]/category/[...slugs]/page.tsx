@@ -1,22 +1,25 @@
+import { notFound } from 'next/navigation'
 import { auth } from "@/lib/auth"
-import { getTranslations } from "next-intl/server"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-import { HeroSection } from "@/components/home/hero-section"
-import { CategoryFilter } from "@/components/home/category-filter"
 import { HomeFeedWrapper } from "@/components/feed/home-feed-wrapper"
-import { getMainCategories } from "@/app/actions/categories/get-categories"
+import { getCategoryBySlug } from "@/app/actions/categories/get-category-by-slug"
+import { CategoryBreadcrumb } from "./category-breadcrumb"
+import { CategoryHeader } from "./category-header"
 import type { FeedFilters, FeedResponse } from "@/lib/types/feed"
 
-interface HomePageProps {
-  params: Promise<{ locale: string }>
+interface CategoryPageProps {
+  params: Promise<{ locale: string; slugs: string[] }>
   searchParams: Promise<Record<string, string | undefined>>
 }
 
-function parseFilters(searchParams: Record<string, string | undefined>): FeedFilters {
+function parseFilters(
+  searchParams: Record<string, string | undefined>,
+  categoryId: string,
+): FeedFilters {
   return {
     sort: (searchParams.sort as FeedFilters['sort']) ?? 'algorithmic',
-    categoryIds: searchParams.categoryIds?.split(',').filter(Boolean),
+    categoryIds: [categoryId],
     tags: searchParams.tags?.split(',').filter(Boolean),
     lat: searchParams.lat ? parseFloat(searchParams.lat) : undefined,
     lng: searchParams.lng ? parseFloat(searchParams.lng) : undefined,
@@ -63,69 +66,64 @@ async function getInitialFeed(filters: FeedFilters): Promise<FeedResponse | null
   }
 }
 
-export default async function HomePage({ params, searchParams }: HomePageProps) {
-  const { locale } = await params
+export default async function CategoryPage({ params, searchParams }: CategoryPageProps) {
+  const { locale, slugs } = await params
   const resolvedSearchParams = await searchParams
   const session = await auth()
-  const t = await getTranslations("home")
 
   const isLoggedIn = !!session?.user
-  const filters = parseFilters(resolvedSearchParams)
-  const [initialData, categories] = await Promise.all([
-    getInitialFeed(filters),
-    getMainCategories(),
-  ])
 
-  const categoryFilterEl = (
-    <CategoryFilter
-      categories={categories.map(c => ({
-        id: c.id,
-        name: c.name,
-        slug: c.slug,
-        icon: c.icon,
+  // Last slug in the array is the target category
+  const targetSlug = slugs[slugs.length - 1]
+  const category = await getCategoryBySlug(targetSlug)
+
+  if (!category) {
+    notFound()
+  }
+
+  // Build breadcrumb data
+  const breadcrumb: { name: string; slug: string }[] = []
+  if (category.parent) {
+    breadcrumb.push({ name: category.parent.name, slug: category.parent.slug })
+  }
+  breadcrumb.push({ name: category.name, slug: category.slug })
+
+  const filters = parseFilters(resolvedSearchParams, category.id)
+  const initialData = await getInitialFeed(filters)
+
+  // Header slot — rendered inside FeedList's sticky header bar
+  const categoryHeader = (
+    <CategoryHeader
+      breadcrumb={breadcrumb}
+      locale={locale}
+      categoryName={category.name}
+      categorySlug={category.slug}
+      subcategories={category.children.map(sub => ({
+        id: sub.id,
+        name: sub.name,
+        slug: sub.slug,
       }))}
-      labels={{
-        discover: t("filter.discover"),
-        nearby: t("filter.nearby"),
-        following: t("filter.following"),
-        more: t("filter.more"),
-      }}
     />
   )
 
-  // For logged-in users: list mode is default, CategoryFilter goes into the header slot
-  // For guests: grid mode with hero + category filter above
+  const content = (
+    <HomeFeedWrapper
+      initialData={initialData}
+      filters={filters}
+      defaultViewMode="list"
+      header={categoryHeader}
+    />
+  )
+
   if (isLoggedIn) {
-    return (
-      <HomeFeedWrapper
-        initialData={initialData}
-        filters={filters}
-        defaultViewMode="list"
-        header={categoryFilterEl}
-      />
-    )
+    return content
   }
 
-  // Guest users: always grid, standard layout
   return (
     <div className="flex min-h-screen flex-col">
       <Header locale={locale} />
-      <main className="flex-1 w-full max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 py-6">
-        <div className="flex flex-col gap-8">
-          <HeroSection
-            title={t("hero.title")}
-            highlight={t("hero.highlight")}
-            subtitle={t("hero.subtitle")}
-            ctaPrimary={t("hero.ctaPrimary")}
-            ctaSecondary={t("hero.ctaSecondary")}
-          />
-          {categoryFilterEl}
-          <HomeFeedWrapper
-            initialData={initialData}
-            filters={filters}
-            defaultViewMode="grid"
-          />
-        </div>
+      <main className="flex-1">
+        {content}
       </main>
       <Footer locale={locale} />
     </div>

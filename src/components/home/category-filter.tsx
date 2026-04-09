@@ -1,16 +1,19 @@
 "use client"
 
+import Link from 'next/link'
+import { useLocale } from 'next-intl'
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
-interface Category {
+interface CategoryItem {
   id: string
   name: string
-  emoji: string
+  slug: string
+  icon: string | null
 }
 
 interface CategoryFilterProps {
-  categories: Category[]
+  categories: CategoryItem[]
   activeFilter?: "discover" | "nearby" | "following"
   selectedCategory?: string
   onFilterChange?: (filter: "discover" | "nearby" | "following") => void
@@ -31,6 +34,8 @@ export function CategoryFilter({
   onCategorySelect,
   labels,
 }: CategoryFilterProps) {
+  const locale = useLocale()
+
   return (
     <section className="flex flex-col gap-3 sticky top-[72px] z-40 bg-background py-2 -mx-4 px-4 md:mx-0 md:px-0">
       {/* Segmented Control - always full width on mobile, auto on desktop */}
@@ -51,44 +56,26 @@ export function CategoryFilter({
         ))}
       </div>
 
-      {/* Category Chips (Scrollable) */}
+      {/* Category Chips (Scrollable) — links to category pages */}
       <div className="flex gap-2 overflow-x-auto hide-scrollbar pb-1 -mx-4 px-4 md:mx-0 md:px-0">
         {categories.map((category) => (
           <Button
             key={category.id}
             variant="outline"
             size="sm"
-            onClick={() =>
-              onCategorySelect?.(
-                selectedCategory === category.id ? undefined : category.id
-              )
-            }
+            asChild
             className={cn(
               "shrink-0 h-8 md:h-9 px-3 md:px-4 rounded-full whitespace-nowrap text-xs md:text-sm",
               selectedCategory === category.id &&
                 "border-primary bg-primary/10 text-primary"
             )}
           >
-            {category.emoji} {category.name}
+            <Link href={`/${locale}/category/${category.slug}`}>
+              {category.name}
+            </Link>
           </Button>
         ))}
-        <Button
-          variant="outline"
-          size="sm"
-          className="shrink-0 h-8 md:h-9 px-3 md:px-4 rounded-full whitespace-nowrap text-xs md:text-sm"
-        >
-          {labels.more}
-        </Button>
       </div>
     </section>
   )
 }
-
-// Sample categories for demo
-export const sampleCategories: Category[] = [
-  { id: "food-drink", name: "Food & Drink", emoji: "🍽️" },
-  { id: "retail", name: "Retail", emoji: "🛍️" },
-  { id: "services", name: "Services", emoji: "🔧" },
-  { id: "health-fitness", name: "Health & Fitness", emoji: "💪" },
-  { id: "real-estate", name: "Real Estate", emoji: "🏠" },
-]

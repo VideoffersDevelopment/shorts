@@ -60,6 +60,10 @@
     "more": "Завантаження...",
     "skeleton": "Це все!"
   },
+  "viewMode": {
+    "grid": "Сітка",
+    "list": "Список"
+  },
   "card": {
     "views": "{count} переглядів",
     "likes": "{count} вподобань",

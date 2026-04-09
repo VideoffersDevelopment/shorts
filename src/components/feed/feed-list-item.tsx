@@ -10,8 +10,6 @@ import {
   ExternalLink,
   BadgeCheck,
   MapPin,
-  Tag,
-  ArrowLeft,
   Share2,
   MessageCircle,
   X,
@@ -19,20 +17,23 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { FeedCard } from '@/components/feed/feed-card'
 import { ShortPlayer } from '@/components/shorts/short-player'
 import { ReactionButton } from '@/components/shorts/reaction-button'
 import { CommentsSection } from '@/components/shorts/comments-section'
 import { FollowButton } from '@/components/companies/follow-button'
 import { cn } from '@/lib/utils'
-import type { PublicShortDetail } from '@/app/actions/shorts/get-public'
+import type { FeedShort } from '@/lib/types/feed'
 import type { LikeType } from '@prisma/client'
 
-interface ShortDetailViewProps {
-  short: PublicShortDetail
+type SlideState = 'active' | 'adjacent' | 'idle'
+
+interface FeedListItemProps {
+  short: FeedShort
+  /** 'active' = playing + panel, 'adjacent' = preloaded player, 'idle' = thumbnail only */
+  state: SlideState
 }
 
-export function ShortDetailView({ short }: ShortDetailViewProps) {
+export function FeedListItem({ short, state }: FeedListItemProps) {
   const locale = useLocale()
   const { data: session } = useSession()
   const { t } = useTranslations('shorts')
@@ -97,17 +98,41 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
   }
 
   // ─── VIDEO PLAYER ────────────────────────────────────────
-  const videoPlayer = (
+  const renderPlayer = state === 'active' || state === 'adjacent'
+
+  const videoPlayer = renderPlayer ? (
     <div className="relative h-full overflow-hidden rounded-2xl" style={{ aspectRatio: '9/16' }}>
       <ShortPlayer
         hlsUrl={short.hlsPlaylistUrl}
         posterUrl={short.thumbnailUrl ?? undefined}
         title={short.title}
-        autoPlay
+        autoPlay={state === 'active'}
+        muted={state === 'adjacent'}
         loop
         className="h-full w-full"
       />
     </div>
+  ) : (
+    // idle — thumbnail only
+    <Link
+      href={`/${locale}/shorts/${short.id}`}
+      className="relative block h-full overflow-hidden rounded-2xl bg-muted"
+      style={{ aspectRatio: '9/16' }}
+    >
+      {short.thumbnailUrl ? (
+        <Image
+          src={short.thumbnailUrl}
+          alt={short.title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 100vw, 400px"
+        />
+      ) : (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-muted-foreground text-sm">Video</span>
+        </div>
+      )}
+    </Link>
   )
 
   // ─── SIDE ACTIONS (TikTok-style) ─────────────────────────
@@ -135,10 +160,10 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
       {/* Reactions */}
       <ReactionButton
         shortId={short.id}
-        initialLiked={short.userInteraction?.reaction.liked ?? false}
-        initialType={(short.userInteraction?.reaction.type as LikeType) ?? null}
-        initialTotalLikes={short.userInteraction?.reaction.totalLikes ?? short.likes}
-        initialCounts={(short.userInteraction?.reaction.counts ?? { LIKE: short.likes }) as Partial<Record<LikeType, number>>}
+        initialLiked={false}
+        initialType={null}
+        initialTotalLikes={short.likes}
+        initialCounts={{ LIKE: short.likes } as Partial<Record<LikeType, number>>}
         isAuthenticated={isAuthenticated}
         translations={reactionTranslations}
         className="flex-col"
@@ -202,10 +227,10 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
         </Link>
         <FollowButton
           companyId={short.company.id}
-          initialFollowing={short.userInteraction?.following ?? false}
-          initialFollowersCount={short.userInteraction?.followersCount ?? 0}
+          initialFollowing={false}
+          initialFollowersCount={0}
           isAuthenticated={isAuthenticated}
-          showCount
+          showCount={false}
           translations={{
             follow: tCompanies('follow.follow'),
             following: tCompanies('follow.following'),
@@ -215,27 +240,16 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
         />
       </div>
 
-      {/* Title & Description */}
+      {/* Title */}
       <div>
-        <h1 className="text-lg font-bold leading-tight">{short.title}</h1>
-        {short.description && (
-          <p className="text-sm text-muted-foreground mt-1">{short.description}</p>
-        )}
+        <h2 className="text-lg font-bold leading-tight">{short.title}</h2>
       </div>
 
-      {/* Tags + Category */}
+      {/* Category badge */}
       <div className="flex flex-wrap gap-1.5">
-        <Link href={`/${locale}?categoryIds=${short.category.id}`}>
+        <Link href={`/${locale}/category/${short.category.slug}`}>
           <Badge variant="outline" className="cursor-pointer text-xs">{short.category.name}</Badge>
         </Link>
-        {short.tags.map((tag) => (
-          <Link key={tag.slug} href={`/${locale}/search?q=${encodeURIComponent(tag.name)}`}>
-            <Badge variant="secondary" className="cursor-pointer hover:bg-accent text-xs">
-              <Tag className="h-3 w-3 mr-1" />
-              {tag.name}
-            </Badge>
-          </Link>
-        ))}
       </div>
 
       {/* CTA */}
@@ -250,39 +264,29 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
 
       <div className="border-t" />
 
-      {/* Comments */}
-      <div ref={commentsSectionRef}>
-        <CommentsSection
-          shortId={short.id}
-          currentUserId={currentUserId}
-          isAdmin={isAdmin}
-          isAuthenticated={isAuthenticated}
-          translations={commentTranslations}
-        />
-      </div>
+      {/* Comments — only render when active to avoid fetching for all slides */}
+      {state === 'active' && (
+        <div ref={commentsSectionRef}>
+          <CommentsSection
+            shortId={short.id}
+            currentUserId={currentUserId}
+            isAdmin={isAdmin}
+            isAuthenticated={isAuthenticated}
+            translations={commentTranslations}
+          />
+        </div>
+      )}
     </div>
   )
 
-  // Header = h-16 = 4rem
+  // ─── LAYOUT ──────────────────────────────────────────────
   return (
-    <div data-full-bleed>
-      {/* ─── DESKTOP LAYOUT (lg+) ───────────────────────────── */}
-      <div className="hidden lg:flex h-[calc(100vh-4rem)] overflow-hidden">
-
-        {/* Video area — fills remaining space, centers video */}
-        <div className="flex-1 flex items-center justify-center gap-3 min-w-0 relative">
-          {/* Back button — top-left corner */}
-          <div className="absolute top-2 left-3 z-10">
-            <Button variant="ghost" size="sm" asChild>
-              <Link href={`/${locale}`}>
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                {t('backToFeed')}
-              </Link>
-            </Button>
-          </div>
-
-          {/* Video + Side actions — grouped so actions align to video bottom */}
-          <div className="h-full py-2 flex items-center gap-3" style={{ maxHeight: '720px' }}>
+    <div className="h-full w-full">
+      {/* ─── DESKTOP (lg+) ──────────────────────────────── */}
+      <div className="hidden lg:flex h-full overflow-hidden">
+        {/* Video area — top-aligned, fills remaining space */}
+        <div className="flex-1 flex items-start justify-center gap-3 min-w-0 py-2">
+          <div className="h-full flex items-start gap-3">
             {videoPlayer}
             <div className="h-full flex items-end">
               {sideActions}
@@ -290,7 +294,7 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
           </div>
         </div>
 
-        {/* Panel toggle — visible pill button */}
+        {/* Panel toggle */}
         <div className="flex-shrink-0 flex items-start pt-3">
           <button
             onClick={() => setPanelOpen(!panelOpen)}
@@ -299,7 +303,6 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
               "bg-muted/50 hover:bg-muted transition-colors",
               "h-10 w-7"
             )}
-            title={panelOpen ? 'Zwiń panel' : 'Rozwiń panel'}
           >
             {panelOpen ? (
               <X className="h-3.5 w-3.5 text-muted-foreground" />
@@ -309,7 +312,7 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
           </button>
         </div>
 
-        {/* Right panel — collapsible, flush to right edge */}
+        {/* Right panel — full height, top-aligned, collapsible */}
         <div
           className={cn(
             "flex-shrink-0 border-l border-border overflow-y-auto transition-all duration-300 ease-in-out scrollbar-thin",
@@ -320,61 +323,23 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
         </div>
       </div>
 
-      {/* ─── MOBILE LAYOUT (< lg) ───────────────────────────── */}
-      <div className="lg:hidden">
-        {/* Back */}
-        <div className="px-4 pt-2 pb-1">
-          <Button variant="ghost" size="sm" asChild>
-            <Link href={`/${locale}`}>
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              {t('backToFeed')}
-            </Link>
-          </Button>
-        </div>
-
-        {/* Video + side actions — full width */}
-        <div className="flex justify-center gap-1 px-2">
-          <div className="flex-1" style={{ maxHeight: 'calc(100vh - 10rem)' }}>
+      {/* ─── MOBILE (< lg) ──────────────────────────────── */}
+      <div className="lg:hidden h-full flex flex-col">
+        {/* Video + side actions */}
+        <div className="flex-1 flex justify-center gap-1 px-2 min-h-0">
+          <div className="flex-1 min-h-0">
             {videoPlayer}
           </div>
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-end pb-4">
             {sideActions}
           </div>
         </div>
 
-        {/* Info panel below */}
-        {panelContent}
-
-        {/* Related Shorts */}
-        {short.relatedShorts.length > 0 && (
-          <section className="px-4 py-6 border-t border-border">
-            <h2 className="text-lg font-semibold mb-4">{t('relatedShorts')}</h2>
-            <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-thin">
-              {short.relatedShorts.map((related) => (
-                <div key={related.id} className="w-36 flex-shrink-0 snap-start">
-                  <FeedCard short={related} />
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
+        {/* Bottom info — scrollable overflow */}
+        <div className="flex-shrink-0 max-h-[30%] overflow-y-auto border-t border-border">
+          {panelContent}
+        </div>
       </div>
-
-      {/* ─── Related Shorts (Desktop only) ───────────────────── */}
-      {short.relatedShorts.length > 0 && (
-        <section className="hidden lg:block border-t border-border px-4 py-6">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-lg font-semibold mb-4">{t('relatedShorts')}</h2>
-            <div className="flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-thin">
-              {short.relatedShorts.map((related) => (
-                <div key={related.id} className="w-36 flex-shrink-0 snap-start">
-                  <FeedCard short={related} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
     </div>
   )
 }

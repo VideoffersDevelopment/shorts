@@ -17,6 +17,7 @@ interface ShortPlayerProps {
   status?: ShortStatus
   autoPlay?: boolean
   muted?: boolean
+  loop?: boolean
   aspectRatio?: "9:16" | "16:9"
   onPlay?: () => void
   onEnded?: () => void
@@ -41,6 +42,7 @@ export function ShortPlayer({
   status,
   autoPlay = false,
   muted = false,
+  loop = false,
   aspectRatio = "9:16",
   onPlay,
   onEnded,
@@ -109,6 +111,7 @@ export function ShortPlayer({
         title={title}
         autoPlay={autoPlay}
         muted={muted}
+        loop={loop}
         onPlay={handlePlay}
         onEnded={handleEnded}
         aspectRatio={aspectRatio === "9:16" ? "9/16" : "16/9"}
