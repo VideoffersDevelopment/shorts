@@ -59,7 +59,7 @@ export function FollowingPageContent({
 
   if (isLoading) {
     return (
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 max-w-4xl mx-auto">
         <h1 className="text-2xl font-bold">{t.title}</h1>
         <div className="flex items-center justify-center py-12">
           <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
@@ -71,7 +71,7 @@ export function FollowingPageContent({
 
   if (isError) {
     return (
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 max-w-4xl mx-auto">
         <h1 className="text-2xl font-bold">{t.title}</h1>
         <div className="flex items-center justify-center py-12">
           <p className="text-muted-foreground">{t.error}</p>
@@ -83,7 +83,7 @@ export function FollowingPageContent({
   const hasCompanies = companies && companies.length > 0
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold">{t.title}</h1>
 
       {!hasCompanies ? (

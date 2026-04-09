@@ -26,5 +26,7 @@
     "shorts": "Meine Shorts",
     "credits": "Guthaben"
   },
-  "admin": "Admin-Bereich"
+  "admin": "Admin-Bereich",
+  "savedEmpty": "Noch keine gespeicherten Shorts",
+  "savedEmptyDescription": "Speichere interessante Shorts, um später leicht darauf zurückzukommen."
 }

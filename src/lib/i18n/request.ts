@@ -14,7 +14,12 @@ export default getRequestConfig(async ({ locale }) => {
     admin,
     adminCategories,
     categories,
-    home
+    home,
+    following,
+    shorts,
+    feed,
+    search,
+    payments
   ] = await Promise.all([
     import(`../locales/${locale}/auth.json`),
     import(`../locales/${locale}/common.json`),
@@ -26,7 +31,12 @@ export default getRequestConfig(async ({ locale }) => {
     import(`../locales/${locale}/admin.json`),
     import(`../locales/${locale}/admin-categories.json`),
     import(`../locales/${locale}/categories.json`),
-    import(`../locales/${locale}/home.json`)
+    import(`../locales/${locale}/home.json`),
+    import(`../locales/${locale}/following.json`),
+    import(`../locales/${locale}/shorts.json`),
+    import(`../locales/${locale}/feed.json`),
+    import(`../locales/${locale}/search.json`),
+    import(`../locales/${locale}/payments.json`)
   ])
 
   return {
@@ -41,7 +51,12 @@ export default getRequestConfig(async ({ locale }) => {
       admin: admin.default,
       'admin-categories': adminCategories.default,
       categories: categories.default,
-      home: home.default
+      home: home.default,
+      following: following.default,
+      shorts: shorts.default,
+      feed: feed.default,
+      search: search.default,
+      payments: payments.default
     }
   }
 })

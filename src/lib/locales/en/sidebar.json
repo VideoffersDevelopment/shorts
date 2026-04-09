@@ -26,5 +26,7 @@
     "shorts": "My Shorts",
     "credits": "Credits"
   },
-  "admin": "Admin Panel"
+  "admin": "Admin Panel",
+  "savedEmpty": "No saved shorts yet",
+  "savedEmptyDescription": "Save interesting shorts to easily come back to them later."
 }

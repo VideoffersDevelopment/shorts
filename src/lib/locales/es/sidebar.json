@@ -26,5 +26,7 @@
     "shorts": "Mis Shorts",
     "credits": "Creditos"
   },
-  "admin": "Panel de administración"
+  "admin": "Panel de administración",
+  "savedEmpty": "Aún no tienes shorts guardados",
+  "savedEmptyDescription": "Guarda shorts interesantes para volver a ellos fácilmente."
 }

@@ -101,7 +101,7 @@ export function FeedListItem({ short, state }: FeedListItemProps) {
   const renderPlayer = state === 'active' || state === 'adjacent'
 
   const videoPlayer = renderPlayer ? (
-    <div className="relative h-full overflow-hidden rounded-2xl" style={{ aspectRatio: '9/16' }}>
+    <div className="relative h-full w-auto overflow-hidden rounded-2xl" style={{ aspectRatio: '9/16' }}>
       <ShortPlayer
         hlsUrl={short.hlsPlaylistUrl}
         posterUrl={short.thumbnailUrl ?? undefined}
@@ -116,7 +116,7 @@ export function FeedListItem({ short, state }: FeedListItemProps) {
     // idle — thumbnail only
     <Link
       href={`/${locale}/shorts/${short.id}`}
-      className="relative block h-full overflow-hidden rounded-2xl bg-muted"
+      className="relative block h-full w-auto overflow-hidden rounded-2xl bg-muted"
       style={{ aspectRatio: '9/16' }}
     >
       {short.thumbnailUrl ? (
@@ -284,10 +284,12 @@ export function FeedListItem({ short, state }: FeedListItemProps) {
     <div className="h-full w-full">
       {/* ─── DESKTOP (lg+) ──────────────────────────────── */}
       <div className="hidden lg:flex h-full overflow-hidden">
-        {/* Video area — top-aligned, fills remaining space */}
-        <div className="flex-1 flex items-start justify-center gap-3 min-w-0 py-2">
+        {/* Video area — height-constrained, video width derived from aspect-ratio */}
+        <div className="flex-1 flex items-start justify-center gap-3 min-w-0 p-2 h-full">
           <div className="h-full flex items-start gap-3">
-            {videoPlayer}
+            <div className="h-full w-auto">
+              {videoPlayer}
+            </div>
             <div className="h-full flex items-end">
               {sideActions}
             </div>

@@ -1,8 +1,7 @@
 import { auth } from "@/lib/auth"
+import { redirect } from "next/navigation"
 import { getTranslations } from "next-intl/server"
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
-import { VideoGrid, sampleVideos } from "@/components/home/video-grid"
+import { Bookmark } from "lucide-react"
 
 interface SavedPageProps {
   params: Promise<{ locale: string }>
@@ -11,30 +10,26 @@ interface SavedPageProps {
 export default async function SavedPage({ params }: SavedPageProps) {
   const { locale } = await params
   const session = await auth()
-  const t = await getTranslations("sidebar")
 
-  const isLoggedIn = !!session?.user
-
-  const content = (
-    <div className="flex flex-col gap-6">
-      <h1 className="text-2xl font-bold">{t("saved")}</h1>
-      <VideoGrid videos={sampleVideos} />
-    </div>
-  )
-
-  // Logged-in users: layout already has Header/Sidebar/Footer
-  if (isLoggedIn) {
-    return content
+  if (!session?.user) {
+    redirect(`/${locale}/login`)
   }
 
-  // Guest users: wrap with Header/Footer
+  const t = await getTranslations("sidebar")
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header locale={locale} />
-      <main className="flex-1 w-full px-4 md:px-6 lg:px-8 py-6">
-        {content}
-      </main>
-      <Footer locale={locale} />
+    <div className="flex flex-col gap-6 max-w-4xl mx-auto">
+      <h1 className="text-2xl font-bold">{t("saved")}</h1>
+
+      <div className="flex flex-col items-center justify-center py-16 text-center">
+        <Bookmark className="h-16 w-16 text-muted-foreground/50 mb-4" />
+        <h2 className="text-lg font-semibold text-muted-foreground">
+          {t("savedEmpty")}
+        </h2>
+        <p className="mt-2 max-w-md text-sm text-muted-foreground/70">
+          {t("savedEmptyDescription")}
+        </p>
+      </div>
     </div>
   )
 }

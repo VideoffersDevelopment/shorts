@@ -98,7 +98,7 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
 
   // ─── VIDEO PLAYER ────────────────────────────────────────
   const videoPlayer = (
-    <div className="relative h-full overflow-hidden rounded-2xl" style={{ aspectRatio: '9/16' }}>
+    <div className="relative h-full w-auto overflow-hidden rounded-2xl" style={{ aspectRatio: '9/16' }}>
       <ShortPlayer
         hlsUrl={short.hlsPlaylistUrl}
         posterUrl={short.thumbnailUrl ?? undefined}
@@ -263,14 +263,14 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
     </div>
   )
 
-  // Header = h-16 = 4rem
+  // Header = h-16 = 4rem, Footer = fixed 53px
   return (
-    <div data-full-bleed>
+    <div data-full-bleed className="h-full">
       {/* ─── DESKTOP LAYOUT (lg+) ───────────────────────────── */}
-      <div className="hidden lg:flex h-[calc(100vh-4rem)] overflow-hidden">
+      <div className="hidden lg:flex h-full overflow-hidden">
 
-        {/* Video area — fills remaining space, centers video */}
-        <div className="flex-1 flex items-center justify-center gap-3 min-w-0 relative">
+        {/* Video area — height-constrained, video width from aspect-ratio */}
+        <div className="flex-1 flex items-start justify-center gap-3 min-w-0 p-2 h-full relative">
           {/* Back button — top-left corner */}
           <div className="absolute top-2 left-3 z-10">
             <Button variant="ghost" size="sm" asChild>
@@ -281,9 +281,11 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
             </Button>
           </div>
 
-          {/* Video + Side actions — grouped so actions align to video bottom */}
-          <div className="h-full py-2 flex items-center gap-3" style={{ maxHeight: '720px' }}>
-            {videoPlayer}
+          {/* Video + Side actions — height fills available space */}
+          <div className="h-full flex items-start gap-3">
+            <div className="h-full w-auto">
+              {videoPlayer}
+            </div>
             <div className="h-full flex items-end">
               {sideActions}
             </div>

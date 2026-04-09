@@ -26,5 +26,7 @@
     "shorts": "Moje Shortsy",
     "credits": "Kredyty"
   },
-  "admin": "Panel administracyjny"
+  "admin": "Panel administracyjny",
+  "savedEmpty": "Nie masz jeszcze zapisanych shortsów",
+  "savedEmptyDescription": "Zapisuj interesujące shortsy, aby móc do nich łatwo wrócić."
 }
