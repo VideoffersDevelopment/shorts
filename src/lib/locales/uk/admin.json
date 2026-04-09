@@ -1,0 +1,230 @@
+{
+  "title": "Панель адміністратора",
+  "dataTable": {
+    "search": "Пошук...",
+    "noResults": "Немає результатів",
+    "selected": "{count} вибрано",
+    "selectAll": "Вибрати все",
+    "selectRow": "Вибрати рядок",
+    "clearSelection": "Очистити вибір",
+    "clearFilters": "Очистити фільтри",
+    "filterAll": "Всі",
+    "pagination": {
+      "showing": "Показано {from} до {to} з {total} результатів",
+      "rowsPerPage": "Рядків на сторінці",
+      "page": "Сторінка {current} з {total}",
+      "previous": "Попередня",
+      "next": "Наступна",
+      "first": "Перша сторінка",
+      "last": "Остання сторінка"
+    },
+    "bulkActions": {
+      "confirmTitle": "Підтвердити дію",
+      "confirmMessage": "Ви впевнені, що хочете виконати цю дію для вибраних елементів?",
+      "success": "Успішно оброблено {count} елементів",
+      "error": "Під час обробки сталася помилка",
+      "cancel": "Скасувати",
+      "confirm": "Підтвердити",
+      "reasonPlaceholder": "Введіть причину...",
+      "verify": "Перевірити вибрані",
+      "reject": "Відхилити вибрані",
+      "delete": "Видалити вибрані",
+      "export": "Експортувати",
+      "exportCSV": "Експортувати в CSV",
+      "exportExcel": "Експортувати в Excel"
+    }
+  },
+  "nav": {
+    "dashboard": "Головна панель",
+    "companies": "Компанії",
+    "categories": "Категорії",
+    "users": "Користувачі",
+    "audit": "Журнал аудиту",
+    "exitAdmin": "Повернутися до сайту",
+    "logout": "Вийти"
+  },
+  "dashboard": {
+    "title": "Головна панель",
+    "stats": {
+      "companies": "Компаній",
+      "users": "Користувачів",
+      "categories": "Категорій",
+      "pending": "очікують перевірки"
+    }
+  },
+  "companies": {
+    "title": "Управління компаніями",
+    "search": {
+      "placeholder": "Шукати за назвою або ІПН...",
+      "button": "Шукати"
+    },
+    "filter": {
+      "status": "Статус",
+      "all": "Всі",
+      "verified": "Перевірені",
+      "pending": "Очікують"
+    },
+    "table": {
+      "name": "Назва компанії",
+      "nip": "ІПН",
+      "email": "Email",
+      "status": "Статус VIES",
+      "accountStatus": "Статус акаунту",
+      "createdAt": "Дата створення",
+      "actions": "Дії"
+    },
+    "status": {
+      "verified": "Перевірена",
+      "pending": "Очікує"
+    },
+    "companyStatus": {
+      "PENDING": "Очікує",
+      "ACTIVE": "Активна",
+      "SUSPENDED": "Призупинена"
+    },
+    "actions": {
+      "verify": "Перевірити",
+      "reject": "Відхилити",
+      "view": "Переглянути",
+      "edit": "Редагувати",
+      "delete": "Видалити",
+      "checkVies": "Перевірити VIES"
+    },
+    "verify": {
+      "success": "Компанію перевірено"
+    },
+    "reject": {
+      "reasonPrompt": "Вкажіть причину відхилення:",
+      "success": "Компанію відхилено"
+    },
+    "delete": {
+      "confirmMessage": "Ви впевнені, що хочете видалити цю компанію? Ця дія незворотня!",
+      "success": "Компанію видалено"
+    },
+    "checkVies": {
+      "success": "ІПН дійсний у системі VIES",
+      "invalid": "ІПН недійсний у системі VIES"
+    },
+    "edit": {
+      "title": "Редагувати компанію",
+      "success": "Компанію оновлено",
+      "error": "Не вдалося оновити компанію",
+      "readOnlyInfo": "Інформація лише для читання"
+    }
+  },
+  "users": {
+    "title": "Управління користувачами",
+    "search": {
+      "placeholder": "Шукати за email або ім'ям...",
+      "button": "Шукати"
+    },
+    "filter": {
+      "role": "Роль",
+      "status": "Статус",
+      "all": "Всі",
+      "active": "Активні",
+      "blocked": "Заблоковані"
+    },
+    "table": {
+      "email": "Email",
+      "role": "Роль",
+      "status": "Статус",
+      "emailVerified": "Email підтверджено",
+      "createdAt": "Дата реєстрації",
+      "actions": "Дії"
+    },
+    "role": {
+      "USER": "Користувач",
+      "COMPANY": "Компанія",
+      "ADMIN": "Адміністратор"
+    },
+    "status": {
+      "active": "Активний",
+      "blocked": "Заблокований"
+    },
+    "actions": {
+      "changeRole": "Змінити роль",
+      "block": "Заблокувати",
+      "unblock": "Розблокувати",
+      "details": "Деталі",
+      "delete": "Видалити"
+    },
+    "details": {
+      "title": "Деталі користувача",
+      "profile": "Профіль",
+      "company": "Компанія",
+      "noProfile": "Немає профілю",
+      "noCompany": "Немає компанії",
+      "noCompanyProfile": "Немає профілю компанії",
+      "displayName": "Ім'я для відображення",
+      "bio": "Про себе",
+      "location": "Місцезнаходження",
+      "companyName": "Назва компанії",
+      "companyProfile": "Профіль компанії",
+      "createdAt": "Дата створення",
+      "updatedAt": "Останнє оновлення",
+      "emailVerified": "Email підтверджено",
+      "notVerified": "Не підтверджено"
+    },
+    "changeRole": {
+      "title": "Змінити роль користувача",
+      "description": "Виберіть нову роль для цього користувача",
+      "selectRole": "Виберіть роль",
+      "success": "Роль користувача змінено"
+    },
+    "block": {
+      "success": "Користувача заблоковано"
+    },
+    "unblock": {
+      "success": "Користувача розблоковано"
+    },
+    "delete": {
+      "success": "Користувача видалено"
+    },
+    "bulkActions": {
+      "block": "Заблокувати вибраних",
+      "unblock": "Розблокувати вибраних",
+      "changeRole": "Змінити роль",
+      "delete": "Видалити вибраних",
+      "confirmBlock": "Ви впевнені, що хочете заблокувати {count} користувачів?",
+      "confirmUnblock": "Ви впевнені, що хочете розблокувати {count} користувачів?",
+      "confirmDelete": "Ви впевнені, що хочете видалити {count} користувачів? Ця операція незворотня!",
+      "changeRoleTitle": "Змінити роль для вибраних",
+      "changeRoleDescription": "Зміна ролі для {count} користувачів",
+      "changeRoleSuccess": "Змінено роль для {count} користувачів",
+      "partialSuccess": "Оброблено {success}, помилок: {failed}"
+    },
+    "confirm": {
+      "block": "Ви впевнені, що хочете заблокувати цього користувача?",
+      "unblock": "Ви впевнені, що хочете розблокувати цього користувача?",
+      "changeRole": "Ви впевнені, що хочете змінити роль користувача на {role}?"
+    },
+    "success": {
+      "roleChanged": "Роль користувача змінено",
+      "blocked": "Користувача заблоковано",
+      "unblocked": "Користувача розблоковано"
+    }
+  },
+  "common": {
+    "cancel": "Скасувати",
+    "confirm": "Підтвердити",
+    "saving": "Збереження..."
+  },
+  "errors": {
+    "invalidInput": "Недійсні вхідні дані",
+    "verifyFailed": "Перевірка не вдалася",
+    "rejectFailed": "Відхилення не вдалося",
+    "deleteFailed": "Видалення не вдалося",
+    "viesUnavailable": "Система VIES недоступна. Спробуйте пізніше.",
+    "viesCheckFailed": "Перевірка VIES не вдалася",
+    "reasonRequired": "Причина відхилення є обов'язковою",
+    "companyNotFound": "Компанію не знайдено",
+    "userNotFound": "Користувача не знайдено",
+    "roleChangeFailed": "Зміна ролі не вдалася",
+    "blockFailed": "Блокування не вдалося",
+    "unblockFailed": "Розблокування не вдалося",
+    "cannotBlockSelf": "Ви не можете заблокувати себе",
+    "cannotChangeOwnRole": "Ви не можете змінити власну роль",
+    "updateFailed": "Оновлення не вдалося"
+  }
+}

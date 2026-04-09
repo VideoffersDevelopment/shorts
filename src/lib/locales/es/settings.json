@@ -1,0 +1,30 @@
+{
+  "title": "Configuración",
+  "account": {
+    "title": "Cuenta",
+    "email": "Correo electrónico",
+    "emailVerified": "Verificado",
+    "emailNotVerified": "No verificado",
+    "changePassword": "Cambiar contraseña",
+    "deleteAccount": "Eliminar cuenta"
+  },
+  "password": {
+    "title": "Cambiar contraseña",
+    "current": "Contraseña actual",
+    "new": "Nueva contraseña",
+    "confirm": "Confirmar contraseña",
+    "submit": "Cambiar contraseña",
+    "success": "Contraseña cambiada. Por favor, inicie sesión nuevamente.",
+    "errors": {
+      "wrongPassword": "Contraseña actual incorrecta",
+      "oauthAccount": "Cuenta creada con OAuth"
+    }
+  },
+  "delete": {
+    "title": "Zona de peligro",
+    "warning": "Esta acción es irreversible. Todos sus datos serán eliminados.",
+    "confirm": "Escriba DELETE para confirmar",
+    "submit": "Eliminar mi cuenta",
+    "success": "La cuenta ha sido eliminada"
+  }
+}

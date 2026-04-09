@@ -1,0 +1,5 @@
+ -  autor wpisu ma być oznaczony jakaś ikoną, że to autor odpowiada
+ - osadzanie wido na stronie www
+ - wystawic api
+ - sprawdzanie aktualniosci ofert
+ - stremaming ofert

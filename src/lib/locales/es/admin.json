@@ -1,0 +1,155 @@
+{
+  "title": "Panel de Administración",
+  "nav": {
+    "dashboard": "Panel principal",
+    "companies": "Empresas",
+    "categories": "Categorías",
+    "users": "Usuarios",
+    "audit": "Registro de auditoría",
+    "exitAdmin": "Volver al sitio",
+    "logout": "Cerrar sesión"
+  },
+  "dashboard": {
+    "title": "Panel principal",
+    "stats": {
+      "companies": "Empresas",
+      "users": "Usuarios",
+      "categories": "Categorías",
+      "pending": "pendientes de verificación"
+    }
+  },
+  "companies": {
+    "title": "Gestión de Empresas",
+    "search": {
+      "placeholder": "Buscar por nombre o NIP...",
+      "button": "Buscar"
+    },
+    "filter": {
+      "status": "Estado",
+      "all": "Todas",
+      "verified": "Verificadas",
+      "pending": "Pendientes"
+    },
+    "table": {
+      "name": "Nombre de la empresa",
+      "nip": "NIP",
+      "email": "Correo electrónico",
+      "status": "Estado VIES",
+      "accountStatus": "Estado de cuenta",
+      "createdAt": "Fecha de creación",
+      "actions": "Acciones"
+    },
+    "status": {
+      "verified": "Verificada",
+      "pending": "Pendiente"
+    },
+    "companyStatus": {
+      "PENDING": "Pendiente",
+      "ACTIVE": "Activa",
+      "SUSPENDED": "Suspendida"
+    },
+    "actions": {
+      "verify": "Verificar",
+      "reject": "Rechazar",
+      "view": "Ver",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "checkVies": "Verificar VIES"
+    },
+    "verify": {
+      "success": "La empresa ha sido verificada"
+    },
+    "reject": {
+      "reasonPrompt": "Por favor, indique el motivo del rechazo:",
+      "success": "La empresa ha sido rechazada"
+    },
+    "delete": {
+      "confirmMessage": "¿Está seguro de que desea eliminar esta empresa? ¡Esta acción es irreversible!",
+      "success": "La empresa ha sido eliminada"
+    },
+    "checkVies": {
+      "success": "El NIP es válido en el sistema VIES",
+      "invalid": "El NIP no es válido en el sistema VIES"
+    },
+    "edit": {
+      "title": "Editar Empresa",
+      "success": "La empresa ha sido actualizada",
+      "error": "Error al actualizar la empresa",
+      "readOnlyInfo": "Información de solo lectura"
+    }
+  },
+  "users": {
+    "title": "Gestión de Usuarios",
+    "search": {
+      "placeholder": "Buscar por correo electrónico...",
+      "button": "Buscar"
+    },
+    "filter": {
+      "role": "Rol",
+      "status": "Estado",
+      "all": "Todos",
+      "active": "Activos",
+      "blocked": "Bloqueados"
+    },
+    "table": {
+      "email": "Correo electrónico",
+      "role": "Rol",
+      "status": "Estado",
+      "emailVerified": "Correo verificado",
+      "createdAt": "Fecha de registro",
+      "actions": "Acciones"
+    },
+    "role": {
+      "USER": "Usuario",
+      "COMPANY": "Empresa",
+      "ADMIN": "Administrador"
+    },
+    "status": {
+      "active": "Activo",
+      "blocked": "Bloqueado"
+    },
+    "actions": {
+      "changeRole": "Cambiar rol",
+      "block": "Bloquear",
+      "unblock": "Desbloquear",
+      "details": "Detalles"
+    },
+    "details": {
+      "title": "Detalles del usuario",
+      "email": "Correo electrónico",
+      "role": "Rol",
+      "status": "Estado de la cuenta",
+      "emailVerified": "Correo verificado",
+      "createdAt": "Registrado el",
+      "updatedAt": "Última actualización",
+      "companyProfile": "Perfil de empresa",
+      "noCompanyProfile": "Sin perfil de empresa"
+    },
+    "confirm": {
+      "block": "¿Está seguro de que desea bloquear a este usuario?",
+      "unblock": "¿Está seguro de que desea desbloquear a este usuario?",
+      "changeRole": "¿Está seguro de que desea cambiar el rol a {role}?"
+    },
+    "success": {
+      "roleChanged": "El rol del usuario ha sido cambiado",
+      "blocked": "El usuario ha sido bloqueado",
+      "unblocked": "El usuario ha sido desbloqueado"
+    }
+  },
+  "errors": {
+    "invalidInput": "Datos de entrada no válidos",
+    "verifyFailed": "Verificación fallida",
+    "rejectFailed": "Rechazo fallido",
+    "deleteFailed": "Eliminación fallida",
+    "viesUnavailable": "El sistema VIES no está disponible. Por favor, inténtelo más tarde.",
+    "viesCheckFailed": "Verificación VIES fallida",
+    "reasonRequired": "Se requiere el motivo del rechazo",
+    "companyNotFound": "Empresa no encontrada",
+    "userNotFound": "Usuario no encontrado",
+    "roleChangeFailed": "Cambio de rol fallido",
+    "blockFailed": "Bloqueo fallido",
+    "cannotBlockSelf": "No puede bloquearse a sí mismo",
+    "cannotChangeOwnRole": "No puede cambiar su propio rol",
+    "updateFailed": "La actualización falló"
+  }
+}

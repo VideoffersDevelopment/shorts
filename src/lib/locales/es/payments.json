@@ -1,0 +1,110 @@
+{
+  "page": {
+    "title": "Creditos",
+    "description": "Gestiona tus creditos de publicacion",
+    "balance": "Saldo de creditos",
+    "balanceDescription": "Tus creditos disponibles para publicar shorts",
+    "paymentSuccess": "Pago exitoso!",
+    "creditsAdded": "Tus creditos han sido anadidos a tu cuenta."
+  },
+  "credits": {
+    "credit": "credito",
+    "plural": "creditos",
+    "creditAvailable": "credito disponible",
+    "pluralAvailable": "creditos disponibles",
+    "available": "Creditos disponibles",
+    "buy": "Comprar creditos"
+  },
+  "packages": {
+    "title": "Paquetes de creditos",
+    "description": "Compra creditos para publicar tus shorts",
+    "credit": "credito",
+    "credits": "creditos",
+    "buy": "Comprar ahora"
+  },
+  "transactions": {
+    "title": "Transacciones recientes",
+    "description": "Tu historial de actividad de creditos",
+    "empty": "Sin transacciones aun",
+    "source": {
+      "PACKAGE": "Compra de creditos",
+      "GIFT": "Creditos de regalo",
+      "PROMO": "Creditos promocionales",
+      "REFUND": "Reembolso de creditos",
+      "ADMIN": "Credito administrativo",
+      "PUBLICATION": "Publicacion de short",
+      "OTHER": "Otro"
+    }
+  },
+  "info": {
+    "title": "Como funcionan los creditos",
+    "description": "Los creditos se utilizan para publicar tus videos cortos. Cada publicacion cuesta 1 credito.",
+    "point1": "1 credito = 1 short publicado (30 dias de visibilidad)",
+    "point2": "Los creditos nunca expiran",
+    "point3": "Paquetes a granel disponibles para ahorrar"
+  },
+  "form": {
+    "credits": "Numero de creditos",
+    "selectCredits": "Selecciona un paquete de creditos",
+    "credit": "credito",
+    "creditsPlural": "creditos",
+    "pricePerCredit": "{price} PLN por credito",
+    "provider": "Metodo de pago",
+    "total": "Total",
+    "processing": "Procesando...",
+    "pay": "Pagar {amount} PLN",
+    "securityNote": "Procesamiento de pago seguro. Tus datos estan protegidos."
+  },
+  "providers": {
+    "p24Description": "Transferencia, BLIK, tarjetas",
+    "tpayDescription": "Tarjetas, BLIK, Apple Pay"
+  },
+  "publish": {
+    "title": "Publicar short",
+    "verificationRequired": "Verificacion de empresa requerida",
+    "verificationDescription": "Tu empresa debe estar verificada antes de poder publicar shorts. Completa la verificacion VIES para continuar.",
+    "verifyCompany": "Verificar empresa",
+    "yourCredits": "Tus creditos",
+    "useCreditsTitle": "Usar credito de publicacion",
+    "useCreditsDescription": "Tienes creditos disponibles. La publicacion usara 1 credito.",
+    "useCredit": "Usar 1 credito para publicar",
+    "noCredits": "Sin creditos disponibles",
+    "noCreditsDescription": "Necesitas al menos 1 credito para publicar. Precio: {price} PLN por credito.",
+    "buyAndPublish": "Comprar credito y publicar ({price} PLN)",
+    "buyCredits": "Comprar creditos",
+    "buyCreditsDescription": "Selecciona un metodo de pago y paquete de creditos",
+    "processing": "Procesando...",
+    "processingDescription": "Por favor espera mientras procesamos tu solicitud.",
+    "success": {
+      "title": "Publicacion iniciada!",
+      "description": "Tu short esta siendo procesado y estara en linea pronto."
+    }
+  },
+  "common": {
+    "cancel": "Cancelar",
+    "back": "Atras"
+  },
+  "errors": {
+    "publishFailed": "Error al publicar el short. Por favor, intentalo de nuevo.",
+    "checkoutFailed": "Error al crear la sesion de pago. Por favor, intentalo de nuevo."
+  },
+  "history": {
+    "title": "Historial de creditos",
+    "date": "Fecha",
+    "type": "Tipo",
+    "amount": "Cantidad",
+    "balance": "Saldo",
+    "relatedShort": "Video relacionado",
+    "noTransactions": "Sin transacciones"
+  },
+  "purchase": {
+    "title": "Comprar creditos",
+    "description": "Selecciona un paquete de creditos",
+    "package": "{credits} creditos",
+    "price": "{amount} PLN",
+    "save": "Ahorra {percent}%",
+    "selectProvider": "Metodo de pago",
+    "buy": "Comprar ahora",
+    "cancel": "Cancelar"
+  }
+}

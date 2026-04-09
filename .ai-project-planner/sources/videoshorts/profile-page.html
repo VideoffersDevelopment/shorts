@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>VideoShorts - Company Homepage</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#111318",
+                        "surface-dark": "#1a1d26",
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #111318;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3b4354;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4b5563;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display min-h-screen flex flex-col overflow-x-hidden">
+    <header
+        class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#282e39] bg-white dark:bg-[#111318] px-4 lg:px-10 py-3 shadow-sm">
+        <div class="flex items-center gap-4 lg:gap-8">
+            <div class="flex items-center gap-3">
+                <div class="size-8 text-primary">
+                    <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
+                    </svg>
+                </div>
+                <h2
+                    class="hidden md:block text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+                    VideoShorts</h2>
+            </div>
+            <label class="hidden md:flex flex-col min-w-40 h-10 w-full md:w-64 lg:w-80">
+                <div
+                    class="flex w-full flex-1 items-stretch rounded-lg h-full bg-slate-100 dark:bg-[#282e39] transition-colors focus-within:ring-2 focus-within:ring-primary/50">
+                    <div
+                        class="text-slate-400 dark:text-[#9ca6ba] flex border-none items-center justify-center pl-4 rounded-l-lg">
+                        <span class="material-symbols-outlined text-xl">search</span>
+                    </div>
+                    <input
+                        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-slate-400 dark:placeholder:text-[#9ca6ba] px-3 pl-2 text-sm font-normal leading-normal"
+                        placeholder="Find inspiration..." />
+                </div>
+            </label>
+        </div>
+        <div class="flex flex-1 justify-end gap-4 lg:gap-8 items-center">
+            <div class="hidden xl:flex items-center gap-6">
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary text-sm font-medium leading-normal transition-colors"
+                    href="#">Dashboard</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary text-sm font-medium leading-normal transition-colors flex items-center gap-1"
+                    href="#">
+                    <span class="material-symbols-outlined text-lg">account_balance_wallet</span>
+                    Wallet: $150
+                </a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary text-sm font-medium leading-normal transition-colors flex items-center gap-1"
+                    href="#">
+                    <span class="material-symbols-outlined text-lg">location_on</span>
+                    New York, NY
+                </a>
+            </div>
+            <div class="flex items-center gap-3">
+                <button
+                    class="hidden sm:flex h-10 cursor-pointer items-center justify-center rounded-lg px-4 bg-primary hover:bg-blue-600 transition-colors text-white gap-2 text-sm font-bold shadow-lg shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-lg">add_circle</span>
+                    <span>Upload</span>
+                </button>
+                <button
+                    class="flex size-10 cursor-pointer items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-[#282e39] text-slate-600 dark:text-white transition-colors">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <button
+                    class="flex size-10 cursor-pointer items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-[#282e39] text-slate-600 dark:text-white transition-colors">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+                <div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-slate-200 dark:border-[#3b4354] cursor-pointer"
+                    data-alt="User profile avatar showing a smiling person"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBaRes1Co8qpAcvG0jOBOs0cD1337Kfb_ma5XrAUPRk-qyre1OBS7NKQo-LizZxyR8UPP0G4y-BPmhRdOgjyjRsOcD3zcn8TwGmisXCWR2rSb9rqzuyGMEsTpMT6hHAswglSuOEOEDhXC93DHpN8CccAFavhQP3UlVYYkSZVqzV_KnonOLaYXalP5ctGfuIEjLH828DFfGvZGLHegsV8_AS75-5zo-IZnNdpA2BIrBM46NvQsNJ4OYVDz0j2_oX_91_jiIBSbHLiL0");'>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="flex-1 flex flex-col items-center w-full px-4 md:px-8 lg:px-12 py-8">
+        <div class="w-full max-w-[1400px] flex flex-col gap-8">
+            <section
+                class="flex flex-col gap-6 rounded-xl p-6 md:p-8 bg-white dark:bg-[#1a1d26] border border-slate-200 dark:border-[#3b4354] shadow-lg">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <div class="size-16 md:size-20 bg-center bg-no-repeat bg-cover rounded-full border-2 border-primary"
+                            data-alt="Company profile logo"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD11vXcW9BcXy4AtI-HD4aPNTuqJ149Rg_N_MnmcJM9BWwIw-QYLW8N49DSkWeLVhAy0Kzlxuf3UDAKApGtPTmot_sUjC5Hwvv-GZ4nTK_HlYAOFySqpX7Z98Sezi0kqiawPG84yRdqPGwqFHXgBuN7S4Cjf7BqYa-GNMU4TMLf57WhAElHDEXhnUt1vcjJa9I2GB25ZLlBh_sqqiw1J7fHjv5cGOgAqprJaUART7wvsgh_1XJwxfmaIegYpovk7Le51sbeeYOZldE");'>
+                        </div>
+                        <div class="flex flex-col">
+                            <h1
+                                class="text-3xl md:text-4xl font-black leading-tight tracking-tight text-slate-900 dark:text-white">
+                                Acme Corp
+                            </h1>
+                            <p class="text-slate-500 dark:text-[#9ca6ba] text-base md:text-lg">
+                                Your Profile Overview
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <button
+                            class="flex h-10 cursor-pointer items-center justify-center rounded-lg px-4 bg-slate-100 dark:bg-[#282e39] hover:bg-slate-200 dark:hover:bg-[#3b4354] transition-colors text-slate-700 dark:text-white gap-2 text-sm font-bold shadow-sm">
+                            <span class="material-symbols-outlined text-lg">edit</span>
+                            <span>Edit Profile</span>
+                        </button>
+                        <button
+                            class="flex h-10 cursor-pointer items-center justify-center rounded-lg px-4 bg-primary hover:bg-blue-600 transition-colors text-white gap-2 text-sm font-bold shadow-lg shadow-blue-500/20">
+                            <span class="material-symbols-outlined text-lg">add_circle</span>
+                            <span>Add Short</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Contact Information</h3>
+                        <div class="flex flex-col gap-1 text-slate-600 dark:text-slate-300 text-sm">
+                            <span class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-base">location_on</span> 123 Main Street, New
+                                York, NY 10001</span>
+                            <span class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-base">phone</span> +1 (212) 555-1234</span>
+                            <span class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-base">mail</span> contact@acmecorp.com</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Social Media</h3>
+                        <div class="flex items-center gap-4 text-primary text-xl">
+                            <a aria-label="Facebook" class="hover:text-blue-600 transition-colors" href="#">
+                                <svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14 10H17V7H14V5.21c0-1.02.43-1.63 1.75-1.63H18V.5L14.28.5C10.7 0 9.5 2.14 9.5 4.88V7H6V10H9.5V24H14V10Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a aria-label="Instagram" class="hover:text-pink-500 transition-colors" href="#">
+                                <svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.5 2C4.46 2 2 4.46 2 7.5V16.5C2 19.54 4.46 22 7.5 22H16.5C19.54 22 22 19.54 22 16.5V7.5C22 4.46 19.54 2 16.5 2H7.5ZM19.5 5.5C19.5 4.95 19.05 4.5 18.5 4.5C17.95 4.5 17.5 4.95 17.5 5.5C17.5 6.05 17.95 6.5 18.5 6.5C19.05 6.5 19.5 6.05 19.5 5.5ZM12 7C9.24 7 7 9.24 7 12C7 14.76 9.24 17 12 17C14.76 17 17 14.76 17 12C17 9.24 14.76 7 12 7ZM12 9C13.66 9 15 10.34 15 12C15 13.66 13.66 15 12 15C10.34 15 9 13.66 9 12C9 10.34 10.34 9 12 9Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a aria-label="LinkedIn" class="hover:text-blue-700 transition-colors" href="#">
+                                <svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21 0H3C1.34 0 0 1.34 0 3V21C0 22.66 1.34 24 3 24H21C22.66 24 24 22.66 24 21V3C24 1.34 22.66 0 21 0ZM8 19H5V8H8V19ZM6.5 6.73C5.55 6.73 4.8 5.98 4.8 5.03C4.8 4.08 5.55 3.33 6.5 3.33C7.45 3.33 8.2 4.08 8.2 5.03C8.2 5.98 7.45 6.73 6.5 6.73ZM19 19H16V13.5C16 12.02 15.98 10 13.84 10C11.66 10 11.33 11.61 11.33 13.06V19H8.33V8H11.33V9.3C11.75 8.44 12.83 7.85 14.33 7.85C17.5 7.85 18 9.94 18 13.19V19H19Z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a aria-label="Twitter" class="hover:text-sky-500 transition-colors" href="#">
+                                <svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.46 6C21.68 6.37 20.84 6.62 20 6.76C20.88 6.23 21.56 5.37 21.87 4.31C21.03 4.8 20.12 5.15 19.16 5.37C18.35 4.5 17.27 4 16.06 4C13.88 4 12.11 5.76 12.11 7.94C12.11 8.25 12.15 8.54 12.22 8.83C9.11 8.76 6.38 7.37 4.56 4.9C4.24 5.43 4.06 6.03 4.06 6.67C4.06 8.08 4.79 9.32 5.92 10.04C5.23 10.02 4.57 9.83 3.99 9.5V9.54C3.99 11.5 5.37 13.18 7.29 13.56C6.96 13.65 6.61 13.69 6.25 13.69C6.01 13.69 5.76 13.65 5.54 13.59C6.07 15.22 7.6 16.42 9.38 16.45C7.94 17.52 6.13 18.17 4.21 18.17C3.89 18.17 3.58 18.15 3.26 18.11C5.02 19.34 7.23 20.08 9.66 20.08C16.06 20.08 19.57 14.77 19.57 10.15C19.57 9.98 19.57 9.81 19.56 9.64C20.24 9.16 20.86 8.57 21.36 7.9Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-slate-200 dark:border-[#3b4354] pt-6 mt-4">
+                    <div
+                        class="flex flex-col gap-1 rounded-xl p-5 bg-white dark:bg-[#111318] border border-slate-200 dark:border-[#3b4354] shadow-sm">
+                        <div class="flex justify-between items-center">
+                            <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Views this week</p>
+                            <span class="material-symbols-outlined text-green-500 text-lg">trending_up</span>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <p class="text-slate-900 dark:text-white text-2xl font-bold">12.4k</p>
+                            <p class="text-green-500 text-xs font-bold">+12%</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col gap-1 rounded-xl p-5 bg-white dark:bg-[#111318] border border-slate-200 dark:border-[#3b4354] shadow-sm">
+                        <div class="flex justify-between items-center">
+                            <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Active Campaigns</p>
+                            <span class="material-symbols-outlined text-primary text-lg">campaign</span>
+                        </div>
+                        <p class="text-slate-900 dark:text-white text-2xl font-bold">2</p>
+                    </div>
+                    <div
+                        class="flex flex-col gap-1 rounded-xl p-5 bg-white dark:bg-[#111318] border border-slate-200 dark:border-[#3b4354] shadow-sm">
+                        <div class="flex justify-between items-center">
+                            <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Wallet Balance</p>
+                            <span
+                                class="material-symbols-outlined text-yellow-500 text-lg">account_balance_wallet</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-slate-900 dark:text-white text-2xl font-bold">$150</p>
+                            <button class="text-primary text-xs font-bold hover:underline">Top up</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="flex flex-col md:flex-row items-center justify-between gap-4 sticky top-[72px] z-30 py-4 bg-background-light dark:bg-background-dark/95 backdrop-blur-sm -mx-4 px-4 md:-mx-8 md:px-8 lg:-mx-12 lg:px-12 border-b border-transparent">
+                <div class="flex gap-3 overflow-x-auto hide-scrollbar w-full md:w-auto pb-1 md:pb-0">
+                    <button
+                        class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-5 shadow-md shadow-primary/20 transition-transform hover:scale-105 active:scale-95">
+                        <span class="text-sm font-bold">Trending in New York</span>
+                    </button>
+                    <button
+                        class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#282e39] border border-slate-200 dark:border-transparent hover:border-primary/50 text-slate-700 dark:text-slate-200 px-5 transition-colors">
+                        <span class="text-sm font-medium">My Industry</span>
+                    </button>
+                    <button
+                        class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#282e39] border border-slate-200 dark:border-transparent hover:border-primary/50 text-slate-700 dark:text-slate-200 px-5 transition-colors">
+                        <span class="text-sm font-medium">New Arrivals</span>
+                    </button>
+                    <button
+                        class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#282e39] border border-slate-200 dark:border-transparent hover:border-primary/50 text-slate-700 dark:text-slate-200 px-5 transition-colors">
+                        <span class="text-sm font-medium">High Engagement</span>
+                    </button>
+                </div>
+                <div class="hidden md:flex gap-2">
+                    <div class="text-slate-400 dark:text-slate-500 text-sm flex items-center gap-1">
+                        Sort by: <span
+                            class="text-slate-900 dark:text-white font-medium cursor-pointer">Relevance</span> <span
+                            class="material-symbols-outlined text-base">expand_more</span>
+                    </div>
+                </div>
+            </section>
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6">
+                <article
+                    class="group relative flex flex-col gap-3 rounded-xl bg-transparent transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden bg-slate-800 shadow-md">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Vertical video thumbnail showing a chef plating a gourmet dish"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgqB1Y2reOPYnrYRULbV5adIhIDGR0JMjGBvMeFXmFbAVIMIOLtw3Wsc5PMdgwFU-ym2cCsWbOfOuBsedicKMKjROI7J4NA293TiMdHsDhIl-vQUdnAxRzhiIJEu4nQHHQIqpBVz2pY-FItB1qNWqHYym-W0Zr7kTTKJ0SELtymU5_LZAhqm9Qo3xNpawnmELugFwE6ieyFjxrKcDrF0LBplBztOGPXvpSBzkDHeG8qwDE8pqpRD1beTj6QH10ghi2uWpIXyE7h3s');">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-white/20 backdrop-blur-md rounded-full p-4 text-white">
+                                <span class="material-symbols-outlined text-4xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 flex flex-col gap-2 items-end">
+                            <span
+                                class="bg-black/60 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded">0:45</span>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-4 text-white">
+                            <h3 class="font-bold text-lg leading-tight mb-1 line-clamp-2">Summer Lunch Special Promo
+                            </h3>
+                            <div class="flex items-center gap-2 text-xs text-slate-300 mb-3">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">visibility</span> 1.2k</span>
+                                <span>•</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">location_on</span> Soho, NY</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center px-1">
+                        <div class="flex items-center gap-2">
+                            <div class="size-8 rounded-full bg-slate-700 bg-cover bg-center" data-alt="Bistro logo"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD11vXcW9BcXy4AtI-HD4aPNTuqJ149Rg_N_MnmcJM9BWwIw-QYLW8N49DSkWeLVhAy0Kzlxuf3UDAKApGtPTmot_sUjC5Hwvv-GZ4nTK_HlYAOFySqpX7Z98Sezi0kqiawPG84yRdqPGwqFHXgBuN7S4Cjf7BqYa-GNMU4TMLf57WhAElHDEXhnUt1vcjJa9I2GB25ZLlBh_sqqiw1J7fHjv5cGOgAqprJaUART7wvsgh_1XJwxfmaIegYpovk7Le51sbeeYOZldE')">
+                            </div>
+                            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Downtown Bistro</span>
+                        </div>
+                        <button class="text-primary hover:text-blue-400 text-sm font-bold flex items-center gap-1">
+                            Promote <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </div>
+                </article>
+                <article
+                    class="group relative flex flex-col gap-3 rounded-xl bg-transparent transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden bg-slate-800 shadow-md">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Vertical video thumbnail showing a woman trying on fashion accessories"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpOUZ_y1qWEYv1MxlmChLoBohffNT51Adm-ZcOFs-S4OgQNpj2wAedZxKbJM3H3WX1ng-mkZuTO9aMB6SWPHSJ6VmoeD-FO4TaWSCMiImb70IV4S2ZsiUNohMmS6UwV_VcVrYujAWHEGtIz5kzvNG9xnkg1fNUni353E66XVGaugAEIgobaJr8DsU0PmhyaO1hwUPJhttO9zSSRw9mE57cH9TYYK6lzk-ZNmJu0Cp9wq7DaXJmtVdxZDHwRvjXkB2K_zZZ5WK02_Y');">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-white/20 backdrop-blur-md rounded-full p-4 text-white">
+                                <span class="material-symbols-outlined text-4xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 flex flex-col gap-2 items-end">
+                            <span
+                                class="bg-primary text-white text-xs font-bold px-2 py-1 rounded shadow-sm shadow-primary/50">Trending</span>
+                            <span
+                                class="bg-black/60 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded">0:15</span>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-4 text-white">
+                            <h3 class="font-bold text-lg leading-tight mb-1 line-clamp-2">New Fall Collection Arrival
+                            </h3>
+                            <div class="flex items-center gap-2 text-xs text-slate-300 mb-3">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">visibility</span> 8.5k</span>
+                                <span>•</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">location_on</span> Brooklyn</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center px-1">
+                        <div class="flex items-center gap-2">
+                            <div class="size-8 rounded-full bg-slate-700 bg-cover bg-center"
+                                data-alt="Fashion boutique logo"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrGYt1E6SbH0vP0IZ9WfgGktxDiUiM3tUWyIZZRoHSGd8r_QOK2Ds86wcg_oDOqaLEtlu6PUproNuOIscTDKzuZKgt-j3nYYyXOCttNngCvXuSJPwq_QK9y7fAGkx1y0afSV8x03TDod1dPVfH-5bqYkT389L1c3MQ9s7l8YIM900AqGVsD7b_is6GL7rYK0gU_eeEe-alBb2Cpb0FlEyXOtoZnbGMZJ4V-XcnSwTGAoQ2kzunIdBuNqwVNJJUt4dQogh1Lrik4pU')">
+                            </div>
+                            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Urban Chic</span>
+                        </div>
+                        <button class="text-primary hover:text-blue-400 text-sm font-bold flex items-center gap-1">
+                            Promote <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </div>
+                </article>
+                <article
+                    class="group relative flex flex-col gap-3 rounded-xl bg-transparent transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden bg-slate-800 shadow-md">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Vertical video thumbnail showing gym workout with weights"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUKFqAITA-ug8m4vHLvgRMaR5fOowrvWLSt6qLDz-IMBQq2vSiuW_mBNjtZniT9ih4SFnBNKD0--A7lBUjRyXniyFHrqJYA7pVU3yNRuhioUUTGL5i8lkNrbbAe-03VYDrgq-TcCxXY-TWwHYT1lRCWNh9WOfIvt-Uo2K3I9OfELlPrtRMZKnWvWrNsqB8QSOiqNvzb9QQXrJGXfYsuK05trthyY1IlaQgvo6UcTVi8-UBgj65bTDmvD4HtRXXwzIhu-uMjvrP6i0');">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-white/20 backdrop-blur-md rounded-full p-4 text-white">
+                                <span class="material-symbols-outlined text-4xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 flex flex-col gap-2 items-end">
+                            <span
+                                class="bg-black/60 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded">1:00</span>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-4 text-white">
+                            <h3 class="font-bold text-lg leading-tight mb-1 line-clamp-2">Get Fit This Summer - 50% Off
+                            </h3>
+                            <div class="flex items-center gap-2 text-xs text-slate-300 mb-3">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">visibility</span> 3.4k</span>
+                                <span>•</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">location_on</span> Chelsea</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center px-1">
+                        <div class="flex items-center gap-2">
+                            <div class="size-8 rounded-full bg-slate-700 bg-cover bg-center" data-alt="Gym logo"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3RqPjXc_jJQNjgKU0kzUMHQpRs1gSEN-j_IrPDqzeiG8dhYiNJA8zJharvETCSR_7rMMb9fH_TdjV_xo8seQe8BU89oz53wU6FujYc4FkFdYKz_5jMTwcKOrEgoKgDZoXEn2rDRfxmrHmKNjivwrLFeaJuUEGoTcPfczioTKCKFm3wrbV9_yO_TRTABhUYhkzhoZxKKlB4Bkek7LZzZ3_VjUbMOnWTAeoZbD0OpXzKAmPeCJbc1C5w-XvS_BpBoTOQdlHXNPCGdQ')">
+                            </div>
+                            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Iron Gym</span>
+                        </div>
+                        <button class="text-primary hover:text-blue-400 text-sm font-bold flex items-center gap-1">
+                            Promote <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </div>
+                </article>
+                <article
+                    class="group relative flex flex-col gap-3 rounded-xl bg-transparent transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden bg-slate-800 shadow-md">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Vertical video thumbnail showing coffee being poured latte art"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBd0_OqMpZrGd7k7aDnVJFxH-AUR3pZ52u7HzAsAFD6rcLba6opPyxERimWxO2zgWZ0DcnGC7-aAzMmHYkZdJ_qMTeapXlobPY6SP-k4v9pywAbom6X03pn9H03fosDSunOhv0x0PqcbuRLlzEG3YxtSakRvXuNmBHSLW7QSSPhTVEMJZDkre3e-mURj1kZfuVKupgi5VZQ-gGb7CrVLlrKNpZlvXjhUcXNJEkZJnrE9JlsH0eyzEBy2z22Kp0PatHk7g5Rf4MsjQ0');">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-white/20 backdrop-blur-md rounded-full p-4 text-white">
+                                <span class="material-symbols-outlined text-4xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 flex flex-col gap-2 items-end">
+                            <span
+                                class="bg-black/60 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded">0:30</span>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-4 text-white">
+                            <h3 class="font-bold text-lg leading-tight mb-1 line-clamp-2">Morning Brew Masterclass</h3>
+                            <div class="flex items-center gap-2 text-xs text-slate-300 mb-3">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">visibility</span> 920</span>
+                                <span>•</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">location_on</span> West Village</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center px-1">
+                        <div class="flex items-center gap-2">
+                            <div class="size-8 rounded-full bg-slate-700 bg-cover bg-center" data-alt="Coffee shop logo"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuOS9hrdrMmPDRIeAAJp-zSjtkpAgVwkJ5xzfHlIRCVKeyplIFa6bCmrJ-u3792DgBLSmvlq7YjqqxWlwJKmW2SMHyH1RzLJvMfl4C3bnCTVmXYZmnNhxtcWf3UyXQPS5HA9GU1oS5SFwrNQRxSsmILsYwV69w15AXry7f2E1GAFEq80JLRw5qST2KTUcLnfrc9uR7TcGoUD-uhm2j_xv6CsVFamMnE5GVHxM9Acx7efAZXQDPlj97TTrjIMFnSgTlVh6oiu_H6W8')">
+                            </div>
+                            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Bean &amp; Leaf</span>
+                        </div>
+                        <button class="text-primary hover:text-blue-400 text-sm font-bold flex items-center gap-1">
+                            Promote <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </div>
+                </article>
+                <article
+                    class="group relative flex flex-col gap-3 rounded-xl bg-transparent transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative w-full aspect-[9/16] rounded-xl overflow-hidden bg-slate-800 shadow-md">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Vertical video thumbnail showing modern tech workspace setup"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJAaJodeIJLMvqRBOpX9DwK1Ht1RuagfY7xibzc7NwGL76EIZOjsDN48_rpoz4MfuMBxc5x8jXit59Oe-fZPEDoErWoeLXeABpqURr_IgnObNZk2IDiKDvhxycXcClamKlIFCJCNLjaE7AaAtT-if3C-OmQlzCIlPn4013FwB9T1ek0_4W5sN8dSjdu5DaVHgp3rL6Ab8sMbwzHvxLpmcntd_J3Hn-XbItRh62r0sy-QY2YxYTIhUECMm6m9NwLl6iTKuxDD1pKCA');">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-white/20 backdrop-blur-md rounded-full p-4 text-white">
+                                <span class="material-symbols-outlined text-4xl">play_arrow</span>
+                            </div>
+                        </div>
+                        <div class="absolute top-3 right-3 flex flex-col gap-2 items-end">
+                            <span
+                                class="bg-black/60 backdrop-blur-sm text-white text-xs font-bold px-2 py-1 rounded">0:22</span>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-4 text-white">
+                            <h3 class="font-bold text-lg leading-tight mb-1 line-clamp-2">Coworking Spaces Available Now
+                            </h3>
+                            <div class="flex items-center gap-2 text-xs text-slate-300 mb-3">
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">visibility</span> 2.1k</span>
+                                <span>•</span>
+                                <span class="flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">location_on</span> Midtown</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center px-1">
+                        <div class="flex items-center gap-2">
+                            <div class="size-8 rounded-full bg-slate-700 bg-cover bg-center"
+                                data-alt="Real estate company logo"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC75DRVx0GOOPs9rXwU955kwwNaoAQQlKkpnO7vkixXxzHW9_o5ozZ7jmFqLnELyWdq8HDiRdBVCbuH_eO8bTqDq4VzGXuNAa1kDlW2VWumm9LdwvwAKCfXUhTx7veUgBsIFymPGREgDx6lRqmyCFMVe6dqoXWgBw4tQJ5jTO9qKvJPoBKWyFDL78trIh6_rwIT9Mr3QB9kvGanoGS-MGmoWNp4yG8oA9wQPrninNELi8icKUzPNof3OC_VB-XY64acPwB4v6EqQfo')">
+                            </div>
+                            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">WorkFlow Inc</span>
+                        </div>
+                        <button class="text-primary hover:text-blue-400 text-sm font-bold flex items-center gap-1">
+                            Promote <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </div>
+                </article>
+            </section>
+            <div class="flex justify-center py-8">
+                <button
+                    class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-white font-medium text-sm flex flex-col items-center gap-1 transition-colors">
+                    <span class="material-symbols-outlined animate-bounce">expand_more</span>
+                    Load More Videos
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

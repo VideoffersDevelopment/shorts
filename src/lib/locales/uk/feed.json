@@ -1,0 +1,71 @@
+{
+  "sort": {
+    "label": "Сортування",
+    "algorithmic": "Для вас",
+    "newest": "Найновіші",
+    "popular": "Популярні",
+    "trending": "У тренді",
+    "following": "Підписки"
+  },
+  "filters": {
+    "title": "Фільтри",
+    "apply": "Застосувати фільтри",
+    "clear": "Очистити все",
+    "location": {
+      "label": "Місцезнаходження",
+      "radius": "Радіус",
+      "detectLocation": "Визначити місцезнаходження",
+      "detecting": "Визначення...",
+      "wholeCountry": "Вся країна",
+      "nearMe": "Поруч ({distance})",
+      "radiusOptions": {
+        "1km": "1 км",
+        "5km": "5 км",
+        "10km": "10 км",
+        "25km": "25 км",
+        "50km": "50 км",
+        "all": "Вся країна"
+      }
+    },
+    "categories": {
+      "label": "Категорії",
+      "placeholder": "Виберіть категорії...",
+      "maxSelected": "Максимум {max} категорій"
+    },
+    "tags": {
+      "label": "Теги",
+      "placeholder": "Пошук тегів..."
+    },
+    "verifiedOnly": {
+      "label": "Тільки перевірені",
+      "description": "Показувати тільки shorts від перевірених компаній"
+    },
+    "activeFilters": "Активні фільтри: {count}"
+  },
+  "empty": {
+    "noShorts": {
+      "title": "Немає shorts у цьому районі",
+      "description": "Спробуйте розширити радіус або змінити фільтри",
+      "expandRadius": "Розширити радіус",
+      "clearFilters": "Скинути фільтри",
+      "browseAll": "Переглянути все"
+    },
+    "noFollowing": {
+      "title": "Ви ще не підписані на жодну компанію",
+      "description": "Відкрийте для себе місцеві компанії та почніть підписуватися",
+      "discoverCta": "Відкрити компанії"
+    }
+  },
+  "loading": {
+    "more": "Завантаження...",
+    "skeleton": "Це все!"
+  },
+  "card": {
+    "views": "{count} переглядів",
+    "likes": "{count} вподобань",
+    "distance": "в {distance}",
+    "cta": "Посилання",
+    "follow": "Підписатися",
+    "following": "Підписаний"
+  }
+}

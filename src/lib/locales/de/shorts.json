@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "title": "Kurzvideos",
+    "description": "Verwalten und veroffentlichen Sie Ihre Kurzvideos"
+  },
+  "verification": {
+    "pendingTitle": "Verifizierung ausstehend",
+    "pendingDescription": "Sie können Shorts hochladen und veröffentlichen, nachdem Ihr Unternehmen vom Administrator verifiziert wurde."
+  },
+  "addShort": {
+    "button": "Short hinzufügen",
+    "upgradeTitle": "Auf Firmenkonto upgraden",
+    "upgradeDescription": "Um Shorts hochzuladen und zu veröffentlichen, benötigen Sie ein Firmenkonto. Jetzt upgraden, um Ihre Geschäftsinhalte zu teilen.",
+    "upgradeAction": "Jetzt upgraden",
+    "pendingTitle": "Verifizierung ausstehend",
+    "pendingDescription": "Ihr Unternehmen wartet auf die Genehmigung durch den Administrator. Sie können Shorts hinzufügen, sobald die Verifizierung abgeschlossen ist.",
+    "pendingAction": "OK",
+    "cancel": "Abbrechen"
+  },
+  "list": {
+    "empty": {
+      "title": "Noch keine Videos",
+      "description": "Erstellen Sie Ihr erstes Video, um Ihr Unternehmen zu bewerben",
+      "action": "Video erstellen"
+    }
+  },
+  "create": {
+    "title": "Neues Video erstellen",
+    "description": "Laden Sie ein neues Kurzvideo hoch und veroffentlichen Sie es"
+  },
+  "wizard": {
+    "steps": {
+      "video": "Video",
+      "metadata": "Details",
+      "thumbnail": "Vorschaubild",
+      "review": "Uberprufen"
+    },
+    "video": {
+      "title": "Video hochladen",
+      "description": "Laden Sie Ihr Kurzvideo hoch (max. 60 Sekunden)",
+      "dragAndDrop": "Video hierher ziehen und ablegen",
+      "dropHere": "Video hier ablegen",
+      "browse": "oder Dateien durchsuchen",
+      "requirements": "MP4, WebM oder MOV - Maximal 100MB",
+      "uploading": "Video wird hochgeladen...",
+      "processing": "Video wird verarbeitet...",
+      "preview": "Videovorschau",
+      "changeVideo": "Video andern",
+      "aspectWarning": "Video ist nicht im 9:16-Format. Beste Ergebnisse mit vertikalen Videos."
+    },
+    "tags": {
+      "create": "Erstellen \"{tag}\""
+    },
+    "metadata": {
+      "title": "Video-Details",
+      "description": "Fugen Sie Titel, Beschreibung und Tags hinzu",
+      "fields": {
+        "title": "Titel",
+        "titlePlaceholder": "Geben Sie einen einpragsamen Titel ein",
+        "titleHint": "Maximal 100 Zeichen",
+        "description": "Beschreibung",
+        "descriptionPlaceholder": "Beschreiben Sie Ihr Kurzvideo",
+        "descriptionHint": "Optional, hilft aber bei der Auffindbarkeit",
+        "category": "Kategorie",
+        "categoryPlaceholder": "Kategorie auswahlen",
+        "tags": "Tags",
+        "tagsPlaceholder": "Fugen Sie Tags hinzu, damit Ihr Video gefunden wird",
+        "tagsHint": "Enter drucken, um Tag hinzuzufugen (max. 5)",
+        "location": "Standort",
+        "locationPlaceholder": "Standort hinzufugen (optional)",
+        "ctaLink": "Call-to-Action-Link",
+        "ctaLinkPlaceholder": "https://ihre-website.de",
+        "ctaLinkHint": "Optionaler Link auf Ihrem Video"
+      }
+    },
+    "thumbnail": {
+      "title": "Vorschaubild wahlen",
+      "description": "Wahlen oder laden Sie ein Vorschaubild fur Ihr Video hoch",
+      "auto": "Automatisch generiert",
+      "autoDescription": "Wir generieren ein Vorschaubild aus Ihrem Video",
+      "custom": "Eigenes Vorschaubild",
+      "customDescription": "Laden Sie Ihr eigenes Vorschaubild hoch",
+      "upload": "Vorschaubild hochladen",
+      "uploading": "Wird hochgeladen...",
+      "requirements": "JPEG oder PNG - Empfohlen 1080x1920",
+      "dragAndDrop": "Bild hierher ziehen und ablegen",
+      "preview": "Vorschau"
+    },
+    "review": {
+      "title": "Uberprufen & Veroffentlichen",
+      "description": "Uberprufen Sie Ihr Video vor der Veroffentlichung",
+      "sections": {
+        "video": "Video",
+        "details": "Details",
+        "thumbnail": "Vorschaubild"
+      },
+      "duration": "Dauer",
+      "category": "Kategorie",
+      "tags": "Tags",
+      "location": "Standort",
+      "ctaLink": "CTA-Link",
+      "noTags": "Keine Tags",
+      "noLocation": "Kein Standort",
+      "noCta": "Kein CTA-Link"
+    },
+    "navigation": {
+      "back": "Zuruck",
+      "next": "Weiter",
+      "publish": "Veroffentlichen",
+      "saveDraft": "Entwurf speichern"
+    }
+  },
+  "detail": {
+    "title": "Titel",
+    "description": "Beschreibung",
+    "category": "Kategorie",
+    "tags": "Tags",
+    "location": "Standort",
+    "ctaLink": "CTA-Link",
+    "duration": "Dauer",
+    "views": "Aufrufe",
+    "likes": "Likes",
+    "comments": "Kommentare",
+    "ctaClicks": "CTA-Klicks",
+    "createdAt": "Erstellt",
+    "publishedAt": "Veroffentlicht",
+    "expiresAt": "Lauft ab",
+    "archivedAt": "Archiviert",
+    "back": "Zuruck zu Videos",
+    "processing": "Wird verarbeitet",
+    "processingDescription": "Ihr Video wird verarbeitet. Dies kann einige Minuten dauern.",
+    "noThumbnail": "Kein Vorschaubild",
+    "statistics": "Statistiken",
+    "timeline": "Zeitverlauf"
+  },
+  "status": {
+    "DRAFT": "Entwurf",
+    "PENDING_PAYMENT": "Zahlung ausstehend",
+    "PROCESSING": "Wird verarbeitet",
+    "PUBLISHED": "Veroffentlicht",
+    "ARCHIVED": "Archiviert",
+    "DELETED": "Geloscht"
+  },
+  "actions": {
+    "view": "Ansehen",
+    "edit": "Bearbeiten",
+    "publish": "Veroffentlichen",
+    "archive": "Archivieren",
+    "duplicate": "Duplizieren",
+    "delete": "Loschen",
+    "renew": "Erneuern"
+  },
+  "publish": {
+    "title": "Video veroffentlichen",
+    "description": "Ihr Video wird nach der Veroffentlichung fur alle sichtbar sein",
+    "paymentRequired": "Zahlung erforderlich",
+    "paymentDescription": "Sie mussen {amount} bezahlen, um dieses Video zu veroffentlichen",
+    "useCredits": "Publikations-Credits verwenden",
+    "creditsAvailable": "Sie haben {count} Credits verfugbar",
+    "confirm": "Jetzt veroffentlichen",
+    "cancel": "Abbrechen"
+  },
+  "timeline": {
+    "draft": "Entwurf erstellt",
+    "payment": "Zahlung erhalten",
+    "processing": "Video wird verarbeitet",
+    "published": "Veröffentlicht",
+    "estimatedTime": "Geschätzte Zeit: {minutes} Minuten"
+  },
+  "navigation": {
+    "backToShorts": "Zurück zu Shorts"
+  },
+  "player": {
+    "play": "Abspielen",
+    "pause": "Pause",
+    "mute": "Stummschalten",
+    "unmute": "Ton einschalten",
+    "fullscreen": "Vollbild",
+    "exitFullscreen": "Vollbild beenden"
+  },
+  "publishing": {
+    "loading": "Wird geladen...",
+    "processing": {
+      "title": "Ihr Video wird verarbeitet",
+      "description": "Dies kann einige Minuten dauern. Wir benachrichtigen Sie, wenn es bereit ist.",
+      "doNotClose": "Schließen Sie diese Seite nicht"
+    },
+    "title": "Ihr Video wird veroffentlicht",
+    "description": "Bitte warten Sie, wahrend wir Ihr Video verarbeiten",
+    "steps": {
+      "payment": "Zahlung wird verarbeitet",
+      "transcoding": "Video wird transcodiert",
+      "publishing": "Video wird veroffentlicht"
+    },
+    "success": {
+      "title": "Video veroffentlicht!",
+      "description": "Ihr Video ist jetzt live und fur alle sichtbar",
+      "viewShort": "Video ansehen",
+      "createAnother": "Weiteres erstellen"
+    },
+    "error": {
+      "title": "Veroffentlichung fehlgeschlagen",
+      "description": "Beim Veroffentlichen Ihres Videos ist ein Fehler aufgetreten",
+      "retry": "Erneut versuchen",
+      "contact": "Support kontaktieren"
+    },
+    "notStarted": {
+      "title": "Video nicht veröffentlicht",
+      "description": "Dieses Video ist noch ein Entwurf. Gehen Sie zurück zur Bearbeitung und klicken Sie auf 'Veröffentlichen'.",
+      "goToEdit": "Zur Bearbeitung"
+    }
+  },
+  "archive": {
+    "title": "Video archivieren",
+    "description": "Das Video wird vor der offentlichen Ansicht verborgen. Sie konnen es spater wiederherstellen.",
+    "confirm": "Archivieren",
+    "cancel": "Abbrechen"
+  },
+  "delete": {
+    "title": "Video loschen",
+    "description": "Diese Aktion kann nicht ruckgangig gemacht werden. Das Video wird dauerhaft geloscht.",
+    "confirm": "Loschen",
+    "cancel": "Abbrechen"
+  },
+  "renew": {
+    "title": "Video erneuern",
+    "description": "Verlangern Sie die Sichtbarkeit Ihres Videos um weitere 30 Tage",
+    "currentExpiry": "Aktuelles Ablaufdatum: {date}",
+    "newExpiry": "Neues Ablaufdatum: {date}",
+    "cost": "Kosten: {amount}",
+    "confirm": "Jetzt erneuern",
+    "cancel": "Abbrechen",
+    "useCredit": "1 Guthaben wird fur die Erneuerung dieses Videos verwendet",
+    "needsPayment": "Sie mussen Guthaben kaufen, um dieses Video zu erneuern"
+  },
+  "public": {
+    "title": "Kurzvideo",
+    "description": "Sehen Sie sich dieses Kurzvideo an",
+    "by": "von",
+    "views": "Aufrufe",
+    "likes": "Likes",
+    "share": "Teilen",
+    "copyLink": "Link kopieren",
+    "report": "Melden",
+    "visitWebsite": "Website besuchen",
+    "viewCompany": "Unternehmen ansehen",
+    "location": "Standort",
+    "company": "Unternehmen",
+    "archived": "Archiviert",
+    "archivedMessage": "Dieses Video wurde archiviert und ist im Feed nicht mehr aktiv.",
+    "openInMaps": "In Google Maps offnen",
+    "videoNotAvailable": "Video nicht verfugbar",
+    "copied": "Kopiert!",
+    "openNewTab": "In neuem Tab offnen",
+    "linkCopiedTitle": "Link kopiert!",
+    "linkCopiedDescription": "Der Link wurde in die Zwischenablage kopiert.",
+    "copyFailedTitle": "Kopieren fehlgeschlagen",
+    "copyFailedDescription": "Bitte kopieren Sie den Link manuell."
+  },
+  "email": {
+    "expirySubject": "Ihr Video lauft in 7 Tagen ab!",
+    "publishedSubject": "Ihr Video ist live!"
+  },
+  "table": {
+    "columns": {
+      "thumbnail": "Vorschau",
+      "title": "Titel",
+      "status": "Status",
+      "views": "Aufrufe",
+      "likes": "Likes",
+      "publishedAt": "Veroffentlicht",
+      "expiresAt": "Lauft ab",
+      "actions": "Aktionen"
+    },
+    "empty": "Keine Videos gefunden",
+    "loading": "Videos werden geladen..."
+  },
+  "filters": {
+    "all": "Alle",
+    "drafts": "Entwurfe",
+    "published": "Veroffentlicht",
+    "archived": "Archiviert",
+    "search": "Videos suchen...",
+    "sortBy": "Sortieren nach",
+    "sortOptions": {
+      "newest": "Neueste zuerst",
+      "oldest": "Alteste zuerst",
+      "mostViews": "Meiste Aufrufe",
+      "mostLikes": "Meiste Likes"
+    }
+  },
+  "errors": {
+    "loadFailed": "Videos konnten nicht geladen werden",
+    "createFailed": "Video konnte nicht erstellt werden",
+    "updateFailed": "Video konnte nicht aktualisiert werden",
+    "deleteFailed": "Video konnte nicht geloscht werden",
+    "publishFailed": "Video konnte nicht veroffentlicht werden",
+    "archiveFailed": "Video konnte nicht archiviert werden",
+    "uploadFailed": "Datei konnte nicht hochgeladen werden",
+    "invalidVideo": "Ungultiges Videoformat",
+    "videoTooLarge": "Videodatei ist zu gross (max. 100MB)",
+    "videoTooLong": "Video ist zu lang (max. 60 Sekunden)",
+    "invalidThumbnail": "Ungultiges Vorschaubildformat",
+    "thumbnailTooLarge": "Vorschaubilddatei ist zu gross (max. 5MB)",
+    "titleRequired": "Titel ist erforderlich",
+    "categoryRequired": "Kategorie ist erforderlich",
+    "unauthorized": "Sie sind nicht berechtigt, diese Aktion auszufuhren",
+    "notFound": "Video nicht gefunden",
+    "renewFailed": "Fehler beim Erneuern des Shorts",
+    "invalidInput": "Ungultige Eingabe"
+  },
+  "success": {
+    "created": "Video erfolgreich erstellt",
+    "updated": "Video erfolgreich aktualisiert",
+    "deleted": "Video erfolgreich geloscht",
+    "published": "Video erfolgreich veroffentlicht",
+    "archived": "Video erfolgreich archiviert",
+    "renewed": "Video erfolgreich erneuert",
+    "draftSaved": "Entwurf erfolgreich gespeichert"
+  },
+  "edit": {
+    "title": "Video bearbeiten",
+    "description": "Aktualisieren Sie die Video-Details",
+    "titleLabel": "Titel",
+    "descriptionLabel": "Beschreibung",
+    "tagsLabel": "Tags",
+    "ctaLinkLabel": "CTA-Link",
+    "save": "Anderungen speichern",
+    "cancel": "Abbrechen",
+    "success": "Video erfolgreich aktualisiert",
+    "error": "Video konnte nicht aktualisiert werden"
+  },
+  "duplicate": {
+    "success": "Video erfolgreich dupliziert",
+    "error": "Video konnte nicht dupliziert werden",
+    "limitReached": "Entwurfslimit erreicht (max. 10)"
+  },
+  "comments": {
+    "title": "Kommentare",
+    "count": "Kommentare (%count%)",
+    "placeholder": "Kommentar schreiben...",
+    "submit": "Senden",
+    "edit": "Bearbeiten",
+    "reply": "Antworten",
+    "delete": "Löschen",
+    "deleted": "Kommentar gelöscht",
+    "edited": "bearbeitet",
+    "editExpired": "Bearbeitungszeit abgelaufen",
+    "loginRequired": "Melden Sie sich an, um zu kommentieren",
+    "pending": "Wartet auf Moderation",
+    "empty": "Noch keine Kommentare. Sei der Erste!",
+    "sortNewest": "Neueste",
+    "sortOldest": "Älteste",
+    "sortMostLiked": "Beliebteste",
+    "charLimit": "%count%/500 Zeichen",
+    "loadMore": "Mehr laden",
+    "confirmDelete": "Möchten Sie diesen Kommentar wirklich löschen?",
+    "deleteSuccess": "Kommentar gelöscht",
+    "deleteFailed": "Kommentar konnte nicht gelöscht werden",
+    "createFailed": "Kommentar konnte nicht hinzugefügt werden",
+    "editFailed": "Kommentar konnte nicht bearbeitet werden"
+  },
+  "reactions": {
+    "like": "Gefällt mir",
+    "dislike": "Gefällt mir nicht",
+    "fire": "Feuer",
+    "heart": "Herz",
+    "laugh": "Lustig",
+    "wow": "Wow",
+    "clap": "Applaus",
+    "loginRequired": "Melden Sie sich an, um zu reagieren",
+    "rateLimited": "Zu viele Reaktionen. Versuchen Sie es später."
+  },
+  "backToFeed": "Zuruck zum Feed",
+  "viewOffer": "Angebot ansehen",
+  "viewCompany": "Unternehmen ansehen",
+  "relatedShorts": "Ahnliche Shorts"
+}

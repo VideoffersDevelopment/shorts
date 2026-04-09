@@ -1,0 +1,36 @@
+{
+  "bar": {
+    "placeholder": "Search shorts, companies, categories...",
+    "shortcut": "Ctrl+K",
+    "clear": "Clear search"
+  },
+  "company": {
+    "shortsCount": "{count} shorts"
+  },
+  "suggestions": {
+    "recent": "Recent searches",
+    "popular": "Popular searches",
+    "shorts": "Shorts",
+    "companies": "Companies",
+    "clearRecent": "Clear history"
+  },
+  "tabs": {
+    "all": "All",
+    "shorts": "Shorts",
+    "companies": "Companies"
+  },
+  "results": {
+    "title": "Results for: {query}",
+    "count": "{count} results",
+    "noResults": {
+      "title": "No results for: {query}",
+      "description": "Try different keywords or check spelling",
+      "suggestions": "You might be interested in:"
+    }
+  },
+  "filters": {
+    "inCategory": "in category",
+    "inLocation": "in location"
+  },
+  "loading": "Searching..."
+}

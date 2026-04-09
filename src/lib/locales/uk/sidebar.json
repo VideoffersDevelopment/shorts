@@ -1,0 +1,30 @@
+{
+  "accessibility": {
+    "openMenu": "Відкрити меню",
+    "companyNavigation": "Навігація компанії",
+    "navigationMenu": "Меню навігації"
+  },
+  "collapse": "Згорнути меню",
+  "home": "Головна",
+  "trending": "Популярне",
+  "following": "Підписки",
+  "saved": "Збережене",
+  "categories": "Категорії",
+  "profile": "Профіль",
+  "settings": "Налаштування",
+  "preferences": "Налаштування",
+  "logout": "Вийти",
+  "menu": {
+    "upgradeToCompany": "Перейти на бізнес-акаунт",
+    "companyProfile": "Профіль компанії",
+    "adminPanel": "Панель адміністратора",
+    "myShorts": "Мої Shorts",
+    "credits": "Кредити"
+  },
+  "company": {
+    "profile": "Профіль компанії",
+    "shorts": "Мої Shorts",
+    "credits": "Кредити"
+  },
+  "admin": "Панель адміністратора"
+}

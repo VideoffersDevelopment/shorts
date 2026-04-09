@@ -1,0 +1,46 @@
+{
+  "verifyEmail": {
+    "subject": "Potwierdź swój adres email - VideoShorts",
+    "preview": "Potwierdź swój adres email - VideoShorts",
+    "title": "Witaj w VideoShorts!",
+    "body": "Potwierdź swój adres email, klikając poniższy przycisk:",
+    "button": "Potwierdź email",
+    "footer": "Jeśli nie zakładałeś konta, możesz zignorować tę wiadomość."
+  },
+  "passwordReset": {
+    "subject": "Zresetuj hasło - VideoShorts",
+    "preview": "Zresetuj hasło - VideoShorts",
+    "title": "Żądanie resetowania hasła",
+    "body": "Kliknij poniższy przycisk, aby zresetować hasło:",
+    "button": "Zresetuj hasło",
+    "footer": "Ten link wygasa za 1 godzinę. Jeśli nie żądałeś resetowania hasła, możesz zignorować tę wiadomość."
+  },
+  "welcome": {
+    "subject": "Witaj w VideoShorts!",
+    "preview": "Witaj w VideoShorts!",
+    "title": "Witaj w VideoShorts!",
+    "body1": "Dziękujemy za weryfikację adresu email. Twoje konto jest teraz w pełni aktywne.",
+    "body2": "Możesz teraz tworzyć i udostępniać krótkie filmy całemu światu.",
+    "button": "Przejdź do panelu",
+    "footer": "Masz pytania? Skontaktuj się z naszym zespołem wsparcia."
+  },
+  "companyVerified": {
+    "subject": "Firma Zweryfikowana - VideoShorts",
+    "title": "Firma Zweryfikowana",
+    "body": "Twoja firma {{companyName}} została zweryfikowana.",
+    "footer": "Możesz teraz korzystać ze wszystkich funkcji firmowych."
+  },
+  "companyRejected": {
+    "subject": "Weryfikacja Firmy Odrzucona - VideoShorts",
+    "title": "Weryfikacja Firmy Odrzucona",
+    "body": "Weryfikacja Twojej firmy {{companyName}} została odrzucona.",
+    "reason": "Powód: {{reason}}",
+    "footer": "Skontaktuj się z pomocą techniczną, jeśli masz pytania."
+  },
+  "companyDeleted": {
+    "subject": "Firma usunięta - VideoShorts",
+    "title": "Twoja firma została usunięta",
+    "body": "Firma {{companyName}} została usunięta z naszego serwisu przez administratora.",
+    "footer": "Jeśli uważasz, że to pomyłka, skontaktuj się z pomocą techniczną."
+  }
+}

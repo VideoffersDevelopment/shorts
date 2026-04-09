@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>VideoShorts - Local Business Promotions</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for horizontal scrolling areas */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white overflow-x-hidden min-h-screen flex flex-col">
+    <!-- Sticky Header -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-[#282e39] bg-white/95 dark:bg-[#111318]/95 backdrop-blur-md">
+        <div class="px-4 md:px-6 lg:px-8 py-3 flex items-center justify-between gap-4 max-w-[1600px] mx-auto">
+            <!-- Left: Logo & Search -->
+            <div class="flex items-center gap-6 lg:gap-10 flex-1">
+                <a class="flex items-center gap-3 text-[#111318] dark:text-white shrink-0" href="#">
+                    <div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+                        <span class="material-symbols-outlined text-[20px]">play_arrow</span>
+                    </div>
+                    <h2 class="hidden md:block text-lg font-bold tracking-tight">VideoShorts</h2>
+                </a>
+                <div
+                    class="hidden md:flex w-[500px] items-center rounded-lg border border-gray-300 dark:border-border-dark bg-gray-50 dark:bg-surface-dark overflow-hidden h-10">
+                    <div class="flex flex-1 items-center px-3 border-r border-gray-300 dark:border-border-dark">
+                        <span class="material-symbols-outlined text-text-secondary" style="font-size: 20px;">search</span>
+                        <input
+                            class="w-full bg-transparent border-none focus:ring-0 text-sm placeholder:text-text-secondary text-slate-900 dark:text-white"
+                            placeholder="Search businesses..." />
+                    </div>
+                    <div class="flex flex-1 items-center px-3">
+                        <span class="material-symbols-outlined text-text-secondary" style="font-size: 20px;">location_on</span>
+                        <input
+                            class="w-full bg-transparent border-none focus:ring-0 text-sm placeholder:text-text-secondary text-slate-900 dark:text-white"
+                            placeholder="New York, NY" value="New York, NY" />
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Actions -->
+            <div class="flex items-center justify-end gap-3 md:gap-4 shrink-0">
+                <!-- Action Buttons -->
+                <div class="flex items-center gap-2">
+                    <button
+                        class="hidden sm:flex h-10 px-4 items-center justify-center rounded-lg bg-gray-200 dark:bg-[#282e39] hover:bg-gray-300 dark:hover:bg-[#3a4250] text-[#111318] dark:text-white text-sm font-bold transition-colors">
+                        Log In
+                    </button>
+                    <button
+                        class="h-10 px-4 flex items-center justify-center rounded-lg bg-primary hover:bg-blue-600 text-white text-sm font-bold shadow-lg shadow-primary/20 transition-colors">
+                        Get Started
+                    </button>
+                    <button
+                        class="size-10 flex items-center justify-center rounded-lg bg-gray-200 dark:bg-[#282e39] text-[#111318] dark:text-white ml-1">
+                        <span class="material-symbols-outlined text-[20px]">notifications</span>
+                    </button>
+                    <button
+                        class="size-10 flex md:hidden items-center justify-center rounded-lg bg-gray-200 dark:bg-[#282e39] text-[#111318] dark:text-white">
+                        <span class="material-symbols-outlined text-[20px]">search</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Layout -->
+    <main class="flex-1 w-full max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 py-6 flex flex-col gap-8">
+        <!-- Hero Section -->
+        <section
+            class="w-full rounded-2xl overflow-hidden relative min-h-[300px] md:min-h-[360px] flex items-center justify-center">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover"
+                    data-alt="Busy modern collaborative workspace with people talking"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSRKrscmSAjlvwKVfso2Ph56qBtJ-o15DkJzmfx0h9Bwr5lkE7k2OPShq_qtTYFXK9NkjmilnSYjqsR0LeT9DQUTHmrrNkt1PB7_yJwXYepLhvyTsralPoOWQ4fNdwN9KJrKb1yfxbGbXLCRQfuF7xilRMY8-6TEp4du1mytZgMYFmOkhZsalWVwn-nysyOpt4R1Ailc00X-9bDT75BPH6NtMSF8TmGagaaTwUEVd9nVzrS47Twgplv3DKgaBwstlbAoSlqYDpvcM" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-background-dark/90 via-background-dark/70 to-background-dark/30">
+                </div>
+            </div>
+            <!-- Hero Content -->
+            <div class="relative z-10 max-w-2xl text-center px-4 flex flex-col items-center gap-6">
+                <h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight">
+                    Promote your business in <span class="text-primary">60 seconds</span>
+                </h1>
+                <p class="text-gray-300 text-base md:text-lg font-medium max-w-lg">
+                    Short Videos. Big Local Impact. Reach customers nearby with authentic vertical video content.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button
+                        class="h-12 px-6 rounded-lg bg-primary hover:bg-blue-600 text-white font-bold text-base transition-all transform hover:scale-105">
+                        Start Publishing
+                    </button>
+                    <button
+                        class="h-12 px-6 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold text-base transition-colors border border-white/10">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Filters & Navigation Rail -->
+        <section
+            class="flex flex-col gap-4 sticky top-[72px] z-40 bg-background-light dark:bg-background-dark py-2 -mx-4 px-4 md:mx-0 md:px-0">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <!-- Segmented Control -->
+                <div class="flex p-1 bg-gray-200 dark:bg-[#282e39] rounded-lg w-full md:w-auto shrink-0">
+                    <label
+                        class="cursor-pointer flex-1 md:w-32 py-2 px-3 rounded-md bg-white dark:bg-[#111318] shadow-sm text-[#111318] dark:text-white text-sm font-bold text-center transition-all">
+                        <input checked="" class="hidden" name="feed_filter" type="radio" />
+                        Discover
+                    </label>
+                    <label
+                        class="cursor-pointer flex-1 md:w-32 py-2 px-3 rounded-md text-gray-500 dark:text-[#9ca6ba] hover:text-[#111318] dark:hover:text-white text-sm font-medium text-center transition-colors">
+                        <input class="hidden" name="feed_filter" type="radio" />
+                        Near Me
+                    </label>
+                    <label
+                        class="cursor-pointer flex-1 md:w-32 py-2 px-3 rounded-md text-gray-500 dark:text-[#9ca6ba] hover:text-[#111318] dark:hover:text-white text-sm font-medium text-center transition-colors">
+                        <input class="hidden" name="feed_filter" type="radio" />
+                        Following
+                    </label>
+                </div>
+                <!-- Chips (Scrollable on mobile) -->
+                <div class="flex gap-2 overflow-x-auto hide-scrollbar pb-1 items-center">
+                    <button
+                        class="shrink-0 h-9 px-4 rounded-full border border-gray-300 dark:border-[#282e39] hover:border-primary text-sm font-medium text-[#111318] dark:text-white bg-transparent dark:hover:bg-[#282e39] transition-colors whitespace-nowrap">
+                        🍽️ Food &amp; Drink
+                    </button>
+                    <button
+                        class="shrink-0 h-9 px-4 rounded-full border border-gray-300 dark:border-[#282e39] hover:border-primary text-sm font-medium text-[#111318] dark:text-white bg-transparent dark:hover:bg-[#282e39] transition-colors whitespace-nowrap">
+                        🛍️ Retail
+                    </button>
+                    <button
+                        class="shrink-0 h-9 px-4 rounded-full border border-gray-300 dark:border-[#282e39] hover:border-primary text-sm font-medium text-[#111318] dark:text-white bg-transparent dark:hover:bg-[#282e39] transition-colors whitespace-nowrap">
+                        🔧 Services
+                    </button>
+                    <button
+                        class="shrink-0 h-9 px-4 rounded-full border border-gray-300 dark:border-[#282e39] hover:border-primary text-sm font-medium text-[#111318] dark:text-white bg-transparent dark:hover:bg-[#282e39] transition-colors whitespace-nowrap">
+                        💪 Health &amp; Fitness
+                    </button>
+                    <button
+                        class="shrink-0 h-9 px-4 rounded-full border border-gray-300 dark:border-[#282e39] hover:border-primary text-sm font-medium text-[#111318] dark:text-white bg-transparent dark:hover:bg-[#282e39] transition-colors whitespace-nowrap">
+                        🏠 Real Estate
+                    </button>
+                    <button
+                        class="shrink-0 h-9 px-4 rounded-full border border-gray-300 dark:border-[#282e39] hover:border-primary text-sm font-medium text-[#111318] dark:text-white bg-transparent dark:hover:bg-[#282e39] transition-colors whitespace-nowrap">
+                        More +
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Video Feed Grid -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <!-- Card 1 -->
+            <div
+                class="group relative flex flex-col gap-0 rounded-2xl overflow-hidden bg-[#282e39] shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                <div class="relative w-full aspect-[9/16] bg-gray-800 overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Chef putting fresh basil on a gourmet pizza"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXAMNq4vyRClBXKj1EQC9YrbF-o0tNcRmGqvQKzY3ZGEMICu_AfJsMSThCGVpfWGLVtQUiIjhCuofUea99z-llbNjzKWBf4SuYgMcnhcBVKC3JuHibahcX2-wn1nKfVcJzC0hkxJeAtZES2hoiq5i0xsZre8Fsf1JNE5MLoulj4eYJzBonwLbpu9WYWSCdcw-HlHlvgZ9nLvSc75oXIrgAWMHBY4mKEZ1QUSXT1iih0OSC6cknry2-4jpg0qh3tEYFJqLb-DqlFg0" />
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+                    <!-- Stats Badge -->
+                    <div
+                        class="absolute top-3 right-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-2.5 py-1 flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-white text-[14px]">visibility</span>
+                        <span class="text-white text-xs font-bold">4.2k</span>
+                    </div>
+                    <!-- Card Content -->
+                    <div class="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-3">
+                        <div class="flex items-start justify-between gap-2">
+                            <div class="flex flex-col gap-0.5">
+                                <h3 class="text-white font-bold text-lg leading-tight line-clamp-2">Joe's Pizza - Best
+                                    Slice in NYC</h3>
+                                <div class="flex items-center gap-1 text-gray-300 text-xs">
+                                    <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                    <span>Brooklyn • 0.2 mi</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Business Info Row -->
+                        <div class="flex items-center gap-2 mt-1">
+                            <div class="size-6 rounded-full bg-white flex items-center justify-center overflow-hidden">
+                                <img class="w-full h-full object-cover" data-alt="Pizza logo"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNJ_G2_lzu9SdzCfFAY9v34rf2azeJJXcHhhRepGRIZCgCs3m-RkAYVX6AvRmNPqBz4knDBRYS78_F8Gkn3B7m1qDTLBatZN9AY8BIZt4-3FZgGX9G547zsm9r3sSI6m-WaCF-9vkuWwEc7Pkw0o8a1UMF0xS7x7pvVTzUH_z5avNY5_Y6WoZTB9NWScATSAQcDBozkmt5DSbf_0qMTvJe-1fX5qDpnx4y5_mAFA9aASqoGLlCpTomlJ8bAqrtMfZrkFePfH9_A7w" />
+                            </div>
+                            <span class="text-white text-sm font-medium truncate flex-1 flex items-center gap-1">
+                                Joe's Pizza
+                                <span class="material-symbols-outlined text-blue-400 text-[16px] fill">verified</span>
+                            </span>
+                        </div>
+                        <!-- CTA -->
+                        <button
+                            class="w-full h-10 mt-1 bg-primary hover:bg-blue-600 text-white text-sm font-bold rounded-lg transition-colors flex items-center justify-center gap-2">
+                            <span>Order Now</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div
+                class="group relative flex flex-col gap-0 rounded-2xl overflow-hidden bg-[#282e39] shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                <div class="relative w-full aspect-[9/16] bg-gray-800 overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Woman doing yoga pose in a modern studio"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAntHqTPNj1zX4FP73vQ-y0ugGHKhDK4_CdkRFeCqtxDIpBTcIRNg-V436Xn8CvQf2i89J0Q47OpicmRQk3vdv2YdTwjNJhUlTuqW9UAYRqCT5JK6M_w-KT6Ybh_vU6EL3zjLvrz4Zyr02HOAwJ202cCCEon9148cAu-VrGeHmQyt4ImpjJHdWfNeIjVM6jNVpKmDJaMIQQAJOfJVXovVWrHt495cToVaWwtmGHc9gQyqoycDwqmR5b0Aj4Ku2pQhwF2gaHFzDR7io" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+                    <div
+                        class="absolute top-3 right-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-2.5 py-1 flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-white text-[14px]">favorite</span>
+                        <span class="text-white text-xs font-bold">856</span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-3">
+                        <div class="flex flex-col gap-0.5">
+                            <h3 class="text-white font-bold text-lg leading-tight line-clamp-2">Morning Flow - All
+                                Levels Welcome</h3>
+                            <div class="flex items-center gap-1 text-gray-300 text-xs">
+                                <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                <span>SoHo • 0.8 mi</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 mt-1">
+                            <div
+                                class="size-6 rounded-full bg-indigo-500 flex items-center justify-center text-white text-xs font-bold">
+                                Z
+                            </div>
+                            <span class="text-white text-sm font-medium truncate flex-1 flex items-center gap-1">
+                                Zen Studio
+                                <span class="material-symbols-outlined text-blue-400 text-[16px] fill">verified</span>
+                            </span>
+                        </div>
+                        <button
+                            class="w-full h-10 mt-1 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-sm font-bold rounded-lg transition-colors flex items-center justify-center gap-2 border border-white/10">
+                            Book Class
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div
+                class="group relative flex flex-col gap-0 rounded-2xl overflow-hidden bg-[#282e39] shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                <div class="relative w-full aspect-[9/16] bg-gray-800 overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Mannequin in a modern clothing store display"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb2ueBxeR6uzfkVGfSfctbYOtQafkXU-xPyKNNYS06yn0xOHAx26DIkxwvkSIMhpBoktP66mOsDnPdIc-sz8YQmJqG3pCY6PRin9efKF1fm9eSjE0gw4uHj-ftc_Su7K4AH823jX9g1dB77lKHmPhUtywctPbmgYUL9n3aTmsFWwCnhHPD1yVZAVp_iiu9u7YhDb0laesyeVw4bRf4-jtH43b7IVb9xraBciwe9FVsl6RngdHS-3jdOtzFUNX_zxPLpmGrrRmbIUU" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+                    <div
+                        class="absolute top-3 right-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-2.5 py-1 flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-white text-[14px]">visibility</span>
+                        <span class="text-white text-xs font-bold">12.5k</span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-3">
+                        <div class="flex flex-col gap-0.5">
+                            <h3 class="text-white font-bold text-lg leading-tight line-clamp-2">New Summer Collection
+                                Arrived! ☀️</h3>
+                            <div class="flex items-center gap-1 text-gray-300 text-xs">
+                                <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                <span>West Village • 1.2 mi</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 mt-1">
+                            <div
+                                class="size-6 rounded-full bg-pink-500 flex items-center justify-center overflow-hidden">
+                                <img class="w-full h-full object-cover" data-alt="Fashion Logo"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDeA0M0AWY2XVwR8ZQd29caOj6ioF3-XzYut7bq1Eu-CvvghAuh1myHvTsEOTzkucrPktVdAgvb4NdzSwfDLSnw1HffxkJk9DsoL_dwVq8S9_AhkldSdDKtu5PpwRR9rYx5EKBlyEGkHb0WluXl57uo6u15ZBzzjNDlFt9a9_5RvtuYIHG4uUxl00d4f-BvymhcDCYHa7T25a72mm0J_tOE6hyUT-chk94Gl-Pfyn3vZnFzU2_oGlT2rq_Nn10kOprNJ0NqRma2ek" />
+                            </div>
+                            <span class="text-white text-sm font-medium truncate flex-1 flex items-center gap-1">
+                                Urban Thread
+                                <span class="material-symbols-outlined text-blue-400 text-[16px] fill">verified</span>
+                            </span>
+                        </div>
+                        <button
+                            class="w-full h-10 mt-1 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-sm font-bold rounded-lg transition-colors flex items-center justify-center gap-2 border border-white/10">
+                            Visit Store
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div
+                class="group relative flex flex-col gap-0 rounded-2xl overflow-hidden bg-[#282e39] shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                <div class="relative w-full aspect-[9/16] bg-gray-800 overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Electrician fixing wires in a home"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_XU93lsjks76liVhwnothB3XhWFd2tmGi0IownkxkSmiovXbnV9ekcSuubivU_AJWLPjRxA4n-mXtO42rf36-wwyMfQulauqM0GbP1sJbkIRZs7DmYKZzyV6QSOsQfxqO2_oFnCqJI6-uNVzcczQz4u5idKylV_Evg12KzjjpszN_n8tWT9kRVPtULgRjyd0rccQXXnH2RfrhEROOj0YQvYZ2nWO6t0SfQxmIEqDvKAU0LXiQJt02OaCnZ-ayVAQaw92iqc4ccVA" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+                    <div
+                        class="absolute top-3 right-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-2.5 py-1 flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-white text-[14px]">visibility</span>
+                        <span class="text-white text-xs font-bold">1.1k</span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-3">
+                        <div class="flex flex-col gap-0.5">
+                            <h3 class="text-white font-bold text-lg leading-tight line-clamp-2">24/7 Emergency Repairs
+                            </h3>
+                            <div class="flex items-center gap-1 text-gray-300 text-xs">
+                                <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                <span>Queens • 5.0 mi</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 mt-1">
+                            <div
+                                class="size-6 rounded-full bg-orange-500 flex items-center justify-center text-white text-[10px] font-bold">
+                                EF
+                            </div>
+                            <span class="text-white text-sm font-medium truncate flex-1 flex items-center gap-1">
+                                Expert Fixers
+                            </span>
+                        </div>
+                        <button
+                            class="w-full h-10 mt-1 bg-primary hover:bg-blue-600 text-white text-sm font-bold rounded-lg transition-colors flex items-center justify-center gap-2">
+                            Call Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div
+                class="group relative flex flex-col gap-0 rounded-2xl overflow-hidden bg-[#282e39] shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                <div class="relative w-full aspect-[9/16] bg-gray-800 overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Barista pouring latte art in a coffee cup"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQhRDlMTRkta9VR2vkDpFmcWDX2OFOnpIMbi2KwP0dIpoQGQy_XLbYJf2l6J5R2PTsF_-cXXp3V3zgz5OZqEGe8u89oTpbVwngdX-t-9rhpX1Hvd-qUbo9XtNch-HFXNuki881Ac35ii_GeSPga1X872Op5w14n3KMkkHJyHNjjHl1iWqFqEz_Lre4U9OVDH5voR1ELZlnrsFDNkSCTk-Rmn-C125_nA-9cIkr4FNO7WRKwblUYku1IQsEoJvhKEFPRt6FENqncFM" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+                    <div
+                        class="absolute top-3 right-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-2.5 py-1 flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-white text-[14px]">favorite</span>
+                        <span class="text-white text-xs font-bold">2.3k</span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-3">
+                        <div class="flex flex-col gap-0.5">
+                            <h3 class="text-white font-bold text-lg leading-tight line-clamp-2">Try our new Lavender
+                                Latte ☕️</h3>
+                            <div class="flex items-center gap-1 text-gray-300 text-xs">
+                                <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                <span>Chelsea • 0.5 mi</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 mt-1">
+                            <div
+                                class="size-6 rounded-full bg-yellow-600 flex items-center justify-center text-white text-[10px] font-bold">
+                                BC
+                            </div>
+                            <span class="text-white text-sm font-medium truncate flex-1 flex items-center gap-1">
+                                Bean &amp; Cream
+                                <span class="material-symbols-outlined text-blue-400 text-[16px] fill">verified</span>
+                            </span>
+                        </div>
+                        <button
+                            class="w-full h-10 mt-1 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-sm font-bold rounded-lg transition-colors flex items-center justify-center gap-2 border border-white/10">
+                            See Menu
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div
+                class="group relative flex flex-col gap-0 rounded-2xl overflow-hidden bg-[#282e39] shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                <div class="relative w-full aspect-[9/16] bg-gray-800 overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Modern office interior design showcase"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuACPUCTNg_hxqq8I7NHbeNJpEs5N6p4IuYiUwSLaDOXTS-e-DYrEXDcLomdsfpBOoP-Hxry5H2yQbG5qa6mGgUNixe3skaNQUNluV6y9ynDoDl6imrWU_KfEMGwD6GD9T1b5wodbXyefYBfJZnmisW-Pa9jCvsy-RxR63_07PgU5CbXZ-dJnzJ07p1QJXeQXsG_cEJp8JEawmqM6mC-l0-Yr4Ms3vnriCHoJT5z8RaAr_o-OjcsYHiRp6RcKnryYKV8AEDobBhec3o" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+                    <div
+                        class="absolute top-3 right-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-2.5 py-1 flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-white text-[14px]">visibility</span>
+                        <span class="text-white text-xs font-bold">940</span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-3">
+                        <div class="flex flex-col gap-0.5">
+                            <h3 class="text-white font-bold text-lg leading-tight line-clamp-2">Office Spaces Available
+                                Now</h3>
+                            <div class="flex items-center gap-1 text-gray-300 text-xs">
+                                <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                <span>Midtown • 1.5 mi</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 mt-1">
+                            <div
+                                class="size-6 rounded-full bg-gray-200 flex items-center justify-center text-[#111318] text-[10px] font-bold">
+                                WS
+                            </div>
+                            <span class="text-white text-sm font-medium truncate flex-1 flex items-center gap-1">
+                                WorkSpace Inc.
+                            </span>
+                        </div>
+                        <button
+                            class="w-full h-10 mt-1 bg-primary hover:bg-blue-600 text-white text-sm font-bold rounded-lg transition-colors flex items-center justify-center gap-2">
+                            Inquire
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div
+                class="group relative flex flex-col gap-0 rounded-2xl overflow-hidden bg-[#282e39] shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                <div class="relative w-full aspect-[9/16] bg-gray-800 overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Spa treatment relaxation massage"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb_hz_udytLradYr4byBiGi50oY5IdbXKzRKFmg_4xYXQ3pFswkrTZo0CiCDk7eE5AKku9ESzXcXhYjGDuYRnSs9LL8bHdkyPHI44o2lrnZQmfyE1vpyz9UVtZcRoO1iCSickXnCMEuIIxmdvW4ip7Y3wes5i6dRUdIPDvy48pt1SI5z3p89_u2RABIvF5CcQm3mkIm-H_PIqIuPuoUpfQU41C3aW50e9s2t-NiElHfxJ84vMHczYD2ivJhJmCZFwQks26HCyx85I" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+                    <div
+                        class="absolute top-3 right-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-2.5 py-1 flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-white text-[14px]">visibility</span>
+                        <span class="text-white text-xs font-bold">5.8k</span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-3">
+                        <div class="flex flex-col gap-0.5">
+                            <h3 class="text-white font-bold text-lg leading-tight line-clamp-2">50% Off First Massage
+                                💆‍♀️</h3>
+                            <div class="flex items-center gap-1 text-gray-300 text-xs">
+                                <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                <span>Tribeca • 1.1 mi</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 mt-1">
+                            <div
+                                class="size-6 rounded-full bg-teal-500 flex items-center justify-center text-white text-[10px] font-bold">
+                                GL
+                            </div>
+                            <span class="text-white text-sm font-medium truncate flex-1 flex items-center gap-1">
+                                Glow Spa
+                                <span class="material-symbols-outlined text-blue-400 text-[16px] fill">verified</span>
+                            </span>
+                        </div>
+                        <button
+                            class="w-full h-10 mt-1 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-sm font-bold rounded-lg transition-colors flex items-center justify-center gap-2 border border-white/10">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div
+                class="group relative flex flex-col gap-0 rounded-2xl overflow-hidden bg-[#282e39] shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                <div class="relative w-full aspect-[9/16] bg-gray-800 overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="Man getting a haircut at a barber shop"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3SxXN7DuHbBdow5siO_tGr1_uE-vXytlo8EqvFaQxbfJEPAZMFhvCn2GjmA2dHWh6qgHSoOKVEu-YxuxP6if2TGhYrhL7sSNHDpueJiMFQOaeUc9x0PxTU0C9mt_uOOmuWk4TK7co82EwIu1BAuZUfWzAENyVs7MNKIhTM6jcPaeZNvgdt_Ie18K6b7vjdw-Ix6QS4E-hlhkadHEykFjoYJzm4R5QaRjVwOXmcwWYevTLVIjFIlcPDyDn80I8N7tJfhrFBzs9jDg" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+                    <div
+                        class="absolute top-3 right-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full px-2.5 py-1 flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-white text-[14px]">visibility</span>
+                        <span class="text-white text-xs font-bold">3.1k</span>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-3">
+                        <div class="flex flex-col gap-0.5">
+                            <h3 class="text-white font-bold text-lg leading-tight line-clamp-2">Fresh Fades for Weekend
+                            </h3>
+                            <div class="flex items-center gap-1 text-gray-300 text-xs">
+                                <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                <span>Harlem • 4.5 mi</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 mt-1">
+                            <div
+                                class="size-6 rounded-full bg-red-800 flex items-center justify-center text-white text-[10px] font-bold">
+                                KB
+                            </div>
+                            <span class="text-white text-sm font-medium truncate flex-1 flex items-center gap-1">
+                                King's Barbers
+                            </span>
+                        </div>
+                        <button
+                            class="w-full h-10 mt-1 bg-primary hover:bg-blue-600 text-white text-sm font-bold rounded-lg transition-colors flex items-center justify-center gap-2">
+                            Book Seat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Loading State / Infinite Scroll Trigger -->
+        <div class="flex justify-center py-8">
+            <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 dark:border-[#282e39] py-8 bg-white dark:bg-[#111318]">
+        <div
+            class="max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2 text-[#111318] dark:text-white">
+                <div class="size-6 flex items-center justify-center bg-primary rounded-md text-white">
+                    <span class="material-symbols-outlined text-[14px]">play_arrow</span>
+                </div>
+                <span class="text-sm font-bold">VideoShorts © 2024</span>
+            </div>
+            <div class="flex gap-6 text-sm font-medium text-gray-500 dark:text-[#9ca6ba]">
+                <a class="hover:text-primary transition-colors" href="#">For Businesses</a>
+                <a class="hover:text-primary transition-colors" href="#">About Us</a>
+                <a class="hover:text-primary transition-colors" href="#">Privacy</a>
+                <a class="hover:text-primary transition-colors" href="#">Terms</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

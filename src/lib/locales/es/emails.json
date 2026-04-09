@@ -1,0 +1,46 @@
+{
+  "verifyEmail": {
+    "subject": "Verifica tu dirección de correo electrónico - VideoShorts",
+    "preview": "Verifica tu dirección de correo electrónico - VideoShorts",
+    "title": "¡Bienvenido a VideoShorts!",
+    "body": "Por favor, verifica tu dirección de correo electrónico haciendo clic en el botón de abajo:",
+    "button": "Verificar correo",
+    "footer": "Si no creaste una cuenta, puedes ignorar este correo electrónico."
+  },
+  "passwordReset": {
+    "subject": "Restablecer contraseña - VideoShorts",
+    "preview": "Restablecer contraseña - VideoShorts",
+    "title": "Solicitud de restablecimiento de contraseña",
+    "body": "Haz clic en el botón de abajo para restablecer tu contraseña:",
+    "button": "Restablecer contraseña",
+    "footer": "Este enlace expirará en 1 hora. Si no solicitaste restablecer tu contraseña, puedes ignorar este correo electrónico."
+  },
+  "welcome": {
+    "subject": "¡Bienvenido a VideoShorts!",
+    "preview": "¡Bienvenido a VideoShorts!",
+    "title": "¡Bienvenido a VideoShorts!",
+    "body1": "Gracias por verificar tu correo electrónico. Tu cuenta está completamente activada.",
+    "body2": "Ahora puedes empezar a crear y compartir videos cortos con el mundo.",
+    "button": "Ir al panel",
+    "footer": "Si tienes alguna pregunta, no dudes en contactar a nuestro equipo de soporte."
+  },
+  "companyVerified": {
+    "subject": "Empresa Verificada - VideoShorts",
+    "title": "Empresa Verificada",
+    "body": "Su empresa {{companyName}} ha sido verificada.",
+    "footer": "Ahora puede acceder a todas las funciones empresariales."
+  },
+  "companyRejected": {
+    "subject": "Verificación de Empresa Rechazada - VideoShorts",
+    "title": "Verificación de Empresa Rechazada",
+    "body": "La verificación de su empresa {{companyName}} ha sido rechazada.",
+    "reason": "Razón: {{reason}}",
+    "footer": "Póngase en contacto con soporte si tiene preguntas."
+  },
+  "companyDeleted": {
+    "subject": "Empresa eliminada - VideoShorts",
+    "title": "Su empresa ha sido eliminada",
+    "body": "La empresa {{companyName}} ha sido eliminada de nuestro servicio por un administrador.",
+    "footer": "Si cree que esto es un error, por favor contacte con soporte."
+  }
+}

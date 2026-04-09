@@ -1,0 +1,213 @@
+================================================================================
+PROJECT MODIFICATION: Payment Gateway Abstraction
+================================================================================
+Date: 2025-12-14
+Project: videoshorts
+Change Type: Architectural Enhancement
+Status: COMPLETED ✅
+
+================================================================================
+STATISTICS
+================================================================================
+
+Files Modified: 4
+Lines Added: 133
+Lines Removed: 85
+Net Change: +48 lines
+
+Sections Updated: 35+
+Occurrences Replaced: 67+
+Implementation Impact: ZERO (Stage 03 not yet implemented)
+
+================================================================================
+FILE-BY-FILE BREAKDOWN
+================================================================================
+
+1. project-spec.md
+   - Executive Summary: Payment system description updated
+   - Company permissions: Stripe → Multi-provider
+   - F-SHORT-004: Added multi-provider support
+   - F-PAY-002: Complete rewrite with abstraction layer
+   - Payment data model: Added provider enum and fields
+   - External Services (8.2): Replaced Stripe with Przelewy24/Tpay
+   - Risks: Updated webhook failure mitigation
+   - Stage 3 description: Updated payment references
+
+2. architecture-plan.md
+   - High-level diagram: External services updated
+   - Tech stack: Payment provider SDKs
+   - Prisma schema: Added PaymentProvider enum
+   - Payment model: Updated with provider fields
+   - API endpoints: Multi-provider webhooks
+   - Project structure: Payment providers directory
+   - Data flows: Provider-agnostic payment flow
+   - Environment variables: Przelewy24/Tpay credentials
+
+3. stages/index.md
+   - Stage 3 deliverables: Updated checkout references
+   - Risks table: Payment provider webhooks
+   - External docs: Added Przelewy24/Tpay documentation links
+
+4. stages/stage-03-shorts-payments/spec.md
+   - Section 1: Goal updated with multi-provider
+   - Section 2.2: Complete publish flow rewrite
+   - User stories: Payment gateway references
+   - Database schema: PaymentProvider enum + Payment model
+   - API endpoints: Per-provider webhook routes
+   - Publication Controller: Provider factory pattern
+   - Payment clients: Provider abstraction interfaces
+   - Background jobs: Provider-agnostic webhooks
+   - External services: Przelewy24 + Tpay details
+   - Risks: Provider-specific mitigations
+
+================================================================================
+ARCHITECTURAL CHANGES
+================================================================================
+
+BEFORE (Stripe-only):
+┌─────────────────────────────────────┐
+│  Application                        │
+│  └─> Stripe Client (hard-coded)    │
+│       └─> Stripe API                │
+└─────────────────────────────────────┘
+
+AFTER (Multi-provider):
+┌──────────────────────────────────────────────────────────┐
+│  Application                                              │
+│  └─> Payment Provider Factory                            │
+│       ├─> Przelewy24Provider (implements PaymentProvider)│
+│       ├─> TpayProvider (implements PaymentProvider)      │
+│       └─> [Future providers...]                          │
+└──────────────────────────────────────────────────────────┘
+
+================================================================================
+DATABASE SCHEMA CHANGES
+================================================================================
+
+Payment Model:
+  ADDED:
+    - provider: PaymentProvider (enum: PRZELEWY24, TPAY, OTHER)
+    - metadata: JSON (provider-specific data)
+    - @@index([provider])
+    - @@index([providerPaymentId])
+  
+  RENAMED:
+    - stripePaymentIntentId   → providerPaymentId
+    - stripeCheckoutSessionId → providerSessionId
+  
+  REMOVED:
+    - @@index([stripePaymentIntentId])
+
+================================================================================
+API CHANGES
+================================================================================
+
+ENDPOINTS ADDED:
+  POST /api/webhooks/przelewy24
+  POST /api/webhooks/tpay
+
+ENDPOINTS REMOVED:
+  POST /api/webhooks/stripe
+
+ENDPOINTS MODIFIED:
+  POST /api/payments/checkout
+    - Now accepts provider selection
+    - Returns provider-specific checkout URL
+
+================================================================================
+ENVIRONMENT VARIABLES
+================================================================================
+
+REMOVED:
+  - STRIPE_SECRET_KEY
+  - STRIPE_PUBLISHABLE_KEY  
+  - STRIPE_WEBHOOK_SECRET
+
+ADDED:
+  # Przelewy24
+  - PRZELEWY24_MERCHANT_ID
+  - PRZELEWY24_POS_ID
+  - PRZELEWY24_CRC
+  - PRZELEWY24_API_KEY
+  - PRZELEWY24_WEBHOOK_SECRET
+  
+  # Tpay
+  - TPAY_MERCHANT_ID
+  - TPAY_SECURITY_CODE
+  - TPAY_API_KEY
+  - TPAY_API_PASSWORD
+  - TPAY_WEBHOOK_SECRET
+  
+  # Configuration
+  - DEFAULT_PAYMENT_PROVIDER (default: PRZELEWY24)
+
+================================================================================
+IMPLEMENTATION CHECKLIST (For Stage 03)
+================================================================================
+
+[ ] Create payment provider abstraction layer
+    [ ] base-provider.ts (interface)
+    [ ] przelewy24.ts (implementation)
+    [ ] tpay.ts (implementation)
+    [ ] factory.ts (provider factory)
+
+[ ] Update Publication Controller
+    [ ] Use PaymentProviderFactory
+    [ ] Implement provider selection logic
+    [ ] Handle provider-specific responses
+
+[ ] Implement webhook handlers
+    [ ] /api/webhooks/przelewy24/route.ts
+    [ ] /api/webhooks/tpay/route.ts
+    [ ] Signature verification per provider
+    [ ] Unified event processing
+
+[ ] Database migration
+    [ ] Add PaymentProvider enum
+    [ ] Add provider field to Payment model
+    [ ] Add metadata JSON field
+    [ ] Rename stripe-specific fields
+    [ ] Add new indexes
+
+[ ] Environment setup
+    [ ] Przelewy24 sandbox credentials
+    [ ] Tpay sandbox credentials
+    [ ] Configure DEFAULT_PAYMENT_PROVIDER
+
+[ ] Testing
+    [ ] Przelewy24 checkout flow
+    [ ] Tpay checkout flow
+    [ ] Webhook handling (both providers)
+    [ ] Fallback logic
+    [ ] Provider selection UI
+
+================================================================================
+BENEFITS
+================================================================================
+
+✓ Flexibility: Easy to add new payment providers
+✓ Redundancy: Fallback if one provider fails
+✓ Market-specific: Przelewy24/Tpay optimized for Polish market (BLIK support)
+✓ Cost optimization: Negotiate better rates with multiple providers
+✓ Future-proof: Supports international expansion
+✓ No vendor lock-in: Not dependent on single provider
+
+================================================================================
+SAFETY ASSESSMENT
+================================================================================
+
+Impact on Existing Code: NONE ✅
+Reason: Stage 03 (Payments) not yet implemented
+
+Impact on Completed Stages:
+  - Stage 01 (Auth): NO IMPACT ✅
+  - Stage 02 (Companies): NOT STARTED, NO IMPACT ✅
+
+Risk Level: LOW ✅
+All changes are documentation-only. No code exists yet to modify.
+
+================================================================================
+Generated by: project-modifier agent
+Date: 2025-12-14
+Version: 1.0
+================================================================================

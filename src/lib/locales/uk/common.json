@@ -1,0 +1,53 @@
+{
+  "accessibility": {
+    "loading": "Завантаження"
+  },
+  "search": {
+    "open": "Відкрити пошук"
+  },
+  "auth": {
+    "login": "Увійти",
+    "getStarted": "Почати"
+  },
+  "buttons": {
+    "submit": "Надіслати",
+    "cancel": "Скасувати",
+    "save": "Зберегти",
+    "delete": "Видалити",
+    "edit": "Редагувати",
+    "close": "Закрити",
+    "back": "Назад",
+    "next": "Далі",
+    "loading": "Завантаження..."
+  },
+  "errors": {
+    "required": "Це поле є обов'язковим",
+    "invalidEmail": "Невірна адреса email",
+    "minLength": "Мінімальна довжина: {{min}} символів",
+    "maxLength": "Максимальна довжина: {{max}} символів",
+    "generic": "Сталася помилка. Спробуйте ще раз.",
+    "unauthorized": "Немає авторизації",
+    "invalidInput": "Невірні вхідні дані"
+  },
+  "validation": {
+    "emailRequired": "Email є обов'язковим",
+    "passwordRequired": "Пароль є обов'язковим",
+    "passwordMinLength": "Пароль повинен містити мінімум 8 символів",
+    "passwordsNotMatch": "Паролі не збігаються"
+  },
+  "dashboard": {
+    "welcome": "Ласкаво просимо до VideoShorts, {name}",
+    "gettingStarted": {
+      "title": "Почати",
+      "description": "Заповніть свій профіль, щоб почати користуватися VideoShorts"
+    },
+    "yourVideos": {
+      "title": "Ваші відео",
+      "empty": "Ви ще не завантажили жодного відео"
+    },
+    "statistics": {
+      "title": "Статистика",
+      "description": "Переглянути статистику ваших відео"
+    }
+  }
+}

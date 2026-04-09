@@ -1,0 +1,30 @@
+{
+  "title": "Ustawienia",
+  "account": {
+    "title": "Konto",
+    "email": "Email",
+    "emailVerified": "Zweryfikowany",
+    "emailNotVerified": "Niezweryfikowany",
+    "changePassword": "Zmień hasło",
+    "deleteAccount": "Usuń konto"
+  },
+  "password": {
+    "title": "Zmiana hasła",
+    "current": "Obecne hasło",
+    "new": "Nowe hasło",
+    "confirm": "Potwierdź hasło",
+    "submit": "Zmień hasło",
+    "success": "Hasło zmienione. Zaloguj się ponownie.",
+    "errors": {
+      "wrongPassword": "Nieprawidłowe obecne hasło",
+      "oauthAccount": "Konto utworzone przez OAuth"
+    }
+  },
+  "delete": {
+    "title": "Strefa niebezpieczna",
+    "warning": "Ta operacja jest nieodwracalna. Wszystkie Twoje dane zostaną usunięte.",
+    "confirm": "Wpisz DELETE aby potwierdzić",
+    "submit": "Usuń moje konto",
+    "success": "Konto zostało usunięte"
+  }
+}

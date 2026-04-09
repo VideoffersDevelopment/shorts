@@ -1,0 +1,246 @@
+{
+  "upgrade": {
+    "heading": "Перейти на бізнес-акаунт",
+    "description": "Зареєструйте свою компанію, щоб публікувати вакансії та користуватися додатковими функціями.",
+    "title": "Форма реєстрації компанії",
+    "subtitle": "Введіть дані вашої компанії. ІПН буде перевірено через систему VIES.",
+    "fields": {
+      "companyName": "Назва компанії",
+      "nip": "ІПН",
+      "address": "Адреса",
+      "phone": "Телефон (необов'язково)"
+    },
+    "placeholders": {
+      "companyName": "напр. ТОВ «Компанія»",
+      "address": "напр. вул. Головна 1, 01001 Київ",
+      "phone": "+380 12 345 6789"
+    },
+    "hints": {
+      "nip": "Формат: 1234567890 або 12-345-678-90",
+      "phone": "Номер телефону не є обов'язковим"
+    },
+    "submit": "Зареєструвати компанію",
+    "submitting": "Перевірка ІПН...",
+    "success": {
+      "title": "Компанію зареєстровано!",
+      "verified": "ІПН успішно перевірено в системі VIES.",
+      "pending": "ІПН потребує ручної перевірки адміністратором.",
+      "continueButton": "Перейти до профілю компанії"
+    },
+    "alreadyCompany": "Перенаправлення до профілю компанії..."
+  },
+  "vies": {
+    "status": {
+      "verified": "Перевірено",
+      "pending": "Очікує перевірки",
+      "rejected": "Відхилено"
+    }
+  },
+  "status": {
+    "pendingTitle": "Очікує схвалення",
+    "pendingDescription": "Ваша компанія очікує верифікації адміністратором. Ви отримаєте сповіщення на email після схвалення."
+  },
+  "nipValidation": {
+    "validating": "Перевірка ІПН...",
+    "success": {
+      "verified": "ІПН перевірено в VIES"
+    },
+    "warning": {
+      "viesUnavailable": "Сервіс VIES недоступний. Ви можете продовжити - буде потрібна ручна перевірка."
+    },
+    "errors": {
+      "invalidFormat": "Невірний формат ІПН. Використовуйте 10 цифр або формат XX-XXX-XXX-XX.",
+      "alreadyExists": "Цей ІПН вже зареєстровано в нашій системі.",
+      "viesInvalid": "Цей ІПН не знайдено в реєстрі VIES.",
+      "validationFailed": "Перевірка не вдалася. Спробуйте ще раз.",
+      "pleaseFixErrors": "Виправте помилки ІПН перед надсиланням форми.",
+      "unknown": "Невідома помилка перевірки."
+    }
+  },
+  "errors": {
+    "alreadyCompany": "У вас вже є зареєстрована компанія",
+    "nipExists": "Цей ІПН вже зареєстровано",
+    "createFailed": "Не вдалося створити профіль компанії",
+    "notCompany": "У вас немає профілю компанії",
+    "updateFailed": "Не вдалося оновити профіль"
+  },
+  "profile": {
+    "verified": "Перевірено",
+    "placeholders": {
+      "website": "https://example.com",
+      "contactEmail": "contact@company.ua",
+      "facebook": "https://facebook.com/company",
+      "instagram": "https://instagram.com/company",
+      "tiktok": "https://tiktok.com/@company",
+      "youtube": "https://youtube.com/@company",
+      "linkedin": "https://linkedin.com/company/name",
+      "street": "вул. Головна 123",
+      "postalCode": "01001",
+      "city": "Київ"
+    },
+    "overview": {
+      "title": "Огляд профілю",
+      "editProfile": "Редагувати профіль",
+      "addShort": "Додати відео",
+      "viewPublic": "Переглянути публічний профіль",
+      "noDescription": "Немає опису компанії",
+      "addDescription": "Додати опис"
+    },
+    "sections": {
+      "contact": "Контакт",
+      "social": "Соціальні мережі",
+      "location": "Місцезнаходження"
+    },
+    "stats": {
+      "shorts": "Відео",
+      "followers": "Підписники",
+      "views": "Перегляди",
+      "viewsThisWeek": "Перегляди цього тижня",
+      "activeCampaigns": "Активні кампанії",
+      "walletBalance": "Баланс гаманця",
+      "topUp": "Поповнити"
+    },
+    "contact": {
+      "website": "Вебсайт",
+      "address": "Адреса",
+      "phone": "Телефон",
+      "call": "Зателефонувати"
+    },
+    "edit": {
+      "title": "Редагувати профіль компанії",
+      "save": "Зберегти зміни",
+      "saving": "Збереження...",
+      "success": "Профіль оновлено",
+      "error": "Не вдалося оновити профіль"
+    },
+    "fields": {
+      "companyName": "Назва компанії",
+      "description": "Опис",
+      "website": "Вебсайт",
+      "category": "Категорія",
+      "address": "Адреса",
+      "street": "Вулиця та номер",
+      "postalCode": "Поштовий індекс",
+      "city": "Місто",
+      "phone": "Телефон",
+      "contactEmail": "Контактний email",
+      "contactEmailHint": "Необов'язковий email для контакту. Якщо не вказано, буде використано email вашого облікового запису.",
+      "latitude": "Широта",
+      "longitude": "Довгота",
+      "socialLinks": "Соціальні мережі",
+      "businessHours": "Години роботи",
+      "setBusinessHours": "Встановити години роботи",
+      "logo": "Логотип",
+      "banner": "Банер",
+      "showOnMap": "Показати на карті",
+      "hideMap": "Приховати карту"
+    }
+  },
+  "logo": {
+    "title": "Завантажити логотип",
+    "upload": "Завантажити",
+    "uploading": "Завантаження...",
+    "cancel": "Скасувати",
+    "success": "Логотип оновлено",
+    "dragAndDrop": "Перетягніть або натисніть",
+    "dropHere": "Перетягніть файл сюди",
+    "errors": {
+      "invalidType": "Невірний тип файлу. Використовуйте JPEG, PNG або WebP",
+      "tooLarge": "Файл занадто великий. Максимум 5MB",
+      "uploadFailed": "Завантаження не вдалося"
+    }
+  },
+  "banner": {
+    "title": "Завантажити банер",
+    "upload": "Завантажити",
+    "uploading": "Завантаження...",
+    "cancel": "Скасувати",
+    "success": "Банер оновлено",
+    "dragAndDrop": "Перетягніть або натисніть, щоб вибрати банер",
+    "dropHere": "Перетягніть файл сюди",
+    "errors": {
+      "invalidType": "Невірний тип файлу. Використовуйте JPEG, PNG або WebP",
+      "tooLarge": "Файл занадто великий. Максимум 10MB",
+      "uploadFailed": "Завантаження не вдалося"
+    }
+  },
+  "category": {
+    "placeholder": "Виберіть категорію",
+    "searchPlaceholder": "Шукати категорії...",
+    "noResults": "Категорій не знайдено",
+    "backToAll": "Повернутися до всіх категорій",
+    "viewAll": "Показати всі"
+  },
+  "location": {
+    "geocoding": "Пошук місцезнаходження...",
+    "geocodeError": "Не вдалося знайти місцезнаходження",
+    "dragMarker": "Перетягніть маркер, щоб налаштувати місцезнаходження"
+  },
+  "subcategories": {
+    "label": "Підкатегорії",
+    "placeholder": "Виберіть підкатегорії",
+    "selected": "{count} з {max} вибрано",
+    "selectCategoryFirst": "Спочатку виберіть основну категорію",
+    "loading": "Завантаження підкатегорій...",
+    "noSubcategories": "Немає доступних підкатегорій",
+    "hint": "Виберіть до {max} підкатегорій, щоб краще описати вашу діяльність"
+  },
+  "businessHours": {
+    "title": "Години роботи",
+    "days": {
+      "monday": "Понеділок",
+      "tuesday": "Вівторок",
+      "wednesday": "Середа",
+      "thursday": "Четвер",
+      "friday": "П'ятниця",
+      "saturday": "Субота",
+      "sunday": "Неділя"
+    },
+    "openTime": "Час відкриття",
+    "closeTime": "Час закриття",
+    "closed": "Зачинено",
+    "copyToAll": "Скопіювати для всіх",
+    "clearAll": "Очистити все",
+    "hint": "Встановіть години роботи. Вимкніть дні, коли ви зачинені."
+  },
+  "header": {
+    "showLocation": "Показати місцезнаходження",
+    "report": "Поскаржитися",
+    "reportCompany": "Поскаржитися на компанію",
+    "reportError": "Повідомити про помилку"
+  },
+  "social": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn"
+  },
+  "follow": {
+    "follow": "Підписатися",
+    "following": "Підписаний",
+    "unfollow": "Відписатися",
+    "loginRequired": "Увійдіть, щоб підписатися"
+  },
+  "contact": {
+    "button": "Написати нам",
+    "title": "Зв'язатися з компанією",
+    "description": "Надіслати повідомлення до {companyName}",
+    "fields": {
+      "subject": "Тема",
+      "message": "Повідомлення"
+    },
+    "placeholders": {
+      "subject": "Тема повідомлення",
+      "message": "Текст повідомлення..."
+    },
+    "send": "Надіслати",
+    "sending": "Надсилання...",
+    "cancel": "Скасувати",
+    "success": "Повідомлення надіслано",
+    "error": "Не вдалося надіслати повідомлення",
+    "errors": {
+      "emptyMessage": "Повідомлення не може бути порожнім"
+    }
+  }
+}

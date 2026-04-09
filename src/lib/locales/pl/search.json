@@ -1,0 +1,36 @@
+{
+  "bar": {
+    "placeholder": "Szukaj shortów, firm, kategorii...",
+    "shortcut": "Ctrl+K",
+    "clear": "Wyczyść wyszukiwanie"
+  },
+  "company": {
+    "shortsCount": "{count} shortów"
+  },
+  "suggestions": {
+    "recent": "Ostatnie wyszukiwania",
+    "popular": "Popularne wyszukiwania",
+    "shorts": "Shorty",
+    "companies": "Firmy",
+    "clearRecent": "Wyczyść historię"
+  },
+  "tabs": {
+    "all": "Wszystko",
+    "shorts": "Shorty",
+    "companies": "Firmy"
+  },
+  "results": {
+    "title": "Wyniki dla: {query}",
+    "count": "{count} wyników",
+    "noResults": {
+      "title": "Brak wyników dla: {query}",
+      "description": "Spróbuj innych słów kluczowych lub sprawdź pisownię",
+      "suggestions": "Może Cię zainteresować:"
+    }
+  },
+  "filters": {
+    "inCategory": "w kategorii",
+    "inLocation": "w lokalizacji"
+  },
+  "loading": "Szukanie..."
+}

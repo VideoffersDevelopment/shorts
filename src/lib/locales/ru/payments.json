@@ -1,0 +1,110 @@
+{
+  "page": {
+    "title": "Kredity",
+    "description": "Upravlyayte svoimi kreditami publikatsii",
+    "balance": "Balans kreditov",
+    "balanceDescription": "Vashi dostupnye kredity dlya publikatsii shortov",
+    "paymentSuccess": "Oplata proshla uspeshno!",
+    "creditsAdded": "Kredity byli dobavleny na vash schet."
+  },
+  "credits": {
+    "credit": "kredit",
+    "plural": "kreditov",
+    "creditAvailable": "kredit dostupen",
+    "pluralAvailable": "kreditov dostupno",
+    "available": "Dostupnye kredity",
+    "buy": "Kupit kredity"
+  },
+  "packages": {
+    "title": "Pakety kreditov",
+    "description": "Kupite kredity dlya publikatsii vashikh shortov",
+    "credit": "kredit",
+    "credits": "kreditov",
+    "buy": "Kupit seychas"
+  },
+  "transactions": {
+    "title": "Poslednie tranzaktsii",
+    "description": "Istoriya aktivnosti kreditov",
+    "empty": "Tranzaktsii otsutstvuyut",
+    "source": {
+      "PACKAGE": "Pokupka kreditov",
+      "GIFT": "Podarochnye kredity",
+      "PROMO": "Promokredity",
+      "REFUND": "Vozvrat kreditov",
+      "ADMIN": "Administrativnyy kredit",
+      "PUBLICATION": "Publikatsiya shorta",
+      "OTHER": "Drugoe"
+    }
+  },
+  "info": {
+    "title": "Kak rabotayut kredity",
+    "description": "Kredity ispolzuyutsya dlya publikatsii vashikh korotkikh video. Kazhdaya publikatsiya stoit 1 kredit.",
+    "point1": "1 kredit = 1 opublikovannyy short (30 dney vidimosti)",
+    "point2": "Kredity nikogda ne istekayut",
+    "point3": "Dostupny optovye pakety dlya ekonomii"
+  },
+  "form": {
+    "credits": "Kolichestvo kreditov",
+    "selectCredits": "Vyberite paket kreditov",
+    "credit": "kredit",
+    "creditsPlural": "kreditov",
+    "pricePerCredit": "{price} PLN za kredit",
+    "provider": "Sposob oplaty",
+    "total": "Itogo",
+    "processing": "Obrabotka...",
+    "pay": "Oplatit {amount} PLN",
+    "securityNote": "Bezopasnaya obrabotka platezhey. Vashi dannye zashchishcheny."
+  },
+  "providers": {
+    "p24Description": "Perevod, BLIK, karty",
+    "tpayDescription": "Karty, BLIK, Apple Pay"
+  },
+  "publish": {
+    "title": "Opublikovat short",
+    "verificationRequired": "Trebuetsya verifikatsiya kompanii",
+    "verificationDescription": "Vasha kompaniya dolzhna byt verificirovana, prezhde chem vy smozhete publikovat shorty. Zakonchite verifikatsiyu VIES, chtoby prodolzhit.",
+    "verifyCompany": "Verificirovat kompaniyu",
+    "yourCredits": "Vashi kredity",
+    "useCreditsTitle": "Ispolzovat kredit publikatsii",
+    "useCreditsDescription": "U vas est dostupnye kredity. Publikatsiya ispolzuet 1 kredit.",
+    "useCredit": "Ispolzovat 1 kredit dlya publikatsii",
+    "noCredits": "Net dostupnykh kreditov",
+    "noCreditsDescription": "Vam nuzhen kak minimum 1 kredit dlya publikatsii. Tsena: {price} PLN za kredit.",
+    "buyAndPublish": "Kupit kredit i opublikovat ({price} PLN)",
+    "buyCredits": "Kupit kredity",
+    "buyCreditsDescription": "Vyberite sposob oplaty i paket kreditov",
+    "processing": "Obrabotka...",
+    "processingDescription": "Pozhaluysta, podozhdite, poka my obrabotaem vash zapros.",
+    "success": {
+      "title": "Publikatsiya nachata!",
+      "description": "Vash short obrabatyvaetsya i skoro budet dostupen."
+    }
+  },
+  "common": {
+    "cancel": "Otmena",
+    "back": "Nazad"
+  },
+  "errors": {
+    "publishFailed": "Ne udalos opublikovat short. Pozhaluysta, poprobuite snova.",
+    "checkoutFailed": "Ne udalos sozdat sessiyu oplaty. Pozhaluysta, poprobuite snova."
+  },
+  "history": {
+    "title": "Istoriya kreditov",
+    "date": "Data",
+    "type": "Tip",
+    "amount": "Summa",
+    "balance": "Balans",
+    "relatedShort": "Svyazannoye video",
+    "noTransactions": "Net tranzaktsiy"
+  },
+  "purchase": {
+    "title": "Kupit kredity",
+    "description": "Vyberite paket kreditov",
+    "package": "{credits} kreditov",
+    "price": "{amount} PLN",
+    "save": "Ekonomiya {percent}%",
+    "selectProvider": "Sposob oplaty",
+    "buy": "Kupit seychas",
+    "cancel": "Otmena"
+  }
+}

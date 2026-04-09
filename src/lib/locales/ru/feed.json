@@ -1,0 +1,71 @@
+{
+  "sort": {
+    "label": "Сортировка",
+    "algorithmic": "Для вас",
+    "newest": "Новые",
+    "popular": "Популярные",
+    "trending": "В тренде",
+    "following": "Подписки"
+  },
+  "filters": {
+    "title": "Фильтры",
+    "apply": "Применить фильтры",
+    "clear": "Очистить все",
+    "location": {
+      "label": "Местоположение",
+      "radius": "Радиус",
+      "detectLocation": "Определить местоположение",
+      "detecting": "Определение...",
+      "wholeCountry": "Вся страна",
+      "nearMe": "Рядом ({distance})",
+      "radiusOptions": {
+        "1km": "1 км",
+        "5km": "5 км",
+        "10km": "10 км",
+        "25km": "25 км",
+        "50km": "50 км",
+        "all": "Вся страна"
+      }
+    },
+    "categories": {
+      "label": "Категории",
+      "placeholder": "Выберите категории...",
+      "maxSelected": "Максимум {max} категорий"
+    },
+    "tags": {
+      "label": "Теги",
+      "placeholder": "Поиск тегов..."
+    },
+    "verifiedOnly": {
+      "label": "Только проверенные",
+      "description": "Показывать только shorts от проверенных компаний"
+    },
+    "activeFilters": "Активные фильтры: {count}"
+  },
+  "empty": {
+    "noShorts": {
+      "title": "Нет shorts в этом районе",
+      "description": "Попробуйте расширить радиус или изменить фильтры",
+      "expandRadius": "Расширить радиус",
+      "clearFilters": "Сбросить фильтры",
+      "browseAll": "Смотреть все"
+    },
+    "noFollowing": {
+      "title": "Вы пока не подписаны ни на одну компанию",
+      "description": "Откройте для себя местные компании и начните подписываться",
+      "discoverCta": "Открыть компании"
+    }
+  },
+  "loading": {
+    "more": "Загрузка...",
+    "skeleton": "Это все!"
+  },
+  "card": {
+    "views": "{count} просмотров",
+    "likes": "{count} лайков",
+    "distance": "в {distance}",
+    "cta": "Ссылка",
+    "follow": "Подписаться",
+    "following": "Подписан"
+  }
+}

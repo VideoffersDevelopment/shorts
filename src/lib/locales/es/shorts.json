@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "title": "Videos Cortos",
+    "description": "Gestiona y publica tus videos cortos"
+  },
+  "verification": {
+    "pendingTitle": "Verificación pendiente",
+    "pendingDescription": "Podrás subir y publicar shorts después de que tu empresa sea verificada por el administrador."
+  },
+  "addShort": {
+    "button": "Añadir Short",
+    "upgradeTitle": "Actualizar a cuenta empresarial",
+    "upgradeDescription": "Para subir y publicar shorts, necesitas una cuenta empresarial. Actualiza ahora para comenzar a compartir tu contenido empresarial.",
+    "upgradeAction": "Actualizar ahora",
+    "pendingTitle": "Verificación pendiente",
+    "pendingDescription": "Tu empresa está esperando la aprobación del administrador. Podrás añadir shorts una vez verificado.",
+    "pendingAction": "OK",
+    "cancel": "Cancelar"
+  },
+  "list": {
+    "empty": {
+      "title": "Sin videos aun",
+      "description": "Crea tu primer video para empezar a promocionar tu negocio",
+      "action": "Crear Video"
+    }
+  },
+  "create": {
+    "title": "Crear Nuevo Video",
+    "description": "Sube y publica un nuevo video corto"
+  },
+  "wizard": {
+    "steps": {
+      "video": "Video",
+      "metadata": "Detalles",
+      "thumbnail": "Miniatura",
+      "review": "Revisar"
+    },
+    "video": {
+      "title": "Subir Video",
+      "description": "Sube tu video corto (max. 60 segundos)",
+      "dragAndDrop": "Arrastra y suelta tu video aqui",
+      "dropHere": "Suelta el video aqui",
+      "browse": "o busca archivos",
+      "requirements": "MP4, WebM o MOV - Maximo 100MB",
+      "uploading": "Subiendo video...",
+      "processing": "Procesando video...",
+      "preview": "Vista previa del video",
+      "changeVideo": "Cambiar video",
+      "aspectWarning": "El video no esta en formato 9:16. Los mejores resultados son con videos verticales."
+    },
+    "tags": {
+      "create": "Crear \"{tag}\""
+    },
+    "metadata": {
+      "title": "Detalles del Video",
+      "description": "Anade titulo, descripcion y etiquetas",
+      "fields": {
+        "title": "Titulo",
+        "titlePlaceholder": "Ingresa un titulo llamativo",
+        "titleHint": "Maximo 100 caracteres",
+        "description": "Descripcion",
+        "descriptionPlaceholder": "Describe tu video corto",
+        "descriptionHint": "Opcional, pero ayuda con la visibilidad",
+        "category": "Categoria",
+        "categoryPlaceholder": "Selecciona una categoria",
+        "tags": "Etiquetas",
+        "tagsPlaceholder": "Anade etiquetas para que encuentren tu video",
+        "tagsHint": "Presiona Enter para anadir etiqueta (max. 5)",
+        "location": "Ubicacion",
+        "locationPlaceholder": "Anade ubicacion (opcional)",
+        "ctaLink": "Enlace de Accion",
+        "ctaLinkPlaceholder": "https://tu-sitio.com",
+        "ctaLinkHint": "Enlace opcional mostrado en tu video"
+      }
+    },
+    "thumbnail": {
+      "title": "Elegir Miniatura",
+      "description": "Selecciona o sube una miniatura para tu video",
+      "auto": "Generada automaticamente",
+      "autoDescription": "Generaremos una miniatura de tu video",
+      "custom": "Miniatura personalizada",
+      "customDescription": "Sube tu propia imagen de miniatura",
+      "upload": "Subir miniatura",
+      "uploading": "Subiendo...",
+      "requirements": "JPEG o PNG - Recomendado 1080x1920",
+      "dragAndDrop": "Arrastra y suelta la imagen aqui",
+      "preview": "Vista previa de miniatura"
+    },
+    "review": {
+      "title": "Revisar y Publicar",
+      "description": "Revisa tu video antes de publicar",
+      "sections": {
+        "video": "Video",
+        "details": "Detalles",
+        "thumbnail": "Miniatura"
+      },
+      "duration": "Duracion",
+      "category": "Categoria",
+      "tags": "Etiquetas",
+      "location": "Ubicacion",
+      "ctaLink": "Enlace CTA",
+      "noTags": "Sin etiquetas",
+      "noLocation": "Sin ubicacion",
+      "noCta": "Sin enlace CTA"
+    },
+    "navigation": {
+      "back": "Atras",
+      "next": "Siguiente",
+      "publish": "Publicar",
+      "saveDraft": "Guardar borrador"
+    }
+  },
+  "detail": {
+    "title": "Titulo",
+    "description": "Descripcion",
+    "category": "Categoria",
+    "tags": "Etiquetas",
+    "location": "Ubicacion",
+    "ctaLink": "Enlace CTA",
+    "duration": "Duracion",
+    "views": "Vistas",
+    "likes": "Me gusta",
+    "comments": "Comentarios",
+    "ctaClicks": "Clics CTA",
+    "createdAt": "Creado",
+    "publishedAt": "Publicado",
+    "expiresAt": "Expira",
+    "archivedAt": "Archivado",
+    "back": "Volver a videos",
+    "processing": "Procesando",
+    "processingDescription": "Tu video esta siendo procesado. Esto puede tardar unos minutos.",
+    "noThumbnail": "Sin miniatura",
+    "statistics": "Estadisticas",
+    "timeline": "Cronologia"
+  },
+  "status": {
+    "DRAFT": "Borrador",
+    "PENDING_PAYMENT": "Pago pendiente",
+    "PROCESSING": "Procesando",
+    "PUBLISHED": "Publicado",
+    "ARCHIVED": "Archivado",
+    "DELETED": "Eliminado"
+  },
+  "actions": {
+    "view": "Ver",
+    "edit": "Editar",
+    "publish": "Publicar",
+    "archive": "Archivar",
+    "duplicate": "Duplicar",
+    "delete": "Eliminar",
+    "renew": "Renovar"
+  },
+  "publish": {
+    "title": "Publicar Video",
+    "description": "Tu video sera visible para todos despues de publicar",
+    "paymentRequired": "Pago requerido",
+    "paymentDescription": "Debes pagar {amount} para publicar este video",
+    "useCredits": "Usar creditos de publicacion",
+    "creditsAvailable": "Tienes {count} creditos disponibles",
+    "confirm": "Publicar ahora",
+    "cancel": "Cancelar"
+  },
+  "timeline": {
+    "draft": "Borrador creado",
+    "payment": "Pago recibido",
+    "processing": "Procesando video",
+    "published": "Publicado",
+    "estimatedTime": "Tiempo estimado: {minutes} minutos"
+  },
+  "navigation": {
+    "backToShorts": "Volver a Shorts"
+  },
+  "player": {
+    "play": "Reproducir",
+    "pause": "Pausar",
+    "mute": "Silenciar",
+    "unmute": "Activar sonido",
+    "fullscreen": "Pantalla completa",
+    "exitFullscreen": "Salir de pantalla completa"
+  },
+  "publishing": {
+    "loading": "Cargando...",
+    "processing": {
+      "title": "Tu video está siendo procesado",
+      "description": "Esto puede tardar unos minutos. Te notificaremos cuando esté listo.",
+      "doNotClose": "No cierres esta página"
+    },
+    "title": "Publicando tu Video",
+    "description": "Por favor espera mientras procesamos tu video",
+    "steps": {
+      "payment": "Procesando pago",
+      "transcoding": "Transcodificando video",
+      "publishing": "Publicando video"
+    },
+    "success": {
+      "title": "Video Publicado!",
+      "description": "Tu video esta ahora en vivo y visible para todos",
+      "viewShort": "Ver video",
+      "createAnother": "Crear otro"
+    },
+    "error": {
+      "title": "Publicacion fallida",
+      "description": "Hubo un error al publicar tu video",
+      "retry": "Intentar de nuevo",
+      "contact": "Contactar soporte"
+    },
+    "notStarted": {
+      "title": "Video no publicado",
+      "description": "Este video todavía es un borrador. Vuelve a editar y haz clic en 'Publicar' para comenzar.",
+      "goToEdit": "Ir a editar"
+    }
+  },
+  "archive": {
+    "title": "Archivar Video",
+    "description": "Esto ocultara el video de la vista publica. Puedes restaurarlo despues.",
+    "confirm": "Archivar",
+    "cancel": "Cancelar"
+  },
+  "delete": {
+    "title": "Eliminar Video",
+    "description": "Esta accion no se puede deshacer. El video sera eliminado permanentemente.",
+    "confirm": "Eliminar",
+    "cancel": "Cancelar"
+  },
+  "renew": {
+    "title": "Renovar Video",
+    "description": "Extiende la visibilidad de tu video por 30 dias mas",
+    "currentExpiry": "Expiracion actual: {date}",
+    "newExpiry": "Nueva expiracion: {date}",
+    "cost": "Costo: {amount}",
+    "confirm": "Renovar ahora",
+    "cancel": "Cancelar",
+    "useCredit": "Se usara 1 credito para renovar este video",
+    "needsPayment": "Necesitas comprar creditos para renovar este video"
+  },
+  "public": {
+    "title": "Video Corto",
+    "description": "Mira este video corto",
+    "by": "por",
+    "views": "vistas",
+    "likes": "me gusta",
+    "share": "Compartir",
+    "copyLink": "Copiar enlace",
+    "report": "Reportar",
+    "visitWebsite": "Visitar sitio web",
+    "viewCompany": "Ver empresa",
+    "location": "Ubicacion",
+    "company": "Empresa",
+    "archived": "Archivado",
+    "archivedMessage": "Este video ha sido archivado y ya no esta activo en el feed.",
+    "openInMaps": "Abrir en Google Maps",
+    "videoNotAvailable": "Video no disponible",
+    "copied": "Copiado!",
+    "openNewTab": "Abrir en nueva pestana",
+    "linkCopiedTitle": "Enlace copiado!",
+    "linkCopiedDescription": "El enlace ha sido copiado al portapapeles.",
+    "copyFailedTitle": "Error al copiar",
+    "copyFailedDescription": "Por favor, copie el enlace manualmente."
+  },
+  "email": {
+    "expirySubject": "Tu video expira en 7 dias!",
+    "publishedSubject": "Tu video esta en vivo!"
+  },
+  "table": {
+    "columns": {
+      "thumbnail": "Miniatura",
+      "title": "Titulo",
+      "status": "Estado",
+      "views": "Vistas",
+      "likes": "Me gusta",
+      "publishedAt": "Publicado",
+      "expiresAt": "Expira",
+      "actions": "Acciones"
+    },
+    "empty": "No se encontraron videos",
+    "loading": "Cargando videos..."
+  },
+  "filters": {
+    "all": "Todos",
+    "drafts": "Borradores",
+    "published": "Publicados",
+    "archived": "Archivados",
+    "search": "Buscar videos...",
+    "sortBy": "Ordenar por",
+    "sortOptions": {
+      "newest": "Mas recientes",
+      "oldest": "Mas antiguos",
+      "mostViews": "Mas vistas",
+      "mostLikes": "Mas me gusta"
+    }
+  },
+  "errors": {
+    "loadFailed": "Error al cargar videos",
+    "createFailed": "Error al crear video",
+    "updateFailed": "Error al actualizar video",
+    "deleteFailed": "Error al eliminar video",
+    "publishFailed": "Error al publicar video",
+    "archiveFailed": "Error al archivar video",
+    "uploadFailed": "Error al subir archivo",
+    "invalidVideo": "Formato de video invalido",
+    "videoTooLarge": "El archivo de video es muy grande (max. 100MB)",
+    "videoTooLong": "El video es muy largo (max. 60 segundos)",
+    "invalidThumbnail": "Formato de miniatura invalido",
+    "thumbnailTooLarge": "El archivo de miniatura es muy grande (max. 5MB)",
+    "titleRequired": "El titulo es requerido",
+    "categoryRequired": "La categoria es requerida",
+    "unauthorized": "No estas autorizado para realizar esta accion",
+    "notFound": "Video no encontrado",
+    "renewFailed": "Error al renovar el short",
+    "invalidInput": "Entrada invalida"
+  },
+  "success": {
+    "created": "Video creado exitosamente",
+    "updated": "Video actualizado exitosamente",
+    "deleted": "Video eliminado exitosamente",
+    "published": "Video publicado exitosamente",
+    "archived": "Video archivado exitosamente",
+    "renewed": "Video renovado exitosamente",
+    "draftSaved": "Borrador guardado exitosamente"
+  },
+  "edit": {
+    "title": "Editar video",
+    "description": "Actualiza los detalles del video",
+    "titleLabel": "Titulo",
+    "descriptionLabel": "Descripcion",
+    "tagsLabel": "Etiquetas",
+    "ctaLinkLabel": "Enlace CTA",
+    "save": "Guardar cambios",
+    "cancel": "Cancelar",
+    "success": "Video actualizado exitosamente",
+    "error": "Error al actualizar el video"
+  },
+  "duplicate": {
+    "success": "Video duplicado exitosamente",
+    "error": "Error al duplicar el video",
+    "limitReached": "Limite de borradores alcanzado (max. 10)"
+  },
+  "comments": {
+    "title": "Comentarios",
+    "count": "Comentarios (%count%)",
+    "placeholder": "Escribe un comentario...",
+    "submit": "Enviar",
+    "edit": "Editar",
+    "reply": "Responder",
+    "delete": "Eliminar",
+    "deleted": "Comentario eliminado",
+    "edited": "editado",
+    "editExpired": "Tiempo de edición expirado",
+    "loginRequired": "Inicia sesión para comentar",
+    "pending": "Pendiente de moderación",
+    "empty": "Sin comentarios aún. ¡Sé el primero!",
+    "sortNewest": "Más recientes",
+    "sortOldest": "Más antiguos",
+    "sortMostLiked": "Más populares",
+    "charLimit": "%count%/500 caracteres",
+    "loadMore": "Cargar más",
+    "confirmDelete": "¿Estás seguro de que quieres eliminar este comentario?",
+    "deleteSuccess": "Comentario eliminado",
+    "deleteFailed": "No se pudo eliminar el comentario",
+    "createFailed": "No se pudo añadir el comentario",
+    "editFailed": "No se pudo editar el comentario"
+  },
+  "reactions": {
+    "like": "Me gusta",
+    "dislike": "No me gusta",
+    "fire": "Fuego",
+    "heart": "Corazón",
+    "laugh": "Gracioso",
+    "wow": "Wow",
+    "clap": "Aplauso",
+    "loginRequired": "Inicia sesión para reaccionar",
+    "rateLimited": "Demasiadas reacciones. Inténtalo más tarde."
+  },
+  "backToFeed": "Volver al feed",
+  "viewOffer": "Ver oferta",
+  "viewCompany": "Ver empresa",
+  "relatedShorts": "Shorts relacionados"
+}

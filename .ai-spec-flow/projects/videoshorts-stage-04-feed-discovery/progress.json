@@ -1,0 +1,59 @@
+{
+  "project": "videoshorts-stage-04-feed-discovery",
+  "source": "ai-project-planner",
+  "sourceSpec": ".ai-project-planner/projects/videoshorts/stages/stage-04-feed-discovery/spec.md",
+  "context": {
+    "projectSpec": ".ai-project-planner/projects/videoshorts/project-spec.md",
+    "architecturePlan": ".ai-project-planner/projects/videoshorts/architecture-plan.md"
+  },
+  "created": "2026-01-01",
+  "phases": {
+    "brief": "skipped",
+    "analysis": "completed",
+    "architecture": "completed",
+    "tasks": "completed",
+    "coding": "completed",
+    "testing": "completed"
+  },
+  "currentPhase": "completed",
+  "testingInfo": {
+    "task01": "completed",
+    "task02": "completed",
+    "task03": "completed",
+    "task04": "completed",
+    "task05": "completed",
+    "task06": "completed",
+    "task07": "completed",
+    "task08": "completed",
+    "totalTestFiles": 31,
+    "totalTests": 1422
+  },
+  "analysisDetails": {
+    "iterations": 1,
+    "completedAt": "2026-01-01",
+    "outputFile": "analysis/final_analysis.md",
+    "frontendAwarenessComplete": true
+  },
+  "architectureDetails": {
+    "iterations": 1,
+    "completedAt": "2026-01-01",
+    "outputFile": "architecture/final_architecture.md",
+    "frontendSpecificationComplete": true
+  },
+  "taskDetails": {
+    "iterations": 2,
+    "completedAt": "2026-01-01",
+    "totalTasks": 8,
+    "indexFile": "tasks/index.md"
+  },
+  "tasks": [
+    {"id": "task-01", "name": "Database Setup", "status": "tested", "files": 6, "complexity": "Simple", "dependencies": [], "codedAt": "2026-01-01", "commit": "097ca0e", "testCommit": "d5521bf", "testsCount": 63, "testFiles": 2},
+    {"id": "task-02", "name": "Feed API", "status": "tested", "files": 8, "complexity": "Medium", "dependencies": ["task-01"], "codedAt": "2026-01-01", "commit": "5155d10", "testCommit": "dba0eaa", "testsCount": 142, "testFiles": 3},
+    {"id": "task-03", "name": "Core Feed Components", "status": "tested", "files": 9, "complexity": "Medium", "dependencies": ["task-02"], "codedAt": "2026-01-01", "commit": "092628d", "iterations": 2, "testCommit": "1d8b097", "testsCount": 124, "testFiles": 6},
+    {"id": "task-04", "name": "Filter Components", "status": "tested", "files": 11, "complexity": "Medium", "dependencies": ["task-03"], "codedAt": "2026-01-01", "commit": "a0562de", "iterations": 1, "testCommit": "1e46620", "testsCount": 195, "testFiles": 10},
+    {"id": "task-05", "name": "Search API", "status": "tested", "files": 4, "complexity": "Simple", "dependencies": ["task-01"], "codedAt": "2026-01-01", "commit": "6ed927d", "iterations": 1, "testCommit": "c036ec2", "testsCount": 136, "testFiles": 3},
+    {"id": "task-06", "name": "Search Components", "status": "tested", "files": 8, "complexity": "Medium", "dependencies": ["task-03", "task-05"], "codedAt": "2026-01-02", "commit": "6b03821", "iterations": 2, "testCommit": "4503c15", "testsCount": 101, "testFiles": 4},
+    {"id": "task-07", "name": "Translations & i18n", "status": "tested", "files": 12, "complexity": "Medium", "dependencies": [], "codedAt": "2026-01-02", "commit": "62240cc", "iterations": 2, "testCommit": "fe5eaeb", "testsCount": 601, "testFiles": 1},
+    {"id": "task-08", "name": "Short Detail Page", "status": "tested", "files": 9, "complexity": "Medium", "dependencies": ["task-02", "task-03"], "codedAt": "2026-01-02", "commit": "831f63e", "iterations": 1, "testCommit": "500bad8", "testsCount": 60, "testFiles": 2}
+  ]
+}

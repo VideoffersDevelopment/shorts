@@ -1,0 +1,16 @@
+{
+  "title": "Following",
+  "follow": "Follow",
+  "following": "Following",
+  "unfollow": "Unfollow",
+  "loginRequired": "Please log in to follow companies",
+  "followers": "Followers",
+  "shorts": "Shorts",
+  "verified": "Verified",
+  "empty": {
+    "title": "You're not following anyone yet",
+    "description": "Discover local businesses and start following them to see their updates here."
+  },
+  "loading": "Loading...",
+  "error": "Failed to load followed companies"
+}

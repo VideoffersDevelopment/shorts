@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>VideoShorts Homepage</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#111318",
+                        "surface-dark": "#1b1f27",
+                        "border-dark": "#282e39",
+                        "text-secondary": "#9ca6ba"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #111318;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #282e39;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b4354;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-hidden h-screen flex flex-col">
+    <!-- Header -->
+    <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-border-dark bg-white dark:bg-background-dark px-6 py-3 shrink-0 z-50">
+        <div class="flex items-center gap-8">
+            <div class="flex items-center gap-2 text-slate-900 dark:text-white cursor-pointer">
+                <div class="size-8 flex items-center justify-center bg-primary rounded-lg">
+                    <span class="material-symbols-outlined text-white" style="font-size: 24px;">play_arrow</span>
+                </div>
+                <h2 class="text-lg font-bold leading-tight tracking-[-0.015em] hidden sm:block">VideoShorts</h2>
+            </div>
+            <!-- Search Bar (Adapted from TextField component) -->
+            <div
+                class="hidden md:flex w-[500px] items-center rounded-lg border border-gray-300 dark:border-border-dark bg-gray-50 dark:bg-surface-dark overflow-hidden h-10">
+                <div class="flex flex-1 items-center px-3 border-r border-gray-300 dark:border-border-dark">
+                    <span class="material-symbols-outlined text-text-secondary" style="font-size: 20px;">search</span>
+                    <input
+                        class="w-full bg-transparent border-none focus:ring-0 text-sm placeholder:text-text-secondary text-slate-900 dark:text-white"
+                        placeholder="Search businesses..." />
+                </div>
+                <div class="flex flex-1 items-center px-3">
+                    <span class="material-symbols-outlined text-text-secondary"
+                        style="font-size: 20px;">location_on</span>
+                    <input
+                        class="w-full bg-transparent border-none focus:ring-0 text-sm placeholder:text-text-secondary text-slate-900 dark:text-white"
+                        placeholder="New York, NY" value="New York, NY" />
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <!-- Mobile Search Icon -->
+            <button class="md:hidden flex items-center justify-center text-text-secondary hover:text-primary">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+            <!-- Action Buttons -->
+            <div class="flex gap-2">
+                <button
+                    class="flex size-10 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-border-dark text-slate-900 dark:text-white transition-colors relative">
+                    <span class="material-symbols-outlined" style="font-size: 24px;">notifications</span>
+                    <span
+                        class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"></span>
+                </button>
+                <button
+                    class="hidden sm:flex h-10 px-4 cursor-pointer items-center justify-center rounded-lg bg-primary hover:bg-blue-700 text-white gap-2 text-sm font-bold transition-colors">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">add_circle</span>
+                    <span>Create</span>
+                </button>
+            </div>
+            <!-- Profile Dropdown -->
+            <div
+                class="flex items-center gap-3 pl-2 border-l border-gray-200 dark:border-border-dark cursor-pointer group">
+                <div class="bg-center bg-no-repeat bg-cover rounded-full size-9 ring-2 ring-transparent group-hover:ring-primary transition-all"
+                    data-alt="User profile picture of a smiling person"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsFMmaB6AnCOYNtDLAvlpah7q_a8HJqotWs2PXMvBwuh1iwQi5Ds5V-dyjCgd3mHixzEiT-aOqoHUTFNbOzWpQHb-5N4tTaAak-LImQk_shwWJjF_mUBKyKR-O765VfT8nUWRFsILQDVkLr5_NMsRiijeCgkjPDflJ3KeauAj6AVj710QUCoM_fWNAMRe-1M1RPTLsOi9oZzfINjQT7ldfMG5154fNBkFz0bDQtHsu0FtAaTG3CfzBqMP8KQjjMN25zTubGwwczrU");'>
+                </div>
+                <div class="hidden lg:flex flex-col">
+                    <span class="text-sm font-bold leading-none">Alex M.</span>
+                    <span class="text-xs text-text-secondary mt-1">Premium</span>
+                </div>
+                <span class="material-symbols-outlined text-text-secondary hidden lg:block">expand_more</span>
+            </div>
+        </div>
+    </header>
+    <!-- Main Layout -->
+    <div class="flex flex-1 overflow-hidden relative">
+        <!-- Left Sidebar -->
+        <aside
+            class="hidden xl:flex w-64 flex-col justify-between border-r border-gray-200 dark:border-border-dark bg-white dark:bg-background-dark p-4 overflow-y-auto">
+            <div class="flex flex-col gap-6">
+                <!-- Main Nav -->
+                <div class="flex flex-col gap-1">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary" href="#">
+                        <span class="material-symbols-outlined font-variation-fill">home</span>
+                        <p class="text-sm font-bold">Home</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-secondary hover:text-slate-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">trending_up</span>
+                        <p class="text-sm font-medium">Trending</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-secondary hover:text-slate-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">group</span>
+                        <p class="text-sm font-medium">Following</p>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-secondary hover:text-slate-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">bookmark</span>
+                        <p class="text-sm font-medium">Saved</p>
+                    </a>
+                </div>
+                <!-- Categories -->
+                <div>
+                    <h3 class="px-3 text-xs font-bold text-text-secondary uppercase tracking-wider mb-2">Categories</h3>
+                    <div class="flex flex-col gap-1">
+                        <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary hover:text-slate-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined" style="font-size: 20px;">restaurant</span>
+                            <p class="text-sm font-medium">Food &amp; Dining</p>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary hover:text-slate-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined" style="font-size: 20px;">checkroom</span>
+                            <p class="text-sm font-medium">Fashion &amp; Retail</p>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary hover:text-slate-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined" style="font-size: 20px;">devices</span>
+                            <p class="text-sm font-medium">Tech &amp; Services</p>
+                        </a>
+                        <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-text-secondary hover:text-slate-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-border-dark transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined" style="font-size: 20px;">fitness_center</span>
+                            <p class="text-sm font-medium">Health &amp; Wellness</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Links -->
+            <div class="flex flex-col gap-1 mt-auto pt-6 border-t border-gray-200 dark:border-border-dark">
+                <div class="flex flex-wrap gap-x-4 gap-y-2 px-3">
+                    <a class="text-xs text-text-secondary hover:underline" href="#">Privacy</a>
+                    <a class="text-xs text-text-secondary hover:underline" href="#">Terms</a>
+                    <a class="text-xs text-text-secondary hover:underline" href="#">Ad Choices</a>
+                </div>
+                <p class="px-3 py-2 text-xs text-text-secondary/60">© 2023 VideoShorts Inc.</p>
+            </div>
+        </aside>
+        <!-- Main Content (Feed) -->
+        <main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-[#0b0d11]">
+            <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <!-- Page Header -->
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+                    <div>
+                        <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Your Personalized Feed</h1>
+                        <p class="text-text-secondary text-sm mt-1">Based on your activity in <span
+                                class="text-primary font-medium">New York, NY</span></p>
+                    </div>
+                    <!-- Filter Tags -->
+                    <div class="flex gap-2 overflow-x-auto hide-scrollbar pb-1">
+                        <button
+                            class="px-4 py-1.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold whitespace-nowrap">All</button>
+                        <button
+                            class="px-4 py-1.5 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-border-dark text-slate-700 dark:text-text-secondary hover:text-slate-900 dark:hover:text-white text-sm font-medium whitespace-nowrap transition-colors">Offers</button>
+                        <button
+                            class="px-4 py-1.5 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-border-dark text-slate-700 dark:text-text-secondary hover:text-slate-900 dark:hover:text-white text-sm font-medium whitespace-nowrap transition-colors">New
+                            Arrival</button>
+                        <button
+                            class="px-4 py-1.5 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-border-dark text-slate-700 dark:text-text-secondary hover:text-slate-900 dark:hover:text-white text-sm font-medium whitespace-nowrap transition-colors">Near
+                            Me</button>
+                    </div>
+                </div>
+                <!-- Video Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="group relative aspect-[9/16] rounded-xl overflow-hidden bg-surface-dark shadow-sm hover:shadow-xl transition-all duration-300">
+                        <!-- Video Background -->
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Close up of a juicy burger being held"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPwViaIFPqhlByFP50kx6TH4qK6J63Es-FX9ivjDpbgeyaHTVtg30B_3--X2UfIQbXBbouiGIgKExcQsTUSgb5oI5AptG4bOCw7ezt-DTjrcjlaXKrombUdFCPGNN0yxer6B8x0GexLPEYDsYNiXtJmiH2Zlx4l5eHZ72oxh1dcuamm7CFxx7bB1nyh7S1XTaGbZx4eRS9GTd_NneHrfxipNGD5Ytnd1fH-I_QtRktf5BTzkklGgQdWBMn_WvQu8YPp9Wh4Y_iueQ");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/90"></div>
+                        <!-- Top Bar (Inside Card) -->
+                        <div
+                            class="absolute top-0 left-0 right-0 p-4 flex justify-between items-start opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-black/40 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded">Ad
+                            </div>
+                            <button
+                                class="bg-black/40 backdrop-blur-md p-1.5 rounded-full text-white hover:bg-black/60">
+                                <span class="material-symbols-outlined" style="font-size: 20px;">volume_off</span>
+                            </button>
+                        </div>
+                        <!-- Right Actions -->
+                        <div class="absolute right-2 bottom-20 flex flex-col gap-4 items-center z-20">
+                            <button class="flex flex-col items-center gap-1 group/btn">
+                                <div
+                                    class="bg-black/40 backdrop-blur-md p-2.5 rounded-full text-white group-hover/btn:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined font-variation-fill">favorite</span>
+                                </div>
+                                <span class="text-white text-xs font-medium drop-shadow-md">1.2k</span>
+                            </button>
+                            <button class="flex flex-col items-center gap-1 group/btn">
+                                <div
+                                    class="bg-black/40 backdrop-blur-md p-2.5 rounded-full text-white group-hover/btn:bg-white/20 transition-colors">
+                                    <span class="material-symbols-outlined">chat_bubble</span>
+                                </div>
+                                <span class="text-white text-xs font-medium drop-shadow-md">45</span>
+                            </button>
+                            <button class="flex flex-col items-center gap-1 group/btn">
+                                <div
+                                    class="bg-black/40 backdrop-blur-md p-2.5 rounded-full text-white group-hover/btn:bg-white/20 transition-colors">
+                                    <span class="material-symbols-outlined">share</span>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- Bottom Content -->
+                        <div class="absolute bottom-0 left-0 right-0 p-4 pt-12 flex flex-col gap-2 z-10">
+                            <!-- User Info -->
+                            <div class="flex items-center gap-2 mb-1">
+                                <div class="size-8 rounded-full border border-white/20 bg-cover bg-center"
+                                    data-alt="Burger Joint logo"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRyd4sTqtwt3ub-9S7clEe3GmvZl72yAcJOHs1nJSUEyQlcxgaDB5pHNgpwCj8UUnCNXWHQo1h0eJd7QUtG0LpMKBAURrFQHhZHGNjRXCXXuN7zaOvdci3rNArKYflLPfxL9bVY9C5DdWICm_gdh4uHKD5BHUFw7RhUiCkig5qVeWPnMs-qasLBA3jbGcQmdqRZf91Lrg4H3DzmcHhZOHVVJQSSXlfyb9KVsndJ7s9EqfIWnn99sgty26CmdTfg91iqi_7phoTR7Y");'>
+                                </div>
+                                <div class="flex flex-col">
+                                    <div class="flex items-center gap-1">
+                                        <span
+                                            class="text-white font-bold text-sm leading-none drop-shadow-md">BurgerJoint</span>
+                                        <span class="material-symbols-outlined text-blue-400 font-variation-fill"
+                                            style="font-size: 14px;">verified</span>
+                                    </div>
+                                    <span class="text-gray-300 text-xs leading-none">Downtown • Food</span>
+                                </div>
+                                <button
+                                    class="ml-auto bg-white/20 hover:bg-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors backdrop-blur-sm">Follow</button>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight drop-shadow-md pr-12">Lunch Special:
+                                50% Off All Combos Today! 🍔</h3>
+                            <button
+                                class="mt-2 w-full bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-lg">
+                                <span>Order Now</span>
+                                <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="group relative aspect-[9/16] rounded-xl overflow-hidden bg-surface-dark shadow-sm hover:shadow-xl transition-all duration-300">
+                        <!-- Video Background -->
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Man working on a laptop in a modern office"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqYPDm8ET_n-MCqCrmoX5c8fyO7DerW5CMp0xkhI4CrNFMepAuQYT0kuR6T94VIT1yn0n6V9djFf9YsnsBSUhYKHCZ9K1yBtpg9oCuxxSlbkCO1YxqGXS3VwEWWywRzpMHtvRcAzTY5xonu5YdVGpdDTexXaWCdtqMY_P4ufvjlFUK14bghrZur8zqKUqOF1DU_PBpq03DFXHlXok_qlr-dvDYtnvvUDVhePLNwqTKKPqpCCuGo5PeQtygteOUdUJvyOrdFJEg1Z0");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/90"></div>
+                        <!-- Top Bar (Inside Card) -->
+                        <div
+                            class="absolute top-0 left-0 right-0 p-4 flex justify-between items-start opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-black/40 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded">
+                                Promotion</div>
+                            <button
+                                class="bg-black/40 backdrop-blur-md p-1.5 rounded-full text-white hover:bg-black/60">
+                                <span class="material-symbols-outlined" style="font-size: 20px;">volume_off</span>
+                            </button>
+                        </div>
+                        <!-- Right Actions -->
+                        <div class="absolute right-2 bottom-20 flex flex-col gap-4 items-center z-20">
+                            <button class="flex flex-col items-center gap-1 group/btn">
+                                <div
+                                    class="bg-black/40 backdrop-blur-md p-2.5 rounded-full text-white group-hover/btn:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined">favorite_border</span>
+                                </div>
+                                <span class="text-white text-xs font-medium drop-shadow-md">856</span>
+                            </button>
+                            <button class="flex flex-col items-center gap-1 group/btn">
+                                <div
+                                    class="bg-black/40 backdrop-blur-md p-2.5 rounded-full text-white group-hover/btn:bg-white/20 transition-colors">
+                                    <span class="material-symbols-outlined">chat_bubble</span>
+                                </div>
+                                <span class="text-white text-xs font-medium drop-shadow-md">12</span>
+                            </button>
+                            <button class="flex flex-col items-center gap-1 group/btn">
+                                <div
+                                    class="bg-black/40 backdrop-blur-md p-2.5 rounded-full text-white group-hover/btn:bg-white/20 transition-colors">
+                                    <span class="material-symbols-outlined">share</span>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- Bottom Content -->
+                        <div class="absolute bottom-0 left-0 right-0 p-4 pt-12 flex flex-col gap-2 z-10">
+                            <!-- User Info -->
+                            <div class="flex items-center gap-2 mb-1">
+                                <div class="size-8 rounded-full border border-white/20 bg-cover bg-center"
+                                    data-alt="TechSolutions logo"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuSoewB9CSAGQtOQRuPyKS1TJ_Yq1dZuAvwTvR82I-Laes4IZHTlNEGLvfQxSDtBfvXfelVFcs-71wd3aG43ekVIw2EFdktyCN_PFFKS1BKdo4r7xc_Fgs8M6WtXTxgrxFX0qIjv11AeRTX8dKPOs2ffIInVenjCP73I7O22f9l2PqOK8FWeGGXJgW8wsbfCcwDkYB3vbETtTgK1YrDGTS9pBt_xdxczjdAk_ti1SVNrDUI19GyeRFIvNqonh71koaZ72kRM7gHkI");'>
+                                </div>
+                                <div class="flex flex-col">
+                                    <div class="flex items-center gap-1">
+                                        <span
+                                            class="text-white font-bold text-sm leading-none drop-shadow-md">TechSolutions</span>
+                                        <span class="material-symbols-outlined text-blue-400 font-variation-fill"
+                                            style="font-size: 14px;">verified</span>
+                                    </div>
+                                    <span class="text-gray-300 text-xs leading-none">Midtown • IT Services</span>
+                                </div>
+                                <button
+                                    class="ml-auto bg-white/20 hover:bg-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors backdrop-blur-sm">Follow</button>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight drop-shadow-md pr-12">Secure your
+                                small business with our new firewall.</h3>
+                            <button
+                                class="mt-2 w-full bg-white text-primary hover:bg-gray-100 font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-lg">
+                                <span>Get a Quote</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="group relative aspect-[9/16] rounded-xl overflow-hidden bg-surface-dark shadow-sm hover:shadow-xl transition-all duration-300">
+                        <!-- Video Background -->
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Yoga instructor doing a pose in a studio"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-qG29qMQ8TfUmV1pVXk-OSM7YkAYfTA1kP72c78p6rloorHMOXclou_ejxaENi6mBm6N4YwBf4TwcVgPW4tpI1wErdYkTsLKzTHrO3HlBor5piVr-SlP4L6W-UTlhEgUCw5NfBKC0fSMzMSj2UugGgePpyIWAbIGNJtjsqZwhfpox3NiJllLN6wgNbmdDHBpx6rWcJbyTlX4oeNzodow8edNSqkckyGA4ibDVUSgsJyUr9JPPpsM7S0GKh57CCin-pOy-Da4aXpQ");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/90"></div>
+                        <!-- Top Bar (Inside Card) -->
+                        <div
+                            class="absolute top-0 left-0 right-0 p-4 flex justify-between items-start opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-transparent"></div>
+                            <button
+                                class="bg-black/40 backdrop-blur-md p-1.5 rounded-full text-white hover:bg-black/60">
+                                <span class="material-symbols-outlined" style="font-size: 20px;">volume_off</span>
+                            </button>
+                        </div>
+                        <!-- Right Actions -->
+                        <div class="absolute right-2 bottom-20 flex flex-col gap-4 items-center z-20">
+                            <button class="flex flex-col items-center gap-1 group/btn">
+                                <div
+                                    class="bg-black/40 backdrop-blur-md p-2.5 rounded-full text-white group-hover/btn:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined">favorite_border</span>
+                                </div>
+                                <span class="text-white text-xs font-medium drop-shadow-md">3.4k</span>
+                            </button>
+                            <button class="flex flex-col items-center gap-1 group/btn">
+                                <div
+                                    class="bg-black/40 backdrop-blur-md p-2.5 rounded-full text-white group-hover/btn:bg-white/20 transition-colors">
+                                    <span class="material-symbols-outlined">chat_bubble</span>
+                                </div>
+                                <span class="text-white text-xs font-medium drop-shadow-md">120</span>
+                            </button>
+                            <button class="flex flex-col items-center gap-1 group/btn">
+                                <div
+                                    class="bg-black/40 backdrop-blur-md p-2.5 rounded-full text-white group-hover/btn:bg-white/20 transition-colors">
+                                    <span class="material-symbols-outlined">share</span>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- Bottom Content -->
+                        <div class="absolute bottom-0 left-0 right-0 p-4 pt-12 flex flex-col gap-2 z-10">
+                            <!-- User Info -->
+                            <div class="flex items-center gap-2 mb-1">
+                                <div class="size-8 rounded-full border border-white/20 bg-cover bg-center"
+                                    data-alt="Zen Space logo"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA-F9hgCUXmJQnd4D7wwiyIddSOqcaDPz_CMUgLbXqcOdbxprRlV9xZ1SPdQfpLl50eFyW-6trn6PdU82-ophVwgLKuBMmunaHHz93XM1jTdGRJkAYZoexCr0XNtNRnImZ8ZIZbWZxf9tYTvTHaZh9DOnZxwPcgwHwrRzW290daiQEt0xXD5uqfH9_P8fyONTbVp2v5LT-AdT1gKhLKGuyaFWog5azY0l-jp_OEPB2a6U0bpitcmf10157N4yjen11pYMv5yVtEkqw");'>
+                                </div>
+                                <div class="flex flex-col">
+                                    <div class="flex items-center gap-1">
+                                        <span class="text-white font-bold text-sm leading-none drop-shadow-md">Zen
+                                            Space</span>
+                                    </div>
+                                    <span class="text-gray-300 text-xs leading-none">SoHo • Wellness</span>
+                                </div>
+                                <button
+                                    class="ml-auto bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors backdrop-blur-sm">Following</button>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight drop-shadow-md pr-12">Start your
+                                morning right. First class free! 🧘‍♀️</h3>
+                            <!-- No CTA button on this one, just info -->
+                            <div class="mt-2 text-xs text-gray-300 flex items-center gap-1">
+                                <span class="material-symbols-outlined" style="font-size: 14px;">schedule</span>
+                                <span>Classes: Mon-Fri 6AM - 8PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="group relative aspect-[9/16] rounded-xl overflow-hidden bg-surface-dark shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Barista pouring latte art"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB53xnFHDOH6gE7chVl8jRv99jShVATb6HLXGhFMNVMsUECPPpFNx2U4pQRtTxrHRd54apInAe9mpP5vQBrYp3Brhahoy9buz_EtImzV9Pjq6_7mZnehQIT6uhXaIHuh-KQgywJXn_RJaJexkgDWk6uUZ_V5gPqX1jC14Rdnjq47Hz7nMbzbp19v4ukpEirdDDnc7wpGO3W5WTqgD_HjaNY9VHfEPrehg6WWECGE86CZIP3ap6VLQuA1O066NNddVEIGMt5XtPgD4U");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/90"></div>
+                        <div
+                            class="absolute top-0 left-0 right-0 p-4 flex justify-between items-start opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-black/40 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded">
+                                Hiring</div>
+                            <button
+                                class="bg-black/40 backdrop-blur-md p-1.5 rounded-full text-white hover:bg-black/60">
+                                <span class="material-symbols-outlined" style="font-size: 20px;">volume_off</span>
+                            </button>
+                        </div>
+                        <div class="absolute right-2 bottom-20 flex flex-col gap-4 items-center z-20">
+                            <button class="flex flex-col items-center gap-1 group/btn">
+                                <div
+                                    class="bg-black/40 backdrop-blur-md p-2.5 rounded-full text-white group-hover/btn:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined">favorite_border</span>
+                                </div>
+                                <span class="text-white text-xs font-medium drop-shadow-md">245</span>
+                            </button>
+                            <button class="flex flex-col items-center gap-1 group/btn">
+                                <div
+                                    class="bg-black/40 backdrop-blur-md p-2.5 rounded-full text-white group-hover/btn:bg-white/20 transition-colors">
+                                    <span class="material-symbols-outlined">chat_bubble</span>
+                                </div>
+                                <span class="text-white text-xs font-medium drop-shadow-md">8</span>
+                            </button>
+                            <button class="flex flex-col items-center gap-1 group/btn">
+                                <div
+                                    class="bg-black/40 backdrop-blur-md p-2.5 rounded-full text-white group-hover/btn:bg-white/20 transition-colors">
+                                    <span class="material-symbols-outlined">share</span>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 pt-12 flex flex-col gap-2 z-10">
+                            <div class="flex items-center gap-2 mb-1">
+                                <div class="size-8 rounded-full border border-white/20 bg-cover bg-center"
+                                    data-alt="Bean Cafe logo"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5ulkKEs293qDLyNiK_pjOHWhUKvImd_DGGZC7Ff_PGoFoJuUoj0GstmuMqq6ehpR3tQ01E007WALsFBdl8m0uPnIU3zNsDitj7SNx1Br7IqQn1SEV_g3ht-L6R9cXmVGbxM0DLW9UvaYdvGPXJuArc3DHpylVXvLMmqwY_ZDdM436DuHVyNYSc7wVPPYrM6cQYlgiUU_YfRzH_nB7qNKLwQ7axpz-0AdqOf5iVQF8kOoXo4jUo0tMs6TT15J7gWWxqXJ4gyjZYbk");'>
+                                </div>
+                                <div class="flex flex-col">
+                                    <div class="flex items-center gap-1">
+                                        <span class="text-white font-bold text-sm leading-none drop-shadow-md">Bean
+                                            Cafe</span>
+                                    </div>
+                                    <span class="text-gray-300 text-xs leading-none">Brooklyn • Cafe</span>
+                                </div>
+                                <button
+                                    class="ml-auto bg-white/20 hover:bg-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors backdrop-blur-sm">Follow</button>
+                            </div>
+                            <h3 class="text-white font-bold text-lg leading-tight drop-shadow-md pr-12">We are looking
+                                for experienced Baristas! ☕️</h3>
+                            <button
+                                class="mt-2 w-full bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-lg">
+                                <span>Apply Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Load More Loader -->
+                <div class="flex justify-center py-12">
+                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                </div>
+            </div>
+        </main>
+        <!-- Right Sidebar (Suggested) -->
+        <aside
+            class="hidden 2xl:flex w-80 flex-col border-l border-gray-200 dark:border-border-dark bg-white dark:bg-background-dark p-6 overflow-y-auto">
+            <!-- Trending in Location -->
+            <div class="mb-8">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-sm font-bold text-text-secondary uppercase tracking-wider">Trending in New York</h3>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="flex gap-3 group cursor-pointer">
+                        <div class="w-12 h-16 rounded-lg bg-cover bg-center shrink-0"
+                            data-alt="Trending video thumbnail"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlPhzF5IK3acOFTgzJ4Zs2znOC5LpveJl5xhba_QCvWJrs4kq-Uq1S4gaUSaBlt6IzN_ME9d4yMTcrXyhK_-vgNhpWUl9nGbn-bWP59JSRbmdvGg8X6IddW7tfaA4vE3qHJmrcCJqhF470PGI07c-sD3PzwzBj9p7yZpYmyk1StVxJNPawjcO6BFoLmK5ykbA-w1EHuYE9y_inBBXHhYBo3Q_2zvhEr4WSMQ_cvOwad0Y0R91-fv2ywkMBZSiv3YlBsc16M3reuVI");'>
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <p
+                                class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary leading-snug">
+                                Grand Opening: The Tech Hub</p>
+                            <p class="text-xs text-text-secondary mt-1">15k Views</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 group cursor-pointer">
+                        <div class="w-12 h-16 rounded-lg bg-cover bg-center shrink-0"
+                            data-alt="Trending video thumbnail"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2N2YhdchOmvXjopbr87qkEhv_TsIPWucz0mTOi-Xp4KJYEfA0bFI9fWJZEe_yS4HOMqbTYXY5_WEKZ0Hy5_TW5my_UecydjT494YQVzTYBUe723NJRCFB15AVVJPMjzDqRRqwlLF6lZz4LkYnIXm1DkyPD94GyRiYl542O-atr-Ddwravb_VjLDEULK2t39flOmrtEtTCQ4xuFkf1DfsVctMdoL870ynsj34RC428WG3szgADnZ_kH-ed0QmVdl3_1PmwMCD6lmE");'>
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <p
+                                class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary leading-snug">
+                                Top 5 Dinner Spots in Chelsea</p>
+                            <p class="text-xs text-text-secondary mt-1">8.2k Views</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 group cursor-pointer">
+                        <div class="w-12 h-16 rounded-lg bg-cover bg-center shrink-0"
+                            data-alt="Trending video thumbnail"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBiAacrNYqxu8X9iVkDFE5fGQDrnWCantV5dt6ooIwFarc03ndtp880vD4vSvexK7tqPfITWXOyB8pHPg1gGKWWAZy87tTKVW2A623ACezgupdnhCC6kLdEOIDPB_OaSD4VBSb9XrGry2yNugeFvmmqdt_xHyXLW2W6VUGNMzV-Lo2GMy-PjVG1yGwtfhYnHjEerVzQsq9DPo-9Pp_EzIuNpU-hIFaxgt9KXAXXfFt_4pZKOyPcky8J_Nw29lLVGybbacbs6t9hB6c");'>
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <p
+                                class="text-sm font-bold text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary leading-snug">
+                                Flash Sale: Summer Gear</p>
+                            <p class="text-xs text-text-secondary mt-1">22k Views</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="w-full mt-4 text-xs font-bold text-primary hover:underline text-left">View all
+                    trending</button>
+            </div>
+            <!-- Suggested Companies -->
+            <div>
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-sm font-bold text-text-secondary uppercase tracking-wider">Suggested for You</h3>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="size-8 rounded-full bg-cover bg-center" data-alt="Company logo"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqI7BatXMnGFiqpRiXHZoiv1miQJKi05inWhgoYXLbRicQllG0Gh1AGTeQfSiKPNoL53fkyZuBUPemNt4_ueC3HoSn56QgTCDiEwjhH2pJebJOIdJXZiGWsWC_i99GnPpaQFTUULhx8iKPPRX5IXChMkwkDhaOorbeb34lyaBxBwNB0vKu-gfQg2kEzNRQSVsJxIP_qfZUDTh97WZHi8D-L5T1Xpa_uBh3l4V9S9km4W-yoa_e3wBWyKv3PvP_myGL373lw2FVg-k");'>
+                            </div>
+                            <div class="flex flex-col">
+                                <span
+                                    class="text-sm font-bold text-slate-900 dark:text-white leading-none">FreshMkt</span>
+                                <span class="text-xs text-text-secondary">Retail • 1.2M</span>
+                            </div>
+                        </div>
+                        <button
+                            class="text-primary text-xs font-bold hover:bg-primary/10 px-2 py-1 rounded transition-colors">Follow</button>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="size-8 rounded-full bg-cover bg-center" data-alt="Company logo"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSjGTn4tD0FOtasLcEgHbdxsDGteUFXvHMvpsMUJaxEz9_6jR3X-C1ttEr5i2CxSCzX-q8igKLvBHaC0SMU0Kbzqm8bnVYzDMhnd-_vNfnSlLUjZMYaOoO-teUEEJP3RjBgiHiHyQfOpa3H18Jebc7evCQETQQbx2UldHGkxjFoUmfTpD-8lYURhZl1ARDpKjFC3rkGRaEIdfUyMnZ2AWYsHeT839Vu3kJF_uUQLSuQjTGn923NSzNTJyEQslSS1Ram3M4JnGTF8A");'>
+                            </div>
+                            <div class="flex flex-col">
+                                <span
+                                    class="text-sm font-bold text-slate-900 dark:text-white leading-none">LegalEase</span>
+                                <span class="text-xs text-text-secondary">Services • 45k</span>
+                            </div>
+                        </div>
+                        <button
+                            class="text-primary text-xs font-bold hover:bg-primary/10 px-2 py-1 rounded transition-colors">Follow</button>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <div class="size-8 rounded-full bg-cover bg-center" data-alt="Company logo"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnF33fUZkjrpRrNRrJqvIgP4D0JMP2q9Rsv7mVMqsSpR3rvCjJitYhgfslnw9e3-OFC0CpPoa9XKUgnLy_eLCEGAo9_AIkYNIr-KSDyMkDmSQ29s9N8rKhKzxXe0OYwXIgFiO_ovWdsH6Uw09n_5RIsbLGYCGEjBZX1QE1UbFlPyssmKsGW6WLF82O-ziTNQxYCGrH3R2kUu-RMQfgvVr9w9VL37LdrLk722LizQmZCHpogK5JzyS3oDxwhA0BrvtRd_ZSnzuVH14");'>
+                            </div>
+                            <div class="flex flex-col">
+                                <span
+                                    class="text-sm font-bold text-slate-900 dark:text-white leading-none">AutoFix</span>
+                                <span class="text-xs text-text-secondary">Auto • 12k</span>
+                            </div>
+                        </div>
+                        <button
+                            class="text-primary text-xs font-bold hover:bg-primary/10 px-2 py-1 rounded transition-colors">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Ad Space -->
+            <div class="mt-auto pt-6">
+                <div
+                    class="w-full aspect-video rounded-lg bg-border-dark flex items-center justify-center relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-50"
+                        data-alt="Abstract gradient background for ad space"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCi69ItYAt23WFdKqW7qgF62y2Bfg9wNd9izTf1vRhCokEEWIEDdy3YeABWgUZb1U9FjxaFohq5RcGxYSDIopsU1WcRM8MwiiIUp4Adk0AF3rdckBI1Y2ej7ztMnlRg8HH9tLrllvLnP5tQQVLR4EoTs5riLT2OB-Jw_26l_bitbIpX426TimZGHWCzLGt53rrEn19OfROftJPyTfaPemS7rCpw58cvQ9BAg8YYNV13D9jnxC8K7BN9kEbB7ctQRMRxK-FOhEA5vhs");'>
+                    </div>
+                    <span class="text-xs text-white/50 relative z-10">Advertisement</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>

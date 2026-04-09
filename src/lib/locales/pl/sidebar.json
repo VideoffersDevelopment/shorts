@@ -1,0 +1,30 @@
+{
+  "accessibility": {
+    "openMenu": "Otwórz menu",
+    "companyNavigation": "Nawigacja firmy",
+    "navigationMenu": "Menu nawigacji"
+  },
+  "collapse": "Zwiń menu",
+  "home": "Strona główna",
+  "trending": "Popularne",
+  "following": "Obserwowani",
+  "saved": "Zapisane",
+  "categories": "Kategorie",
+  "profile": "Profil",
+  "settings": "Ustawienia",
+  "preferences": "Preferencje",
+  "logout": "Wyloguj",
+  "menu": {
+    "upgradeToCompany": "Przejdź na konto firmowe",
+    "companyProfile": "Profil firmy",
+    "adminPanel": "Panel administracyjny",
+    "myShorts": "Moje Shortsy",
+    "credits": "Kredyty"
+  },
+  "company": {
+    "profile": "Profil firmy",
+    "shorts": "Moje Shortsy",
+    "credits": "Kredyty"
+  },
+  "admin": "Panel administracyjny"
+}

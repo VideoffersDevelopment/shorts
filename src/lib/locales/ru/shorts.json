@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "title": "Korotkie Video",
+    "description": "Upravlyajte i publikujte svoi korotkie video"
+  },
+  "verification": {
+    "pendingTitle": "Ожидает верификации",
+    "pendingDescription": "Вы сможете загружать и публиковать shorts после верификации компании администратором."
+  },
+  "addShort": {
+    "button": "Добавить Short",
+    "upgradeTitle": "Перейти на бизнес-аккаунт",
+    "upgradeDescription": "Для загрузки и публикации shorts вам нужен бизнес-аккаунт. Обновитесь сейчас, чтобы начать делиться бизнес-контентом.",
+    "upgradeAction": "Обновить сейчас",
+    "pendingTitle": "Ожидает верификации",
+    "pendingDescription": "Ваша компания ожидает одобрения администратором. Вы сможете добавлять shorts после верификации.",
+    "pendingAction": "OK",
+    "cancel": "Отмена"
+  },
+  "list": {
+    "empty": {
+      "title": "Poka net video",
+      "description": "Sozdajte svoe pervoe video, chtoby nachat prodvigat biznes",
+      "action": "Sozdat Video"
+    }
+  },
+  "create": {
+    "title": "Sozdat Novoe Video",
+    "description": "Zagruzite i opublikujte novoe korotkoe video"
+  },
+  "wizard": {
+    "steps": {
+      "video": "Video",
+      "metadata": "Detali",
+      "thumbnail": "Miniatura",
+      "review": "Proverka"
+    },
+    "video": {
+      "title": "Zagruzit Video",
+      "description": "Zagruzite svoe korotkoe video (maks. 60 sekund)",
+      "dragAndDrop": "Peretashite video syuda",
+      "dropHere": "Brosте video syuda",
+      "browse": "ili vyberite fajly",
+      "requirements": "MP4, WebM ili MOV - Maksimum 100MB",
+      "uploading": "Zagruzka video...",
+      "processing": "Obrabotka video...",
+      "preview": "Predprosmotr video",
+      "changeVideo": "Izmenit video",
+      "aspectWarning": "Video ne v formate 9:16. Luchshie rezultaty s vertikalnymi video."
+    },
+    "tags": {
+      "create": "Sozdat \"{tag}\""
+    },
+    "metadata": {
+      "title": "Detali Video",
+      "description": "Dobavte zagolovok, opisanie i tegi",
+      "fields": {
+        "title": "Zagolovok",
+        "titlePlaceholder": "Vvedite privlekatelnyj zagolovok",
+        "titleHint": "Maksimum 100 simvolov",
+        "description": "Opisanie",
+        "descriptionPlaceholder": "Opishite svoe korotkoe video",
+        "descriptionHint": "Opcionalno, no pomogaet v poiske",
+        "category": "Kategoriya",
+        "categoryPlaceholder": "Vyberite kategoriyu",
+        "tags": "Tegi",
+        "tagsPlaceholder": "Dobavte tegi dlya poiska video",
+        "tagsHint": "Nazhmite Enter dlya dobavleniya (maks. 5)",
+        "location": "Mestopolozhenie",
+        "locationPlaceholder": "Dobavte mestopolozhenie (opcionalno)",
+        "ctaLink": "Ssylka dlya dejstviya",
+        "ctaLinkPlaceholder": "https://vash-sajt.ru",
+        "ctaLinkHint": "Opcionalnaya ssylka na vashem video"
+      }
+    },
+    "thumbnail": {
+      "title": "Vybrat Miniaturu",
+      "description": "Vyberite ili zagruzite miniaturu dlya video",
+      "auto": "Avtomaticheski sozdannaya",
+      "autoDescription": "My sozdadim miniaturu iz vashego video",
+      "custom": "Polzovatelskaya miniatura",
+      "customDescription": "Zagruzite svoe izobrazhenie miniatury",
+      "upload": "Zagruzit miniaturu",
+      "uploading": "Zagruzka...",
+      "requirements": "JPEG ili PNG - Rekomenduemyj 1080x1920",
+      "dragAndDrop": "Peretashite izobrazhenie syuda",
+      "preview": "Predprosmotr miniatury"
+    },
+    "review": {
+      "title": "Proverit i Opublikovat",
+      "description": "Proverte svoe video pered publikaciej",
+      "sections": {
+        "video": "Video",
+        "details": "Detali",
+        "thumbnail": "Miniatura"
+      },
+      "duration": "Dlitelnost",
+      "category": "Kategoriya",
+      "tags": "Tegi",
+      "location": "Mestopolozhenie",
+      "ctaLink": "CTA Ssylka",
+      "noTags": "Net tegov",
+      "noLocation": "Net mestopolozheniya",
+      "noCta": "Net CTA ssylki"
+    },
+    "navigation": {
+      "back": "Nazad",
+      "next": "Dalee",
+      "publish": "Opublikovat",
+      "saveDraft": "Sohranit chernovik"
+    }
+  },
+  "detail": {
+    "title": "Zagolovok",
+    "description": "Opisanie",
+    "category": "Kategoriya",
+    "tags": "Tegi",
+    "location": "Mestopolozhenie",
+    "ctaLink": "CTA Ssylka",
+    "duration": "Dlitelnost",
+    "views": "Prosmotry",
+    "likes": "Lajki",
+    "comments": "Kommentarii",
+    "ctaClicks": "CTA Kliki",
+    "createdAt": "Sozdano",
+    "publishedAt": "Opublikovano",
+    "expiresAt": "Istekaet",
+    "archivedAt": "Arhivirovano",
+    "back": "Nazad k video",
+    "processing": "Obrabotka",
+    "processingDescription": "Vashe video obrabatyvaetsya. Eto mozhet zanyat neskolko minut.",
+    "noThumbnail": "Net miniatury",
+    "statistics": "Statistika",
+    "timeline": "Hronologiya"
+  },
+  "status": {
+    "DRAFT": "Chernovik",
+    "PENDING_PAYMENT": "Ozhidaet oplaty",
+    "PROCESSING": "Obrabotka",
+    "PUBLISHED": "Opublikovano",
+    "ARCHIVED": "V arhive",
+    "DELETED": "Udaleno"
+  },
+  "actions": {
+    "view": "Smotret",
+    "edit": "Redaktirovat",
+    "publish": "Opublikovat",
+    "archive": "Arhivirovat",
+    "duplicate": "Dublirovat",
+    "delete": "Udalit",
+    "renew": "Prodlit"
+  },
+  "publish": {
+    "title": "Opublikovat Video",
+    "description": "Vashe video budet dostupno vsem posle publikacii",
+    "paymentRequired": "Trebuetsya oplata",
+    "paymentDescription": "Vam nuzhno zaplatit {amount} dlya publikacii",
+    "useCredits": "Ispolzovat kredity publikacii",
+    "creditsAvailable": "U vas {count} dostupnyh kreditov",
+    "confirm": "Opublikovat sejchas",
+    "cancel": "Otmena"
+  },
+  "timeline": {
+    "draft": "Черновик создан",
+    "payment": "Оплата получена",
+    "processing": "Обработка видео",
+    "published": "Опубликовано",
+    "estimatedTime": "Примерное время: {minutes} минут"
+  },
+  "navigation": {
+    "backToShorts": "Назад к Shorts"
+  },
+  "player": {
+    "play": "Воспроизвести",
+    "pause": "Пауза",
+    "mute": "Выключить звук",
+    "unmute": "Включить звук",
+    "fullscreen": "Полный экран",
+    "exitFullscreen": "Выйти из полноэкранного режима"
+  },
+  "publishing": {
+    "loading": "Загрузка...",
+    "processing": {
+      "title": "Ваше видео обрабатывается",
+      "description": "Это может занять несколько минут. Мы уведомим вас, когда будет готово.",
+      "doNotClose": "Не закрывайте эту страницу"
+    },
+    "title": "Publikaciya Vashego Video",
+    "description": "Pozhalujsta, podozhdite, poka my obrabotaem video",
+    "steps": {
+      "payment": "Obrabotka oplaty",
+      "transcoding": "Transkodirrovanie video",
+      "publishing": "Publikaciya video"
+    },
+    "success": {
+      "title": "Video Opublikovano!",
+      "description": "Vashe video teper dostupno dlya vseh",
+      "viewShort": "Smotret video",
+      "createAnother": "Sozdat eshche"
+    },
+    "error": {
+      "title": "Oshibka publikacii",
+      "description": "Proizoshla oshibka pri publikacii video",
+      "retry": "Povtorit",
+      "contact": "Svyazatsya s podderzhkoj"
+    },
+    "notStarted": {
+      "title": "Видео не опубликовано",
+      "description": "Это видео все еще черновик. Вернитесь к редактированию и нажмите 'Опубликовать'.",
+      "goToEdit": "К редактированию"
+    }
+  },
+  "archive": {
+    "title": "Arhivirovat Video",
+    "description": "Eto skroet video iz publichnogo dostupa. Vy mozhete vosstanovit ego pozzhe.",
+    "confirm": "Arhivirovat",
+    "cancel": "Otmena"
+  },
+  "delete": {
+    "title": "Udalit Video",
+    "description": "Eto dejstvie nelzya otmenit. Video budet udaleno navsegda.",
+    "confirm": "Udalit",
+    "cancel": "Otmena"
+  },
+  "renew": {
+    "title": "Prodlit Video",
+    "description": "Prodlite vidimist vashego video eshche na 30 dnej",
+    "currentExpiry": "Tekushee okonchanie: {date}",
+    "newExpiry": "Novoe okonchanie: {date}",
+    "cost": "Stoimost: {amount}",
+    "confirm": "Prodlit sejchas",
+    "cancel": "Otmena",
+    "useCredit": "1 kredit budet ispolzovan dlya prodleniya etogo video",
+    "needsPayment": "Vam nuzhno kupit kredity dlya prodleniya etogo video"
+  },
+  "public": {
+    "title": "Korotkoe Video",
+    "description": "Posmotrite eto korotkoe video",
+    "by": "ot",
+    "views": "prosmotrov",
+    "likes": "lajkov",
+    "share": "Podelitsya",
+    "copyLink": "Kopirovat ssylku",
+    "report": "Pozhalovatsya",
+    "visitWebsite": "Posetit sajt",
+    "viewCompany": "Smotret kompaniyu",
+    "location": "Mestopolozhenie",
+    "company": "Kompaniya",
+    "archived": "V arhive",
+    "archivedMessage": "Eto video bylo arhivirovano i bolshe ne aktivno v lente.",
+    "openInMaps": "Otkryt v Google Maps",
+    "videoNotAvailable": "Video nedostupno",
+    "copied": "Skopirovano!",
+    "openNewTab": "Otkryt v novoj vkladke",
+    "linkCopiedTitle": "Ssylka skopirovana!",
+    "linkCopiedDescription": "Ssylka byla skopirovana v bufer obmena.",
+    "copyFailedTitle": "Ne udalos skopirovat",
+    "copyFailedDescription": "Pozhalujsta, skopiruyte ssylku vruchnuyu."
+  },
+  "email": {
+    "expirySubject": "Vashe video istekaet cherez 7 dnej!",
+    "publishedSubject": "Vashe video opublikovano!"
+  },
+  "table": {
+    "columns": {
+      "thumbnail": "Miniatura",
+      "title": "Zagolovok",
+      "status": "Status",
+      "views": "Prosmotry",
+      "likes": "Lajki",
+      "publishedAt": "Opublikovano",
+      "expiresAt": "Istekaet",
+      "actions": "Dejstviya"
+    },
+    "empty": "Video ne najdeny",
+    "loading": "Zagruzka video..."
+  },
+  "filters": {
+    "all": "Vse",
+    "drafts": "Chernoviki",
+    "published": "Opublikovanye",
+    "archived": "V arhive",
+    "search": "Poisk video...",
+    "sortBy": "Sortirovka",
+    "sortOptions": {
+      "newest": "Snachala novye",
+      "oldest": "Snachala starye",
+      "mostViews": "Bolshe prosmotrov",
+      "mostLikes": "Bolshe lajkov"
+    }
+  },
+  "errors": {
+    "loadFailed": "Ne udalos zagruzit video",
+    "createFailed": "Ne udalos sozdat video",
+    "updateFailed": "Ne udalos obnovit video",
+    "deleteFailed": "Ne udalos udalit video",
+    "publishFailed": "Ne udalos opublikovat video",
+    "archiveFailed": "Ne udalos arhivirovat video",
+    "uploadFailed": "Ne udalos zagruzit fajl",
+    "invalidVideo": "Nevernuй format video",
+    "videoTooLarge": "Fajl video slishkom bolshoj (maks. 100MB)",
+    "videoTooLong": "Video slishkom dlinnoe (maks. 60 sekund)",
+    "invalidThumbnail": "Nevernuй format miniatury",
+    "thumbnailTooLarge": "Fajl miniatury slishkom bolshoj (maks. 5MB)",
+    "titleRequired": "Zagolovok obyazatelen",
+    "categoryRequired": "Kategoriya obyazatelna",
+    "unauthorized": "Vy ne avtorizovany dlya etogo dejstviya",
+    "notFound": "Video ne najdeno",
+    "renewFailed": "Ne udalos obnovit short",
+    "invalidInput": "Nevernye vhodnye dannye"
+  },
+  "success": {
+    "created": "Video uspeshno sozdano",
+    "updated": "Video uspeshno obnovleno",
+    "deleted": "Video uspeshno udaleno",
+    "published": "Video uspeshno opublikovano",
+    "archived": "Video uspeshno arhivirovano",
+    "renewed": "Video uspeshno prodleno",
+    "draftSaved": "Chernovik uspeshno sohranен"
+  },
+  "edit": {
+    "title": "Redaktirovat video",
+    "description": "Obnovite dannye video",
+    "titleLabel": "Zagolovok",
+    "descriptionLabel": "Opisanie",
+    "tagsLabel": "Tegi",
+    "ctaLinkLabel": "CTA Ssylka",
+    "save": "Sohranit izmeneniya",
+    "cancel": "Otmena",
+    "success": "Video uspeshno obnovleno",
+    "error": "Ne udalos obnovit video"
+  },
+  "duplicate": {
+    "success": "Video uspeshno dublirovano",
+    "error": "Ne udalos dublirovat video",
+    "limitReached": "Limit chernovikov dostignut (maks. 10)"
+  },
+  "comments": {
+    "title": "Комментарии",
+    "count": "Комментарии (%count%)",
+    "placeholder": "Напишите комментарий...",
+    "submit": "Отправить",
+    "edit": "Редактировать",
+    "reply": "Ответить",
+    "delete": "Удалить",
+    "deleted": "Комментарий удалён",
+    "edited": "изменён",
+    "editExpired": "Время редактирования истекло",
+    "loginRequired": "Войдите, чтобы комментировать",
+    "pending": "Ожидает модерации",
+    "empty": "Пока нет комментариев. Будьте первым!",
+    "sortNewest": "Новые",
+    "sortOldest": "Старые",
+    "sortMostLiked": "Популярные",
+    "charLimit": "%count%/500 символов",
+    "loadMore": "Загрузить ещё",
+    "confirmDelete": "Вы уверены, что хотите удалить этот комментарий?",
+    "deleteSuccess": "Комментарий удалён",
+    "deleteFailed": "Не удалось удалить комментарий",
+    "createFailed": "Не удалось добавить комментарий",
+    "editFailed": "Не удалось отредактировать комментарий"
+  },
+  "reactions": {
+    "like": "Нравится",
+    "dislike": "Не нравится",
+    "fire": "Огонь",
+    "heart": "Сердце",
+    "laugh": "Смешно",
+    "wow": "Вау",
+    "clap": "Браво",
+    "loginRequired": "Войдите, чтобы реагировать",
+    "rateLimited": "Слишком много реакций. Попробуйте позже."
+  },
+  "backToFeed": "Vernutsya k lente",
+  "viewOffer": "Posmotret predlozhenie",
+  "viewCompany": "Posmotret kompaniyu",
+  "relatedShorts": "Pohozhie shorts"
+}

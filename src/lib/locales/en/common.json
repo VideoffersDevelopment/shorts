@@ -1,0 +1,53 @@
+{
+  "accessibility": {
+    "loading": "Loading"
+  },
+  "search": {
+    "open": "Open search"
+  },
+  "auth": {
+    "login": "Log In",
+    "getStarted": "Get Started"
+  },
+  "buttons": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "loading": "Loading..."
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "minLength": "Minimum length: {{min}} characters",
+    "maxLength": "Maximum length: {{max}} characters",
+    "generic": "An error occurred. Please try again.",
+    "unauthorized": "Unauthorized access",
+    "invalidInput": "Invalid input data"
+  },
+  "validation": {
+    "emailRequired": "Email is required",
+    "passwordRequired": "Password is required",
+    "passwordMinLength": "Password must be at least 8 characters",
+    "passwordsNotMatch": "Passwords do not match"
+  },
+  "dashboard": {
+    "welcome": "Welcome to VideoShorts, {name}",
+    "gettingStarted": {
+      "title": "Getting Started",
+      "description": "Complete your profile to start using VideoShorts"
+    },
+    "yourVideos": {
+      "title": "Your Videos",
+      "empty": "You haven't uploaded any videos yet"
+    },
+    "statistics": {
+      "title": "Statistics",
+      "description": "View your video performance metrics"
+    }
+  }
+}

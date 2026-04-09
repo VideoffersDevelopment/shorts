@@ -1,0 +1,223 @@
+{
+  "upgrade": {
+    "heading": "Auf Firmenkonto upgraden",
+    "description": "Registrieren Sie Ihr Unternehmen, um Stellenangebote zu veröffentlichen und auf zusätzliche Funktionen zuzugreifen.",
+    "title": "Firmenregistrierungsformular",
+    "subtitle": "Geben Sie Ihre Unternehmensdaten ein. Ihre Umsatzsteuer-Identifikationsnummer wird über das VIES-System überprüft.",
+    "fields": {
+      "companyName": "Firmenname",
+      "nip": "Umsatzsteuer-ID (NIP)",
+      "address": "Adresse",
+      "phone": "Telefon (optional)"
+    },
+    "placeholders": {
+      "companyName": "z.B. Acme GmbH",
+      "address": "z.B. Hauptstraße 1, 00-001 Warschau",
+      "phone": "+48 123 456 789"
+    },
+    "hints": {
+      "nip": "Format: 1234567890 oder 12-345-678-90",
+      "phone": "Telefonnummer ist optional"
+    },
+    "submit": "Firma registrieren",
+    "submitting": "Überprüfung der Umsatzsteuer-ID...",
+    "success": {
+      "title": "Firma registriert!",
+      "verified": "Ihre Umsatzsteuer-Identifikationsnummer wurde erfolgreich über VIES überprüft.",
+      "pending": "Ihre Umsatzsteuer-Identifikationsnummer erfordert eine manuelle Überprüfung durch einen Administrator.",
+      "redirecting": "Sie werden in Kürze weitergeleitet..."
+    }
+  },
+  "vies": {
+    "status": {
+      "verified": "Verifiziert",
+      "pending": "Überprüfung ausstehend",
+      "rejected": "Abgelehnt"
+    }
+  },
+  "status": {
+    "pendingTitle": "Genehmigung ausstehend",
+    "pendingDescription": "Ihr Unternehmen wartet auf die Verifizierung durch den Administrator. Sie erhalten eine E-Mail-Benachrichtigung nach der Genehmigung."
+  },
+  "nipValidation": {
+    "validating": "Umsatzsteuer-ID wird überprüft...",
+    "success": {
+      "verified": "Umsatzsteuer-ID in VIES verifiziert"
+    },
+    "warning": {
+      "viesUnavailable": "VIES-Dienst nicht verfügbar. Sie können fortfahren - eine manuelle Überprüfung ist erforderlich."
+    },
+    "errors": {
+      "invalidFormat": "Ungültiges NIP-Format. Verwenden Sie 10 Ziffern oder das Format XX-XXX-XXX-XX.",
+      "alreadyExists": "Diese Umsatzsteuer-ID ist bereits in unserem System registriert.",
+      "viesInvalid": "Diese Umsatzsteuer-ID wurde nicht im VIES-Register gefunden.",
+      "validationFailed": "Überprüfung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "pleaseFixErrors": "Bitte beheben Sie die Umsatzsteuer-ID-Fehler vor dem Absenden.",
+      "unknown": "Unbekannter Validierungsfehler."
+    }
+  },
+  "errors": {
+    "alreadyCompany": "Sie haben bereits ein registriertes Unternehmen",
+    "nipExists": "Diese Umsatzsteuer-ID ist bereits registriert",
+    "createFailed": "Firmenprofil konnte nicht erstellt werden",
+    "notCompany": "Sie haben kein Firmenprofil",
+    "updateFailed": "Profil konnte nicht aktualisiert werden"
+  },
+  "profile": {
+    "verified": "Verifiziert",
+    "placeholders": {
+      "website": "https://beispiel.de",
+      "contactEmail": "kontakt@firma.de",
+      "facebook": "https://facebook.com/firma",
+      "instagram": "https://instagram.com/firma",
+      "tiktok": "https://tiktok.com/@firma",
+      "youtube": "https://youtube.com/@firma",
+      "linkedin": "https://linkedin.com/company/firma",
+      "street": "Hauptstraße 123",
+      "postalCode": "10115",
+      "city": "Berlin"
+    },
+    "overview": {
+      "title": "Profilübersicht",
+      "editProfile": "Profil bearbeiten",
+      "addShort": "Short hinzufügen",
+      "viewPublic": "Öffentliches Profil anzeigen",
+      "noDescription": "Keine Firmenbeschreibung",
+      "addDescription": "Beschreibung hinzufügen"
+    },
+    "sections": {
+      "contact": "Kontakt",
+      "social": "Soziale Medien",
+      "location": "Standort"
+    },
+    "stats": {
+      "shorts": "Shorts",
+      "followers": "Follower",
+      "views": "Ansichten",
+      "viewsThisWeek": "Aufrufe diese Woche",
+      "activeCampaigns": "Aktive Kampagnen",
+      "walletBalance": "Guthaben",
+      "topUp": "Aufladen"
+    },
+    "contact": {
+      "website": "Webseite",
+      "address": "Adresse",
+      "phone": "Telefon"
+    },
+    "edit": {
+      "title": "Firmenprofil bearbeiten",
+      "save": "Änderungen speichern",
+      "saving": "Wird gespeichert...",
+      "success": "Profil erfolgreich aktualisiert",
+      "error": "Profil konnte nicht aktualisiert werden"
+    },
+    "fields": {
+      "companyName": "Firmenname",
+      "description": "Beschreibung",
+      "website": "Webseite",
+      "category": "Kategorie",
+      "address": "Adresse",
+      "phone": "Telefon",
+      "contactEmail": "Kontakt-E-Mail",
+      "contactEmailHint": "Optionale Kontakt-E-Mail. Wenn nicht angegeben, wird Ihre Konto-E-Mail verwendet.",
+      "latitude": "Breitengrad",
+      "longitude": "Längengrad",
+      "socialLinks": "Soziale Medien",
+      "businessHours": "Öffnungszeiten (JSON)",
+      "logo": "Logo",
+      "banner": "Banner"
+    }
+  },
+  "logo": {
+    "title": "Logo hochladen",
+    "upload": "Hochladen",
+    "uploading": "Wird hochgeladen...",
+    "cancel": "Abbrechen",
+    "success": "Logo aktualisiert",
+    "errors": {
+      "invalidType": "Ungültiger Dateityp. Verwenden Sie JPEG, PNG oder WebP",
+      "tooLarge": "Datei zu groß. Maximal 5MB",
+      "uploadFailed": "Upload fehlgeschlagen"
+    }
+  },
+  "banner": {
+    "title": "Banner hochladen",
+    "upload": "Hochladen",
+    "uploading": "Wird hochgeladen...",
+    "cancel": "Abbrechen",
+    "success": "Banner aktualisiert",
+    "errors": {
+      "invalidType": "Ungültiger Dateityp. Verwenden Sie JPEG, PNG oder WebP",
+      "tooLarge": "Datei zu groß. Maximal 10MB",
+      "uploadFailed": "Upload fehlgeschlagen"
+    }
+  },
+  "category": {
+    "placeholder": "Kategorie auswählen",
+    "searchPlaceholder": "Kategorien suchen...",
+    "noResults": "Keine Kategorien gefunden",
+    "backToAll": "Zurück zu allen Kategorien",
+    "viewAll": "Alle anzeigen"
+  },
+  "subcategories": {
+    "label": "Unterkategorien",
+    "placeholder": "Unterkategorien auswählen",
+    "selected": "{count} von {max} ausgewählt",
+    "selectCategoryFirst": "Wählen Sie zuerst eine Hauptkategorie",
+    "loading": "Unterkategorien werden geladen...",
+    "noSubcategories": "Keine Unterkategorien verfügbar",
+    "hint": "Wählen Sie bis zu {max} Unterkategorien, um Ihr Unternehmen besser zu beschreiben"
+  },
+  "businessHours": {
+    "title": "Öffnungszeiten",
+    "days": {
+      "monday": "Montag",
+      "tuesday": "Dienstag",
+      "wednesday": "Mittwoch",
+      "thursday": "Donnerstag",
+      "friday": "Freitag",
+      "saturday": "Samstag",
+      "sunday": "Sonntag"
+    },
+    "openTime": "Öffnungszeit",
+    "closeTime": "Schließzeit",
+    "closed": "Geschlossen",
+    "copyToAll": "Auf alle kopieren",
+    "clearAll": "Alle löschen",
+    "hint": "Legen Sie Ihre Öffnungszeiten fest. Deaktivieren Sie die Tage, an denen Sie geschlossen sind."
+  },
+  "social": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn"
+  },
+  "follow": {
+    "follow": "Folgen",
+    "following": "Folge ich",
+    "unfollow": "Entfolgen",
+    "loginRequired": "Melden Sie sich an, um zu folgen"
+  },
+  "contact": {
+    "button": "Firma kontaktieren",
+    "title": "Firma kontaktieren",
+    "description": "Senden Sie eine Nachricht an {companyName}",
+    "fields": {
+      "subject": "Betreff",
+      "message": "Nachricht"
+    },
+    "placeholders": {
+      "subject": "Nachrichtenbetreff",
+      "message": "Ihre Nachricht..."
+    },
+    "send": "Senden",
+    "sending": "Wird gesendet...",
+    "cancel": "Abbrechen",
+    "success": "Nachricht erfolgreich gesendet",
+    "error": "Nachricht konnte nicht gesendet werden",
+    "errors": {
+      "emptyMessage": "Nachricht darf nicht leer sein"
+    }
+  }
+}

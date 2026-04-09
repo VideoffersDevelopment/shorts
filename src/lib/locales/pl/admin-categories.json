@@ -1,0 +1,40 @@
+{
+  "title": "Zarządzanie kategoriami",
+  "create": "Dodaj kategorię",
+  "enabled": "Włączona",
+  "disabled": "Wyłączona",
+  "companies": "firm",
+  "addChild": "Dodaj podkategorię",
+  "delete": {
+    "hasCompanies": "Nie można usunąć kategorii z firmami",
+    "hasChildren": "Nie można usunąć kategorii z podkategoriami",
+    "confirm": "Czy na pewno chcesz usunąć tę kategorię?",
+    "error": "Nie udało się usunąć kategorii",
+    "success": "Kategoria została usunięta"
+  },
+  "form": {
+    "editTitle": "Edytuj kategorię",
+    "createTitle": "Utwórz kategorię",
+    "name": "Nazwa",
+    "namePlaceholder": "Wprowadź nazwę kategorii",
+    "slug": "Slug",
+    "slugPlaceholder": "kategoria-slug",
+    "slugHint": "Tylko małe litery, cyfry i myślniki",
+    "icon": "Ikona",
+    "iconPlaceholder": "🏢",
+    "iconHint": "Emoji lub znak ikony",
+    "parent": "Kategoria nadrzędna",
+    "parentPlaceholder": "Wybierz kategorię nadrzędną",
+    "noParent": "Brak nadrzędnej (główna)",
+    "enabled": "Status",
+    "enabledYes": "Włączona",
+    "enabledNo": "Wyłączona",
+    "cancel": "Anuluj",
+    "saving": "Zapisywanie...",
+    "update": "Aktualizuj",
+    "create": "Utwórz",
+    "error": "Nie udało się zapisać kategorii",
+    "updateSuccess": "Kategoria została zaktualizowana",
+    "createSuccess": "Kategoria została utworzona"
+  }
+}

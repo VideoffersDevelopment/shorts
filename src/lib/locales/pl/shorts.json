@@ -1,0 +1,425 @@
+{
+  "meta": {
+    "title": "Krotkie Filmy",
+    "description": "Zarzadzaj i publikuj swoje krotkie filmy"
+  },
+  "verification": {
+    "pendingTitle": "Oczekuje na weryfikację",
+    "pendingDescription": "Będziesz mógł przesyłać i publikować shortsy po weryfikacji firmy przez administratora."
+  },
+  "addShort": {
+    "button": "Dodaj Short",
+    "upgradeTitle": "Przejdź na konto firmowe",
+    "upgradeDescription": "Aby przesyłać i publikować shortsy, potrzebujesz konta firmowego. Zaktualizuj teraz, aby zacząć udostępniać treści biznesowe.",
+    "upgradeAction": "Przejdź na konto firmowe",
+    "pendingTitle": "Oczekuje na weryfikację",
+    "pendingDescription": "Twoja firma czeka na zatwierdzenie przez administratora. Będziesz mógł dodawać shortsy po weryfikacji.",
+    "pendingAction": "OK",
+    "cancel": "Anuluj"
+  },
+  "list": {
+    "empty": {
+      "title": "Brak filmow",
+      "description": "Stworz swoj pierwszy film, aby zaczac promowac swoja firme",
+      "action": "Stworz Film"
+    }
+  },
+  "create": {
+    "title": "Stworz Nowy Film",
+    "description": "Przeslij i opublikuj nowy krotki film"
+  },
+  "wizard": {
+    "steps": {
+      "video": "Film",
+      "metadata": "Szczegoly",
+      "thumbnail": "Miniatura",
+      "review": "Przeglad"
+    },
+    "video": {
+      "title": "Przeslij Film",
+      "description": "Przeslij swoj krotki film (maks. 60 sekund)",
+      "dragAndDrop": "Przeciagnij i upusc film tutaj",
+      "dropHere": "Upusc film tutaj",
+      "browse": "lub przegladaj pliki",
+      "requirements": "MP4, WebM lub MOV - Maksymalnie 100MB",
+      "uploading": "Przesylanie filmu...",
+      "processing": "Przetwarzanie filmu...",
+      "preview": "Podglad filmu",
+      "changeVideo": "Zmien film",
+      "aspectWarning": "Film nie jest w formacie 9:16. Najlepsze rezultaty sa z pionowymi filmami."
+    },
+    "tags": {
+      "create": "Utworz \"{tag}\""
+    },
+    "metadata": {
+      "title": "Szczegoly filmu",
+      "description": "Dodaj tytul, opis i tagi",
+      "fields": {
+        "title": "Tytul",
+        "titlePlaceholder": "Wpisz chwytliwy tytul",
+        "titleHint": "Maksymalnie 100 znakow",
+        "description": "Opis",
+        "descriptionPlaceholder": "Opisz swoj krotki film",
+        "descriptionHint": "Opcjonalne, ale pomaga w odkrywalnosci",
+        "category": "Kategoria",
+        "categoryPlaceholder": "Wybierz kategorie",
+        "tags": "Tagi",
+        "tagsPlaceholder": "Dodaj tagi, aby ulatwic znalezienie filmu",
+        "tagsHint": "Nacisnij Enter, aby dodac tag (maks. 5)",
+        "location": "Lokalizacja",
+        "locationPlaceholder": "Dodaj lokalizacje (opcjonalnie)",
+        "ctaLink": "Link do akcji",
+        "ctaLinkPlaceholder": "https://twoja-strona.pl",
+        "ctaLinkHint": "Opcjonalny link wyswietlany na filmie"
+      }
+    },
+    "thumbnail": {
+      "title": "Wybierz Miniature",
+      "description": "Wybierz lub przeslij miniature dla swojego filmu",
+      "auto": "Automatycznie wygenerowana",
+      "autoDescription": "Wygenerujemy miniature z Twojego filmu",
+      "custom": "Wlasna miniatura",
+      "customDescription": "Przeslij wlasny obraz miniatury",
+      "upload": "Przeslij miniature",
+      "uploading": "Przesylanie...",
+      "requirements": "JPEG lub PNG - Zalecane 1080x1920",
+      "dragAndDrop": "Przeciagnij i upusc obraz tutaj",
+      "preview": "Podglad miniatury"
+    },
+    "review": {
+      "title": "Przejrzyj i Opublikuj",
+      "description": "Przejrzyj swoj film przed publikacja",
+      "sections": {
+        "video": "Film",
+        "details": "Szczegoly",
+        "thumbnail": "Miniatura"
+      },
+      "duration": "Czas trwania",
+      "category": "Kategoria",
+      "tags": "Tagi",
+      "location": "Lokalizacja",
+      "ctaLink": "Link CTA",
+      "noTags": "Brak tagow",
+      "noLocation": "Brak lokalizacji",
+      "noCta": "Brak linku CTA"
+    },
+    "navigation": {
+      "back": "Wstecz",
+      "next": "Dalej",
+      "publish": "Opublikuj",
+      "saveDraft": "Zapisz szkic"
+    }
+  },
+  "detail": {
+    "title": "Tytul",
+    "description": "Opis",
+    "category": "Kategoria",
+    "tags": "Tagi",
+    "location": "Lokalizacja",
+    "ctaLink": "Link CTA",
+    "duration": "Czas trwania",
+    "views": "Wyswietlenia",
+    "likes": "Polubienia",
+    "comments": "Komentarze",
+    "ctaClicks": "Klikniecia CTA",
+    "createdAt": "Utworzono",
+    "publishedAt": "Opublikowano",
+    "expiresAt": "Wygasa",
+    "archivedAt": "Zarchiwizowano",
+    "back": "Powrot do filmow",
+    "processing": "Przetwarzanie",
+    "processingDescription": "Twoj film jest przetwarzany. Moze to potrwac kilka minut.",
+    "noThumbnail": "Brak miniatury",
+    "statistics": "Statystyki",
+    "timeline": "Oś czasu"
+  },
+  "status": {
+    "DRAFT": "Szkic",
+    "PENDING_PAYMENT": "Oczekuje na platnosc",
+    "PROCESSING": "Przetwarzanie",
+    "PUBLISHED": "Opublikowany",
+    "EXPIRED": "Wygasl",
+    "ARCHIVED": "Zarchiwizowany",
+    "DELETED": "Usuniety"
+  },
+  "actions": {
+    "view": "Zobacz",
+    "edit": "Edytuj",
+    "publish": "Opublikuj",
+    "archive": "Archiwizuj",
+    "duplicate": "Duplikuj",
+    "delete": "Usun",
+    "renew": "Odnow",
+    "extend": "Przedluz",
+    "boost": "Promuj"
+  },
+  "publish": {
+    "title": "Opublikuj Film",
+    "description": "Twoj film bedzie widoczny dla wszystkich po publikacji",
+    "paymentRequired": "Wymagana platnosc",
+    "paymentDescription": "Musisz zaplacic {amount}, aby opublikowac ten film",
+    "useCredits": "Uzyj kredytow publikacji",
+    "creditsAvailable": "Masz {count} dostepnych kredytow",
+    "confirm": "Opublikuj teraz",
+    "cancel": "Anuluj"
+  },
+  "publishing": {
+    "title": "Publikowanie Filmu",
+    "description": "Prosze czekac, przetwarzamy Twoj film",
+    "loading": "Ladowanie statusu...",
+    "steps": {
+      "payment": "Przetwarzanie platnosci",
+      "transcoding": "Transkodowanie filmu",
+      "publishing": "Publikowanie filmu"
+    },
+    "processing": {
+      "title": "Przetwarzanie Twojego Filmu",
+      "description": "Twoj film jest transkodowany dla optymalnego odtwarzania",
+      "doNotClose": "Prosze nie zamykac tej strony. Zostaniesz przekierowany po zakonczeniu."
+    },
+    "checkStatus": "Sprawdz status",
+    "success": {
+      "title": "Film Opublikowany!",
+      "description": "Twoj film jest teraz dostepny i widoczny dla wszystkich",
+      "viewShort": "Zobacz film",
+      "createAnother": "Stworz kolejny"
+    },
+    "error": {
+      "title": "Publikacja nieudana",
+      "description": "Wystapil blad podczas publikowania filmu",
+      "retry": "Sprobuj ponownie",
+      "contact": "Skontaktuj sie z obsluga"
+    },
+    "notStarted": {
+      "title": "Film nie zostal opublikowany",
+      "description": "Ten film jest wciaz szkicem. Wróć do edycji i kliknij 'Opublikuj', aby rozpocząć publikację.",
+      "goToEdit": "Wróć do edycji"
+    }
+  },
+  "timeline": {
+    "draft": "Szkic utworzony",
+    "payment": "Platnosc otrzymana",
+    "processing": "Przetwarzanie filmu",
+    "published": "Opublikowany",
+    "estimatedTime": "Szacowany czas: pozostalo {minutes} minut(y)"
+  },
+  "navigation": {
+    "backToShorts": "Powrot do filmow"
+  },
+  "player": {
+    "play": "Odtwarzaj",
+    "pause": "Pauza",
+    "mute": "Wycisz",
+    "unmute": "Wlacz dzwiek",
+    "fullscreen": "Pelny ekran",
+    "exitFullscreen": "Zamknij pelny ekran"
+  },
+  "archive": {
+    "title": "Archiwizuj Film",
+    "description": "To ukryje film przed publicznym widokiem. Mozesz go przywrocic pozniej.",
+    "confirm": "Archiwizuj",
+    "cancel": "Anuluj"
+  },
+  "delete": {
+    "title": "Usun Film",
+    "description": "Tej akcji nie mozna cofnac. Film zostanie trwale usuniety.",
+    "confirm": "Usun",
+    "cancel": "Anuluj"
+  },
+  "renew": {
+    "title": "Odnow Film",
+    "description": "Przedluz widocznosc swojego filmu na kolejne 30 dni",
+    "currentExpiry": "Aktualne wygasniecie: {date}",
+    "newExpiry": "Nowe wygasniecie: {date}",
+    "cost": "Koszt: {amount}",
+    "confirm": "Odnow teraz",
+    "cancel": "Anuluj",
+    "useCredit": "1 kredyt zostanie uzyty do odnowienia tego filmu",
+    "needsPayment": "Musisz kupic kredyty, aby odnowic ten film"
+  },
+  "public": {
+    "title": "Krotki Film",
+    "description": "Obejrzyj ten krotki film",
+    "by": "od",
+    "views": "wyswietlen",
+    "likes": "polubien",
+    "share": "Udostepnij",
+    "copyLink": "Kopiuj link",
+    "report": "Zglos",
+    "visitWebsite": "Odwiedz strone",
+    "viewCompany": "Zobacz firme",
+    "location": "Lokalizacja",
+    "company": "Firma",
+    "archived": "Zarchiwizowany",
+    "archivedMessage": "Ten film zostal zarchiwizowany i nie jest juz aktywny w kanale.",
+    "openInMaps": "Otworz w Google Maps",
+    "videoNotAvailable": "Film niedostepny",
+    "copied": "Skopiowano!",
+    "openNewTab": "Otworz w nowej karcie",
+    "linkCopiedTitle": "Link skopiowany!",
+    "linkCopiedDescription": "Link zostal skopiowany do schowka.",
+    "copyFailedTitle": "Nie udalo sie skopiowac",
+    "copyFailedDescription": "Prosze skopiowac link recznie.",
+    "superLike": "Super Like",
+    "superLikeSent": "Wyslano!",
+    "superLikeLogin": "Zaloguj sie, aby wyslac Super Like",
+    "superLikeOwn": "Nie mozesz wyslac Super Like wlasnemu filmowi",
+    "superLikeInsufficient": "Za malo kredytow na Super Like",
+    "superLikeFailed": "Nie udalo sie wyslac Super Like"
+  },
+  "email": {
+    "expirySubject": "Twoj film wygasa za 7 dni!",
+    "publishedSubject": "Twoj film jest juz dostepny!"
+  },
+  "table": {
+    "columns": {
+      "thumbnail": "Miniatura",
+      "title": "Tytul",
+      "status": "Status",
+      "views": "Wyswietlenia",
+      "likes": "Polubienia",
+      "publishedAt": "Opublikowano",
+      "expiresAt": "Wygasa",
+      "actions": "Akcje"
+    },
+    "empty": "Nie znaleziono filmow",
+    "loading": "Ladowanie filmow..."
+  },
+  "filters": {
+    "all": "Wszystkie",
+    "drafts": "Szkice",
+    "published": "Opublikowane",
+    "archived": "Zarchiwizowane",
+    "search": "Szukaj filmow...",
+    "sortBy": "Sortuj wedlug",
+    "sortOptions": {
+      "newest": "Najnowsze",
+      "oldest": "Najstarsze",
+      "mostViews": "Najwiecej wyswietlen",
+      "mostLikes": "Najwiecej polubien"
+    }
+  },
+  "errors": {
+    "loadFailed": "Nie udalo sie zaladowac filmow",
+    "createFailed": "Nie udalo sie stworzyc filmu",
+    "updateFailed": "Nie udalo sie zaktualizowac filmu",
+    "deleteFailed": "Nie udalo sie usunac filmu",
+    "publishFailed": "Nie udalo sie opublikowac filmu",
+    "archiveFailed": "Nie udalo sie zarchiwizowac filmu",
+    "uploadFailed": "Nie udalo sie przeslac pliku",
+    "invalidVideo": "Nieprawidlowy format wideo",
+    "videoTooLarge": "Plik wideo jest za duzy (maks. 100MB)",
+    "videoTooLong": "Film jest za dlugi (maks. 60 sekund)",
+    "invalidThumbnail": "Nieprawidlowy format miniatury",
+    "thumbnailTooLarge": "Plik miniatury jest za duzy (maks. 5MB)",
+    "titleRequired": "Tytul jest wymagany",
+    "categoryRequired": "Kategoria jest wymagana",
+    "unauthorized": "Nie masz uprawnien do wykonania tej akcji",
+    "notFound": "Nie znaleziono filmu",
+    "renewFailed": "Nie udalo sie odnowic shorta",
+    "invalidInput": "Nieprawidlowe dane wejsciowe"
+  },
+  "success": {
+    "created": "Film utworzony pomyslnie",
+    "updated": "Film zaktualizowany pomyslnie",
+    "deleted": "Film usuniety pomyslnie",
+    "published": "Film opublikowany pomyslnie",
+    "archived": "Film zarchiwizowany pomyslnie",
+    "renewed": "Film odnowiony pomyslnie",
+    "draftSaved": "Szkic zapisany pomyslnie"
+  },
+  "edit": {
+    "title": "Edytuj film",
+    "description": "Zaktualizuj szczegoly filmu",
+    "titleLabel": "Tytul",
+    "descriptionLabel": "Opis",
+    "tagsLabel": "Tagi",
+    "ctaLinkLabel": "Link CTA",
+    "save": "Zapisz zmiany",
+    "cancel": "Anuluj",
+    "success": "Film zaktualizowany pomyslnie",
+    "error": "Nie udalo sie zaktualizowac filmu"
+  },
+  "duplicate": {
+    "success": "Film zduplikowany pomyslnie",
+    "error": "Nie udalo sie zduplikowac filmu",
+    "limitReached": "Osiagnieto limit szkicow (maks. 10)"
+  },
+  "extension": {
+    "title": "Przedluz publikacje",
+    "description": "Przedluz widocznosc \"{title}\"",
+    "currentExpiry": "Obecne wygasniecie: {date}",
+    "points": "pkt",
+    "yourBalance": "Twoje saldo",
+    "cancel": "Anuluj",
+    "extend": "Przedluz ({cost} pkt)",
+    "insufficientShort": "Za malo kredytow",
+    "insufficientCredits": "Nie masz wystarczajaco kredytow na to przedluzenie.",
+    "success": "Publikacja przedluzona pomyslnie!",
+    "failed": "Nie udalo sie przedluzyc publikacji. Sprobuj ponownie."
+  },
+  "boost": {
+    "title": "Promuj film",
+    "description": "Promuj \"{title}\" w feedzie",
+    "cost": "Koszt promowania",
+    "points": "pkt",
+    "duration": "Czas trwania",
+    "durationValue": "24 godziny",
+    "yourBalance": "Twoje saldo",
+    "cancel": "Anuluj",
+    "confirm": "Promuj teraz",
+    "insufficientShort": "Za malo kredytow",
+    "insufficientCredits": "Nie masz wystarczajaco kredytow na promowanie.",
+    "success": "Film promowany! Bedzie wyrozniany przez 24 godziny.",
+    "failed": "Nie udalo sie promowac filmu. Sprobuj ponownie.",
+    "info": "Promowane filmy sa wyswietlane wyzej w feedzie przez 24 godziny."
+  },
+  "superLike": {
+    "button": "Super Like",
+    "sent": "Wyslano!",
+    "loginRequired": "Zaloguj sie, aby wyslac Super Like",
+    "ownShort": "Nie mozesz wyslac Super Like wlasnemu filmowi",
+    "insufficientCredits": "Za malo kredytow na Super Like",
+    "failed": "Nie udalo sie wyslac Super Like. Sprobuj ponownie."
+  },
+  "comments": {
+    "title": "Komentarze",
+    "count": "Komentarze (%count%)",
+    "placeholder": "Napisz komentarz...",
+    "submit": "Wyślij",
+    "edit": "Edytuj",
+    "reply": "Odpowiedz",
+    "delete": "Usuń",
+    "deleted": "Komentarz usunięty",
+    "edited": "edytowany",
+    "editExpired": "Czas edycji minął",
+    "loginRequired": "Zaloguj się, aby komentować",
+    "pending": "Oczekuje na moderację",
+    "empty": "Brak komentarzy. Bądź pierwszy!",
+    "sortNewest": "Najnowsze",
+    "sortOldest": "Najstarsze",
+    "sortMostLiked": "Najpopularniejsze",
+    "charLimit": "%count%/500 znaków",
+    "loadMore": "Załaduj więcej",
+    "confirmDelete": "Czy na pewno chcesz usunąć ten komentarz?",
+    "deleteSuccess": "Komentarz usunięty",
+    "deleteFailed": "Nie udało się usunąć komentarza",
+    "createFailed": "Nie udało się dodać komentarza",
+    "editFailed": "Nie udało się edytować komentarza"
+  },
+  "reactions": {
+    "like": "Lubię to",
+    "dislike": "Nie lubię",
+    "fire": "Ogień",
+    "heart": "Serce",
+    "laugh": "Śmieszne",
+    "wow": "Wow",
+    "clap": "Brawo",
+    "loginRequired": "Zaloguj się, aby reagować",
+    "rateLimited": "Zbyt wiele reakcji. Spróbuj później."
+  },
+  "backToFeed": "Wroc do feedu",
+  "viewOffer": "Zobacz oferte",
+  "viewCompany": "Zobacz firme",
+  "relatedShorts": "Podobne shorty"
+}

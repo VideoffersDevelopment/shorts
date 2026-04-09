@@ -1,0 +1,28 @@
+{
+  "title": "Perfil",
+  "displayName": "Nombre para mostrar",
+  "displayNamePlaceholder": "Ingresa tu nombre",
+  "bio": "Bio",
+  "bioPlaceholder": "Escribe algo sobre ti...",
+  "location": "Ubicación",
+  "locationPlaceholder": "Ciudad, país",
+  "avatar": "Foto de perfil",
+  "changeAvatar": "Cambiar foto",
+  "removeAvatar": "Eliminar foto",
+  "cropAvatar": "Recortar imagen",
+  "saveAvatar": "Guardar imagen",
+  "confirmRemoveAvatar": "¿Estás seguro de que quieres eliminar tu foto de perfil?",
+  "save": "Guardar cambios",
+  "saving": "Guardando...",
+  "removing": "Eliminando...",
+  "cancel": "Cancelar",
+  "success": "Perfil actualizado",
+  "errors": {
+    "uploadFailed": "Error al subir la imagen",
+    "invalidFileType": "Tipo de archivo inválido",
+    "fileTooLarge": "El archivo es demasiado grande (máx 5MB)",
+    "deleteFailed": "Error al eliminar la imagen",
+    "bioTooLong": "El bio puede tener máx. 500 caracteres",
+    "saveFailed": "No se pudo guardar el perfil"
+  }
+}

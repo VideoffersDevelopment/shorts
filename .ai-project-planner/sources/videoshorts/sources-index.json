@@ -1,0 +1,48 @@
+{
+  "project": "VideoShorts",
+  "created": "2025-11-28",
+  "updated": "2025-11-28",
+  "description": "Platforma Video Shorts dla Promocji Produktów - SaaS Stack",
+  "sources": [
+    {
+      "id": "source-01",
+      "type": "prd",
+      "file": "source-01-prd.md",
+      "title": "PRD i Specyfikacja Techniczna",
+      "description": "Pełna specyfikacja techniczna z stackiem SaaS (Next.js, Neon DB, Vercel, Mux)",
+      "added": "2025-11-28",
+      "status": "active",
+      "origin": "imported",
+      "originalPath": ".ai-prompts/PRD_Specyfikacja_VideoShorts_SaaS.md"
+    },
+    {
+      "id": "source-02",
+      "type": "opis",
+      "file": "source-02-opis.md",
+      "title": "Opis Działania Aplikacji",
+      "description": "Dokument dla klienta z user flows, scenariuszami i FAQ",
+      "added": "2025-11-28",
+      "status": "active",
+      "origin": "imported",
+      "originalPath": ".ai-prompts/Opis_Dzialania_Aplikacji.md"
+    }
+  ],
+  "generated": {
+    "project_spec": true,
+    "project_spec_date": "2025-11-28",
+    "architecture_plan": true,
+    "architecture_plan_date": "2025-11-28",
+    "stages": true,
+    "stages_count": 8,
+    "stages_date": "2025-11-28"
+  },
+  "metadata": {
+    "total_sources": 2,
+    "types": {
+      "prd": 1,
+      "opis": 1,
+      "prompt": 0,
+      "custom": 0
+    }
+  }
+}

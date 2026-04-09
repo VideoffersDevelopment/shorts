@@ -1,0 +1,139 @@
+{
+  "page": {
+    "title": "Kredyty",
+    "description": "Zarzadzaj kredytami publikacji",
+    "balance": "Saldo kredytow",
+    "balanceDescription": "Twoje dostepne kredyty do publikacji shortow",
+    "paymentSuccess": "Platnosc zakonczona sukcesem!",
+    "creditsAdded": "Kredyty zostaly dodane do Twojego konta."
+  },
+  "credits": {
+    "credit": "kredyt",
+    "plural": "kredytow",
+    "creditAvailable": "kredyt dostepny",
+    "pluralAvailable": "kredytow dostepnych",
+    "available": "Dostepne kredyty",
+    "buy": "Kup kredyty"
+  },
+  "packages": {
+    "title": "Pakiety kredytow",
+    "description": "Kup kredyty, aby publikowac shorty",
+    "credit": "kredyt",
+    "credits": "kredytow",
+    "buy": "Kup teraz"
+  },
+  "transactions": {
+    "title": "Ostatnie transakcje",
+    "description": "Historia aktywnosci kredytowej",
+    "empty": "Brak transakcji",
+    "source": {
+      "PACKAGE": "Zakup kredytow",
+      "GIFT": "Kredyty podarunkowe",
+      "PROMO": "Kredyty promocyjne",
+      "REFUND": "Zwrot kredytow",
+      "ADMIN": "Kredyt administratora",
+      "PUBLICATION": "Publikacja shorta",
+      "OTHER": "Inne"
+    },
+    "actionType": {
+      "PURCHASE": "Zakup",
+      "PUBLICATION": "Publikacja",
+      "BOOST_STD": "Boost",
+      "EXTENSION": "Przedluzenie",
+      "SUPER_LIKE": "Super Like",
+      "REFUND": "Zwrot",
+      "ADMIN_GRANT": "Grant admina",
+      "MAINTENANCE_FEE": "Oplata utrzymaniowa",
+      "PROMO_EXPIRED": "PROMO wygaslo",
+      "EARNED_TIP": "Otrzymany napiwek"
+    }
+  },
+  "wallet": {
+    "totalBalance": "Calkowite saldo",
+    "points": "pkt",
+    "promo": {
+      "title": "Portfel PROMO",
+      "expiresIn": "Pozostalo {days} dni",
+      "expiryWarning": "Kredyty wkrotce wygasna! Wykorzystaj je zanim stracisz.",
+      "empty": "Brak kredytow promocyjnych"
+    },
+    "main": {
+      "title": "Portfel MAIN",
+      "expiresAt": "Najwczesniejsze wygasniecie: {date}",
+      "maintenanceWarning": "Aktywna oplata utrzymaniowa",
+      "empty": "Brak zakupionych kredytow. Kup pakiet, aby rozpoczac."
+    }
+  },
+  "info": {
+    "title": "Jak dzialaja kredyty",
+    "description": "Kredyty sluza do publikowania filmow. Kazda usuga kosztuje punkty z portfela.",
+    "point1": "Najpierw wydawane sa kredyty PROMO (FIFO), potem MAIN",
+    "point2": "Zakup pakietu przedluza waznosc WSZYSTKICH kredytow MAIN o 12 miesiecy",
+    "point3": "Pakiety zbiorcze z rabatem do 33%"
+  },
+  "form": {
+    "credits": "Liczba kredytow",
+    "selectCredits": "Wybierz pakiet kredytow",
+    "credit": "kredyt",
+    "creditsPlural": "kredytow",
+    "pricePerCredit": "{price} PLN za kredyt",
+    "provider": "Metoda platnosci",
+    "total": "Razem",
+    "processing": "Przetwarzanie...",
+    "pay": "Zaplac {amount} PLN",
+    "securityNote": "Bezpieczne przetwarzanie platnosci. Twoje dane sa chronione."
+  },
+  "providers": {
+    "p24Description": "Przelew, BLIK, karty",
+    "tpayDescription": "Karty, BLIK, Apple Pay"
+  },
+  "publish": {
+    "title": "Publikuj shorta",
+    "verificationRequired": "Wymagana weryfikacja firmy",
+    "verificationDescription": "Twoja firma musi byc zweryfikowana, zanim bedziesz mogl publikowac shorty. Wykonaj weryfikacje VIES, aby kontynuowac.",
+    "verifyCompany": "Zweryfikuj firme",
+    "yourCredits": "Twoje kredyty",
+    "useCreditsTitle": "Uzyj kredytu publikacji",
+    "useCreditsDescription": "Masz dostepne kredyty. Publikacja zuzyje 1 kredyt.",
+    "useCredit": "Uzyj 1 kredytu do publikacji",
+    "noCredits": "Brak dostepnych kredytow",
+    "noCreditsDescription": "Potrzebujesz co najmniej 1 kredytu do publikacji. Cena: {price} PLN za kredyt.",
+    "buyAndPublish": "Kup kredyt i publikuj ({price} PLN)",
+    "buyCredits": "Kup kredyty",
+    "buyCreditsDescription": "Wybierz metode platnosci i pakiet kredytow",
+    "processing": "Przetwarzanie...",
+    "processingDescription": "Prosze czekac, przetwarzamy Twoje zadanie.",
+    "success": {
+      "title": "Publikacja rozpoczeta!",
+      "description": "Twoj short jest przetwarzany i wkrotce bedzie dostepny."
+    }
+  },
+  "common": {
+    "cancel": "Anuluj",
+    "back": "Wstecz"
+  },
+  "errors": {
+    "publishFailed": "Nie udalo sie opublikowac shorta. Sprobuj ponownie.",
+    "checkoutFailed": "Nie udalo sie utworzyc sesji platnosci. Sprobuj ponownie."
+  },
+  "history": {
+    "title": "Historia kredytow",
+    "date": "Data",
+    "type": "Typ",
+    "amount": "Kwota",
+    "balance": "Saldo",
+    "relatedShort": "Powiazany film",
+    "noTransactions": "Brak transakcji"
+  },
+  "purchase": {
+    "title": "Kup kredyty",
+    "description": "Wybierz pakiet kredytow",
+    "package": "{credits} kredytow",
+    "price": "{amount} PLN",
+    "save": "Oszczedz {percent}%",
+    "selectProvider": "Metoda platnosci",
+    "buy": "Kup teraz",
+    "cancel": "Anuluj",
+    "expiryResetInfo": "Zakup przedluza waznosc WSZYSTKICH kredytow MAIN o +12 miesiecy!"
+  }
+}

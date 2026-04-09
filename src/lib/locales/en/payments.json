@@ -1,0 +1,139 @@
+{
+  "page": {
+    "title": "Credits",
+    "description": "Manage your publication credits",
+    "balance": "Credit Balance",
+    "balanceDescription": "Your available credits for publishing shorts",
+    "paymentSuccess": "Payment successful!",
+    "creditsAdded": "Your credits have been added to your account."
+  },
+  "credits": {
+    "credit": "credit",
+    "plural": "credits",
+    "creditAvailable": "credit available",
+    "pluralAvailable": "credits available",
+    "available": "Available credits",
+    "buy": "Buy Credits"
+  },
+  "packages": {
+    "title": "Credit Packages",
+    "description": "Purchase credits to publish your shorts",
+    "credit": "credit",
+    "credits": "credits",
+    "buy": "Buy Now"
+  },
+  "transactions": {
+    "title": "Recent Transactions",
+    "description": "Your credit activity history",
+    "empty": "No transactions yet",
+    "source": {
+      "PACKAGE": "Credit Purchase",
+      "GIFT": "Gift Credits",
+      "PROMO": "Promotional Credits",
+      "REFUND": "Credit Refund",
+      "ADMIN": "Admin Credit",
+      "PUBLICATION": "Short Publication",
+      "OTHER": "Other"
+    },
+    "actionType": {
+      "PURCHASE": "Purchase",
+      "PUBLICATION": "Publication",
+      "BOOST_STD": "Boost",
+      "EXTENSION": "Extension",
+      "SUPER_LIKE": "Super Like",
+      "REFUND": "Refund",
+      "ADMIN_GRANT": "Admin Grant",
+      "MAINTENANCE_FEE": "Maintenance Fee",
+      "PROMO_EXPIRED": "PROMO Expired",
+      "EARNED_TIP": "Tip Received"
+    }
+  },
+  "wallet": {
+    "totalBalance": "Total Balance",
+    "points": "pts",
+    "promo": {
+      "title": "PROMO Wallet",
+      "expiresIn": "{days} days remaining",
+      "expiryWarning": "Credits expiring soon! Use them before they expire.",
+      "empty": "No promotional credits"
+    },
+    "main": {
+      "title": "MAIN Wallet",
+      "expiresAt": "Earliest expiry: {date}",
+      "maintenanceWarning": "Maintenance fee active",
+      "empty": "No purchased credits. Buy a package to get started."
+    }
+  },
+  "info": {
+    "title": "How Credits Work",
+    "description": "Credits are used to publish your short videos. Each publication costs points from your wallet.",
+    "point1": "PROMO credits are used first (FIFO), then MAIN credits",
+    "point2": "Buying a package extends validity of ALL your MAIN credits by 12 months",
+    "point3": "Bulk packages available with up to 33% savings"
+  },
+  "form": {
+    "credits": "Number of Credits",
+    "selectCredits": "Select credit package",
+    "credit": "credit",
+    "creditsPlural": "credits",
+    "pricePerCredit": "{price} PLN per credit",
+    "provider": "Payment Method",
+    "total": "Total",
+    "processing": "Processing...",
+    "pay": "Pay {amount} PLN",
+    "securityNote": "Secure payment processing. Your data is protected."
+  },
+  "providers": {
+    "p24Description": "Bank transfer, BLIK, cards",
+    "tpayDescription": "Cards, BLIK, Apple Pay"
+  },
+  "publish": {
+    "title": "Publish Short",
+    "verificationRequired": "Company Verification Required",
+    "verificationDescription": "Your company must be verified before you can publish shorts. Complete the VIES verification to continue.",
+    "verifyCompany": "Verify Company",
+    "yourCredits": "Your credits",
+    "useCreditsTitle": "Use Publication Credit",
+    "useCreditsDescription": "You have credits available. Publishing will use 1 credit.",
+    "useCredit": "Use 1 Credit to Publish",
+    "noCredits": "No Credits Available",
+    "noCreditsDescription": "You need at least 1 credit to publish. Price: {price} PLN per credit.",
+    "buyAndPublish": "Buy Credit & Publish ({price} PLN)",
+    "buyCredits": "Buy Credits",
+    "buyCreditsDescription": "Select a payment method and credit package",
+    "processing": "Processing...",
+    "processingDescription": "Please wait while we process your request.",
+    "success": {
+      "title": "Publishing Started!",
+      "description": "Your short is being processed and will be live soon."
+    }
+  },
+  "common": {
+    "cancel": "Cancel",
+    "back": "Back"
+  },
+  "errors": {
+    "publishFailed": "Failed to publish short. Please try again.",
+    "checkoutFailed": "Failed to create checkout session. Please try again."
+  },
+  "history": {
+    "title": "Credit History",
+    "date": "Date",
+    "type": "Type",
+    "amount": "Amount",
+    "balance": "Balance",
+    "relatedShort": "Related Short",
+    "noTransactions": "No transactions yet"
+  },
+  "purchase": {
+    "title": "Purchase Credits",
+    "description": "Select a credit package",
+    "package": "{credits} credits",
+    "price": "{amount} PLN",
+    "save": "Save {percent}%",
+    "selectProvider": "Payment Method",
+    "buy": "Buy Now",
+    "cancel": "Cancel",
+    "expiryResetInfo": "Purchasing resets the validity of ALL your MAIN credits by +12 months!"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Settings",
+  "account": {
+    "title": "Account",
+    "email": "Email",
+    "emailVerified": "Verified",
+    "emailNotVerified": "Not verified",
+    "changePassword": "Change password",
+    "deleteAccount": "Delete account"
+  },
+  "password": {
+    "title": "Change password",
+    "current": "Current password",
+    "new": "New password",
+    "confirm": "Confirm password",
+    "submit": "Change password",
+    "success": "Password changed. Please log in again.",
+    "errors": {
+      "wrongPassword": "Wrong current password",
+      "oauthAccount": "Account created with OAuth"
+    }
+  },
+  "delete": {
+    "title": "Danger zone",
+    "warning": "This action is irreversible. All your data will be deleted.",
+    "confirm": "Type DELETE to confirm",
+    "submit": "Delete my account",
+    "success": "Account has been deleted"
+  }
+}

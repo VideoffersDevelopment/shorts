@@ -1,0 +1,110 @@
+{
+  "page": {
+    "title": "Guthaben",
+    "description": "Verwalten Sie Ihre Publikationsguthaben",
+    "balance": "Guthabenstand",
+    "balanceDescription": "Ihre verfugbaren Guthaben fur die Veroffentlichung von Shorts",
+    "paymentSuccess": "Zahlung erfolgreich!",
+    "creditsAdded": "Ihre Guthaben wurden Ihrem Konto hinzugefugt."
+  },
+  "credits": {
+    "credit": "Guthaben",
+    "plural": "Guthaben",
+    "creditAvailable": "Guthaben verfugbar",
+    "pluralAvailable": "Guthaben verfugbar",
+    "available": "Verfugbare Guthaben",
+    "buy": "Guthaben kaufen"
+  },
+  "packages": {
+    "title": "Guthaben-Pakete",
+    "description": "Kaufen Sie Guthaben, um Ihre Shorts zu veroffentlichen",
+    "credit": "Guthaben",
+    "credits": "Guthaben",
+    "buy": "Jetzt kaufen"
+  },
+  "transactions": {
+    "title": "Letzte Transaktionen",
+    "description": "Ihre Guthaben-Aktivitatshistorie",
+    "empty": "Keine Transaktionen vorhanden",
+    "source": {
+      "PACKAGE": "Guthaben-Kauf",
+      "GIFT": "Geschenk-Guthaben",
+      "PROMO": "Werbe-Guthaben",
+      "REFUND": "Guthaben-Ruckerstattung",
+      "ADMIN": "Admin-Guthaben",
+      "PUBLICATION": "Short-Veroffentlichung",
+      "OTHER": "Sonstiges"
+    }
+  },
+  "info": {
+    "title": "So funktionieren Guthaben",
+    "description": "Guthaben werden verwendet, um Ihre Kurzvideos zu veroffentlichen. Jede Veroffentlichung kostet 1 Guthaben.",
+    "point1": "1 Guthaben = 1 veroffentlichtes Short (30 Tage Sichtbarkeit)",
+    "point2": "Guthaben laufen nie ab",
+    "point3": "Sammelpakete fur Ersparnisse verfugbar"
+  },
+  "form": {
+    "credits": "Anzahl der Guthaben",
+    "selectCredits": "Guthaben-Paket auswahlen",
+    "credit": "Guthaben",
+    "creditsPlural": "Guthaben",
+    "pricePerCredit": "{price} PLN pro Guthaben",
+    "provider": "Zahlungsmethode",
+    "total": "Gesamt",
+    "processing": "Wird verarbeitet...",
+    "pay": "{amount} PLN bezahlen",
+    "securityNote": "Sichere Zahlungsabwicklung. Ihre Daten sind geschutzt."
+  },
+  "providers": {
+    "p24Description": "Uberweisung, BLIK, Karten",
+    "tpayDescription": "Karten, BLIK, Apple Pay"
+  },
+  "publish": {
+    "title": "Short veroffentlichen",
+    "verificationRequired": "Firmenverifizierung erforderlich",
+    "verificationDescription": "Ihre Firma muss verifiziert sein, bevor Sie Shorts veroffentlichen konnen. Fuhren Sie die VIES-Verifizierung durch, um fortzufahren.",
+    "verifyCompany": "Firma verifizieren",
+    "yourCredits": "Ihre Guthaben",
+    "useCreditsTitle": "Publikationsguthaben verwenden",
+    "useCreditsDescription": "Sie haben verfugbare Guthaben. Die Veroffentlichung verwendet 1 Guthaben.",
+    "useCredit": "1 Guthaben fur Veroffentlichung verwenden",
+    "noCredits": "Keine Guthaben verfugbar",
+    "noCreditsDescription": "Sie benotigen mindestens 1 Guthaben zum Veroffentlichen. Preis: {price} PLN pro Guthaben.",
+    "buyAndPublish": "Guthaben kaufen und veroffentlichen ({price} PLN)",
+    "buyCredits": "Guthaben kaufen",
+    "buyCreditsDescription": "Wahlen Sie eine Zahlungsmethode und ein Guthaben-Paket",
+    "processing": "Wird verarbeitet...",
+    "processingDescription": "Bitte warten Sie, wahrend wir Ihre Anfrage verarbeiten.",
+    "success": {
+      "title": "Veroffentlichung gestartet!",
+      "description": "Ihr Short wird verarbeitet und ist bald online."
+    }
+  },
+  "common": {
+    "cancel": "Abbrechen",
+    "back": "Zuruck"
+  },
+  "errors": {
+    "publishFailed": "Short konnte nicht veroffentlicht werden. Bitte versuchen Sie es erneut.",
+    "checkoutFailed": "Checkout-Sitzung konnte nicht erstellt werden. Bitte versuchen Sie es erneut."
+  },
+  "history": {
+    "title": "Guthaben-Verlauf",
+    "date": "Datum",
+    "type": "Typ",
+    "amount": "Betrag",
+    "balance": "Saldo",
+    "relatedShort": "Verknupftes Video",
+    "noTransactions": "Keine Transaktionen"
+  },
+  "purchase": {
+    "title": "Guthaben kaufen",
+    "description": "Wahlen Sie ein Guthaben-Paket",
+    "package": "{credits} Guthaben",
+    "price": "{amount} PLN",
+    "save": "{percent}% sparen",
+    "selectProvider": "Zahlungsmethode",
+    "buy": "Jetzt kaufen",
+    "cancel": "Abbrechen"
+  }
+}

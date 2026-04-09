@@ -1,0 +1,513 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─────────────────────────────────────────────
+// Auth & User Models
+// ─────────────────────────────────────────────
+
+model User {
+  id                 String              @id @default(cuid())
+  email              String              @unique
+  passwordHash       String?
+  role               Role                @default(USER)
+  isBlocked          Boolean             @default(false)
+  emailVerified      DateTime?           @db.Timestamptz(6)
+  createdAt          DateTime            @default(now()) @db.Timestamptz(6)
+  updatedAt          DateTime            @updatedAt @db.Timestamptz(6)
+  accounts           Account[]
+  adminAuditLogs     AuditLog[]          @relation("AdminAuditLogs")
+  companyProfile     CompanyProfile?
+  sessions           Session[]
+  profile            UserProfile?
+  payments           Payment[]
+  creditBatches      CreditBatch[]
+  creditTransactions CreditTransaction[]
+  notificationLogs   NotificationLog[]
+  shortBoosts        ShortBoost[]
+  likes              Like[]
+  comments           Comment[]
+  follows            Follow[]
+
+  @@index([email])
+  @@index([role])
+  @@index([isBlocked])
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime @db.Timestamptz(6)
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime @db.Timestamptz(6)
+
+  @@unique([identifier, token])
+}
+
+model UserProfile {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  displayName String?
+  avatar      String?
+  bio         String?
+  location    String?
+  latitude    Float?
+  longitude   Float?
+  preferences Json?
+  darkMode    Boolean  @default(false)
+  createdAt   DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt   DateTime @updatedAt @db.Timestamptz(6)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([latitude, longitude])
+}
+
+model CompanyProfile {
+  id            String        @id @default(cuid())
+  userId        String        @unique
+  companyName   String
+  slug          String        @unique
+  nip           String        @unique
+  status        CompanyStatus @default(PENDING)
+  viesVerified  Boolean       @default(false)
+  verifiedAt    DateTime?     @db.Timestamptz(6)
+  verifiedBy    String?
+  logo          String?
+  banner        String?
+  description   String?
+  categoryId    String?
+  subcategories Json?
+  website       String?
+  socialLinks   Json?
+  latitude      Float?
+  longitude     Float?
+  street        String?
+  postalCode    String?
+  city          String?
+  phone         String?
+  contactEmail  String?
+  businessHours Json?
+  createdAt     DateTime  @default(now()) @db.Timestamptz(6)
+  updatedAt     DateTime  @updatedAt @db.Timestamptz(6)
+  category      Category? @relation(fields: [categoryId], references: [id])
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  shorts        Short[]
+  followers     Follow[]
+
+  @@index([userId])
+  @@index([slug])
+  @@index([nip])
+  @@index([categoryId])
+  @@index([status])
+  @@index([viesVerified])
+  @@index([latitude, longitude])
+}
+
+model Category {
+  id              String           @id @default(cuid())
+  name            String
+  slug            String           @unique
+  icon            String?
+  parentId        String?
+  order           Int              @default(0)
+  enabled         Boolean          @default(true)
+  createdAt       DateTime         @default(now()) @db.Timestamptz(6)
+  updatedAt       DateTime         @updatedAt @db.Timestamptz(6)
+  parent          Category?        @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children        Category[]       @relation("CategoryHierarchy")
+  companyProfiles CompanyProfile[]
+  shorts          Short[]
+
+  @@index([slug])
+  @@index([parentId])
+  @@index([enabled])
+  @@index([order])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  adminId    String
+  action     String
+  targetType String
+  targetId   String
+  metadata   Json?
+  createdAt  DateTime @default(now()) @db.Timestamptz(6)
+  admin      User     @relation("AdminAuditLogs", fields: [adminId], references: [id])
+
+  @@index([adminId])
+  @@index([targetType, targetId])
+  @@index([createdAt])
+}
+
+// ─────────────────────────────────────────────
+// Core Enums
+// ─────────────────────────────────────────────
+
+enum Role {
+  USER
+  COMPANY
+  ADMIN
+}
+
+enum CompanyStatus {
+  PENDING
+  ACTIVE
+  SUSPENDED
+}
+
+enum ShortStatus {
+  DRAFT
+  PENDING_PAYMENT
+  PROCESSING
+  PUBLISHED
+  EXPIRED
+  ARCHIVED
+  DELETED
+}
+
+enum PaymentProvider {
+  PRZELEWY24
+  TPAY
+  OTHER
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCEEDED
+  FAILED
+  REFUNDED
+}
+
+enum LikeType {
+  LIKE
+  DISLIKE
+  FIRE
+  HEART
+  LAUGH
+  WOW
+  CLAP
+}
+
+enum CommentStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  DELETED
+}
+
+// ─────────────────────────────────────────────
+// Wallet System Enums
+// ─────────────────────────────────────────────
+
+enum WalletType {
+  PROMO // Portfel Promocyjny — darmowe, 60 dni, nieodnawialne
+  MAIN  // Portfel Główny — kupione, 12 mc, odnawialne
+}
+
+enum CreditBatchType {
+  PROMO_GRANT // Darmowe na start (onboarding COMPANY)
+  PURCHASED   // Kupione za PLN (P24/Tpay)
+  BONUS       // Gratis od admina / do pakietu
+  EARNED_TIP  // Napiwki od innych (Super Like)
+}
+
+enum CreditActionType {
+  PUBLICATION     // Opłata za publikację wideo
+  EXTENSION       // Przedłużenie emisji wideo
+  BOOST_STD       // Boost standardowy
+  SUPER_LIKE      // Napiwek dla innego użytkownika
+  MAINTENANCE_FEE // Opłata utrzymaniowa (auto, po 12mc)
+  REFUND          // Zwrot za nieudane przetwarzanie
+  PROMO_EXPIRED   // Wygaśnięcie partii PROMO (zerowanie)
+  ADMIN_GRANT     // Grant od admina
+}
+
+// ─────────────────────────────────────────────
+// Video & Content Models
+// ─────────────────────────────────────────────
+
+model Short {
+  id                 String              @id @default(cuid())
+  companyId          String
+  // RENAMED using @map (preserves existing column in DB)
+  qencodeTaskId      String?             @unique @map("muxAssetId")
+  hlsPlaylistUrl     String?             @unique @map("muxPlaybackId")
+  rawVideoKey        String?             @map("muxUploadId")
+  title              String              @db.VarChar(100)
+  description        String?             @db.Text
+  categoryId         String
+  latitude           Float?
+  longitude          Float?
+  address            String?
+  ctaLink            String?
+  status             ShortStatus         @default(DRAFT)
+  thumbnailUrl       String?
+  customThumbnail    Boolean             @default(false)
+  duration           Int?
+  aspectRatio        String?
+  publishedAt        DateTime?           @db.Timestamptz(6)
+  archivedAt         DateTime?           @db.Timestamptz(6)
+  expiresAt          DateTime?           @db.Timestamptz(6)
+  processingError    String?             @db.Text
+  retryCount         Int                 @default(0)
+  createdAt          DateTime            @default(now()) @db.Timestamptz(6)
+  updatedAt          DateTime            @updatedAt @db.Timestamptz(6)
+  company            CompanyProfile      @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  category           Category            @relation(fields: [categoryId], references: [id])
+  tags               ShortTag[]
+  stats              ShortStats?
+  creditTransactions CreditTransaction[]
+  boosts             ShortBoost[]
+  likes              Like[]
+  comments           Comment[]
+
+  @@index([companyId])
+  @@index([status])
+  @@index([publishedAt])
+  @@index([expiresAt])
+  @@index([categoryId])
+  @@index([qencodeTaskId])
+}
+
+model ShortStats {
+  id           String   @id @default(cuid())
+  shortId      String   @unique
+  views        Int      @default(0)
+  uniqueViews  Int      @default(0)
+  likes        Int      @default(0)
+  comments     Int      @default(0)
+  ctaClicks    Int      @default(0)
+  avgWatchTime Float?
+  updatedAt    DateTime @updatedAt @db.Timestamptz(6)
+  short        Short    @relation(fields: [shortId], references: [id], onDelete: Cascade)
+}
+
+model Tag {
+  id         String     @id @default(cuid())
+  name       String     @db.VarChar(50)
+  slug       String     @unique
+  usageCount Int        @default(0)
+  createdAt  DateTime   @default(now()) @db.Timestamptz(6)
+  shorts     ShortTag[]
+
+  @@index([slug])
+  @@index([usageCount])
+}
+
+model ShortTag {
+  shortId String
+  tagId   String
+  short   Short  @relation(fields: [shortId], references: [id], onDelete: Cascade)
+  tag     Tag    @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([shortId, tagId])
+  @@index([shortId])
+  @@index([tagId])
+}
+
+model ShortBoost {
+  id        String   @id @default(cuid())
+  shortId   String
+  userId    String
+  type      String   @default("STANDARD")
+  cost      Int
+  startedAt DateTime @default(now()) @db.Timestamptz(6)
+  expiresAt DateTime @db.Timestamptz(6)
+  status    String   @default("ACTIVE")
+
+  short Short @relation(fields: [shortId], references: [id], onDelete: Cascade)
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([shortId])
+  @@index([userId])
+  @@index([status])
+  @@index([expiresAt])
+}
+
+// ─────────────────────────────────────────────
+// Payment & Wallet Models
+// ─────────────────────────────────────────────
+
+model Payment {
+  id                String          @id @default(cuid())
+  userId            String
+  provider          PaymentProvider @default(PRZELEWY24)
+  providerPaymentId String          @unique
+  providerSessionId String?         @unique
+  amount            Decimal         @db.Decimal(10, 2)
+  currency          String          @default("PLN")
+  status            PaymentStatus   @default(PENDING)
+  invoiceUrl        String?
+  metadata          Json?
+  creditsGranted    Int             @default(0)
+  createdAt         DateTime        @default(now()) @db.Timestamptz(6)
+  updatedAt         DateTime        @updatedAt @db.Timestamptz(6)
+  user              User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+  @@index([provider])
+  @@index([providerPaymentId])
+}
+
+model CreditBatch {
+  id             String          @id @default(cuid())
+  userId         String
+  wallet         WalletType
+  type           CreditBatchType
+  initialAmount  Int
+  currentBalance Int
+  createdAt      DateTime        @default(now()) @db.Timestamptz(6)
+  expiresAt      DateTime        @db.Timestamptz(6)
+  lastActivityAt DateTime        @default(now()) @db.Timestamptz(6)
+  isFrozen       Boolean         @default(false)
+
+  user         User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  transactions CreditTransaction[]
+
+  @@index([userId, wallet])
+  @@index([expiresAt])
+  @@index([userId, currentBalance])
+}
+
+model CreditTransaction {
+  id         String           @id @default(cuid())
+  userId     String
+  batchId    String?
+  amount     Int
+  actionType CreditActionType
+  shortId    String?
+  paymentId  String?
+  metadata   Json?
+  createdAt  DateTime         @default(now()) @db.Timestamptz(6)
+
+  user  User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  batch CreditBatch? @relation(fields: [batchId], references: [id])
+  short Short?       @relation(fields: [shortId], references: [id])
+
+  @@index([userId])
+  @@index([actionType])
+  @@index([batchId])
+  @@index([createdAt])
+}
+
+// ─────────────────────────────────────────────
+// Configuration & Admin Models
+// ─────────────────────────────────────────────
+
+model PricingConfig {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  label       String
+  description String?
+  cost        Int
+  enabled     Boolean  @default(true)
+  category    String   @default("general")
+  updatedAt   DateTime @updatedAt @db.Timestamptz(6)
+  updatedBy   String?
+
+  @@index([key])
+  @@index([category])
+}
+
+model NotificationLog {
+  id          String   @id @default(cuid())
+  userId      String
+  triggerType String
+  batchId     String?
+  channel     String
+  sentAt      DateTime @default(now()) @db.Timestamptz(6)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, triggerType, batchId])
+  @@index([userId])
+  @@index([triggerType])
+}
+
+// ─────────────────────────────────────────────
+// Interactions Models
+// ─────────────────────────────────────────────
+
+model Like {
+  id        String   @id @default(cuid())
+  userId    String
+  shortId   String
+  type      LikeType @default(LIKE)
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  short Short @relation(fields: [shortId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, shortId])
+  @@index([shortId])
+  @@index([userId])
+}
+
+model Comment {
+  id            String        @id @default(cuid())
+  userId        String
+  shortId       String
+  parentId      String?
+  content       String        @db.Text
+  status        CommentStatus @default(APPROVED)
+  toxicityScore Float?
+  editedAt      DateTime?     @db.Timestamptz(6)
+  createdAt     DateTime      @default(now()) @db.Timestamptz(6)
+  updatedAt     DateTime      @updatedAt @db.Timestamptz(6)
+
+  user    User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  short   Short     @relation(fields: [shortId], references: [id], onDelete: Cascade)
+  parent  Comment?  @relation("CommentThread", fields: [parentId], references: [id], onDelete: Cascade)
+  replies Comment[] @relation("CommentThread")
+
+  @@index([shortId, status, createdAt])
+  @@index([parentId])
+  @@index([userId])
+}
+
+model Follow {
+  id        String   @id @default(cuid())
+  userId    String
+  companyId String
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
+
+  user    User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  company CompanyProfile @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, companyId])
+  @@index([companyId])
+  @@index([userId])
+}

@@ -1,0 +1,257 @@
+{
+  "upgrade": {
+    "heading": "Upgrade to Company Account",
+    "description": "Register your company to post job offers and access additional features.",
+    "title": "Company Registration Form",
+    "subtitle": "Enter your company details. Your VAT number will be verified through the VIES system.",
+    "fields": {
+      "companyName": "Company Name",
+      "nip": "VAT Number (NIP)",
+      "address": "Address",
+      "phone": "Phone (optional)"
+    },
+    "placeholders": {
+      "companyName": "e.g. Acme Corp Ltd.",
+      "address": "e.g. 123 Main Street, 00-001 Warsaw",
+      "phone": "+48 123 456 789"
+    },
+    "hints": {
+      "nip": "Format: 1234567890 or 12-345-678-90",
+      "phone": "Phone number is optional"
+    },
+    "submit": "Register Company",
+    "submitting": "Verifying VAT number...",
+    "success": {
+      "title": "Company Registered!",
+      "verified": "Your VAT number has been successfully verified through VIES.",
+      "pending": "Your VAT number requires manual verification by an administrator.",
+      "continueButton": "Go to Company Profile",
+      "promoTitle": "1,000 PROMO credits added!",
+      "promoDescription": "Use them within 60 days to publish and promote your first shorts."
+    },
+    "alreadyCompany": "Redirecting to your company profile..."
+  },
+  "vies": {
+    "status": {
+      "verified": "Verified",
+      "pending": "Pending Verification",
+      "rejected": "Rejected"
+    }
+  },
+  "status": {
+    "pendingTitle": "Pending Admin Approval",
+    "pendingDescription": "Your company is awaiting admin verification. You'll receive an email notification once approved."
+  },
+  "nipValidation": {
+    "validating": "Verifying VAT number...",
+    "success": {
+      "verified": "VAT number verified in VIES"
+    },
+    "warning": {
+      "viesUnavailable": "VIES service unavailable. You can proceed - manual verification will be required."
+    },
+    "errors": {
+      "invalidFormat": "Invalid NIP format. Use 10 digits or XX-XXX-XXX-XX format.",
+      "alreadyExists": "This VAT number is already registered in our system.",
+      "viesInvalid": "This VAT number was not found in the VIES registry.",
+      "validationFailed": "Validation failed. Please try again.",
+      "pleaseFixErrors": "Please fix the VAT number errors before submitting.",
+      "unknown": "Unknown validation error."
+    }
+  },
+  "errors": {
+    "alreadyCompany": "You already have a registered company",
+    "nipExists": "This VAT number is already registered",
+    "createFailed": "Failed to create company profile",
+    "notCompany": "You don't have a company profile",
+    "updateFailed": "Failed to update profile"
+  },
+  "profile": {
+    "verified": "Verified",
+    "addShort": "Add short",
+    "noShorts": {
+      "title": "No published videos",
+      "description": "This company hasn't published any videos yet."
+    },
+    "noShortsOwner": {
+      "title": "You don't have any videos yet",
+      "description": "Add your first short to show customers what you do!"
+    },
+    "placeholders": {
+      "website": "https://example.com",
+      "contactEmail": "contact@company.com",
+      "facebook": "https://facebook.com/company",
+      "instagram": "https://instagram.com/company",
+      "tiktok": "https://tiktok.com/@company",
+      "youtube": "https://youtube.com/@company",
+      "linkedin": "https://linkedin.com/company/name",
+      "street": "123 Main Street",
+      "postalCode": "00-000",
+      "city": "Warsaw"
+    },
+    "overview": {
+      "title": "Profile Overview",
+      "editProfile": "Edit Profile",
+      "addShort": "Add Short",
+      "viewPublic": "View Public Profile",
+      "noDescription": "No company description",
+      "addDescription": "Add description"
+    },
+    "sections": {
+      "contact": "Contact",
+      "social": "Social Media",
+      "location": "Location"
+    },
+    "stats": {
+      "shorts": "Shorts",
+      "followers": "Followers",
+      "views": "Views",
+      "viewsThisWeek": "Views this week",
+      "activeCampaigns": "Active Campaigns",
+      "walletBalance": "Wallet Balance",
+      "topUp": "Top up"
+    },
+    "contact": {
+      "website": "Website",
+      "address": "Address",
+      "phone": "Phone",
+      "call": "Call"
+    },
+    "edit": {
+      "title": "Edit Company Profile",
+      "save": "Save Changes",
+      "saving": "Saving...",
+      "success": "Profile updated successfully",
+      "error": "Failed to update profile"
+    },
+    "fields": {
+      "companyName": "Company Name",
+      "description": "Description",
+      "website": "Website",
+      "category": "Category",
+      "address": "Address",
+      "street": "Street and number",
+      "postalCode": "Postal code",
+      "city": "City",
+      "phone": "Phone",
+      "contactEmail": "Contact Email",
+      "contactEmailHint": "Optional contact email. If not provided, your account email will be used.",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "socialLinks": "Social Media",
+      "businessHours": "Business Hours",
+      "setBusinessHours": "Set business hours",
+      "logo": "Logo",
+      "banner": "Banner",
+      "showOnMap": "Show on map",
+      "hideMap": "Hide map"
+    }
+  },
+  "logo": {
+    "title": "Upload Logo",
+    "upload": "Upload",
+    "uploading": "Uploading...",
+    "cancel": "Cancel",
+    "success": "Logo updated",
+    "dragAndDrop": "Drag and drop or click",
+    "dropHere": "Drop file here",
+    "errors": {
+      "invalidType": "Invalid file type. Use JPEG, PNG or WebP",
+      "tooLarge": "File too large. Maximum 5MB",
+      "uploadFailed": "Upload failed"
+    }
+  },
+  "banner": {
+    "title": "Upload Banner",
+    "upload": "Upload",
+    "uploading": "Uploading...",
+    "cancel": "Cancel",
+    "success": "Banner updated",
+    "dragAndDrop": "Drag and drop or click to select banner",
+    "dropHere": "Drop file here",
+    "errors": {
+      "invalidType": "Invalid file type. Use JPEG, PNG or WebP",
+      "tooLarge": "File too large. Maximum 10MB",
+      "uploadFailed": "Upload failed"
+    }
+  },
+  "category": {
+    "placeholder": "Select category",
+    "searchPlaceholder": "Search categories...",
+    "noResults": "No categories found",
+    "backToAll": "Back to all categories",
+    "viewAll": "View all"
+  },
+  "location": {
+    "geocoding": "Searching location...",
+    "geocodeError": "Could not find location",
+    "dragMarker": "Drag marker to adjust location"
+  },
+  "subcategories": {
+    "label": "Subcategories",
+    "placeholder": "Select subcategories",
+    "selected": "{count} of {max} selected",
+    "selectCategoryFirst": "Select a main category first",
+    "loading": "Loading subcategories...",
+    "noSubcategories": "No subcategories available",
+    "hint": "Select up to {max} subcategories to better describe your business"
+  },
+  "businessHours": {
+    "title": "Business Hours",
+    "days": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "openTime": "Opening time",
+    "closeTime": "Closing time",
+    "closed": "Closed",
+    "copyToAll": "Copy to all",
+    "clearAll": "Clear all",
+    "hint": "Set your business hours. Toggle off days when you're closed."
+  },
+  "header": {
+    "showLocation": "Show location",
+    "report": "Report",
+    "reportCompany": "Report company",
+    "reportError": "Report error"
+  },
+  "social": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn"
+  },
+  "follow": {
+    "follow": "Follow",
+    "following": "Following",
+    "unfollow": "Unfollow",
+    "loginRequired": "Log in to follow"
+  },
+  "contact": {
+    "button": "Contact us",
+    "title": "Contact Company",
+    "description": "Send a message to {companyName}",
+    "fields": {
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "placeholders": {
+      "subject": "Message subject",
+      "message": "Your message..."
+    },
+    "send": "Send",
+    "sending": "Sending...",
+    "cancel": "Cancel",
+    "success": "Message sent successfully",
+    "error": "Failed to send message",
+    "errors": {
+      "emptyMessage": "Message cannot be empty"
+    }
+  }
+}

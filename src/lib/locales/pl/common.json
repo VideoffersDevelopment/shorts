@@ -1,0 +1,53 @@
+{
+  "accessibility": {
+    "loading": "Ładowanie"
+  },
+  "search": {
+    "open": "Otwórz wyszukiwanie"
+  },
+  "auth": {
+    "login": "Zaloguj się",
+    "getStarted": "Rozpocznij"
+  },
+  "buttons": {
+    "submit": "Wyślij",
+    "cancel": "Anuluj",
+    "save": "Zapisz",
+    "delete": "Usuń",
+    "edit": "Edytuj",
+    "close": "Zamknij",
+    "back": "Wstecz",
+    "next": "Dalej",
+    "loading": "Ładowanie..."
+  },
+  "errors": {
+    "required": "To pole jest wymagane",
+    "invalidEmail": "Nieprawidłowy adres email",
+    "minLength": "Minimalna długość: {{min}} znaków",
+    "maxLength": "Maksymalna długość: {{max}} znaków",
+    "generic": "Wystąpił błąd. Spróbuj ponownie.",
+    "unauthorized": "Brak autoryzacji",
+    "invalidInput": "Nieprawidłowe dane wejściowe"
+  },
+  "validation": {
+    "emailRequired": "Email jest wymagany",
+    "passwordRequired": "Hasło jest wymagane",
+    "passwordMinLength": "Hasło musi mieć minimum 8 znaków",
+    "passwordsNotMatch": "Hasła nie są takie same"
+  },
+  "dashboard": {
+    "welcome": "Witaj w VideoShorts, {name}",
+    "gettingStarted": {
+      "title": "Rozpocznij",
+      "description": "Uzupełnij swój profil, aby zacząć korzystać z VideoShorts"
+    },
+    "yourVideos": {
+      "title": "Twoje filmy",
+      "empty": "Nie przesłałeś jeszcze żadnych filmów"
+    },
+    "statistics": {
+      "title": "Statystyki",
+      "description": "Zobacz statystyki swoich filmów"
+    }
+  }
+}

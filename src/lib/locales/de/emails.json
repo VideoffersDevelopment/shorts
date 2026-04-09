@@ -1,0 +1,46 @@
+{
+  "verifyEmail": {
+    "subject": "Bestätigen Sie Ihre E-Mail-Adresse - VideoShorts",
+    "preview": "Bestätigen Sie Ihre E-Mail-Adresse - VideoShorts",
+    "title": "Willkommen bei VideoShorts!",
+    "body": "Bitte bestätigen Sie Ihre E-Mail-Adresse, indem Sie auf die Schaltfläche unten klicken:",
+    "button": "E-Mail bestätigen",
+    "footer": "Wenn Sie kein Konto erstellt haben, können Sie diese E-Mail ignorieren."
+  },
+  "passwordReset": {
+    "subject": "Passwort zurücksetzen - VideoShorts",
+    "preview": "Passwort zurücksetzen - VideoShorts",
+    "title": "Passwort-Zurücksetzung angefordert",
+    "body": "Klicken Sie auf die Schaltfläche unten, um Ihr Passwort zurückzusetzen:",
+    "button": "Passwort zurücksetzen",
+    "footer": "Dieser Link läuft in 1 Stunde ab. Wenn Sie kein Passwort-Zurücksetzen angefordert haben, können Sie diese E-Mail ignorieren."
+  },
+  "welcome": {
+    "subject": "Willkommen bei VideoShorts!",
+    "preview": "Willkommen bei VideoShorts!",
+    "title": "Willkommen bei VideoShorts!",
+    "body1": "Vielen Dank für die Bestätigung Ihrer E-Mail. Ihr Konto ist jetzt vollständig aktiviert.",
+    "body2": "Sie können jetzt kurze Videos erstellen und mit der Welt teilen.",
+    "button": "Zum Dashboard",
+    "footer": "Bei Fragen können Sie sich gerne an unser Support-Team wenden."
+  },
+  "companyVerified": {
+    "subject": "Firma Verifiziert - VideoShorts",
+    "title": "Firma Verifiziert",
+    "body": "Ihre Firma {{companyName}} wurde verifiziert.",
+    "footer": "Sie können jetzt alle Unternehmensfunktionen nutzen."
+  },
+  "companyRejected": {
+    "subject": "Firmenverifizierung Abgelehnt - VideoShorts",
+    "title": "Firmenverifizierung Abgelehnt",
+    "body": "Die Verifizierung Ihrer Firma {{companyName}} wurde abgelehnt.",
+    "reason": "Grund: {{reason}}",
+    "footer": "Bitte kontaktieren Sie den Support, wenn Sie Fragen haben."
+  },
+  "companyDeleted": {
+    "subject": "Firma gelöscht - VideoShorts",
+    "title": "Ihre Firma wurde gelöscht",
+    "body": "Die Firma {{companyName}} wurde von einem Administrator aus unserem Service gelöscht.",
+    "footer": "Wenn Sie glauben, dass dies ein Fehler ist, kontaktieren Sie bitte den Support."
+  }
+}

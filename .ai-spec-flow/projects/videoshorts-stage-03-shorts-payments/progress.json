@@ -1,0 +1,327 @@
+{
+  "project": "videoshorts-stage-03-shorts-payments",
+  "source": "ai-project-planner",
+  "sourceSpec": ".ai-project-planner/projects/videoshorts/stages/stage-03-shorts-payments/spec.md",
+  "context": {
+    "projectSpec": ".ai-project-planner/projects/videoshorts/project-spec.md",
+    "architecturePlan": ".ai-project-planner/projects/videoshorts/architecture-plan.md"
+  },
+  "created": "2025-12-31",
+  "phases": {
+    "brief": "skipped",
+    "analysis": "completed",
+    "architecture": "completed",
+    "tasks": "completed",
+    "coding": "completed",
+    "testing": "completed"
+  },
+  "currentPhase": "completed",
+  "testingInfo": {
+    "task01": "completed",
+    "task02": "completed",
+    "task03": "completed",
+    "task04": "completed",
+    "task05": "completed",
+    "task06": "completed",
+    "task07": "completed",
+    "totalTestFiles": 81,
+    "totalTests": 3009
+  },
+  "analysisInfo": {
+    "iterations": 1,
+    "completedAt": "2025-12-31",
+    "outputFile": "analysis/final_analysis.md",
+    "summaryFile": "analysis/summary.md"
+  },
+  "architectureInfo": {
+    "iterations": 2,
+    "completedAt": "2025-12-31",
+    "outputFile": "architecture/final_architecture.md",
+    "summaryFile": "architecture/summary.md",
+    "mainDocument": "architecture/response_v1.md",
+    "addendum": "architecture/response_v2.md"
+  },
+  "tasksInfo": {
+    "iterations": 2,
+    "completedAt": "2025-12-31",
+    "totalTasks": 7,
+    "totalFiles": 100,
+    "estimatedTokens": "~100k",
+    "indexFile": "tasks/index.md",
+    "summaryFile": "tasks/summary.md"
+  },
+  "tasks": [
+    {
+      "id": "task-01",
+      "name": "Database Schema + Infrastructure",
+      "status": "completed",
+      "files": 8,
+      "complexity": "Simple",
+      "dependencies": [],
+      "iterations": 1,
+      "finalCommit": {
+        "sha": "e67407dbf04c924acba013b410297dd45f39f97a",
+        "message": "feat(task-01): add shorts and payments database schema - iteration v1",
+        "timestamp": "2025-12-31",
+        "filesChanged": 21
+      },
+      "testCommit": {
+        "sha": "f5c901e77ab0c608a0deaa3316fd9c761df54fb0",
+        "message": "test(task-01): add validation and inngest tests - iteration v1",
+        "timestamp": "2025-12-31",
+        "testsPassed": true
+      }
+    },
+    {
+      "id": "task-02",
+      "name": "R2 Video Module + Upload API",
+      "status": "completed",
+      "files": 10,
+      "complexity": "Simple",
+      "dependencies": ["task-01"],
+      "iterations": 2,
+      "finalCommit": {
+        "sha": "8473fed0b0e06ac13c933fb7efbbf6cd313e5cdd",
+        "message": "fix(task-02): add auth check to tags search and thumbnail size validation - iteration v2",
+        "timestamp": "2025-12-31",
+        "filesChanged": 10
+      },
+      "iterationCommits": [
+        { "iteration": 1, "sha": "55e36e3fa767b40717dcf6ee0f8b7462b3be58e7", "status": "rejected", "message": "feat(task-02): add R2 video module and upload APIs - iteration v1" },
+        { "iteration": 2, "sha": "8473fed0b0e06ac13c933fb7efbbf6cd313e5cdd", "status": "approved", "message": "fix(task-02): add auth and thumbnail validation - iteration v2" }
+      ],
+      "testCommit": {
+        "sha": "99c3fa8a800116bddca2d2e2f76cf18396027bdc",
+        "message": "test(task-02): add R2 video and API route tests - iteration v1",
+        "timestamp": "2025-12-31",
+        "testsPassed": true
+      }
+    },
+    {
+      "id": "task-03",
+      "name": "Upload Wizard UI + Server Action",
+      "status": "completed",
+      "files": 18,
+      "complexity": "Medium",
+      "dependencies": ["task-02"],
+      "iterations": 2,
+      "finalCommit": {
+        "sha": "6884c170996f9d3a7888308acd1270728dc8979f",
+        "message": "fix(task-03): add aspect ratio warning and fix i18n - iteration v2",
+        "timestamp": "2025-12-31",
+        "filesChanged": 17
+      },
+      "iterationCommits": [
+        { "iteration": 1, "sha": "3c2ea4203d1e27d5e396ffd2e6f4ca337c3b56da", "status": "rejected", "message": "feat(task-03): add upload wizard UI and create short action - iteration v1" },
+        { "iteration": 2, "sha": "6884c170996f9d3a7888308acd1270728dc8979f", "status": "approved", "message": "fix(task-03): add aspect ratio warning and fix i18n - iteration v2" }
+      ],
+      "testCommit": {
+        "sha": "0138deb795fe524961515cdfaba95a4a91f32729",
+        "message": "test(task-03): fix test failures for upload wizard components - iteration v2",
+        "timestamp": "2025-12-31",
+        "testsPassed": true,
+        "testsCount": 179,
+        "testFiles": 7
+      }
+    },
+    {
+      "id": "task-04",
+      "name": "Qencode Integration + Inngest Jobs",
+      "status": "tested",
+      "files": 15,
+      "complexity": "Medium",
+      "dependencies": ["task-02"],
+      "iterations": 2,
+      "finalCommit": {
+        "sha": "879e8ec3fadc8bc181a71d9bd24bff95969d62b7",
+        "message": "fix(task-04): add i18n translations to DE/ES/RU/UK locales - iteration v2",
+        "timestamp": "2025-12-31",
+        "filesChanged": 4
+      },
+      "iterationCommits": [
+        { "iteration": 1, "sha": "77bc3fa154c59c4a67bbfa69ea3a99a0a8775ebf", "status": "rejected", "message": "feat(task-04): add Qencode integration and Inngest jobs - iteration v1", "reason": "Missing i18n in DE/ES/RU/UK" },
+        { "iteration": 2, "sha": "879e8ec3fadc8bc181a71d9bd24bff95969d62b7", "status": "approved", "message": "fix(task-04): add i18n translations to DE/ES/RU/UK locales - iteration v2" }
+      ],
+      "codeCreated": {
+        "totalLines": 1681,
+        "totalFiles": 15,
+        "keyComponents": [
+          "src/lib/qencode.ts",
+          "src/lib/inngest/functions/process-video.ts",
+          "src/lib/inngest/functions/cleanup-video.ts",
+          "src/app/api/webhooks/qencode/route.ts",
+          "src/components/shorts/short-player.tsx",
+          "src/components/shorts/processing-status-timeline.tsx",
+          "src/app/actions/shorts/publish.ts"
+        ]
+      },
+      "testCommit": {
+        "sha": "b22a4e6",
+        "message": "fix(task-04): resolve test failures for Qencode integration tests - iteration v2",
+        "timestamp": "2025-12-31",
+        "testsPassed": true,
+        "testsCount": 221,
+        "testFiles": 8,
+        "initialCommit": "20c1f4e44eb0473fe253272045ef322f4e4f28ef"
+      }
+    },
+    {
+      "id": "task-05",
+      "name": "Payment Providers + Credits System",
+      "status": "tested",
+      "files": 18,
+      "complexity": "Medium",
+      "dependencies": ["task-01"],
+      "iterations": 1,
+      "finalCommit": {
+        "sha": "b7b6583257b6b302db37381409e25cf878a3420e",
+        "message": "feat(task-05): add payment providers and credits system - iteration v1",
+        "timestamp": "2025-12-31",
+        "filesChanged": 21
+      },
+      "iterationCommits": [
+        { "iteration": 1, "sha": "b7b6583257b6b302db37381409e25cf878a3420e", "status": "approved", "message": "feat(task-05): add payment providers and credits system - iteration v1" }
+      ],
+      "codeCreated": {
+        "totalFiles": 21,
+        "keyComponents": [
+          "src/lib/payments/index.ts",
+          "src/lib/payments/przelewy24.ts",
+          "src/lib/payments/tpay.ts",
+          "src/lib/publication/publication-controller.ts",
+          "src/app/api/payments/checkout/route.ts",
+          "src/app/api/payments/status/[id]/route.ts",
+          "src/app/api/webhooks/przelewy24/route.ts",
+          "src/app/api/webhooks/tpay/route.ts",
+          "src/components/payments/payment-form.tsx",
+          "src/components/payments/credits-display.tsx",
+          "src/components/shorts/publish-dialog.tsx",
+          "src/app/(main)/[locale]/panel/credits/page.tsx"
+        ]
+      },
+      "testCommit": {
+        "sha": "00b3222",
+        "message": "fix(task-05): resolve test syntax errors and behavior mismatches - iteration v3",
+        "timestamp": "2025-12-31",
+        "testsPassed": true,
+        "testsCount": 205,
+        "testFiles": 9,
+        "initialCommit": "5d99a32fe3e08c9d113eb5bdef3672116e36d9f4"
+      }
+    },
+    {
+      "id": "task-06",
+      "name": "Shorts Management UI",
+      "status": "tested",
+      "files": 18,
+      "complexity": "Medium",
+      "dependencies": ["task-03", "task-05"],
+      "iterations": 2,
+      "finalCommit": {
+        "sha": "0a0bcac",
+        "message": "fix(task-06): add shortId validation, i18n keys, URL validation - iteration v2",
+        "timestamp": "2026-01-01",
+        "filesChanged": 11
+      },
+      "iterationCommits": [
+        { "iteration": 1, "sha": "bb760e034ed0f32aa61a9d3efc4bcdc544bed440", "status": "rejected", "message": "feat(task-06): add shorts management UI and CRUD actions - iteration v1", "reason": "Missing shortId validation, hardcoded i18n strings" },
+        { "iteration": 2, "sha": "0a0bcac", "status": "approved", "message": "fix(task-06): add shortId validation, i18n keys, URL validation - iteration v2" }
+      ],
+      "codeCreated": {
+        "totalFiles": 32,
+        "keyComponents": [
+          "src/components/shorts/shorts-table.tsx",
+          "src/components/shorts/shorts-filters.tsx",
+          "src/components/shorts/short-card.tsx",
+          "src/components/shorts/edit-short-dialog.tsx",
+          "src/components/shorts/archive-dialog.tsx",
+          "src/components/shorts/delete-dialog.tsx",
+          "src/components/shorts/shorts-management.tsx",
+          "src/components/payments/credits-history.tsx",
+          "src/components/payments/credits-purchase-modal.tsx",
+          "src/components/payments/credits-management.tsx",
+          "src/app/actions/shorts/update.ts",
+          "src/app/actions/shorts/delete.ts",
+          "src/app/actions/shorts/archive.ts",
+          "src/app/actions/shorts/duplicate.ts",
+          "src/app/api/shorts/route.ts",
+          "src/app/api/shorts/[id]/route.ts",
+          "src/app/api/credits/route.ts",
+          "src/app/(main)/[locale]/panel/shorts/[id]/page.tsx"
+        ]
+      },
+      "testCommit": {
+        "sha": "ea8034c",
+        "message": "fix(task-06): resolve test failures for shorts management tests - iteration v2",
+        "timestamp": "2026-01-01",
+        "testsPassed": true,
+        "testsCount": 627,
+        "testFiles": 26,
+        "initialCommit": "aac09d6f117172e549bcca1d8660219b60339794"
+      }
+    },
+    {
+      "id": "task-07",
+      "name": "Lifecycle + Public View",
+      "status": "tested",
+      "files": 16,
+      "complexity": "Medium",
+      "dependencies": ["task-04", "task-06"],
+      "iterations": 2,
+      "finalCommit": {
+        "sha": "d936d15f3ecc0c6c55489ad6bebe5ab33ef02574",
+        "message": "fix(task-07): add Zod validation, URL validation, and i18n fixes - iteration v2",
+        "timestamp": "2026-01-01",
+        "filesChanged": 12
+      },
+      "iterationCommits": [
+        { "iteration": 1, "sha": "3baa7843d62335949c70bddbf9246205625976ca", "status": "rejected", "message": "feat(task-07): add lifecycle management and public view - iteration v1", "reason": "Missing Zod validation in renew.ts, hardcoded i18n strings" },
+        { "iteration": 2, "sha": "d936d15f3ecc0c6c55489ad6bebe5ab33ef02574", "status": "approved", "message": "fix(task-07): add Zod validation, URL validation, and i18n fixes - iteration v2" }
+      ],
+      "codeCreated": {
+        "totalFiles": 39,
+        "totalLines": 4525,
+        "keyComponents": [
+          "src/lib/inngest/functions/archive-expired.ts",
+          "src/lib/inngest/functions/expiry-reminder.ts",
+          "src/emails/expiry-reminder.tsx",
+          "src/emails/short-published.tsx",
+          "src/app/actions/shorts/renew.ts",
+          "src/components/shorts/renew-dialog.tsx",
+          "src/components/shorts/public-short-view.tsx",
+          "src/components/shorts/short-company-card.tsx",
+          "src/components/shorts/short-cta-button.tsx",
+          "src/components/shorts/short-location-map.tsx",
+          "src/components/shorts/short-share-button.tsx",
+          "src/app/(main)/[locale]/shorts/[id]/page.tsx",
+          "src/app/(main)/[locale]/shorts/[id]/opengraph-image.tsx",
+          "src/lib/shorts/stats.ts",
+          "src/app/api/shorts/[id]/track/route.ts"
+        ]
+      },
+      "testCommit": {
+        "sha": "d2cd54b12651f2baaff6fef176dfa0f3b5ffe64c",
+        "message": "test(task-07): add comprehensive tests for lifecycle and public view - iteration v1",
+        "timestamp": "2026-01-01",
+        "testsPassed": true,
+        "testsCount": 261,
+        "testFiles": 11
+      }
+    }
+  ],
+  "stageInfo": {
+    "name": "Shorts Upload + Payments",
+    "priority": "P0 (Critical - MVP Core)",
+    "estimatedTime": "3 weeks",
+    "dependencies": ["Etap 1 (Core + Auth)", "Etap 2 (Companies)"]
+  },
+  "externalServices": [
+    "Cloudflare R2 (video-raw, video-hls)",
+    "Qencode (transcoding)",
+    "Przelewy24 (payments)",
+    "Tpay (payments)",
+    "@vidstack/react (player)",
+    "Inngest (background jobs)",
+    "Resend (email)"
+  ]
+}

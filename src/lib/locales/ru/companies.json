@@ -1,0 +1,223 @@
+{
+  "upgrade": {
+    "heading": "Перейти на корпоративный аккаунт",
+    "description": "Зарегистрируйте свою компанию, чтобы публиковать вакансии и получить доступ к дополнительным функциям.",
+    "title": "Форма регистрации компании",
+    "subtitle": "Введите данные вашей компании. Ваш номер НДС будет проверен через систему VIES.",
+    "fields": {
+      "companyName": "Название компании",
+      "nip": "Номер НДС (NIP)",
+      "address": "Адрес",
+      "phone": "Телефон (необязательно)"
+    },
+    "placeholders": {
+      "companyName": "например, ООО \"Компания\"",
+      "address": "например, ул. Главная 1, 00-001 Варшава",
+      "phone": "+48 123 456 789"
+    },
+    "hints": {
+      "nip": "Формат: 1234567890 или 12-345-678-90",
+      "phone": "Номер телефона необязателен"
+    },
+    "submit": "Зарегистрировать компанию",
+    "submitting": "Проверка номера НДС...",
+    "success": {
+      "title": "Компания зарегистрирована!",
+      "verified": "Ваш номер НДС успешно проверен через систему VIES.",
+      "pending": "Ваш номер НДС требует ручной проверки администратором.",
+      "redirecting": "Вы будете перенаправлены в ближайшее время..."
+    }
+  },
+  "vies": {
+    "status": {
+      "verified": "Проверен",
+      "pending": "Ожидает проверки",
+      "rejected": "Отклонен"
+    }
+  },
+  "status": {
+    "pendingTitle": "Ожидает одобрения",
+    "pendingDescription": "Ваша компания ожидает верификации администратором. Вы получите уведомление по электронной почте после одобрения."
+  },
+  "nipValidation": {
+    "validating": "Проверка номера НДС...",
+    "success": {
+      "verified": "Номер НДС подтверждён в VIES"
+    },
+    "warning": {
+      "viesUnavailable": "Сервис VIES недоступен. Вы можете продолжить - потребуется ручная проверка."
+    },
+    "errors": {
+      "invalidFormat": "Неверный формат NIP. Используйте 10 цифр или формат XX-XXX-XXX-XX.",
+      "alreadyExists": "Этот номер НДС уже зарегистрирован в нашей системе.",
+      "viesInvalid": "Этот номер НДС не найден в реестре VIES.",
+      "validationFailed": "Проверка не удалась. Пожалуйста, попробуйте снова.",
+      "pleaseFixErrors": "Пожалуйста, исправьте ошибки номера НДС перед отправкой.",
+      "unknown": "Неизвестная ошибка проверки."
+    }
+  },
+  "errors": {
+    "alreadyCompany": "У вас уже есть зарегистрированная компания",
+    "nipExists": "Этот номер НДС уже зарегистрирован",
+    "createFailed": "Не удалось создать профиль компании",
+    "notCompany": "У вас нет профиля компании",
+    "updateFailed": "Не удалось обновить профиль"
+  },
+  "profile": {
+    "verified": "Проверен",
+    "placeholders": {
+      "website": "https://example.com",
+      "contactEmail": "contact@company.ru",
+      "facebook": "https://facebook.com/company",
+      "instagram": "https://instagram.com/company",
+      "tiktok": "https://tiktok.com/@company",
+      "youtube": "https://youtube.com/@company",
+      "linkedin": "https://linkedin.com/company/name",
+      "street": "ул. Главная 123",
+      "postalCode": "101000",
+      "city": "Москва"
+    },
+    "overview": {
+      "title": "Обзор профиля",
+      "editProfile": "Редактировать профиль",
+      "addShort": "Добавить ролик",
+      "viewPublic": "Открыть публичный профиль",
+      "noDescription": "Описание компании отсутствует",
+      "addDescription": "Добавить описание"
+    },
+    "sections": {
+      "contact": "Контакты",
+      "social": "Социальные сети",
+      "location": "Местоположение"
+    },
+    "stats": {
+      "shorts": "Ролики",
+      "followers": "Подписчики",
+      "views": "Просмотры",
+      "viewsThisWeek": "Просмотры за неделю",
+      "activeCampaigns": "Активные кампании",
+      "walletBalance": "Баланс кошелька",
+      "topUp": "Пополнить"
+    },
+    "contact": {
+      "website": "Веб-сайт",
+      "address": "Адрес",
+      "phone": "Телефон"
+    },
+    "edit": {
+      "title": "Редактировать профиль компании",
+      "save": "Сохранить изменения",
+      "saving": "Сохранение...",
+      "success": "Профиль успешно обновлен",
+      "error": "Не удалось обновить профиль"
+    },
+    "fields": {
+      "companyName": "Название компании",
+      "description": "Описание",
+      "website": "Веб-сайт",
+      "category": "Категория",
+      "address": "Адрес",
+      "phone": "Телефон",
+      "contactEmail": "Контактный email",
+      "contactEmailHint": "Необязательный контактный email. Если не указан, будет использоваться email вашего аккаунта.",
+      "latitude": "Широта",
+      "longitude": "Долгота",
+      "socialLinks": "Социальные сети",
+      "businessHours": "Часы работы (JSON)",
+      "logo": "Логотип",
+      "banner": "Баннер"
+    }
+  },
+  "logo": {
+    "title": "Загрузить логотип",
+    "upload": "Загрузить",
+    "uploading": "Загрузка...",
+    "cancel": "Отмена",
+    "success": "Логотип обновлен",
+    "errors": {
+      "invalidType": "Недопустимый тип файла. Используйте JPEG, PNG или WebP",
+      "tooLarge": "Файл слишком большой. Максимум 5МБ",
+      "uploadFailed": "Ошибка загрузки"
+    }
+  },
+  "banner": {
+    "title": "Загрузить баннер",
+    "upload": "Загрузить",
+    "uploading": "Загрузка...",
+    "cancel": "Отмена",
+    "success": "Баннер обновлен",
+    "errors": {
+      "invalidType": "Недопустимый тип файла. Используйте JPEG, PNG или WebP",
+      "tooLarge": "Файл слишком большой. Максимум 10МБ",
+      "uploadFailed": "Ошибка загрузки"
+    }
+  },
+  "category": {
+    "placeholder": "Выберите категорию",
+    "searchPlaceholder": "Поиск категорий...",
+    "noResults": "Категории не найдены",
+    "backToAll": "Вернуться ко всем категориям",
+    "viewAll": "Показать все"
+  },
+  "subcategories": {
+    "label": "Подкатегории",
+    "placeholder": "Выберите подкатегории",
+    "selected": "{count} из {max} выбрано",
+    "selectCategoryFirst": "Сначала выберите основную категорию",
+    "loading": "Загрузка подкатегорий...",
+    "noSubcategories": "Нет доступных подкатегорий",
+    "hint": "Выберите до {max} подкатегорий для лучшего описания вашего бизнеса"
+  },
+  "businessHours": {
+    "title": "Часы работы",
+    "days": {
+      "monday": "Понедельник",
+      "tuesday": "Вторник",
+      "wednesday": "Среда",
+      "thursday": "Четверг",
+      "friday": "Пятница",
+      "saturday": "Суббота",
+      "sunday": "Воскресенье"
+    },
+    "openTime": "Время открытия",
+    "closeTime": "Время закрытия",
+    "closed": "Закрыто",
+    "copyToAll": "Копировать во все",
+    "clearAll": "Очистить все",
+    "hint": "Установите часы работы. Выключите дни, когда вы закрыты."
+  },
+  "social": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn"
+  },
+  "follow": {
+    "follow": "Подписаться",
+    "following": "Подписан",
+    "unfollow": "Отписаться",
+    "loginRequired": "Войдите, чтобы подписаться"
+  },
+  "contact": {
+    "button": "Связаться с компанией",
+    "title": "Связаться с компанией",
+    "description": "Отправить сообщение в {companyName}",
+    "fields": {
+      "subject": "Тема",
+      "message": "Сообщение"
+    },
+    "placeholders": {
+      "subject": "Тема сообщения",
+      "message": "Ваше сообщение..."
+    },
+    "send": "Отправить",
+    "sending": "Отправка...",
+    "cancel": "Отмена",
+    "success": "Сообщение успешно отправлено",
+    "error": "Не удалось отправить сообщение",
+    "errors": {
+      "emptyMessage": "Сообщение не может быть пустым"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Preferences",
+  "accessibility": {
+    "toggleTheme": "Toggle theme"
+  },
+  "theme": {
+    "label": "Theme",
+    "title": "Appearance",
+    "description": "Select app theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "label": "Language",
+    "title": "Language",
+    "description": "Select interface language",
+    "pl": "Polski",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "ru": "Русский",
+    "uk": "Українська"
+  },
+  "save": "Save",
+  "saving": "Saving...",
+  "success": "Preferences updated",
+  "saved": "Preferences saved"
+}

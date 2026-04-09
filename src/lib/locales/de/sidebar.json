@@ -1,0 +1,30 @@
+{
+  "accessibility": {
+    "openMenu": "Menü öffnen",
+    "companyNavigation": "Firmennavigation",
+    "navigationMenu": "Navigationsmenü"
+  },
+  "collapse": "Menü einklappen",
+  "home": "Startseite",
+  "trending": "Beliebt",
+  "following": "Folge ich",
+  "saved": "Gespeichert",
+  "categories": "Kategorien",
+  "profile": "Profil",
+  "settings": "Einstellungen",
+  "preferences": "Einstellungen",
+  "logout": "Abmelden",
+  "menu": {
+    "upgradeToCompany": "Zum Firmenkonto wechseln",
+    "companyProfile": "Firmenprofil",
+    "adminPanel": "Admin-Bereich",
+    "myShorts": "Meine Shorts",
+    "credits": "Guthaben"
+  },
+  "company": {
+    "profile": "Firmenprofil",
+    "shorts": "Meine Shorts",
+    "credits": "Guthaben"
+  },
+  "admin": "Admin-Bereich"
+}

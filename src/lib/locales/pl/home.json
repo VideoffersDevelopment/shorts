@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Promuj swój biznes w",
+    "highlight": "60 sekund",
+    "subtitle": "Krótkie filmy. Duży lokalny wpływ. Docieraj do klientów w okolicy dzięki autentycznym pionowym filmom.",
+    "ctaPrimary": "Zacznij publikować",
+    "ctaSecondary": "Dowiedz się więcej"
+  },
+  "filter": {
+    "discover": "Odkrywaj",
+    "nearby": "W pobliżu",
+    "following": "Obserwowane",
+    "more": "Więcej +"
+  },
+  "footer": {
+    "forBusiness": "Dla firm",
+    "about": "O nas",
+    "privacy": "Prywatność",
+    "terms": "Regulamin"
+  }
+}

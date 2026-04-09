@@ -1,0 +1,53 @@
+{
+  "accessibility": {
+    "loading": "Загрузка"
+  },
+  "search": {
+    "open": "Открыть поиск"
+  },
+  "auth": {
+    "login": "Войти",
+    "getStarted": "Начать"
+  },
+  "buttons": {
+    "submit": "Отправить",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "close": "Закрыть",
+    "back": "Назад",
+    "next": "Далее",
+    "loading": "Загрузка..."
+  },
+  "errors": {
+    "required": "Это поле обязательно",
+    "invalidEmail": "Неверный адрес email",
+    "minLength": "Минимальная длина: {{min}} символов",
+    "maxLength": "Максимальная длина: {{max}} символов",
+    "generic": "Произошла ошибка. Попробуйте снова.",
+    "unauthorized": "Несанкционированный доступ",
+    "invalidInput": "Недопустимые входные данные"
+  },
+  "validation": {
+    "emailRequired": "Email обязателен",
+    "passwordRequired": "Пароль обязателен",
+    "passwordMinLength": "Пароль должен быть не менее 8 символов",
+    "passwordsNotMatch": "Пароли не совпадают"
+  },
+  "dashboard": {
+    "welcome": "Добро пожаловать в VideoShorts, {name}",
+    "gettingStarted": {
+      "title": "Начало работы",
+      "description": "Заполните профиль, чтобы начать использовать VideoShorts"
+    },
+    "yourVideos": {
+      "title": "Ваши видео",
+      "empty": "Вы ещё не загрузили ни одного видео"
+    },
+    "statistics": {
+      "title": "Статистика",
+      "description": "Посмотрите метрики эффективности ваших видео"
+    }
+  }
+}

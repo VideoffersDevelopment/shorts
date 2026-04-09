@@ -1,0 +1,44 @@
+{
+  "mcpServers": {
+    "Prisma": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "prisma",
+        "mcp"
+      ]
+    },
+    "mcp-sequentialthinking-tools": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "mcp-sequentialthinking-tools"
+      ]
+    },
+    "chrome-devtools": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ]
+    },
+    "context7": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+        "ctx7sk-be5511d7-a9bb-4f2e-a32c-b2746014b224"
+      ]
+    }
+  }
+}

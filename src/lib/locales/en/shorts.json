@@ -1,0 +1,425 @@
+{
+  "meta": {
+    "title": "Video Shorts",
+    "description": "Manage and publish your short videos"
+  },
+  "verification": {
+    "pendingTitle": "Verification Pending",
+    "pendingDescription": "You'll be able to upload and publish shorts after your company is verified by admin."
+  },
+  "addShort": {
+    "button": "Add Short",
+    "upgradeTitle": "Upgrade to Company Account",
+    "upgradeDescription": "To upload and publish shorts, you need a company account. Upgrade now to start sharing your business content.",
+    "upgradeAction": "Upgrade Now",
+    "pendingTitle": "Verification Pending",
+    "pendingDescription": "Your company is awaiting admin approval. You'll be able to upload shorts once verified.",
+    "pendingAction": "OK",
+    "cancel": "Cancel"
+  },
+  "list": {
+    "empty": {
+      "title": "No shorts yet",
+      "description": "Create your first short to start promoting your business",
+      "action": "Create Short"
+    }
+  },
+  "create": {
+    "title": "Create New Short",
+    "description": "Upload and publish a new short video"
+  },
+  "wizard": {
+    "steps": {
+      "video": "Video",
+      "metadata": "Details",
+      "thumbnail": "Thumbnail",
+      "review": "Review"
+    },
+    "video": {
+      "title": "Upload Video",
+      "description": "Upload your short video (max 60 seconds)",
+      "dragAndDrop": "Drag and drop your video here",
+      "dropHere": "Drop video here",
+      "browse": "or browse files",
+      "requirements": "MP4, WebM, or MOV - Maximum 100MB",
+      "uploading": "Uploading video...",
+      "processing": "Processing video...",
+      "preview": "Video Preview",
+      "changeVideo": "Change Video",
+      "aspectWarning": "Video is not in 9:16 format. Best results are with vertical videos."
+    },
+    "tags": {
+      "create": "Create \"{tag}\""
+    },
+    "metadata": {
+      "title": "Short Details",
+      "description": "Add title, description, and tags",
+      "fields": {
+        "title": "Title",
+        "titlePlaceholder": "Enter a catchy title",
+        "titleHint": "Maximum 100 characters",
+        "description": "Description",
+        "descriptionPlaceholder": "Describe your short video",
+        "descriptionHint": "Optional, but helps with discovery",
+        "category": "Category",
+        "categoryPlaceholder": "Select a category",
+        "tags": "Tags",
+        "tagsPlaceholder": "Add tags to help people find your short",
+        "tagsHint": "Press Enter to add tag (max 5)",
+        "location": "Location",
+        "locationPlaceholder": "Add location (optional)",
+        "ctaLink": "Call to Action Link",
+        "ctaLinkPlaceholder": "https://your-website.com",
+        "ctaLinkHint": "Optional link shown on your short"
+      }
+    },
+    "thumbnail": {
+      "title": "Choose Thumbnail",
+      "description": "Select or upload a thumbnail for your short",
+      "auto": "Auto-generated",
+      "autoDescription": "We'll generate a thumbnail from your video",
+      "custom": "Custom Thumbnail",
+      "customDescription": "Upload your own thumbnail image",
+      "upload": "Upload Thumbnail",
+      "uploading": "Uploading...",
+      "requirements": "JPEG or PNG - Recommended 1080x1920",
+      "dragAndDrop": "Drag and drop image here",
+      "preview": "Thumbnail Preview"
+    },
+    "review": {
+      "title": "Review & Publish",
+      "description": "Review your short before publishing",
+      "sections": {
+        "video": "Video",
+        "details": "Details",
+        "thumbnail": "Thumbnail"
+      },
+      "duration": "Duration",
+      "category": "Category",
+      "tags": "Tags",
+      "location": "Location",
+      "ctaLink": "CTA Link",
+      "noTags": "No tags",
+      "noLocation": "No location",
+      "noCta": "No CTA link"
+    },
+    "navigation": {
+      "back": "Back",
+      "next": "Next",
+      "publish": "Publish",
+      "saveDraft": "Save Draft"
+    }
+  },
+  "detail": {
+    "title": "Title",
+    "description": "Description",
+    "category": "Category",
+    "tags": "Tags",
+    "location": "Location",
+    "ctaLink": "CTA Link",
+    "duration": "Duration",
+    "views": "Views",
+    "likes": "Likes",
+    "comments": "Comments",
+    "ctaClicks": "CTA Clicks",
+    "createdAt": "Created",
+    "publishedAt": "Published",
+    "expiresAt": "Expires",
+    "archivedAt": "Archived",
+    "back": "Back to Shorts",
+    "processing": "Processing",
+    "processingDescription": "Your video is being processed. This may take a few minutes.",
+    "noThumbnail": "No thumbnail",
+    "statistics": "Statistics",
+    "timeline": "Timeline"
+  },
+  "status": {
+    "DRAFT": "Draft",
+    "PENDING_PAYMENT": "Pending Payment",
+    "PROCESSING": "Processing",
+    "PUBLISHED": "Published",
+    "EXPIRED": "Expired",
+    "ARCHIVED": "Archived",
+    "DELETED": "Deleted"
+  },
+  "actions": {
+    "view": "View",
+    "edit": "Edit",
+    "publish": "Publish",
+    "archive": "Archive",
+    "duplicate": "Duplicate",
+    "delete": "Delete",
+    "renew": "Renew",
+    "extend": "Extend",
+    "boost": "Boost"
+  },
+  "publish": {
+    "title": "Publish Short",
+    "description": "Your short will be visible to everyone after publishing",
+    "paymentRequired": "Payment required",
+    "paymentDescription": "You need to pay {amount} to publish this short",
+    "useCredits": "Use publication credits",
+    "creditsAvailable": "You have {count} credits available",
+    "confirm": "Publish Now",
+    "cancel": "Cancel"
+  },
+  "publishing": {
+    "title": "Publishing Your Short",
+    "description": "Please wait while we process your video",
+    "loading": "Loading status...",
+    "steps": {
+      "payment": "Processing payment",
+      "transcoding": "Transcoding video",
+      "publishing": "Publishing short"
+    },
+    "processing": {
+      "title": "Processing Your Video",
+      "description": "Your video is being transcoded for optimal playback",
+      "doNotClose": "Please do not close this page. You will be redirected when complete."
+    },
+    "checkStatus": "Check status",
+    "success": {
+      "title": "Short Published!",
+      "description": "Your short is now live and visible to everyone",
+      "viewShort": "View Short",
+      "createAnother": "Create Another"
+    },
+    "error": {
+      "title": "Publishing Failed",
+      "description": "There was an error publishing your short",
+      "retry": "Try Again",
+      "contact": "Contact Support"
+    },
+    "notStarted": {
+      "title": "Short Not Published",
+      "description": "This short is still a draft. Go back to edit and click 'Publish' to start publishing.",
+      "goToEdit": "Go to Edit"
+    }
+  },
+  "timeline": {
+    "draft": "Draft Created",
+    "payment": "Payment Received",
+    "processing": "Processing Video",
+    "published": "Published",
+    "estimatedTime": "Estimated time: {minutes} minute(s) remaining"
+  },
+  "navigation": {
+    "backToShorts": "Back to Shorts"
+  },
+  "player": {
+    "play": "Play",
+    "pause": "Pause",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit Fullscreen"
+  },
+  "archive": {
+    "title": "Archive Short",
+    "description": "This will hide the short from public view. You can restore it later.",
+    "confirm": "Archive",
+    "cancel": "Cancel"
+  },
+  "delete": {
+    "title": "Delete Short",
+    "description": "This action cannot be undone. The short will be permanently deleted.",
+    "confirm": "Delete",
+    "cancel": "Cancel"
+  },
+  "renew": {
+    "title": "Renew Short",
+    "description": "Extend the visibility of your short for another 30 days",
+    "currentExpiry": "Current expiry: {date}",
+    "newExpiry": "New expiry: {date}",
+    "cost": "Cost: {amount}",
+    "confirm": "Renew Now",
+    "cancel": "Cancel",
+    "useCredit": "1 credit will be used to renew this short",
+    "needsPayment": "You need to purchase credits to renew this short"
+  },
+  "public": {
+    "title": "Short Video",
+    "description": "Watch this short video",
+    "by": "by",
+    "views": "views",
+    "likes": "likes",
+    "share": "Share",
+    "copyLink": "Copy link",
+    "report": "Report",
+    "visitWebsite": "Visit Website",
+    "viewCompany": "View Company",
+    "location": "Location",
+    "company": "Company",
+    "archived": "Archived",
+    "archivedMessage": "This short has been archived and is no longer active in the feed.",
+    "openInMaps": "Open in Google Maps",
+    "videoNotAvailable": "Video not available",
+    "copied": "Copied!",
+    "openNewTab": "Open in new tab",
+    "linkCopiedTitle": "Link copied!",
+    "linkCopiedDescription": "The link has been copied to your clipboard.",
+    "copyFailedTitle": "Failed to copy",
+    "copyFailedDescription": "Please copy the link manually.",
+    "superLike": "Super Like",
+    "superLikeSent": "Sent!",
+    "superLikeLogin": "Log in to send a Super Like",
+    "superLikeOwn": "You can't Super Like your own video",
+    "superLikeInsufficient": "Not enough credits for a Super Like",
+    "superLikeFailed": "Failed to send Super Like"
+  },
+  "email": {
+    "expirySubject": "Your short expires in 7 days!",
+    "publishedSubject": "Your short is live!"
+  },
+  "table": {
+    "columns": {
+      "thumbnail": "Thumbnail",
+      "title": "Title",
+      "status": "Status",
+      "views": "Views",
+      "likes": "Likes",
+      "publishedAt": "Published",
+      "expiresAt": "Expires",
+      "actions": "Actions"
+    },
+    "empty": "No shorts found",
+    "loading": "Loading shorts..."
+  },
+  "filters": {
+    "all": "All",
+    "drafts": "Drafts",
+    "published": "Published",
+    "archived": "Archived",
+    "search": "Search shorts...",
+    "sortBy": "Sort by",
+    "sortOptions": {
+      "newest": "Newest first",
+      "oldest": "Oldest first",
+      "mostViews": "Most views",
+      "mostLikes": "Most likes"
+    }
+  },
+  "errors": {
+    "loadFailed": "Failed to load shorts",
+    "createFailed": "Failed to create short",
+    "updateFailed": "Failed to update short",
+    "deleteFailed": "Failed to delete short",
+    "publishFailed": "Failed to publish short",
+    "archiveFailed": "Failed to archive short",
+    "uploadFailed": "Failed to upload file",
+    "invalidVideo": "Invalid video format",
+    "videoTooLarge": "Video file is too large (max 100MB)",
+    "videoTooLong": "Video is too long (max 60 seconds)",
+    "invalidThumbnail": "Invalid thumbnail format",
+    "thumbnailTooLarge": "Thumbnail file is too large (max 5MB)",
+    "titleRequired": "Title is required",
+    "categoryRequired": "Category is required",
+    "unauthorized": "You are not authorized to perform this action",
+    "notFound": "Short not found",
+    "renewFailed": "Failed to renew short",
+    "invalidInput": "Invalid input"
+  },
+  "success": {
+    "created": "Short created successfully",
+    "updated": "Short updated successfully",
+    "deleted": "Short deleted successfully",
+    "published": "Short published successfully",
+    "archived": "Short archived successfully",
+    "renewed": "Short renewed successfully",
+    "draftSaved": "Draft saved successfully"
+  },
+  "edit": {
+    "title": "Edit Short",
+    "description": "Update your short details",
+    "titleLabel": "Title",
+    "descriptionLabel": "Description",
+    "tagsLabel": "Tags",
+    "ctaLinkLabel": "CTA Link",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "success": "Short updated successfully",
+    "error": "Failed to update short"
+  },
+  "duplicate": {
+    "success": "Short duplicated successfully",
+    "error": "Failed to duplicate short",
+    "limitReached": "Draft limit reached (max 10)"
+  },
+  "extension": {
+    "title": "Extend Publication",
+    "description": "Extend the visibility of \"{title}\"",
+    "currentExpiry": "Current expiry: {date}",
+    "points": "pts",
+    "yourBalance": "Your balance",
+    "cancel": "Cancel",
+    "extend": "Extend ({cost} pts)",
+    "insufficientShort": "Not enough credits",
+    "insufficientCredits": "You don't have enough credits for this extension.",
+    "success": "Publication extended successfully!",
+    "failed": "Failed to extend publication. Try again."
+  },
+  "boost": {
+    "title": "Boost Video",
+    "description": "Promote \"{title}\" in the feed",
+    "cost": "Boost cost",
+    "points": "pts",
+    "duration": "Duration",
+    "durationValue": "24 hours",
+    "yourBalance": "Your balance",
+    "cancel": "Cancel",
+    "confirm": "Boost Now",
+    "insufficientShort": "Not enough credits",
+    "insufficientCredits": "You don't have enough credits for a boost.",
+    "success": "Video boosted! It will be promoted for 24 hours.",
+    "failed": "Failed to boost video. Try again.",
+    "info": "Boosted videos get higher priority in the feed for 24 hours."
+  },
+  "superLike": {
+    "button": "Super Like",
+    "sent": "Sent!",
+    "loginRequired": "Log in to send a Super Like",
+    "ownShort": "You can't Super Like your own video",
+    "insufficientCredits": "Not enough credits for a Super Like",
+    "failed": "Failed to send Super Like. Try again."
+  },
+  "comments": {
+    "title": "Comments",
+    "count": "Comments (%count%)",
+    "placeholder": "Write a comment...",
+    "submit": "Submit",
+    "edit": "Edit",
+    "reply": "Reply",
+    "delete": "Delete",
+    "deleted": "Comment deleted",
+    "edited": "edited",
+    "editExpired": "Edit time expired",
+    "loginRequired": "Log in to comment",
+    "pending": "Pending moderation",
+    "empty": "No comments yet. Be the first!",
+    "sortNewest": "Newest",
+    "sortOldest": "Oldest",
+    "sortMostLiked": "Most liked",
+    "charLimit": "%count%/500 characters",
+    "loadMore": "Load more",
+    "confirmDelete": "Are you sure you want to delete this comment?",
+    "deleteSuccess": "Comment deleted",
+    "deleteFailed": "Failed to delete comment",
+    "createFailed": "Failed to add comment",
+    "editFailed": "Failed to edit comment"
+  },
+  "reactions": {
+    "like": "Like",
+    "dislike": "Dislike",
+    "fire": "Fire",
+    "heart": "Heart",
+    "laugh": "Funny",
+    "wow": "Wow",
+    "clap": "Clap",
+    "loginRequired": "Log in to react",
+    "rateLimited": "Too many reactions. Try again later."
+  },
+  "backToFeed": "Back to feed",
+  "viewOffer": "View offer",
+  "viewCompany": "View company",
+  "relatedShorts": "Related shorts"
+}

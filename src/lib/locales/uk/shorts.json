@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "title": "Korotki Video",
+    "description": "Kerujte ta publikujte svoi korotki video"
+  },
+  "verification": {
+    "pendingTitle": "Очікує верифікації",
+    "pendingDescription": "Ви зможете завантажувати та публікувати shorts після верифікації компанії адміністратором."
+  },
+  "addShort": {
+    "button": "Додати Short",
+    "upgradeTitle": "Перейти на бізнес-акаунт",
+    "upgradeDescription": "Для завантаження та публікації shorts вам потрібен бізнес-акаунт. Оновіть зараз, щоб почати ділитися бізнес-контентом.",
+    "upgradeAction": "Оновити зараз",
+    "pendingTitle": "Очікує верифікації",
+    "pendingDescription": "Ваша компанія очікує схвалення адміністратором. Ви зможете додавати shorts після верифікації.",
+    "pendingAction": "OK",
+    "cancel": "Скасувати"
+  },
+  "list": {
+    "empty": {
+      "title": "Shche nemaie video",
+      "description": "Stvorit pershe video, shchob pochaty prosuvaty biznes",
+      "action": "Stvoryty Video"
+    }
+  },
+  "create": {
+    "title": "Stvoryty Nove Video",
+    "description": "Zavantazhte ta opublikujte nove korotke video"
+  },
+  "wizard": {
+    "steps": {
+      "video": "Video",
+      "metadata": "Detali",
+      "thumbnail": "Miniatura",
+      "review": "Perevirka"
+    },
+    "video": {
+      "title": "Zavantazhyty Video",
+      "description": "Zavantazhte svoe korotke video (maks. 60 sekund)",
+      "dragAndDrop": "Peretiahnit video siudy",
+      "dropHere": "Vidpustit video tut",
+      "browse": "abo oberit faily",
+      "requirements": "MP4, WebM abo MOV - Maksymum 100MB",
+      "uploading": "Zavantazhennia video...",
+      "processing": "Obrobka video...",
+      "preview": "Poperedni perehlyad video",
+      "changeVideo": "Zminyty video",
+      "aspectWarning": "Video ne u formati 9:16. Naikrashchi rezultaty z vertykalnymy video."
+    },
+    "tags": {
+      "create": "Stvoryty \"{tag}\""
+    },
+    "metadata": {
+      "title": "Detali Video",
+      "description": "Dodaite zaholovok, opys ta tehy",
+      "fields": {
+        "title": "Zaholovok",
+        "titlePlaceholder": "Vvedit pryvablyvy zaholovok",
+        "titleHint": "Maksymum 100 symvoliv",
+        "description": "Opys",
+        "descriptionPlaceholder": "Opishit svoe korotke video",
+        "descriptionHint": "Opcionalno, ale dopomahaie v poshuku",
+        "category": "Katehoriia",
+        "categoryPlaceholder": "Oberit katehoriiu",
+        "tags": "Tehy",
+        "tagsPlaceholder": "Dodaite tehy dlya poshuku video",
+        "tagsHint": "Natysnit Enter dlya dodavannia (maks. 5)",
+        "location": "Mistserozташuvannia",
+        "locationPlaceholder": "Dodaite mistse (opcionalno)",
+        "ctaLink": "Posylannia dlya dii",
+        "ctaLinkPlaceholder": "https://vash-sait.ua",
+        "ctaLinkHint": "Opcionalne posylannia na vashomu video"
+      }
+    },
+    "thumbnail": {
+      "title": "Obraty Miniaturu",
+      "description": "Oberit abo zavantazhte miniaturu dlya video",
+      "auto": "Avtomatychno stvorena",
+      "autoDescription": "My stvoriymo miniaturu z vashoho video",
+      "custom": "Vlasna miniatura",
+      "customDescription": "Zavantazhte vlasne zobrazhennia miniatury",
+      "upload": "Zavantazhyty miniaturu",
+      "uploading": "Zavantazhennia...",
+      "requirements": "JPEG abo PNG - Rekomendovano 1080x1920",
+      "dragAndDrop": "Peretiahnit zobrazhennia siudy",
+      "preview": "Poperedni perehlyad miniatury"
+    },
+    "review": {
+      "title": "Pereviryty ta Opublikuvaty",
+      "description": "Perevir svoe video pered publikaciieiu",
+      "sections": {
+        "video": "Video",
+        "details": "Detali",
+        "thumbnail": "Miniatura"
+      },
+      "duration": "Tryvalyst",
+      "category": "Katehoriia",
+      "tags": "Tehy",
+      "location": "Mistserozташuvannia",
+      "ctaLink": "CTA Posylannia",
+      "noTags": "Nemaie tehiv",
+      "noLocation": "Nemaie mistsia",
+      "noCta": "Nemaie CTA posylannia"
+    },
+    "navigation": {
+      "back": "Nazad",
+      "next": "Dali",
+      "publish": "Opublikuvaty",
+      "saveDraft": "Zberehty chernетку"
+    }
+  },
+  "detail": {
+    "title": "Zaholovok",
+    "description": "Opys",
+    "category": "Katehoriia",
+    "tags": "Tehy",
+    "location": "Mistserozташuvannia",
+    "ctaLink": "CTA Posylannia",
+    "duration": "Tryvalyst",
+    "views": "Perehliadы",
+    "likes": "Lajky",
+    "comments": "Komentari",
+    "ctaClicks": "CTA Kliky",
+    "createdAt": "Stvoreno",
+    "publishedAt": "Opublikovano",
+    "expiresAt": "Zakinchуetsya",
+    "archivedAt": "Arhivovano",
+    "back": "Nazad do video",
+    "processing": "Obrobka",
+    "processingDescription": "Vashe video obroblyaetsya. Tse mozhe zanyaty kilka khvylyn.",
+    "noThumbnail": "Nemaie miniatury",
+    "statistics": "Statystyka",
+    "timeline": "Khronolohiia"
+  },
+  "status": {
+    "DRAFT": "Chernetka",
+    "PENDING_PAYMENT": "Ochikuie oplaty",
+    "PROCESSING": "Obrobka",
+    "PUBLISHED": "Opublikovano",
+    "ARCHIVED": "V arhivi",
+    "DELETED": "Vydaleno"
+  },
+  "actions": {
+    "view": "Dyvytysya",
+    "edit": "Redahuvaty",
+    "publish": "Opublikuvaty",
+    "archive": "Arhivuvaty",
+    "duplicate": "Dubliuvaty",
+    "delete": "Vydalyty",
+    "renew": "Ponovyty"
+  },
+  "publish": {
+    "title": "Opublikuvaty Video",
+    "description": "Vashe video bude dostupne vsim pislya publikacii",
+    "paymentRequired": "Potribna oplata",
+    "paymentDescription": "Vam potribno splatyty {amount} dlya publikacii",
+    "useCredits": "Vykorystaty kredyty publikacii",
+    "creditsAvailable": "U vas {count} dostupnyh kredytiv",
+    "confirm": "Opublikuvaty zaraz",
+    "cancel": "Skasuva"
+  },
+  "timeline": {
+    "draft": "Чернетку створено",
+    "payment": "Оплату отримано",
+    "processing": "Обробка відео",
+    "published": "Опубліковано",
+    "estimatedTime": "Приблизний час: {minutes} хвилин"
+  },
+  "navigation": {
+    "backToShorts": "Назад до Shorts"
+  },
+  "player": {
+    "play": "Відтворити",
+    "pause": "Пауза",
+    "mute": "Вимкнути звук",
+    "unmute": "Увімкнути звук",
+    "fullscreen": "Повний екран",
+    "exitFullscreen": "Вийти з повноекранного режиму"
+  },
+  "publishing": {
+    "loading": "Завантаження...",
+    "processing": {
+      "title": "Ваше відео обробляється",
+      "description": "Це може зайняти кілька хвилин. Ми повідомимо вас, коли буде готово.",
+      "doNotClose": "Не закривайте цю сторінку"
+    },
+    "title": "Publikuietsia Vashe Video",
+    "description": "Bud laska, zachekaite, poky my obrobymo video",
+    "steps": {
+      "payment": "Obrobka oplaty",
+      "transcoding": "Transkoduvannia video",
+      "publishing": "Publikaciia video"
+    },
+    "success": {
+      "title": "Video Opublikovano!",
+      "description": "Vashe video teper dostupne dlya vsih",
+      "viewShort": "Dyvytysya video",
+      "createAnother": "Stvoryty shche"
+    },
+    "error": {
+      "title": "Pomylka publikacii",
+      "description": "Stalasya pomylka pry publikacii video",
+      "retry": "Sprobuvaty znovu",
+      "contact": "Zvyazatysya z pidtrymkoiu"
+    },
+    "notStarted": {
+      "title": "Відео не опубліковано",
+      "description": "Це відео все ще чернетка. Поверніться до редагування і натисніть 'Опублікувати'.",
+      "goToEdit": "До редагування"
+    }
+  },
+  "archive": {
+    "title": "Arhivuvaty Video",
+    "description": "Ce shovaje video vid publichnоho dostupu. Vy mozhete vidnovyty yoho piznishe.",
+    "confirm": "Arhivuvaty",
+    "cancel": "Skasuva"
+  },
+  "delete": {
+    "title": "Vydalyty Video",
+    "description": "Ciu diiu ne mozhna skasuvaты. Video bude vydaleno nazavzhdy.",
+    "confirm": "Vydalyty",
+    "cancel": "Skasuva"
+  },
+  "renew": {
+    "title": "Ponovyty Video",
+    "description": "Prodovzhit vydymist vashoho video shche na 30 dniv",
+    "currentExpiry": "Potochne zakinchеnnia: {date}",
+    "newExpiry": "Nove zakinchеnnia: {date}",
+    "cost": "Vartist: {amount}",
+    "confirm": "Ponovyty zaraz",
+    "cancel": "Skasuvaty",
+    "useCredit": "1 kredyt bude vykorystano dlya ponovlennia tsoho video",
+    "needsPayment": "Vam potribno kupyty kredyty dlya ponovlennia tsoho video"
+  },
+  "public": {
+    "title": "Korotke Video",
+    "description": "Podyvitsya tse korotke video",
+    "by": "vid",
+    "views": "perehlyаdiv",
+    "likes": "lajkiv",
+    "share": "Podilytysya",
+    "copyLink": "Kopiyuvaty posylannia",
+    "report": "Povidomyty",
+    "visitWebsite": "Vidvidaty sajt",
+    "viewCompany": "Dyvytysya kompaniiu",
+    "location": "Mistserozташuvannia",
+    "company": "Kompaniia",
+    "archived": "V arhivi",
+    "archivedMessage": "Tse video bulo arhivovano i bilshe ne aktyvne v strichci.",
+    "openInMaps": "Vidkryty v Google Maps",
+    "videoNotAvailable": "Video nedostupne",
+    "copied": "Skopiyovano!",
+    "openNewTab": "Vidkryty v novij vkladci",
+    "linkCopiedTitle": "Posylannia skopiyovano!",
+    "linkCopiedDescription": "Posylannia bulo skopiyovano do buferu obminu.",
+    "copyFailedTitle": "Ne vdalosya skopiyuvaty",
+    "copyFailedDescription": "Bud laska, skopiyuyte posylannia vruchnu."
+  },
+  "email": {
+    "expirySubject": "Vashe video spalyuie cherez 7 dniv!",
+    "publishedSubject": "Vashe video opublikovano!"
+  },
+  "table": {
+    "columns": {
+      "thumbnail": "Miniatura",
+      "title": "Zaholovok",
+      "status": "Status",
+      "views": "Perehliadы",
+      "likes": "Lajky",
+      "publishedAt": "Opublikovano",
+      "expiresAt": "Zakinchuietsia",
+      "actions": "Dii"
+    },
+    "empty": "Video ne znajdeno",
+    "loading": "Zavantazhennia video..."
+  },
+  "filters": {
+    "all": "Vsi",
+    "drafts": "Chernetky",
+    "published": "Opublikovani",
+    "archived": "V arhivi",
+    "search": "Poshuk video...",
+    "sortBy": "Sortuvannia",
+    "sortOptions": {
+      "newest": "Spochatku novi",
+      "oldest": "Spochatku stari",
+      "mostViews": "Bilshe perehlyаdiv",
+      "mostLikes": "Bilshe lajkiv"
+    }
+  },
+  "errors": {
+    "loadFailed": "Ne vdalosya zavantazhyty video",
+    "createFailed": "Ne vdalosya stvoryty video",
+    "updateFailed": "Ne vdalosya onovyty video",
+    "deleteFailed": "Ne vdalosya vydalyty video",
+    "publishFailed": "Ne vdalosya opublikuvaty video",
+    "archiveFailed": "Ne vdalosya arhivuvaty video",
+    "uploadFailed": "Ne vdalosya zavantazhyty fajl",
+    "invalidVideo": "Nepravylnyi format video",
+    "videoTooLarge": "Fajl video zanadto velykyj (maks. 100MB)",
+    "videoTooLong": "Video zanadto dovhe (maks. 60 sekund)",
+    "invalidThumbnail": "Nepravylnyi format miniatury",
+    "thumbnailTooLarge": "Fajl miniatury zanadto velykyj (maks. 5MB)",
+    "titleRequired": "Zaholovok obovyazkovyj",
+    "categoryRequired": "Katehoriia obovyazkova",
+    "unauthorized": "Vy ne avtoryzovani dlya ciei dii",
+    "notFound": "Video ne znajdeno",
+    "renewFailed": "Ne vdalosya onovyty short",
+    "invalidInput": "Nepravylni vhidni dani"
+  },
+  "success": {
+    "created": "Video uspishno stvoreno",
+    "updated": "Video uspishno onovleno",
+    "deleted": "Video uspishno vydaleno",
+    "published": "Video uspishno opublikovano",
+    "archived": "Video uspishno arhivovano",
+    "renewed": "Video uspishno ponovleno",
+    "draftSaved": "Chernetku uspishno zberezheno"
+  },
+  "edit": {
+    "title": "Redahuvaty video",
+    "description": "Onovit dani video",
+    "titleLabel": "Zaholovok",
+    "descriptionLabel": "Opys",
+    "tagsLabel": "Tehy",
+    "ctaLinkLabel": "CTA Posylannia",
+    "save": "Zberehty zminy",
+    "cancel": "Skasuvaty",
+    "success": "Video uspishno onovleno",
+    "error": "Ne vdalosya onovyty video"
+  },
+  "duplicate": {
+    "success": "Video uspishno dublyovano",
+    "error": "Ne vdalosya dublyuvaty video",
+    "limitReached": "Limit chernetok dosyahnutyy (maks. 10)"
+  },
+  "comments": {
+    "title": "Коментарі",
+    "count": "Коментарі (%count%)",
+    "placeholder": "Напишіть коментар...",
+    "submit": "Надіслати",
+    "edit": "Редагувати",
+    "reply": "Відповісти",
+    "delete": "Видалити",
+    "deleted": "Коментар видалено",
+    "edited": "змінено",
+    "editExpired": "Час редагування минув",
+    "loginRequired": "Увійдіть, щоб коментувати",
+    "pending": "Очікує модерації",
+    "empty": "Ще немає коментарів. Будьте першим!",
+    "sortNewest": "Найновіші",
+    "sortOldest": "Найстаріші",
+    "sortMostLiked": "Найпопулярніші",
+    "charLimit": "%count%/500 символів",
+    "loadMore": "Завантажити ще",
+    "confirmDelete": "Ви впевнені, що хочете видалити цей коментар?",
+    "deleteSuccess": "Коментар видалено",
+    "deleteFailed": "Не вдалося видалити коментар",
+    "createFailed": "Не вдалося додати коментар",
+    "editFailed": "Не вдалося відредагувати коментар"
+  },
+  "reactions": {
+    "like": "Подобається",
+    "dislike": "Не подобається",
+    "fire": "Вогонь",
+    "heart": "Серце",
+    "laugh": "Смішно",
+    "wow": "Вау",
+    "clap": "Браво",
+    "loginRequired": "Увійдіть, щоб реагувати",
+    "rateLimited": "Забагато реакцій. Спробуйте пізніше."
+  },
+  "backToFeed": "Povernutysya do strichky",
+  "viewOffer": "Perehlyanuti propozytsiyu",
+  "viewCompany": "Perehlyanuti kompaniyu",
+  "relatedShorts": "Skhozhi shorts"
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Профіль",
+  "displayName": "Ім'я для відображення",
+  "displayNamePlaceholder": "Введіть ім'я",
+  "bio": "Про себе",
+  "bioPlaceholder": "Напишіть щось про себе...",
+  "location": "Місцезнаходження",
+  "locationPlaceholder": "Місто, країна",
+  "avatar": "Фото профілю",
+  "changeAvatar": "Змінити фото",
+  "removeAvatar": "Видалити фото",
+  "cropAvatar": "Обрізати фото",
+  "saveAvatar": "Зберегти фото",
+  "confirmRemoveAvatar": "Ви впевнені, що хочете видалити фото профілю?",
+  "save": "Зберегти зміни",
+  "saving": "Збереження...",
+  "removing": "Видалення...",
+  "cancel": "Скасувати",
+  "success": "Профіль оновлено",
+  "avatarUploaded": "Фото профілю оновлено",
+  "avatarRemoved": "Фото профілю видалено",
+  "errors": {
+    "uploadFailed": "Помилка завантаження фото",
+    "invalidFileType": "Невірний тип файлу",
+    "fileTooLarge": "Файл занадто великий (макс. 5MB)",
+    "deleteFailed": "Не вдалося видалити фото",
+    "bioTooLong": "Про себе може містити макс. 500 символів",
+    "saveFailed": "Не вдалося зберегти профіль"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "bar": {
+    "placeholder": "Поиск shorts, компаний, категорий...",
+    "shortcut": "Ctrl+K",
+    "clear": "Очистить поиск"
+  },
+  "company": {
+    "shortsCount": "{count} shorts"
+  },
+  "suggestions": {
+    "recent": "Недавние поиски",
+    "popular": "Популярные поиски",
+    "shorts": "Shorts",
+    "companies": "Компании",
+    "clearRecent": "Очистить историю"
+  },
+  "tabs": {
+    "all": "Все",
+    "shorts": "Shorts",
+    "companies": "Компании"
+  },
+  "results": {
+    "title": "Результаты для: {query}",
+    "count": "{count} результатов",
+    "noResults": {
+      "title": "Ничего не найдено: {query}",
+      "description": "Попробуйте другие ключевые слова или проверьте правописание",
+      "suggestions": "Вам может быть интересно:"
+    }
+  },
+  "filters": {
+    "inCategory": "в категории",
+    "inLocation": "в локации"
+  },
+  "loading": "Поиск..."
+}

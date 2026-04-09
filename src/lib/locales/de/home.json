@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Bewerben Sie Ihr Unternehmen in",
+    "highlight": "60 Sekunden",
+    "subtitle": "Kurze Videos. Große lokale Wirkung. Erreichen Sie Kunden in der Nähe mit authentischen vertikalen Videoinhalten.",
+    "ctaPrimary": "Jetzt starten",
+    "ctaSecondary": "Mehr erfahren"
+  },
+  "filter": {
+    "discover": "Entdecken",
+    "nearby": "In der Nähe",
+    "following": "Abonniert",
+    "more": "Mehr +"
+  },
+  "footer": {
+    "forBusiness": "Für Unternehmen",
+    "about": "Über uns",
+    "privacy": "Datenschutz",
+    "terms": "AGB"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Preferencje",
+  "accessibility": {
+    "toggleTheme": "Przełącz motyw"
+  },
+  "theme": {
+    "label": "Motyw",
+    "title": "Wygląd",
+    "description": "Wybierz motyw aplikacji",
+    "light": "Jasny",
+    "dark": "Ciemny",
+    "system": "Systemowy"
+  },
+  "language": {
+    "label": "Język",
+    "title": "Język",
+    "description": "Wybierz język interfejsu",
+    "pl": "Polski",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "ru": "Русский",
+    "uk": "Українська"
+  },
+  "save": "Zapisz",
+  "saving": "Zapisuję...",
+  "success": "Preferencje zaktualizowane",
+  "saved": "Preferencje zapisane"
+}

@@ -1,0 +1,40 @@
+{
+  "title": "Gestión de categorías",
+  "create": "Agregar categoría",
+  "enabled": "Habilitada",
+  "disabled": "Deshabilitada",
+  "companies": "empresas",
+  "addChild": "Agregar subcategoría",
+  "delete": {
+    "hasCompanies": "No se puede eliminar categoría con empresas",
+    "hasChildren": "No se puede eliminar categoría con subcategorías",
+    "confirm": "¿Estás seguro de que quieres eliminar esta categoría?",
+    "error": "Error al eliminar categoría",
+    "success": "Categoría eliminada exitosamente"
+  },
+  "form": {
+    "editTitle": "Editar categoría",
+    "createTitle": "Crear categoría",
+    "name": "Nombre",
+    "namePlaceholder": "Ingrese el nombre de la categoría",
+    "slug": "Slug",
+    "slugPlaceholder": "categoria-slug",
+    "slugHint": "Solo letras minúsculas, números y guiones",
+    "icon": "Ícono",
+    "iconPlaceholder": "🏢",
+    "iconHint": "Emoji o carácter de ícono",
+    "parent": "Categoría padre",
+    "parentPlaceholder": "Seleccione categoría padre",
+    "noParent": "Sin padre (nivel superior)",
+    "enabled": "Estado",
+    "enabledYes": "Habilitada",
+    "enabledNo": "Deshabilitada",
+    "cancel": "Cancelar",
+    "saving": "Guardando...",
+    "update": "Actualizar",
+    "create": "Crear",
+    "error": "Error al guardar categoría",
+    "updateSuccess": "Categoría actualizada exitosamente",
+    "createSuccess": "Categoría creada exitosamente"
+  }
+}

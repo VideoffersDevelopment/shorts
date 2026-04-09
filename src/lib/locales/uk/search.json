@@ -1,0 +1,36 @@
+{
+  "bar": {
+    "placeholder": "Пошук shorts, компаній, категорій...",
+    "shortcut": "Ctrl+K",
+    "clear": "Очистити пошук"
+  },
+  "company": {
+    "shortsCount": "{count} shorts"
+  },
+  "suggestions": {
+    "recent": "Нещодавні пошуки",
+    "popular": "Популярні пошуки",
+    "shorts": "Shorts",
+    "companies": "Компанії",
+    "clearRecent": "Очистити історію"
+  },
+  "tabs": {
+    "all": "Все",
+    "shorts": "Shorts",
+    "companies": "Компанії"
+  },
+  "results": {
+    "title": "Результати для: {query}",
+    "count": "{count} результатів",
+    "noResults": {
+      "title": "Нічого не знайдено: {query}",
+      "description": "Спробуйте інші ключові слова або перевірте правопис",
+      "suggestions": "Вам може бути цікаво:"
+    }
+  },
+  "filters": {
+    "inCategory": "в категорії",
+    "inLocation": "в локації"
+  },
+  "loading": "Пошук..."
+}

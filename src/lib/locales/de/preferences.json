@@ -1,0 +1,28 @@
+{
+  "title": "Einstellungen",
+  "accessibility": {
+    "toggleTheme": "Design wechseln"
+  },
+  "theme": {
+    "label": "Design",
+    "title": "Erscheinungsbild",
+    "description": "App-Design auswählen",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
+  "language": {
+    "label": "Sprache",
+    "title": "Sprache",
+    "description": "Oberflächensprache auswählen",
+    "pl": "Polski",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "ru": "Русский",
+    "uk": "Українська"
+  },
+  "save": "Speichern",
+  "saving": "Speichern...",
+  "success": "Einstellungen aktualisiert"
+}

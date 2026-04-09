@@ -1,0 +1,30 @@
+{
+  "accessibility": {
+    "openMenu": "Открыть меню",
+    "companyNavigation": "Навигация компании",
+    "navigationMenu": "Меню навигации"
+  },
+  "collapse": "Свернуть меню",
+  "home": "Главная",
+  "trending": "Тренды",
+  "following": "Подписки",
+  "saved": "Сохранённое",
+  "categories": "Категории",
+  "profile": "Профиль",
+  "settings": "Настройки",
+  "preferences": "Настройки",
+  "logout": "Выйти",
+  "menu": {
+    "upgradeToCompany": "Перейти на бизнес-аккаунт",
+    "companyProfile": "Профиль компании",
+    "adminPanel": "Панель администратора",
+    "myShorts": "Мои Shorts",
+    "credits": "Кредиты"
+  },
+  "company": {
+    "profile": "Профиль компании",
+    "shorts": "Мои Shorts",
+    "credits": "Кредиты"
+  },
+  "admin": "Панель администратора"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Настройки",
+  "accessibility": {
+    "toggleTheme": "Переключить тему"
+  },
+  "theme": {
+    "label": "Тема",
+    "title": "Внешний вид",
+    "description": "Выберите тему приложения",
+    "light": "Светлая",
+    "dark": "Темная",
+    "system": "Системная"
+  },
+  "language": {
+    "label": "Язык",
+    "title": "Язык",
+    "description": "Выберите язык интерфейса",
+    "pl": "Polski",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "ru": "Русский",
+    "uk": "Українська"
+  },
+  "save": "Сохранить",
+  "saving": "Сохранение...",
+  "success": "Настройки обновлены"
+}

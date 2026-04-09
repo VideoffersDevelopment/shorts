@@ -1,0 +1,234 @@
+{
+  "title": "Panel Administracyjny",
+  "dataTable": {
+    "search": "Szukaj...",
+    "noResults": "Brak wyników",
+    "selected": "{count} zaznaczonych",
+    "selectAll": "Zaznacz wszystko",
+    "selectRow": "Zaznacz wiersz",
+    "clearSelection": "Wyczyść zaznaczenie",
+    "clearFilters": "Wyczyść filtry",
+    "filterAll": "Wszystkie",
+    "pagination": {
+      "showing": "Wyświetlanie {from} do {to} z {total} wyników",
+      "rowsPerPage": "Wierszy na stronie",
+      "page": "Strona {current} z {total}",
+      "previous": "Poprzednia",
+      "next": "Następna",
+      "first": "Pierwsza strona",
+      "last": "Ostatnia strona"
+    },
+    "bulkActions": {
+      "confirmTitle": "Potwierdź akcję",
+      "confirmMessage": "Czy na pewno chcesz wykonać tę akcję na zaznaczonych elementach?",
+      "success": "Pomyślnie przetworzono {count} elementów",
+      "error": "Wystąpił błąd podczas przetwarzania",
+      "cancel": "Anuluj",
+      "confirm": "Potwierdź",
+      "reasonPlaceholder": "Podaj powód...",
+      "verify": "Weryfikuj zaznaczone",
+      "reject": "Odrzuć zaznaczone",
+      "delete": "Usuń zaznaczone",
+      "export": "Eksportuj",
+      "exportCSV": "Eksportuj do CSV",
+      "exportExcel": "Eksportuj do Excel"
+    }
+  },
+  "nav": {
+    "dashboard": "Panel główny",
+    "companies": "Firmy",
+    "categories": "Kategorie",
+    "users": "Użytkownicy",
+    "audit": "Dziennik audytu",
+    "pricing": "Cennik",
+    "exitAdmin": "Wróć do serwisu",
+    "logout": "Wyloguj się"
+  },
+  "dashboard": {
+    "title": "Panel główny",
+    "stats": {
+      "companies": "Firm",
+      "users": "Użytkowników",
+      "categories": "Kategorii",
+      "pending": "oczekujące na weryfikację"
+    }
+  },
+  "companies": {
+    "title": "Zarządzanie firmami",
+    "search": {
+      "placeholder": "Szukaj po nazwie lub NIP...",
+      "button": "Szukaj"
+    },
+    "filter": {
+      "status": "Status",
+      "all": "Wszystkie",
+      "verified": "Zweryfikowane",
+      "pending": "Oczekujące"
+    },
+    "table": {
+      "name": "Nazwa firmy",
+      "nip": "NIP",
+      "email": "Email",
+      "status": "Status VIES",
+      "accountStatus": "Status konta",
+      "createdAt": "Data utworzenia",
+      "actions": "Akcje"
+    },
+    "status": {
+      "verified": "Zweryfikowana",
+      "pending": "Oczekująca"
+    },
+    "companyStatus": {
+      "PENDING": "Oczekująca",
+      "ACTIVE": "Aktywna",
+      "SUSPENDED": "Zawieszona"
+    },
+    "actions": {
+      "verify": "Zweryfikuj",
+      "reject": "Odrzuć",
+      "view": "Podgląd",
+      "edit": "Edytuj",
+      "delete": "Usuń",
+      "checkVies": "Sprawdź VIES",
+      "wallet": "Portfel właściciela"
+    },
+    "verify": {
+      "success": "Firma została zweryfikowana"
+    },
+    "reject": {
+      "reasonPrompt": "Podaj powód odrzucenia:",
+      "success": "Firma została odrzucona"
+    },
+    "delete": {
+      "confirmMessage": "Czy na pewno chcesz usunąć tę firmę? Ta operacja jest nieodwracalna!",
+      "success": "Firma została usunięta"
+    },
+    "checkVies": {
+      "success": "NIP jest prawidłowy w systemie VIES",
+      "invalid": "NIP nie jest prawidłowy w systemie VIES"
+    },
+    "edit": {
+      "title": "Edycja firmy",
+      "success": "Firma została zaktualizowana",
+      "error": "Aktualizacja firmy nie powiodła się",
+      "readOnlyInfo": "Informacje tylko do odczytu"
+    }
+  },
+  "users": {
+    "title": "Zarządzanie użytkownikami",
+    "search": {
+      "placeholder": "Szukaj po email lub nazwie...",
+      "button": "Szukaj"
+    },
+    "filter": {
+      "role": "Rola",
+      "status": "Status",
+      "all": "Wszystkie",
+      "active": "Aktywni",
+      "blocked": "Zablokowani"
+    },
+    "table": {
+      "email": "Email",
+      "role": "Rola",
+      "status": "Status",
+      "emailVerified": "Email zweryfikowany",
+      "createdAt": "Data rejestracji",
+      "balance": "Saldo",
+      "actions": "Akcje"
+    },
+    "role": {
+      "USER": "Użytkownik",
+      "COMPANY": "Firma",
+      "ADMIN": "Administrator"
+    },
+    "status": {
+      "active": "Aktywny",
+      "blocked": "Zablokowany"
+    },
+    "actions": {
+      "changeRole": "Zmień rolę",
+      "block": "Zablokuj",
+      "unblock": "Odblokuj",
+      "details": "Szczegóły",
+      "wallet": "Portfel",
+      "delete": "Usuń"
+    },
+    "details": {
+      "title": "Szczegóły użytkownika",
+      "profile": "Profil",
+      "company": "Firma",
+      "noProfile": "Brak profilu",
+      "noCompany": "Brak firmy",
+      "noCompanyProfile": "Brak profilu firmy",
+      "displayName": "Nazwa wyświetlana",
+      "bio": "Bio",
+      "location": "Lokalizacja",
+      "companyName": "Nazwa firmy",
+      "companyProfile": "Profil firmowy",
+      "createdAt": "Data utworzenia",
+      "updatedAt": "Ostatnia aktualizacja",
+      "emailVerified": "Email zweryfikowany",
+      "notVerified": "Nie zweryfikowany"
+    },
+    "changeRole": {
+      "title": "Zmień rolę użytkownika",
+      "description": "Wybierz nową rolę dla tego użytkownika",
+      "selectRole": "Wybierz rolę",
+      "success": "Rola użytkownika została zmieniona"
+    },
+    "block": {
+      "success": "Użytkownik został zablokowany"
+    },
+    "unblock": {
+      "success": "Użytkownik został odblokowany"
+    },
+    "delete": {
+      "success": "Użytkownik został usunięty"
+    },
+    "bulkActions": {
+      "block": "Zablokuj zaznaczonych",
+      "unblock": "Odblokuj zaznaczonych",
+      "changeRole": "Zmień rolę",
+      "delete": "Usuń zaznaczonych",
+      "confirmBlock": "Czy na pewno chcesz zablokować {count} użytkowników?",
+      "confirmUnblock": "Czy na pewno chcesz odblokować {count} użytkowników?",
+      "confirmDelete": "Czy na pewno chcesz usunąć {count} użytkowników? Ta operacja jest nieodwracalna!",
+      "changeRoleTitle": "Zmień rolę dla zaznaczonych",
+      "changeRoleDescription": "Zmiana roli dla {count} użytkowników",
+      "changeRoleSuccess": "Zmieniono rolę dla {count} użytkowników",
+      "partialSuccess": "Przetworzono {success}, błędów: {failed}"
+    },
+    "confirm": {
+      "block": "Czy na pewno zablokować tego użytkownika?",
+      "unblock": "Czy na pewno odblokować tego użytkownika?",
+      "changeRole": "Czy na pewno zmienić rolę użytkownika na {role}?"
+    },
+    "success": {
+      "roleChanged": "Rola użytkownika została zmieniona",
+      "blocked": "Użytkownik został zablokowany",
+      "unblocked": "Użytkownik został odblokowany"
+    }
+  },
+  "common": {
+    "cancel": "Anuluj",
+    "confirm": "Potwierdź",
+    "saving": "Zapisywanie..."
+  },
+  "errors": {
+    "invalidInput": "Nieprawidłowe dane wejściowe",
+    "verifyFailed": "Weryfikacja nie powiodła się",
+    "rejectFailed": "Odrzucenie nie powiodło się",
+    "deleteFailed": "Usunięcie nie powiodło się",
+    "viesUnavailable": "System VIES jest niedostępny. Spróbuj ponownie później.",
+    "viesCheckFailed": "Sprawdzenie VIES nie powiodło się",
+    "reasonRequired": "Powód odrzucenia jest wymagany",
+    "companyNotFound": "Firma nie znaleziona",
+    "userNotFound": "Użytkownik nie znaleziony",
+    "roleChangeFailed": "Zmiana roli nie powiodła się",
+    "blockFailed": "Blokowanie nie powiodło się",
+    "unblockFailed": "Odblokowanie nie powiodło się",
+    "cannotBlockSelf": "Nie możesz zablokować samego siebie",
+    "cannotChangeOwnRole": "Nie możesz zmienić własnej roli",
+    "updateFailed": "Aktualizacja nie powiodła się"
+  }
+}

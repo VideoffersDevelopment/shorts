@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Promociona tu negocio en",
+    "highlight": "60 segundos",
+    "subtitle": "Videos cortos. Gran impacto local. Llega a clientes cercanos con contenido de video vertical auténtico.",
+    "ctaPrimary": "Empezar a publicar",
+    "ctaSecondary": "Saber más"
+  },
+  "filter": {
+    "discover": "Descubrir",
+    "nearby": "Cerca de mí",
+    "following": "Siguiendo",
+    "more": "Más +"
+  },
+  "footer": {
+    "forBusiness": "Para empresas",
+    "about": "Sobre nosotros",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  }
+}

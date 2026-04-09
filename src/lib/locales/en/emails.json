@@ -1,0 +1,46 @@
+{
+  "verifyEmail": {
+    "subject": "Verify your email address - VideoShorts",
+    "preview": "Verify your email address - VideoShorts",
+    "title": "Welcome to VideoShorts!",
+    "body": "Please verify your email address by clicking the button below:",
+    "button": "Verify Email",
+    "footer": "If you didn't create an account, you can safely ignore this email."
+  },
+  "passwordReset": {
+    "subject": "Reset your password - VideoShorts",
+    "preview": "Reset your password - VideoShorts",
+    "title": "Password Reset Request",
+    "body": "Click the button below to reset your password:",
+    "button": "Reset Password",
+    "footer": "This link will expire in 1 hour. If you didn't request a password reset, you can safely ignore this email."
+  },
+  "welcome": {
+    "subject": "Welcome to VideoShorts!",
+    "preview": "Welcome to VideoShorts!",
+    "title": "Welcome to VideoShorts!",
+    "body1": "Thank you for verifying your email. Your account is now fully activated.",
+    "body2": "You can now start creating and sharing short videos with the world.",
+    "button": "Go to Dashboard",
+    "footer": "If you have any questions, feel free to reach out to our support team."
+  },
+  "companyVerified": {
+    "subject": "Company Verified - VideoShorts",
+    "title": "Company Verified",
+    "body": "Your company {{companyName}} has been verified.",
+    "footer": "You can now access all company features."
+  },
+  "companyRejected": {
+    "subject": "Company Verification Rejected - VideoShorts",
+    "title": "Company Verification Rejected",
+    "body": "Your company {{companyName}} verification has been rejected.",
+    "reason": "Reason: {{reason}}",
+    "footer": "Please contact support if you have questions."
+  },
+  "companyDeleted": {
+    "subject": "Company Deleted - VideoShorts",
+    "title": "Your company has been deleted",
+    "body": "Company {{companyName}} has been deleted from our service by an administrator.",
+    "footer": "If you believe this is a mistake, please contact support."
+  }
+}

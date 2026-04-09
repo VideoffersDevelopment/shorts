@@ -1,0 +1,37 @@
+{
+  "project": "{PROJECT_NAME}",
+  "created": "{DATE}",
+  "updated": "{DATE}",
+  "description": "{PROJECT_DESCRIPTION}",
+  "sources": [
+    {
+      "id": "source-01",
+      "type": "prd",
+      "file": "source-01-prd.md",
+      "title": "{TITLE}",
+      "description": "{DESCRIPTION}",
+      "added": "{DATE}",
+      "status": "active",
+      "origin": "created|imported",
+      "originalPath": "{ORIGINAL_PATH_IF_IMPORTED}"
+    }
+  ],
+  "generated": {
+    "project_spec": false,
+    "project_spec_date": null,
+    "architecture_plan": false,
+    "architecture_plan_date": null,
+    "stages": false,
+    "stages_count": 0,
+    "stages_date": null
+  },
+  "metadata": {
+    "total_sources": 1,
+    "types": {
+      "prd": 1,
+      "opis": 0,
+      "prompt": 0,
+      "custom": 0
+    }
+  }
+}

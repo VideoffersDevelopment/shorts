@@ -1,0 +1,110 @@
+{
+  "page": {
+    "title": "Kredyty",
+    "description": "Keruyte svoiemy kredytamy publikatsii",
+    "balance": "Balans kredytiv",
+    "balanceDescription": "Vashi dostupni kredyty dlya publikatsii shortiv",
+    "paymentSuccess": "Oplata projshla uspishno!",
+    "creditsAdded": "Kredyty buly dodani na vash rakhunok."
+  },
+  "credits": {
+    "credit": "kredyt",
+    "plural": "kredytiv",
+    "creditAvailable": "kredyt dostupnyj",
+    "pluralAvailable": "kredytiv dostupno",
+    "available": "Dostupni kredyty",
+    "buy": "Kupyty kredyty"
+  },
+  "packages": {
+    "title": "Pakety kredytiv",
+    "description": "Kupity kredyty dlya publikatsii vashykh shortiv",
+    "credit": "kredyt",
+    "credits": "kredytiv",
+    "buy": "Kupyty zaraz"
+  },
+  "transactions": {
+    "title": "Ostanni tranzaktsii",
+    "description": "Istoriya aktyvnosti kredytiv",
+    "empty": "Tranzaktsii vidsutni",
+    "source": {
+      "PACKAGE": "Kupivlya kredytiv",
+      "GIFT": "Podarunkovi kredyty",
+      "PROMO": "Promokredyty",
+      "REFUND": "Povernennya kredytiv",
+      "ADMIN": "Administratyvnyj kredyt",
+      "PUBLICATION": "Publikatsiya shorta",
+      "OTHER": "Inshe"
+    }
+  },
+  "info": {
+    "title": "Yak pratsyuyut kredyty",
+    "description": "Kredyty vykorystovuyutsya dlya publikatsii vashykh korotkykh video. Kozhna publikatsiya koshtuye 1 kredyt.",
+    "point1": "1 kredyt = 1 opublikovanyj short (30 dniv vydymosti)",
+    "point2": "Kredyty nikoly ne zakinchatyutsya",
+    "point3": "Dostupni optovi pakety dlya ekonomii"
+  },
+  "form": {
+    "credits": "Kilkist kredytiv",
+    "selectCredits": "Oberit paket kredytiv",
+    "credit": "kredyt",
+    "creditsPlural": "kredytiv",
+    "pricePerCredit": "{price} PLN za kredyt",
+    "provider": "Sposib oplaty",
+    "total": "Vsogo",
+    "processing": "Obrobka...",
+    "pay": "Oplatyty {amount} PLN",
+    "securityNote": "Bezpechna obrobka platezhiv. Vashi dani zakhyshcheni."
+  },
+  "providers": {
+    "p24Description": "Perekaz, BLIK, kartky",
+    "tpayDescription": "Kartky, BLIK, Apple Pay"
+  },
+  "publish": {
+    "title": "Opublikuvaty short",
+    "verificationRequired": "Potribna veryfikatsiya kompanii",
+    "verificationDescription": "Vasha kompaniya povynna buty veryfikovana, persh nizh vy zmozhete publikuvaty shorty. Zavershy VIES veryfikatsiyu, shchob prodovzhyty.",
+    "verifyCompany": "Veryfikuvaty kompaniyu",
+    "yourCredits": "Vashi kredyty",
+    "useCreditsTitle": "Vykorystaty kredyt publikatsii",
+    "useCreditsDescription": "U vas ye dostupni kredyty. Publikatsiya vykorystaye 1 kredyt.",
+    "useCredit": "Vykorystaty 1 kredyt dlya publikatsii",
+    "noCredits": "Nemaye dostupnykh kredytiv",
+    "noCreditsDescription": "Vam potriben shchonaymenshe 1 kredyt dlya publikatsii. Tsina: {price} PLN za kredyt.",
+    "buyAndPublish": "Kupyty kredyt i opublikuvaty ({price} PLN)",
+    "buyCredits": "Kupyty kredyty",
+    "buyCreditsDescription": "Oberit sposib oplaty ta paket kredytiv",
+    "processing": "Obrobka...",
+    "processingDescription": "Bud laska, zachekayte, poky my obroblyayemo vash zapyt.",
+    "success": {
+      "title": "Publikatsiya rozpochata!",
+      "description": "Vash short obroblyayetsya i skoro bude dostupnyj."
+    }
+  },
+  "common": {
+    "cancel": "Skasuvaty",
+    "back": "Nazad"
+  },
+  "errors": {
+    "publishFailed": "Ne vdalosya opublikuvaty short. Bud laska, sprobuite shche raz.",
+    "checkoutFailed": "Ne vdalosya stvoryty sesiyu oplaty. Bud laska, sprobuite shche raz."
+  },
+  "history": {
+    "title": "Istoriya kredytiv",
+    "date": "Data",
+    "type": "Typ",
+    "amount": "Suma",
+    "balance": "Balans",
+    "relatedShort": "Poviazane video",
+    "noTransactions": "Nemaye tranzaktsij"
+  },
+  "purchase": {
+    "title": "Kupyty kredyty",
+    "description": "Oberit paket kredytiv",
+    "package": "{credits} kredytiv",
+    "price": "{amount} PLN",
+    "save": "Ekonomiya {percent}%",
+    "selectProvider": "Sposib oplaty",
+    "buy": "Kupyty zaraz",
+    "cancel": "Skasuvaty"
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "project": "videoshorts-stage-02-companies",
+  "source": "ai-project-planner",
+  "sourceSpec": ".ai-project-planner/projects/videoshorts/stages/stage-02-companies/spec.md",
+  "context": {
+    "projectSpec": ".ai-project-planner/projects/videoshorts/project-spec.md",
+    "architecturePlan": ".ai-project-planner/projects/videoshorts/architecture-plan.md"
+  },
+  "created": "2025-12-14",
+  "updated": "2025-12-16",
+  "phases": {
+    "brief": "skipped",
+    "analysis": "completed",
+    "architecture": "completed",
+    "tasks": "completed",
+    "coding": "completed",
+    "testing": "in_progress"
+  },
+  "currentPhase": "testing",
+  "analysisMetadata": {
+    "iterations": 1,
+    "completedAt": "2025-12-14",
+    "outputFile": ".ai-spec-flow/projects/videoshorts-stage-02-companies/analysis/final_analysis.md",
+    "componentsReusable": 21,
+    "componentsToCreate": 12,
+    "apisToCreate": 17,
+    "databaseModels": 3,
+    "externalServices": 1
+  },
+  "architectureMetadata": {
+    "iterations": 2,
+    "completedAt": "2025-12-15",
+    "outputFile": ".ai-spec-flow/projects/videoshorts-stage-02-companies/architecture/final_architecture.md",
+    "frontendSpecificationComplete": true,
+    "languagesCovered": ["pl", "en", "de", "es", "ru"],
+    "implementationPhases": 8,
+    "translationNamespaces": ["companies", "admin", "categories", "errors"],
+    "newDatabaseModels": ["CompanyProfile", "Category", "AuditLog"],
+    "externalIntegrations": ["VIES API"]
+  },
+  "tasksMetadata": {
+    "iterations": 1,
+    "completedAt": "2025-12-15",
+    "updatedAt": "2025-12-16",
+    "totalTasks": 12,
+    "completedTasks": 12,
+    "pendingTasks": 0,
+    "totalFiles": 119,
+    "estimatedTokens": 119000,
+    "outputFile": ".ai-spec-flow/projects/videoshorts-stage-02-companies/tasks/index.md"
+  },
+  "tasks": [
+    { "id": "task-01", "name": "Database Schema & Infrastructure", "status": "completed", "files": 8, "complexity": "LOW", "dependencies": [], "iterations": 1, "finalCommit": { "sha": "e95aef8e", "message": "feat(task-01): implement database schema for Stage 02 - iteration v1", "timestamp": "2025-12-15", "filesChanged": 6 }, "testing": { "type": "infrastructure", "unitTests": "completed", "testCommit": { "sha": "1af66474", "message": "test(task-01): add action-result and seed-categories tests - iteration v1" }, "testsTotal": 53, "testsPassed": 53, "testsSkipped": 0, "buildPassed": true, "typeCheckPassed": true, "completedAt": "2025-12-15" } },
+    { "id": "task-02", "name": "VIES Integration & Utilities", "status": "completed", "files": 6, "complexity": "LOW", "dependencies": ["task-01"], "iterations": 1, "finalCommit": { "sha": "5a7455d", "message": "feat(task-02): implement VIES integration and utility functions - iteration v1", "timestamp": "2025-12-15", "filesChanged": 6 }, "testing": { "type": "utility", "unitTests": "completed", "testCommit": { "sha": "6c255986", "message": "test(task-02): comprehensive tests for VIES integration and utilities - iteration v1" }, "testsTotal": 115, "testsPassed": 115, "testsSkipped": 0, "buildPassed": true, "typeCheckPassed": true, "completedAt": "2025-12-15" } },
+    { "id": "task-03", "name": "Company Upgrade Flow", "status": "completed", "files": 12, "complexity": "MEDIUM", "dependencies": ["task-01", "task-02"], "iterations": 2, "finalCommit": { "sha": "6a51117", "message": "fix(task-03): remove contactEmail field not in database schema - iteration v2", "timestamp": "2025-12-15", "filesChanged": 9 }, "testing": { "type": "feature", "unitTests": "completed", "testCommit": { "sha": "eecedad", "message": "test(task-03): comprehensive tests for Company Upgrade Flow - iteration v1" }, "testsTotal": 66, "testsPassed": 66, "testsSkipped": 0, "buildPassed": true, "typeCheckPassed": true, "completedAt": "2025-12-15" } },
+    { "id": "task-04", "name": "Public Company Profile", "status": "completed", "files": 10, "complexity": "MEDIUM", "dependencies": ["task-03"], "iterations": 2, "finalCommit": { "sha": "b9638b9", "message": "fix(task-04): add URL sanitization and security fixes - iteration v2", "timestamp": "2025-12-15", "filesChanged": 3 }, "testing": { "type": "feature", "unitTests": "completed", "testCommit": { "sha": "03ff372d", "message": "test(task-04): comprehensive test suite for company profile - iteration v1" }, "testsTotal": 101, "testsPassed": 101, "testsSkipped": 0, "buildPassed": true, "typeCheckPassed": true, "completedAt": "2025-12-15" } },
+    { "id": "task-05", "name": "Company Profile Edit", "status": "completed", "files": 15, "complexity": "MEDIUM", "dependencies": ["task-04"], "iterations": 1, "finalCommit": { "sha": "b1f5a300", "message": "feat(task-05): implement company profile edit - iteration v1", "timestamp": "2025-12-15", "filesChanged": 12 }, "testing": { "type": "feature", "unitTests": "completed", "testCommit": { "sha": "fbe0225", "message": "test(task-05): company profile edit tests - iteration v4" }, "testsTotal": 126, "testsPassed": 126, "testsSkipped": 0, "buildPassed": true, "typeCheckPassed": true, "completedAt": "2025-12-15" } },
+    { "id": "task-06", "name": "Admin Panel Foundation", "status": "completed", "files": 11, "complexity": "MEDIUM", "dependencies": ["task-01"], "iterations": 1, "finalCommit": { "sha": "cd1fc5a7", "message": "feat(task-06): implement admin panel foundation - iteration v1", "timestamp": "2025-12-15", "filesChanged": 9 }, "testing": { "type": "feature", "unitTests": "completed", "testCommit": { "sha": "dbe810e", "message": "test(task-06): admin panel foundation tests - iteration v2" }, "testsTotal": 35, "testsPassed": 35, "testsSkipped": 0, "buildPassed": true, "typeCheckPassed": true, "completedAt": "2025-12-15" } },
+    { "id": "task-07", "name": "Admin Companies Management", "status": "completed", "files": 9, "complexity": "LOW", "dependencies": ["task-06"], "iterations": 2, "finalCommit": { "sha": "41de91c5", "message": "fix(task-07): add input validation and existence checks - iteration v2", "timestamp": "2025-12-15", "filesChanged": 8 }, "testing": { "type": "feature", "unitTests": "completed", "testCommit": { "sha": "a9f8eb05", "message": "test(task-07): comprehensive tests for Admin Companies Management - iteration v1" }, "testsTotal": 74, "testsPassed": 74, "testsSkipped": 0, "buildPassed": true, "typeCheckPassed": true, "completedAt": "2025-12-15" } },
+    { "id": "task-08", "name": "Admin Categories Management", "status": "completed", "files": 10, "complexity": "MEDIUM", "dependencies": ["task-06"], "iterations": 2, "finalCommit": { "sha": "620ec9dd", "message": "fix(task-08): add missing i18n translations for categories - iteration v2", "timestamp": "2025-12-16", "filesChanged": 11 }, "testing": { "type": "feature", "unitTests": "completed", "testCommit": { "sha": "5c712a2", "message": "test(task-08): comprehensive tests for Admin Categories Management - iteration v1" }, "testsTotal": 145, "testsPassed": 145, "testsSkipped": 0, "buildPassed": true, "typeCheckPassed": true, "completedAt": "2025-12-16" } },
+    { "id": "task-09", "name": "Navigation & Translations", "status": "completed", "files": 18, "complexity": "MEDIUM", "dependencies": ["task-03", "task-06"], "iterations": 1, "finalCommit": { "sha": "63f68f4", "message": "feat(task-09): implement navigation extensions and translations - iteration v1", "timestamp": "2025-12-16", "filesChanged": 13 }, "testing": { "type": "feature", "unitTests": "completed", "testCommit": { "sha": "4b2dee1", "message": "test(task-09): role-based navigation tests - iteration v1" }, "testsTotal": 72, "testsPassed": 72, "testsSkipped": 0, "buildPassed": true, "typeCheckPassed": true, "completedAt": "2025-12-16" } },
+    {
+      "id": "task-10",
+      "name": "Fix Test Environment Issue",
+      "status": "completed",
+      "files": 3,
+      "complexity": "LOW",
+      "dependencies": [],
+      "priority": "HIGH",
+      "addedAt": "2025-12-16",
+      "addedReason": "Follow-up from audit: 3 test suites failing due to Next.js module resolution in Vitest",
+      "issue": {
+        "description": "Cannot find module 'next/server' in test environment",
+        "affectedFiles": [
+          "src/app/actions/admin/categories/__tests__/create.test.ts",
+          "src/app/actions/admin/categories/__tests__/delete.test.ts",
+          "src/app/actions/admin/categories/__tests__/update.test.ts"
+        ],
+        "impact": "94% test suite pass rate (should be 100%)"
+      },
+      "iterations": 1,
+      "finalCommit": {
+        "sha": "3e95d9b",
+        "message": "fix(task-10): resolve next/server module issue in test environment - iteration v1",
+        "timestamp": "2025-12-16",
+        "filesChanged": 4
+      },
+      "testing": {
+        "type": "configuration",
+        "adminCategoriesTests": "passed",
+        "testsTotal": 75,
+        "testsPassed": 75,
+        "buildPassed": true,
+        "completedAt": "2025-12-16"
+      }
+    },
+    {
+      "id": "task-11",
+      "name": "Implement SubcategoryPicker",
+      "status": "completed",
+      "files": 8,
+      "complexity": "MEDIUM",
+      "dependencies": ["task-05"],
+      "priority": "MEDIUM",
+      "addedAt": "2025-12-16",
+      "addedReason": "Follow-up from audit: REQ-PROFILE-06 partial implementation - database field exists, UI missing",
+      "feature": {
+        "description": "Multi-select dropdown for subcategories (max 3)",
+        "impact": "Companies can select subcategories via UI"
+      },
+      "iterations": 1,
+      "finalCommit": {
+        "sha": "0cacd25",
+        "message": "feat(task-11): implement SubcategoryPicker component - iteration v1",
+        "timestamp": "2025-12-16",
+        "filesChanged": 12
+      },
+      "testing": {
+        "type": "feature",
+        "buildPassed": true,
+        "completedAt": "2025-12-16"
+      }
+    },
+    {
+      "id": "task-12",
+      "name": "Implement BusinessHoursPicker",
+      "status": "completed",
+      "files": 9,
+      "complexity": "MEDIUM",
+      "dependencies": ["task-05"],
+      "priority": "MEDIUM",
+      "addedAt": "2025-12-16",
+      "addedReason": "Follow-up from audit: REQ-PROFILE-09 partial implementation - database field exists, visual editor missing",
+      "feature": {
+        "description": "Visual business hours editor with 7-day time picker",
+        "impact": "Companies can set business hours via UI"
+      },
+      "iterations": 1,
+      "finalCommit": {
+        "sha": "1921476",
+        "message": "feat(task-12): implement BusinessHoursPicker component - iteration v1",
+        "timestamp": "2025-12-16",
+        "filesChanged": 18
+      },
+      "testing": {
+        "type": "feature",
+        "buildPassed": true,
+        "completedAt": "2025-12-16"
+      }
+    }
+  ],
+  "audit": {
+    "performedAt": "2025-12-16",
+    "reportPath": ".ai-spec-flow/projects/videoshorts-stage-02-companies/audit/audit-report-2025-12-16.md",
+    "status": "PRODUCTION_READY_WITH_GAPS",
+    "metrics": {
+      "requirementsTotal": 56,
+      "requirementsImplemented": 54,
+      "requirementsPartial": 2,
+      "testsTotal": 1217,
+      "testsPassing": 1204,
+      "testSuitesTotal": 53,
+      "testSuitesPassing": 50,
+      "documentationCoverage": "0%"
+    },
+    "followUpTasksCreated": ["task-10", "task-11", "task-12"]
+  },
+  "documentation": {
+    "lastUpdated": "2025-12-22T12:00:00Z",
+    "architectureVersion": "task-12",
+    "codingPracticesRules": 0,
+    "tasksDocumented": ["task-01", "task-02", "task-03", "task-04", "task-05", "task-06", "task-07", "task-08", "task-09", "task-10", "task-11", "task-12"],
+    "docsGenerated": {
+      "generatedAt": "2025-12-22T12:30:00Z",
+      "mode": "stage",
+      "filesCreated": 10,
+      "filesUpdated": 5,
+      "coverage": {
+        "features": "100%",
+        "api": "100%",
+        "components": "100%",
+        "database": "100%"
+      }
+    }
+  },
+  "notes": [
+    "Stage 02 imported from AI Project Planner",
+    "Brief phase skipped - using spec.md directly",
+    "Context folder created with project-spec.md and architecture-plan.md references",
+    "Dependencies: Stage 01 (Core + Auth) must be completed first",
+    "Payment gateway modification applied: Przelewy24 + Tpay (affects Stage 03, not Stage 02)",
+    "2025-12-16: Audit performed - 3 follow-up tasks added (task-10, task-11, task-12)",
+    "2025-12-16: Documentation gap identified (0% coverage) - recommend /ai-generate-docs"
+  ]
+}

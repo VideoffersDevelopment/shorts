@@ -1,0 +1,30 @@
+{
+  "title": "Einstellungen",
+  "account": {
+    "title": "Konto",
+    "email": "E-Mail",
+    "emailVerified": "Verifiziert",
+    "emailNotVerified": "Nicht verifiziert",
+    "changePassword": "Passwort ändern",
+    "deleteAccount": "Konto löschen"
+  },
+  "password": {
+    "title": "Passwort ändern",
+    "current": "Aktuelles Passwort",
+    "new": "Neues Passwort",
+    "confirm": "Passwort bestätigen",
+    "submit": "Passwort ändern",
+    "success": "Passwort geändert. Bitte melden Sie sich erneut an.",
+    "errors": {
+      "wrongPassword": "Falsches aktuelles Passwort",
+      "oauthAccount": "Konto mit OAuth erstellt"
+    }
+  },
+  "delete": {
+    "title": "Gefahrenzone",
+    "warning": "Diese Aktion ist unwiderruflich. Alle Ihre Daten werden gelöscht.",
+    "confirm": "Geben Sie DELETE ein, um zu bestätigen",
+    "submit": "Mein Konto löschen",
+    "success": "Konto wurde gelöscht"
+  }
+}

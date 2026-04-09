@@ -1,0 +1,234 @@
+{
+  "title": "Admin Panel",
+  "dataTable": {
+    "search": "Search...",
+    "noResults": "No results found",
+    "selected": "{count} selected",
+    "selectAll": "Select all",
+    "selectRow": "Select row",
+    "clearSelection": "Clear selection",
+    "clearFilters": "Clear filters",
+    "filterAll": "All",
+    "pagination": {
+      "showing": "Showing {from} to {to} of {total} results",
+      "rowsPerPage": "Rows per page",
+      "page": "Page {current} of {total}",
+      "previous": "Previous",
+      "next": "Next",
+      "first": "First page",
+      "last": "Last page"
+    },
+    "bulkActions": {
+      "confirmTitle": "Confirm action",
+      "confirmMessage": "Are you sure you want to perform this action on selected items?",
+      "success": "Successfully processed {count} items",
+      "error": "An error occurred during processing",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "reasonPlaceholder": "Enter reason...",
+      "verify": "Verify selected",
+      "reject": "Reject selected",
+      "delete": "Delete selected",
+      "export": "Export",
+      "exportCSV": "Export to CSV",
+      "exportExcel": "Export to Excel"
+    }
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "companies": "Companies",
+    "categories": "Categories",
+    "users": "Users",
+    "audit": "Audit Log",
+    "pricing": "Pricing",
+    "exitAdmin": "Back to Site",
+    "logout": "Log Out"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "stats": {
+      "companies": "Companies",
+      "users": "Users",
+      "categories": "Categories",
+      "pending": "pending verification"
+    }
+  },
+  "companies": {
+    "title": "Companies Management",
+    "search": {
+      "placeholder": "Search by name or NIP...",
+      "button": "Search"
+    },
+    "filter": {
+      "status": "Status",
+      "all": "All",
+      "verified": "Verified",
+      "pending": "Pending"
+    },
+    "table": {
+      "name": "Company Name",
+      "nip": "NIP",
+      "email": "Email",
+      "status": "VIES Status",
+      "accountStatus": "Account Status",
+      "createdAt": "Created At",
+      "actions": "Actions"
+    },
+    "status": {
+      "verified": "Verified",
+      "pending": "Pending"
+    },
+    "companyStatus": {
+      "PENDING": "Pending",
+      "ACTIVE": "Active",
+      "SUSPENDED": "Suspended"
+    },
+    "actions": {
+      "verify": "Verify",
+      "reject": "Reject",
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete",
+      "checkVies": "Check VIES",
+      "wallet": "Owner Wallet"
+    },
+    "verify": {
+      "success": "Company has been verified"
+    },
+    "reject": {
+      "reasonPrompt": "Please provide rejection reason:",
+      "success": "Company has been rejected"
+    },
+    "delete": {
+      "confirmMessage": "Are you sure you want to delete this company? This action is irreversible!",
+      "success": "Company has been deleted"
+    },
+    "checkVies": {
+      "success": "NIP is valid in the VIES system",
+      "invalid": "NIP is not valid in the VIES system"
+    },
+    "edit": {
+      "title": "Edit Company",
+      "success": "Company has been updated",
+      "error": "Failed to update company",
+      "readOnlyInfo": "Read-only Information"
+    }
+  },
+  "users": {
+    "title": "Users Management",
+    "search": {
+      "placeholder": "Search by email or name...",
+      "button": "Search"
+    },
+    "filter": {
+      "role": "Role",
+      "status": "Status",
+      "all": "All",
+      "active": "Active",
+      "blocked": "Blocked"
+    },
+    "table": {
+      "email": "Email",
+      "role": "Role",
+      "status": "Status",
+      "emailVerified": "Email Verified",
+      "createdAt": "Registered",
+      "balance": "Balance",
+      "actions": "Actions"
+    },
+    "role": {
+      "USER": "User",
+      "COMPANY": "Company",
+      "ADMIN": "Administrator"
+    },
+    "status": {
+      "active": "Active",
+      "blocked": "Blocked"
+    },
+    "actions": {
+      "changeRole": "Change Role",
+      "block": "Block",
+      "unblock": "Unblock",
+      "details": "Details",
+      "wallet": "Wallet",
+      "delete": "Delete"
+    },
+    "details": {
+      "title": "User Details",
+      "profile": "Profile",
+      "company": "Company",
+      "noProfile": "No profile",
+      "noCompany": "No company",
+      "noCompanyProfile": "No company profile",
+      "displayName": "Display Name",
+      "bio": "Bio",
+      "location": "Location",
+      "companyName": "Company Name",
+      "companyProfile": "Company Profile",
+      "createdAt": "Created At",
+      "updatedAt": "Last Updated",
+      "emailVerified": "Email Verified",
+      "notVerified": "Not Verified"
+    },
+    "changeRole": {
+      "title": "Change User Role",
+      "description": "Select a new role for this user",
+      "selectRole": "Select role",
+      "success": "User role has been changed"
+    },
+    "block": {
+      "success": "User has been blocked"
+    },
+    "unblock": {
+      "success": "User has been unblocked"
+    },
+    "delete": {
+      "success": "User has been deleted"
+    },
+    "bulkActions": {
+      "block": "Block selected",
+      "unblock": "Unblock selected",
+      "changeRole": "Change role",
+      "delete": "Delete selected",
+      "confirmBlock": "Are you sure you want to block {count} users?",
+      "confirmUnblock": "Are you sure you want to unblock {count} users?",
+      "confirmDelete": "Are you sure you want to delete {count} users? This action is irreversible!",
+      "changeRoleTitle": "Change role for selected",
+      "changeRoleDescription": "Changing role for {count} users",
+      "changeRoleSuccess": "Changed role for {count} users",
+      "partialSuccess": "Processed {success}, errors: {failed}"
+    },
+    "confirm": {
+      "block": "Are you sure you want to block this user?",
+      "unblock": "Are you sure you want to unblock this user?",
+      "changeRole": "Are you sure you want to change user role to {role}?"
+    },
+    "success": {
+      "roleChanged": "User role has been changed",
+      "blocked": "User has been blocked",
+      "unblocked": "User has been unblocked"
+    }
+  },
+  "common": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "saving": "Saving..."
+  },
+  "errors": {
+    "invalidInput": "Invalid input data",
+    "verifyFailed": "Verification failed",
+    "rejectFailed": "Rejection failed",
+    "deleteFailed": "Deletion failed",
+    "viesUnavailable": "VIES system is unavailable. Please try again later.",
+    "viesCheckFailed": "VIES check failed",
+    "reasonRequired": "Rejection reason is required",
+    "companyNotFound": "Company not found",
+    "userNotFound": "User not found",
+    "roleChangeFailed": "Role change failed",
+    "blockFailed": "Block failed",
+    "unblockFailed": "Unblock failed",
+    "cannotBlockSelf": "You cannot block yourself",
+    "cannotChangeOwnRole": "You cannot change your own role",
+    "updateFailed": "Update failed"
+  }
+}

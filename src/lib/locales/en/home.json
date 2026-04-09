@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Promote your business in",
+    "highlight": "60 seconds",
+    "subtitle": "Short Videos. Big Local Impact. Reach customers nearby with authentic vertical video content.",
+    "ctaPrimary": "Start Publishing",
+    "ctaSecondary": "Learn More"
+  },
+  "filter": {
+    "discover": "Discover",
+    "nearby": "Near Me",
+    "following": "Following",
+    "more": "More +"
+  },
+  "footer": {
+    "forBusiness": "For Businesses",
+    "about": "About Us",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}

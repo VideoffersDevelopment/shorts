@@ -1,0 +1,223 @@
+{
+  "upgrade": {
+    "heading": "Actualizar a cuenta de empresa",
+    "description": "Registre su empresa para publicar ofertas de trabajo y acceder a funciones adicionales.",
+    "title": "Formulario de registro de empresa",
+    "subtitle": "Ingrese los datos de su empresa. Su número de IVA será verificado a través del sistema VIES.",
+    "fields": {
+      "companyName": "Nombre de la empresa",
+      "nip": "Número de IVA (NIP)",
+      "address": "Dirección",
+      "phone": "Teléfono (opcional)"
+    },
+    "placeholders": {
+      "companyName": "p.ej. Acme S.A.",
+      "address": "p.ej. Calle Principal 1, 00-001 Varsovia",
+      "phone": "+48 123 456 789"
+    },
+    "hints": {
+      "nip": "Formato: 1234567890 o 12-345-678-90",
+      "phone": "El número de teléfono es opcional"
+    },
+    "submit": "Registrar empresa",
+    "submitting": "Verificando número de IVA...",
+    "success": {
+      "title": "¡Empresa registrada!",
+      "verified": "Su número de IVA ha sido verificado con éxito a través de VIES.",
+      "pending": "Su número de IVA requiere verificación manual por parte de un administrador.",
+      "redirecting": "Será redirigido en breve..."
+    }
+  },
+  "vies": {
+    "status": {
+      "verified": "Verificado",
+      "pending": "Verificación pendiente",
+      "rejected": "Rechazado"
+    }
+  },
+  "status": {
+    "pendingTitle": "Aprobación pendiente",
+    "pendingDescription": "Su empresa está esperando la verificación del administrador. Recibirá una notificación por correo electrónico una vez aprobada."
+  },
+  "nipValidation": {
+    "validating": "Verificando número de IVA...",
+    "success": {
+      "verified": "Número de IVA verificado en VIES"
+    },
+    "warning": {
+      "viesUnavailable": "Servicio VIES no disponible. Puede continuar - se requerirá verificación manual."
+    },
+    "errors": {
+      "invalidFormat": "Formato de NIP inválido. Use 10 dígitos o el formato XX-XXX-XXX-XX.",
+      "alreadyExists": "Este número de IVA ya está registrado en nuestro sistema.",
+      "viesInvalid": "Este número de IVA no fue encontrado en el registro VIES.",
+      "validationFailed": "La verificación falló. Por favor, inténtelo de nuevo.",
+      "pleaseFixErrors": "Por favor, corrija los errores del número de IVA antes de enviar.",
+      "unknown": "Error de validación desconocido."
+    }
+  },
+  "errors": {
+    "alreadyCompany": "Ya tiene una empresa registrada",
+    "nipExists": "Este número de IVA ya está registrado",
+    "createFailed": "Error al crear el perfil de empresa",
+    "notCompany": "No tiene un perfil de empresa",
+    "updateFailed": "Error al actualizar el perfil"
+  },
+  "profile": {
+    "verified": "Verificado",
+    "placeholders": {
+      "website": "https://ejemplo.com",
+      "contactEmail": "contacto@empresa.es",
+      "facebook": "https://facebook.com/empresa",
+      "instagram": "https://instagram.com/empresa",
+      "tiktok": "https://tiktok.com/@empresa",
+      "youtube": "https://youtube.com/@empresa",
+      "linkedin": "https://linkedin.com/company/empresa",
+      "street": "Calle Principal 123",
+      "postalCode": "28001",
+      "city": "Madrid"
+    },
+    "overview": {
+      "title": "Vista general del perfil",
+      "editProfile": "Editar perfil",
+      "addShort": "Añadir Short",
+      "viewPublic": "Ver perfil público",
+      "noDescription": "Sin descripción de empresa",
+      "addDescription": "Añadir descripción"
+    },
+    "sections": {
+      "contact": "Contacto",
+      "social": "Redes sociales",
+      "location": "Ubicación"
+    },
+    "stats": {
+      "shorts": "Shorts",
+      "followers": "Seguidores",
+      "views": "Vistas",
+      "viewsThisWeek": "Vistas esta semana",
+      "activeCampaigns": "Campañas activas",
+      "walletBalance": "Saldo de cartera",
+      "topUp": "Recargar"
+    },
+    "contact": {
+      "website": "Sitio web",
+      "address": "Dirección",
+      "phone": "Teléfono"
+    },
+    "edit": {
+      "title": "Editar perfil de empresa",
+      "save": "Guardar cambios",
+      "saving": "Guardando...",
+      "success": "Perfil actualizado correctamente",
+      "error": "Error al actualizar el perfil"
+    },
+    "fields": {
+      "companyName": "Nombre de la empresa",
+      "description": "Descripción",
+      "website": "Sitio web",
+      "category": "Categoría",
+      "address": "Dirección",
+      "phone": "Teléfono",
+      "contactEmail": "Email de contacto",
+      "contactEmailHint": "Email de contacto opcional. Si no se proporciona, se usará el email de su cuenta.",
+      "latitude": "Latitud",
+      "longitude": "Longitud",
+      "socialLinks": "Redes sociales",
+      "businessHours": "Horario de atención (JSON)",
+      "logo": "Logo",
+      "banner": "Banner"
+    }
+  },
+  "logo": {
+    "title": "Subir logo",
+    "upload": "Subir",
+    "uploading": "Subiendo...",
+    "cancel": "Cancelar",
+    "success": "Logo actualizado",
+    "errors": {
+      "invalidType": "Tipo de archivo no válido. Use JPEG, PNG o WebP",
+      "tooLarge": "Archivo demasiado grande. Máximo 5MB",
+      "uploadFailed": "Error al subir"
+    }
+  },
+  "banner": {
+    "title": "Subir banner",
+    "upload": "Subir",
+    "uploading": "Subiendo...",
+    "cancel": "Cancelar",
+    "success": "Banner actualizado",
+    "errors": {
+      "invalidType": "Tipo de archivo no válido. Use JPEG, PNG o WebP",
+      "tooLarge": "Archivo demasiado grande. Máximo 10MB",
+      "uploadFailed": "Error al subir"
+    }
+  },
+  "category": {
+    "placeholder": "Seleccionar categoría",
+    "searchPlaceholder": "Buscar categorías...",
+    "noResults": "No se encontraron categorías",
+    "backToAll": "Volver a todas las categorías",
+    "viewAll": "Ver todas"
+  },
+  "subcategories": {
+    "label": "Subcategorías",
+    "placeholder": "Seleccionar subcategorías",
+    "selected": "{count} de {max} seleccionadas",
+    "selectCategoryFirst": "Seleccione primero una categoría principal",
+    "loading": "Cargando subcategorías...",
+    "noSubcategories": "No hay subcategorías disponibles",
+    "hint": "Seleccione hasta {max} subcategorías para describir mejor su negocio"
+  },
+  "businessHours": {
+    "title": "Horario de atención",
+    "days": {
+      "monday": "Lunes",
+      "tuesday": "Martes",
+      "wednesday": "Miércoles",
+      "thursday": "Jueves",
+      "friday": "Viernes",
+      "saturday": "Sábado",
+      "sunday": "Domingo"
+    },
+    "openTime": "Hora de apertura",
+    "closeTime": "Hora de cierre",
+    "closed": "Cerrado",
+    "copyToAll": "Copiar a todos",
+    "clearAll": "Borrar todo",
+    "hint": "Configura tu horario de atención. Desactiva los días que estés cerrado."
+  },
+  "social": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn"
+  },
+  "follow": {
+    "follow": "Seguir",
+    "following": "Siguiendo",
+    "unfollow": "Dejar de seguir",
+    "loginRequired": "Inicia sesión para seguir"
+  },
+  "contact": {
+    "button": "Contactar empresa",
+    "title": "Contactar empresa",
+    "description": "Enviar un mensaje a {companyName}",
+    "fields": {
+      "subject": "Asunto",
+      "message": "Mensaje"
+    },
+    "placeholders": {
+      "subject": "Asunto del mensaje",
+      "message": "Tu mensaje..."
+    },
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "cancel": "Cancelar",
+    "success": "Mensaje enviado correctamente",
+    "error": "Error al enviar el mensaje",
+    "errors": {
+      "emptyMessage": "El mensaje no puede estar vacío"
+    }
+  }
+}

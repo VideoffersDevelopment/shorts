@@ -1,0 +1,72 @@
+{
+  "sort": {
+    "label": "Sort",
+    "algorithmic": "For You",
+    "newest": "Newest",
+    "popular": "Popular",
+    "trending": "Trending",
+    "following": "Following"
+  },
+  "filters": {
+    "title": "Filters",
+    "apply": "Apply filters",
+    "clear": "Clear all",
+    "location": {
+      "label": "Location",
+      "radius": "Radius",
+      "detectLocation": "Detect location",
+      "detecting": "Detecting...",
+      "wholeCountry": "Whole country",
+      "nearMe": "Near me ({distance})",
+      "radiusOptions": {
+        "1km": "1 km",
+        "5km": "5 km",
+        "10km": "10 km",
+        "25km": "25 km",
+        "50km": "50 km",
+        "all": "Whole country"
+      }
+    },
+    "categories": {
+      "label": "Categories",
+      "placeholder": "Select categories...",
+      "maxSelected": "Maximum {max} categories"
+    },
+    "tags": {
+      "label": "Tags",
+      "placeholder": "Search tags..."
+    },
+    "verifiedOnly": {
+      "label": "Verified only",
+      "description": "Show only shorts from verified companies"
+    },
+    "activeFilters": "Active filters: {count}"
+  },
+  "empty": {
+    "noShorts": {
+      "title": "No shorts in this area",
+      "description": "Try expanding the radius or changing filters",
+      "expandRadius": "Expand radius",
+      "clearFilters": "Clear filters",
+      "browseAll": "Browse all"
+    },
+    "noFollowing": {
+      "title": "You don't follow any companies yet",
+      "description": "Discover local businesses and start following",
+      "discoverCta": "Discover companies"
+    }
+  },
+  "loading": {
+    "more": "Loading more...",
+    "skeleton": "That's all!",
+    "endOfFeed": "That's all!"
+  },
+  "card": {
+    "views": "{count} views",
+    "likes": "{count} likes",
+    "distance": "{distance} away",
+    "cta": "Link",
+    "follow": "Follow",
+    "following": "Following"
+  }
+}

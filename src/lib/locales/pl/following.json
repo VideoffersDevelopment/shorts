@@ -1,0 +1,16 @@
+{
+  "title": "Obserwowane",
+  "follow": "Obserwuj",
+  "following": "Obserwujesz",
+  "unfollow": "Przestań obserwować",
+  "loginRequired": "Zaloguj się, aby obserwować firmy",
+  "followers": "Obserwujących",
+  "shorts": "Filmy",
+  "verified": "Zweryfikowana",
+  "empty": {
+    "title": "Nie obserwujesz jeszcze nikogo",
+    "description": "Odkrywaj lokalne firmy i zacznij je obserwować, aby widzieć ich aktualizacje tutaj."
+  },
+  "loading": "Ładowanie...",
+  "error": "Nie udało się załadować obserwowanych firm"
+}

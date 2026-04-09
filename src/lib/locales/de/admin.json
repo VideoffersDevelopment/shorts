@@ -1,0 +1,155 @@
+{
+  "title": "Verwaltungspanel",
+  "nav": {
+    "dashboard": "Dashboard",
+    "companies": "Unternehmen",
+    "categories": "Kategorien",
+    "users": "Benutzer",
+    "audit": "Audit-Protokoll",
+    "exitAdmin": "Zurück zur Website",
+    "logout": "Abmelden"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "stats": {
+      "companies": "Unternehmen",
+      "users": "Benutzer",
+      "categories": "Kategorien",
+      "pending": "ausstehende Überprüfung"
+    }
+  },
+  "companies": {
+    "title": "Unternehmensverwaltung",
+    "search": {
+      "placeholder": "Nach Name oder NIP suchen...",
+      "button": "Suchen"
+    },
+    "filter": {
+      "status": "Status",
+      "all": "Alle",
+      "verified": "Verifiziert",
+      "pending": "Ausstehend"
+    },
+    "table": {
+      "name": "Firmenname",
+      "nip": "NIP",
+      "email": "E-Mail",
+      "status": "VIES-Status",
+      "accountStatus": "Kontostatus",
+      "createdAt": "Erstellt am",
+      "actions": "Aktionen"
+    },
+    "status": {
+      "verified": "Verifiziert",
+      "pending": "Ausstehend"
+    },
+    "companyStatus": {
+      "PENDING": "Ausstehend",
+      "ACTIVE": "Aktiv",
+      "SUSPENDED": "Gesperrt"
+    },
+    "actions": {
+      "verify": "Verifizieren",
+      "reject": "Ablehnen",
+      "view": "Ansehen",
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "checkVies": "VIES prüfen"
+    },
+    "verify": {
+      "success": "Unternehmen wurde verifiziert"
+    },
+    "reject": {
+      "reasonPrompt": "Bitte geben Sie den Ablehnungsgrund an:",
+      "success": "Unternehmen wurde abgelehnt"
+    },
+    "delete": {
+      "confirmMessage": "Sind Sie sicher, dass Sie dieses Unternehmen löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden!",
+      "success": "Unternehmen wurde gelöscht"
+    },
+    "checkVies": {
+      "success": "NIP ist im VIES-System gültig",
+      "invalid": "NIP ist im VIES-System nicht gültig"
+    },
+    "edit": {
+      "title": "Unternehmen bearbeiten",
+      "success": "Unternehmen wurde aktualisiert",
+      "error": "Aktualisierung des Unternehmens fehlgeschlagen",
+      "readOnlyInfo": "Nur-Lese-Informationen"
+    }
+  },
+  "users": {
+    "title": "Benutzerverwaltung",
+    "search": {
+      "placeholder": "Nach E-Mail suchen...",
+      "button": "Suchen"
+    },
+    "filter": {
+      "role": "Rolle",
+      "status": "Status",
+      "all": "Alle",
+      "active": "Aktiv",
+      "blocked": "Gesperrt"
+    },
+    "table": {
+      "email": "E-Mail",
+      "role": "Rolle",
+      "status": "Status",
+      "emailVerified": "E-Mail verifiziert",
+      "createdAt": "Registrierungsdatum",
+      "actions": "Aktionen"
+    },
+    "role": {
+      "USER": "Benutzer",
+      "COMPANY": "Unternehmen",
+      "ADMIN": "Administrator"
+    },
+    "status": {
+      "active": "Aktiv",
+      "blocked": "Gesperrt"
+    },
+    "actions": {
+      "changeRole": "Rolle ändern",
+      "block": "Sperren",
+      "unblock": "Entsperren",
+      "details": "Details"
+    },
+    "details": {
+      "title": "Benutzerdetails",
+      "email": "E-Mail-Adresse",
+      "role": "Rolle",
+      "status": "Kontostatus",
+      "emailVerified": "E-Mail verifiziert",
+      "createdAt": "Registriert am",
+      "updatedAt": "Letzte Aktualisierung",
+      "companyProfile": "Unternehmensprofil",
+      "noCompanyProfile": "Kein Unternehmensprofil"
+    },
+    "confirm": {
+      "block": "Sind Sie sicher, dass Sie diesen Benutzer sperren möchten?",
+      "unblock": "Sind Sie sicher, dass Sie diesen Benutzer entsperren möchten?",
+      "changeRole": "Sind Sie sicher, dass Sie die Rolle auf {role} ändern möchten?"
+    },
+    "success": {
+      "roleChanged": "Benutzerrolle wurde geändert",
+      "blocked": "Benutzer wurde gesperrt",
+      "unblocked": "Benutzer wurde entsperrt"
+    }
+  },
+  "errors": {
+    "invalidInput": "Ungültige Eingabedaten",
+    "verifyFailed": "Verifizierung fehlgeschlagen",
+    "rejectFailed": "Ablehnung fehlgeschlagen",
+    "deleteFailed": "Löschen fehlgeschlagen",
+    "viesUnavailable": "VIES-System ist nicht verfügbar. Bitte versuchen Sie es später erneut.",
+    "viesCheckFailed": "VIES-Prüfung fehlgeschlagen",
+    "reasonRequired": "Ablehnungsgrund ist erforderlich",
+    "companyNotFound": "Unternehmen nicht gefunden",
+    "userNotFound": "Benutzer nicht gefunden",
+    "roleChangeFailed": "Rollenänderung fehlgeschlagen",
+    "blockFailed": "Sperrung fehlgeschlagen",
+    "cannotBlockSelf": "Sie können sich nicht selbst sperren",
+    "cannotChangeOwnRole": "Sie können Ihre eigene Rolle nicht ändern",
+    "updateFailed": "Aktualisierung fehlgeschlagen"
+  }
+}

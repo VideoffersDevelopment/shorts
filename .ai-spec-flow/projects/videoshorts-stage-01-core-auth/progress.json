@@ -1,0 +1,325 @@
+{
+  "project": "videoshorts-stage-01-core-auth",
+  "source": "ai-project-planner",
+  "documentation": {
+    "lastUpdated": "2025-12-22T12:00:00Z",
+    "architectureVersion": "task-08",
+    "codingPracticesRules": 15,
+    "tasksDocumented": ["task-01", "task-02", "task-03", "task-04", "task-05", "task-06", "task-07", "task-08"]
+  },
+  "sourceSpec": ".ai-project-planner/projects/videoshorts/stages/stage-01-core-auth/spec.md",
+  "context": {
+    "projectSpec": ".ai-project-planner/projects/videoshorts/project-spec.md",
+    "architecturePlan": ".ai-project-planner/projects/videoshorts/architecture-plan.md"
+  },
+  "created": "2025-11-28",
+  "phases": {
+    "brief": "skipped",
+    "analysis": "completed",
+    "architecture": "completed",
+    "tasks": "completed",
+    "coding": "completed"
+  },
+  "currentPhase": "completed",
+  "analysisMetadata": {
+    "iterations": 1,
+    "completedAt": "2025-11-28",
+    "outputFile": ".ai-spec-flow/projects/videoshorts-stage-01-core-auth/analysis/final_analysis.md",
+    "projectType": "greenfield",
+    "componentsToCreate": 29,
+    "apisToCreate": 20,
+    "databaseModels": 5,
+    "externalServices": 8
+  },
+  "architectureMetadata": {
+    "iterations": 1,
+    "completedAt": "2025-11-28",
+    "outputFile": ".ai-spec-flow/projects/videoshorts-stage-01-core-auth/architecture/final_architecture.md",
+    "frontendSpecificationComplete": true,
+    "languagesCovered": ["pl", "en", "de", "es", "ru"],
+    "implementationPhases": 6
+  },
+  "tasksMetadata": {
+    "iterations": 2,
+    "completedAt": "2025-11-28",
+    "totalTasks": 8,
+    "totalFiles": 98,
+    "estimatedTokens": 108000
+  },
+  "tasks": [
+    {
+      "id": "task-01",
+      "name": "Project Setup",
+      "status": "completed",
+      "files": 8,
+      "complexity": "Simple",
+      "dependencies": [],
+      "iterations": 2,
+      "finalCommit": {
+        "sha": "d8d0b24",
+        "message": "chore(task-01): update package-lock.json after dependency install",
+        "timestamp": "2025-11-28T16:42:00Z",
+        "filesChanged": 6
+      },
+      "iterationCommits": [
+        {"iteration": 1, "sha": "86338ab", "status": "rejected", "message": "feat(task-01): initialize project configuration - iteration v1"},
+        {"iteration": 2, "sha": "fc1b35f", "status": "approved", "message": "fix(task-01): update packages for React 19 compatibility - iteration v2"}
+      ],
+      "testing": {
+        "type": "configuration",
+        "unitTests": "not_applicable",
+        "buildPassed": true,
+        "typeCheckPassed": true,
+        "verificationFile": ".ai-spec-flow/projects/videoshorts-stage-01-core-auth/testing/task-01/verification.md",
+        "completedAt": "2025-11-28"
+      },
+      "newRules": []
+    },
+    {
+      "id": "task-02",
+      "name": "Core Infrastructure",
+      "status": "completed",
+      "files": 12,
+      "complexity": "Medium",
+      "dependencies": ["task-01"],
+      "iterations": 1,
+      "finalCommit": {
+        "sha": "7c1cfc0",
+        "message": "feat(task-02): implement core infrastructure - iteration v1",
+        "timestamp": "2025-11-28T17:00:00Z",
+        "filesChanged": 12
+      },
+      "iterationCommits": [
+        {"iteration": 1, "sha": "7c1cfc0", "status": "approved", "message": "feat(task-02): implement core infrastructure - iteration v1"}
+      ],
+      "testing": {
+        "type": "infrastructure",
+        "unitTests": "not_applicable",
+        "prismaValidated": true,
+        "prismaClientGenerated": true,
+        "buildPassed": true,
+        "typeCheckPassed": true,
+        "verificationFile": ".ai-spec-flow/projects/videoshorts-stage-01-core-auth/testing/task-02/verification.md",
+        "completedAt": "2025-11-28"
+      },
+      "newRules": []
+    },
+    {
+      "id": "task-03",
+      "name": "Authentication Flow",
+      "status": "completed",
+      "files": 21,
+      "complexity": "Medium",
+      "dependencies": ["task-02"],
+      "iterations": 2,
+      "finalCommit": {
+        "sha": "017e016",
+        "message": "feat(task-03): add React email templates - iteration v2",
+        "timestamp": "2025-11-28T19:30:00Z",
+        "filesChanged": 9
+      },
+      "iterationCommits": [
+        {"iteration": 1, "sha": "4850b82", "status": "rejected", "message": "feat(task-03): implement authentication flow - iteration v1"},
+        {"iteration": 2, "sha": "017e016", "status": "approved", "message": "feat(task-03): add React email templates - iteration v2"}
+      ],
+      "testing": {
+        "type": "feature",
+        "unitTests": "completed",
+        "testCommit": {
+          "sha": "8c9e5f5",
+          "message": "test(task-03): add authentication flow tests - iteration v1",
+          "timestamp": "2025-11-29T12:35:00Z"
+        },
+        "testsTotal": 175,
+        "testsPassed": 175,
+        "testsSkipped": 6,
+        "coverage": "94%",
+        "buildPassed": true,
+        "typeCheckPassed": true,
+        "verificationFile": ".ai-spec-flow/projects/videoshorts-stage-01-core-auth/testing/task-03/verification.md",
+        "completedAt": "2025-11-29",
+        "note": "Comprehensive test suite: 59 Server Actions tests, 103+ Component tests. 6 edge cases skipped."
+      },
+      "newRules": []
+    },
+    {
+      "id": "task-04",
+      "name": "Profile Management",
+      "status": "completed",
+      "files": 14,
+      "complexity": "Medium",
+      "dependencies": ["task-02"],
+      "iterations": 1,
+      "finalCommit": {
+        "sha": "90312a0",
+        "message": "feat(task-04): implement profile management - iteration v1",
+        "timestamp": "2025-11-28T20:15:00Z",
+        "filesChanged": 21
+      },
+      "iterationCommits": [
+        {"iteration": 1, "sha": "90312a0", "status": "approved", "message": "feat(task-04): implement profile management - iteration v1"}
+      ],
+      "testing": {
+        "type": "feature",
+        "unitTests": "completed",
+        "testCommit": {
+          "sha": "0eec894",
+          "message": "test(task-04): add profile management comprehensive test suite",
+          "timestamp": "2025-11-29T14:55:00Z"
+        },
+        "testsTotal": 74,
+        "testsPassed": 70,
+        "testsSkipped": 4,
+        "buildPassed": true,
+        "typeCheckPassed": true,
+        "verificationFile": ".ai-spec-flow/projects/videoshorts-stage-01-core-auth/testing/task-04/verification.md",
+        "completedAt": "2025-11-29",
+        "note": "Comprehensive test suite: 19 Server Action tests, 55 Component tests. 4 edge cases skipped (jsdom limitations)."
+      },
+      "newRules": []
+    },
+    {
+      "id": "task-05",
+      "name": "Settings & Account",
+      "status": "completed",
+      "files": 10,
+      "complexity": "Simple",
+      "dependencies": ["task-02"],
+      "iterations": 2,
+      "finalCommit": {
+        "sha": "0ef0a29",
+        "message": "fix(task-05): correct i18n translation paths - iteration v2",
+        "timestamp": "2025-11-28T21:00:00Z",
+        "filesChanged": 7
+      },
+      "iterationCommits": [
+        {"iteration": 1, "sha": "00ebe42", "status": "rejected", "message": "feat(task-05): implement settings and account management - iteration v1"},
+        {"iteration": 2, "sha": "0ef0a29", "status": "approved", "message": "fix(task-05): correct i18n translation paths - iteration v2"}
+      ],
+      "testing": {
+        "type": "feature",
+        "unitTests": "completed",
+        "testCommit": {
+          "sha": "9d237a2",
+          "message": "test(task-05): add settings and account management comprehensive test suite",
+          "timestamp": "2025-11-29T15:30:00Z"
+        },
+        "testsTotal": 78,
+        "testsPassed": 78,
+        "testsSkipped": 0,
+        "buildPassed": true,
+        "typeCheckPassed": true,
+        "completedAt": "2025-11-29",
+        "note": "Comprehensive test suite: 33 Server Action tests (change-password, delete-account), 45 Component tests. All tests passing."
+      },
+      "newRules": []
+    },
+    {
+      "id": "task-06",
+      "name": "Theme & Preferences",
+      "status": "completed",
+      "files": 9,
+      "complexity": "Simple",
+      "dependencies": ["task-02"],
+      "iterations": 2,
+      "finalCommit": {
+        "sha": "09701f5",
+        "message": "fix(task-06): add i18n for saving state in preferences - iteration v2",
+        "timestamp": "2025-11-29T10:00:00Z",
+        "filesChanged": 7
+      },
+      "iterationCommits": [
+        {"iteration": 1, "sha": "0e68f1c", "status": "rejected", "message": "feat(task-06): implement theme and preferences - iteration v1"},
+        {"iteration": 2, "sha": "09701f5", "status": "approved", "message": "fix(task-06): add i18n for saving state in preferences - iteration v2"}
+      ],
+      "testing": {
+        "type": "feature",
+        "unitTests": "completed",
+        "testCommit": {
+          "sha": "b358c01",
+          "message": "test(task-06): add theme and preferences comprehensive test suite",
+          "timestamp": "2025-11-29T16:20:00Z"
+        },
+        "testsTotal": 73,
+        "testsPassed": 73,
+        "testsSkipped": 0,
+        "buildPassed": true,
+        "typeCheckPassed": true,
+        "completedAt": "2025-11-29",
+        "note": "Comprehensive test suite: 4 Components (ThemeToggle 17, LocaleSwitcher 22, PreferencesForm 24, ThemeProvider 10). All tests passing."
+      },
+      "newRules": []
+    },
+    {
+      "id": "task-07",
+      "name": "Layout & Navigation",
+      "status": "completed",
+      "files": 16,
+      "complexity": "Medium",
+      "dependencies": ["task-03", "task-04", "task-05", "task-06"],
+      "iterations": 1,
+      "finalCommit": {
+        "sha": "50a4987",
+        "message": "feat(task-07): implement layout and navigation - iteration v1",
+        "timestamp": "2025-11-29T11:00:00Z",
+        "filesChanged": 16
+      },
+      "iterationCommits": [
+        {"iteration": 1, "sha": "50a4987", "status": "approved", "message": "feat(task-07): implement layout and navigation - iteration v1"}
+      ],
+      "testing": {
+        "type": "feature",
+        "unitTests": "completed",
+        "testCommit": {
+          "sha": "2f09304",
+          "message": "test(task-07): add layout and navigation comprehensive test suite",
+          "timestamp": "2025-11-29T15:30:00Z"
+        },
+        "testsTotal": 92,
+        "testsPassed": 92,
+        "testsSkipped": 0,
+        "buildPassed": true,
+        "typeCheckPassed": true,
+        "verificationFile": ".ai-spec-flow/projects/videoshorts-stage-01-core-auth/testing/task-07/verification.md",
+        "completedAt": "2025-11-29",
+        "note": "Comprehensive test suite: 5 Components (AppSidebar 17, UserMenu 19, Footer 19, MobileDrawer 20, ErrorBoundary 17). All tests passing."
+      },
+      "newRules": []
+    },
+    {
+      "id": "task-08",
+      "name": "Avatar Upload Enhancements",
+      "status": "completed",
+      "files": 11,
+      "complexity": "Medium",
+      "dependencies": ["task-04", "task-07"],
+      "addedAt": "2025-11-29T17:30:00Z",
+      "addedReason": "Follow-up: Avatar upload needs cropping and deletion functionality",
+      "iterations": 1,
+      "finalCommit": {
+        "sha": "d5e0f84",
+        "message": "feat(task-08): implement avatar cropping and deletion - iteration v1",
+        "timestamp": "2025-11-29T18:30:00Z",
+        "filesChanged": 12
+      },
+      "iterationCommits": [
+        {"iteration": 1, "sha": "d5e0f84", "status": "approved", "message": "feat(task-08): implement avatar cropping and deletion - iteration v1"}
+      ],
+      "bugFixes": [
+        {"sha": "6455b92", "message": "fix(auth): wrap Prisma calls in try-catch for Edge Runtime compatibility"}
+      ],
+      "testing": {
+        "type": "feature",
+        "unitTests": "completed",
+        "testsTotal": 530,
+        "testsPassed": 530,
+        "testsSkipped": 13,
+        "buildPassed": true,
+        "typeCheckPassed": true,
+        "completedAt": "2025-11-29",
+        "note": "Avatar upload tests: 36 tests (23 component, 20 server action). 6 upload flow tests skipped due to jsdom canvas/blob mocking limitations. Core functionality (rendering, deletion, file validation) fully tested."
+      },
+      "newRules": []
+    }
+  ]
+}

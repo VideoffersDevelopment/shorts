@@ -1,0 +1,40 @@
+{
+  "title": "Kategorienverwaltung",
+  "create": "Kategorie hinzufügen",
+  "enabled": "Aktiviert",
+  "disabled": "Deaktiviert",
+  "companies": "Unternehmen",
+  "addChild": "Unterkategorie hinzufügen",
+  "delete": {
+    "hasCompanies": "Kategorie mit Unternehmen kann nicht gelöscht werden",
+    "hasChildren": "Kategorie mit Unterkategorien kann nicht gelöscht werden",
+    "confirm": "Möchten Sie diese Kategorie wirklich löschen?",
+    "error": "Kategorie konnte nicht gelöscht werden",
+    "success": "Kategorie erfolgreich gelöscht"
+  },
+  "form": {
+    "editTitle": "Kategorie bearbeiten",
+    "createTitle": "Kategorie erstellen",
+    "name": "Name",
+    "namePlaceholder": "Kategorienamen eingeben",
+    "slug": "Slug",
+    "slugPlaceholder": "kategorie-slug",
+    "slugHint": "Nur Kleinbuchstaben, Zahlen und Bindestriche",
+    "icon": "Symbol",
+    "iconPlaceholder": "🏢",
+    "iconHint": "Emoji oder Symbolzeichen",
+    "parent": "Übergeordnete Kategorie",
+    "parentPlaceholder": "Übergeordnete Kategorie auswählen",
+    "noParent": "Keine übergeordnete (Hauptebene)",
+    "enabled": "Status",
+    "enabledYes": "Aktiviert",
+    "enabledNo": "Deaktiviert",
+    "cancel": "Abbrechen",
+    "saving": "Speichern...",
+    "update": "Aktualisieren",
+    "create": "Erstellen",
+    "error": "Kategorie konnte nicht gespeichert werden",
+    "updateSuccess": "Kategorie erfolgreich aktualisiert",
+    "createSuccess": "Kategorie erfolgreich erstellt"
+  }
+}

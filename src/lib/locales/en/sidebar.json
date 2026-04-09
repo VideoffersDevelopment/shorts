@@ -1,0 +1,30 @@
+{
+  "accessibility": {
+    "openMenu": "Open menu",
+    "companyNavigation": "Company navigation",
+    "navigationMenu": "Navigation Menu"
+  },
+  "collapse": "Collapse menu",
+  "home": "Home",
+  "trending": "Trending",
+  "following": "Following",
+  "saved": "Saved",
+  "categories": "Categories",
+  "profile": "Profile",
+  "settings": "Settings",
+  "preferences": "Preferences",
+  "logout": "Logout",
+  "menu": {
+    "upgradeToCompany": "Upgrade to Company",
+    "companyProfile": "Company Profile",
+    "adminPanel": "Admin Panel",
+    "myShorts": "My Shorts",
+    "credits": "Credits"
+  },
+  "company": {
+    "profile": "Company Profile",
+    "shorts": "My Shorts",
+    "credits": "Credits"
+  },
+  "admin": "Admin Panel"
+}

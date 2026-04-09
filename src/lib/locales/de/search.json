@@ -1,0 +1,36 @@
+{
+  "bar": {
+    "placeholder": "Shorts, Unternehmen, Kategorien suchen...",
+    "shortcut": "Strg+K",
+    "clear": "Suche löschen"
+  },
+  "company": {
+    "shortsCount": "{count} Shorts"
+  },
+  "suggestions": {
+    "recent": "Letzte Suchen",
+    "popular": "Beliebte Suchen",
+    "shorts": "Shorts",
+    "companies": "Unternehmen",
+    "clearRecent": "Verlauf löschen"
+  },
+  "tabs": {
+    "all": "Alle",
+    "shorts": "Shorts",
+    "companies": "Unternehmen"
+  },
+  "results": {
+    "title": "Ergebnisse für: {query}",
+    "count": "{count} Ergebnisse",
+    "noResults": {
+      "title": "Keine Ergebnisse für: {query}",
+      "description": "Versuche andere Schlüsselwörter oder überprüfe die Schreibweise",
+      "suggestions": "Das könnte dich interessieren:"
+    }
+  },
+  "filters": {
+    "inCategory": "in Kategorie",
+    "inLocation": "am Standort"
+  },
+  "loading": "Suche..."
+}

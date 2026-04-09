@@ -1,0 +1,30 @@
+{
+  "title": "Profile",
+  "displayName": "Display name",
+  "displayNamePlaceholder": "Enter your name",
+  "bio": "Bio",
+  "bioPlaceholder": "Write something about yourself...",
+  "location": "Location",
+  "locationPlaceholder": "City, country",
+  "avatar": "Profile picture",
+  "changeAvatar": "Change picture",
+  "removeAvatar": "Remove picture",
+  "cropAvatar": "Crop image",
+  "saveAvatar": "Save image",
+  "confirmRemoveAvatar": "Are you sure you want to remove your profile picture?",
+  "save": "Save changes",
+  "saving": "Saving...",
+  "removing": "Removing...",
+  "cancel": "Cancel",
+  "success": "Profile updated",
+  "avatarUploaded": "Profile picture updated",
+  "avatarRemoved": "Profile picture removed",
+  "errors": {
+    "uploadFailed": "Failed to upload image",
+    "invalidFileType": "Invalid file type",
+    "fileTooLarge": "File is too large (max 5MB)",
+    "deleteFailed": "Failed to delete image",
+    "bioTooLong": "Bio can be max. 500 characters",
+    "saveFailed": "Failed to save profile"
+  }
+}

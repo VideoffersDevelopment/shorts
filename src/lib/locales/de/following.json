@@ -1,0 +1,16 @@
+{
+  "title": "Folge ich",
+  "follow": "Folgen",
+  "following": "Folge ich",
+  "unfollow": "Entfolgen",
+  "loginRequired": "Bitte melden Sie sich an, um Unternehmen zu folgen",
+  "followers": "Follower",
+  "shorts": "Shorts",
+  "verified": "Verifiziert",
+  "empty": {
+    "title": "Sie folgen noch niemandem",
+    "description": "Entdecken Sie lokale Unternehmen und folgen Sie ihnen, um ihre Updates hier zu sehen."
+  },
+  "loading": "Wird geladen...",
+  "error": "Fehler beim Laden der gefolgten Unternehmen"
+}

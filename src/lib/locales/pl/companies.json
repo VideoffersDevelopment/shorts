@@ -1,0 +1,257 @@
+{
+  "upgrade": {
+    "heading": "Przejdź na konto firmowe",
+    "description": "Zarejestruj swoją firmę, aby móc publikować oferty pracy i korzystać z dodatkowych funkcji.",
+    "title": "Formularz rejestracji firmy",
+    "subtitle": "Wprowadź dane swojej firmy. NIP zostanie zweryfikowany przez system VIES.",
+    "fields": {
+      "companyName": "Nazwa firmy",
+      "nip": "NIP",
+      "address": "Adres",
+      "phone": "Telefon (opcjonalnie)"
+    },
+    "placeholders": {
+      "companyName": "np. Kowalski Sp. z o.o.",
+      "address": "np. ul. Główna 1, 00-001 Warszawa",
+      "phone": "+48 123 456 789"
+    },
+    "hints": {
+      "nip": "Format: 1234567890 lub 12-345-678-90",
+      "phone": "Numer telefonu nie jest wymagany"
+    },
+    "submit": "Zarejestruj firmę",
+    "submitting": "Weryfikacja NIP...",
+    "success": {
+      "title": "Firma zarejestrowana!",
+      "verified": "NIP został pomyślnie zweryfikowany w systemie VIES.",
+      "pending": "NIP wymaga ręcznej weryfikacji przez administratora.",
+      "continueButton": "Przejdź do profilu firmy",
+      "promoTitle": "Dodano 1 000 kredytow PROMO!",
+      "promoDescription": "Wykorzystaj je w ciagu 60 dni na publikacje i promocje pierwszych shortow."
+    },
+    "alreadyCompany": "Przekierowywanie do profilu firmy..."
+  },
+  "vies": {
+    "status": {
+      "verified": "Zweryfikowany",
+      "pending": "Oczekuje weryfikacji",
+      "rejected": "Odrzucony"
+    }
+  },
+  "status": {
+    "pendingTitle": "Oczekuje na zatwierdzenie",
+    "pendingDescription": "Twoja firma czeka na weryfikację przez administratora. Otrzymasz powiadomienie e-mail po zatwierdzeniu."
+  },
+  "nipValidation": {
+    "validating": "Weryfikacja NIP...",
+    "success": {
+      "verified": "NIP zweryfikowany w VIES"
+    },
+    "warning": {
+      "viesUnavailable": "Usługa VIES niedostępna. Możesz kontynuować - wymagana będzie ręczna weryfikacja."
+    },
+    "errors": {
+      "invalidFormat": "Nieprawidłowy format NIP. Użyj 10 cyfr lub formatu XX-XXX-XXX-XX.",
+      "alreadyExists": "Ten NIP jest już zarejestrowany w naszym systemie.",
+      "viesInvalid": "Ten NIP nie został znaleziony w rejestrze VIES.",
+      "validationFailed": "Weryfikacja nie powiodła się. Spróbuj ponownie.",
+      "pleaseFixErrors": "Popraw błędy NIP przed wysłaniem formularza.",
+      "unknown": "Nieznany błąd weryfikacji."
+    }
+  },
+  "errors": {
+    "alreadyCompany": "Masz już zarejestrowaną firmę",
+    "nipExists": "Ten NIP jest już zarejestrowany",
+    "createFailed": "Nie udało się utworzyć profilu firmy",
+    "notCompany": "Nie masz profilu firmy",
+    "updateFailed": "Nie udało się zaktualizować profilu"
+  },
+  "profile": {
+    "verified": "Zweryfikowany",
+    "addShort": "Dodaj short",
+    "noShorts": {
+      "title": "Brak opublikowanych filmików",
+      "description": "Ta firma nie opublikowała jeszcze żadnych filmików."
+    },
+    "noShortsOwner": {
+      "title": "Nie masz jeszcze żadnych filmików",
+      "description": "Dodaj swój pierwszy short, aby pokazać klientom czym się zajmujesz!"
+    },
+    "placeholders": {
+      "website": "https://example.com",
+      "contactEmail": "kontakt@firma.pl",
+      "facebook": "https://facebook.com/firma",
+      "instagram": "https://instagram.com/firma",
+      "tiktok": "https://tiktok.com/@firma",
+      "youtube": "https://youtube.com/@firma",
+      "linkedin": "https://linkedin.com/company/firma",
+      "street": "ul. Przykładowa 123",
+      "postalCode": "00-000",
+      "city": "Warszawa"
+    },
+    "overview": {
+      "title": "Podgląd profilu",
+      "editProfile": "Edytuj profil",
+      "addShort": "Dodaj filmik",
+      "viewPublic": "Zobacz publiczny profil",
+      "noDescription": "Brak opisu firmy",
+      "addDescription": "Dodaj opis"
+    },
+    "sections": {
+      "contact": "Kontakt",
+      "social": "Media społecznościowe",
+      "location": "Lokalizacja"
+    },
+    "stats": {
+      "shorts": "Filmiki",
+      "followers": "Obserwujący",
+      "views": "Wyświetlenia",
+      "viewsThisWeek": "Wyświetlenia w tym tygodniu",
+      "activeCampaigns": "Aktywne kampanie",
+      "walletBalance": "Saldo portfela",
+      "topUp": "Doładuj"
+    },
+    "contact": {
+      "website": "Strona WWW",
+      "address": "Adres",
+      "phone": "Telefon",
+      "call": "Zadzwoń"
+    },
+    "edit": {
+      "title": "Edytuj profil firmy",
+      "save": "Zapisz zmiany",
+      "saving": "Zapisywanie...",
+      "success": "Profil został zaktualizowany",
+      "error": "Nie udało się zaktualizować profilu"
+    },
+    "fields": {
+      "companyName": "Nazwa firmy",
+      "description": "Opis",
+      "website": "Strona internetowa",
+      "category": "Kategoria",
+      "address": "Adres",
+      "street": "Ulica i numer",
+      "postalCode": "Kod pocztowy",
+      "city": "Miasto",
+      "phone": "Telefon",
+      "contactEmail": "Email kontaktowy",
+      "contactEmailHint": "Opcjonalny email do kontaktu. Jeśli nie podasz, użyjemy adresu email Twojego konta.",
+      "latitude": "Szerokość geograficzna",
+      "longitude": "Długość geograficzna",
+      "socialLinks": "Media społecznościowe",
+      "businessHours": "Godziny otwarcia",
+      "setBusinessHours": "Ustaw godziny otwarcia",
+      "logo": "Logo",
+      "banner": "Baner",
+      "showOnMap": "Pokaż na mapie",
+      "hideMap": "Ukryj mapę"
+    }
+  },
+  "logo": {
+    "title": "Prześlij logo",
+    "upload": "Prześlij",
+    "uploading": "Przesyłanie...",
+    "cancel": "Anuluj",
+    "success": "Logo zostało zaktualizowane",
+    "dragAndDrop": "Przeciągnij i upuść lub kliknij",
+    "dropHere": "Upuść plik tutaj",
+    "errors": {
+      "invalidType": "Nieprawidłowy typ pliku. Użyj JPEG, PNG lub WebP",
+      "tooLarge": "Plik jest za duży. Maksymalnie 5MB",
+      "uploadFailed": "Przesyłanie nie powiodło się"
+    }
+  },
+  "banner": {
+    "title": "Prześlij baner",
+    "upload": "Prześlij",
+    "uploading": "Przesyłanie...",
+    "cancel": "Anuluj",
+    "success": "Baner został zaktualizowany",
+    "dragAndDrop": "Przeciągnij i upuść lub kliknij, aby wybrać baner",
+    "dropHere": "Upuść plik tutaj",
+    "errors": {
+      "invalidType": "Nieprawidłowy typ pliku. Użyj JPEG, PNG lub WebP",
+      "tooLarge": "Plik jest za duży. Maksymalnie 10MB",
+      "uploadFailed": "Przesyłanie nie powiodło się"
+    }
+  },
+  "category": {
+    "placeholder": "Wybierz kategorię",
+    "searchPlaceholder": "Szukaj kategorii...",
+    "noResults": "Nie znaleziono kategorii",
+    "backToAll": "Wróć do wszystkich kategorii",
+    "viewAll": "Pokaż wszystkie"
+  },
+  "location": {
+    "geocoding": "Wyszukiwanie lokalizacji...",
+    "geocodeError": "Nie udało się znaleźć lokalizacji",
+    "dragMarker": "Przeciągnij marker, aby dostosować lokalizację"
+  },
+  "subcategories": {
+    "label": "Podkategorie",
+    "placeholder": "Wybierz podkategorie",
+    "selected": "{count} z {max} wybranych",
+    "selectCategoryFirst": "Najpierw wybierz główną kategorię",
+    "loading": "Ładowanie podkategorii...",
+    "noSubcategories": "Brak dostępnych podkategorii",
+    "hint": "Wybierz do {max} podkategorii, aby lepiej opisać swoją działalność"
+  },
+  "businessHours": {
+    "title": "Godziny otwarcia",
+    "days": {
+      "monday": "Poniedziałek",
+      "tuesday": "Wtorek",
+      "wednesday": "Środa",
+      "thursday": "Czwartek",
+      "friday": "Piątek",
+      "saturday": "Sobota",
+      "sunday": "Niedziela"
+    },
+    "openTime": "Godzina otwarcia",
+    "closeTime": "Godzina zamknięcia",
+    "closed": "Zamknięte",
+    "copyToAll": "Skopiuj do wszystkich",
+    "clearAll": "Wyczyść wszystko",
+    "hint": "Ustaw godziny otwarcia. Wyłącz dni, w których jesteś zamknięty."
+  },
+  "header": {
+    "showLocation": "Pokaż lokalizację",
+    "report": "Zgłoś",
+    "reportCompany": "Zgłoś firmę",
+    "reportError": "Zgłoś błąd"
+  },
+  "social": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "youtube": "YouTube",
+    "linkedin": "LinkedIn"
+  },
+  "follow": {
+    "follow": "Obserwuj",
+    "following": "Obserwujesz",
+    "unfollow": "Przestań obserwować",
+    "loginRequired": "Zaloguj się, aby obserwować"
+  },
+  "contact": {
+    "button": "Napisz do nas",
+    "title": "Skontaktuj się z firmą",
+    "description": "Wyślij wiadomość do {companyName}",
+    "fields": {
+      "subject": "Temat",
+      "message": "Wiadomość"
+    },
+    "placeholders": {
+      "subject": "Temat wiadomości",
+      "message": "Treść wiadomości..."
+    },
+    "send": "Wyślij",
+    "sending": "Wysyłanie...",
+    "cancel": "Anuluj",
+    "success": "Wiadomość została wysłana",
+    "error": "Nie udało się wysłać wiadomości",
+    "errors": {
+      "emptyMessage": "Wiadomość nie może być pusta"
+    }
+  }
+}
