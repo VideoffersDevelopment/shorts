@@ -1,5 +1,5 @@
 # Debug Guide - Short Player Issue
-
+ 
 ## Symptom
 Player nie pojawia się na stronie `/panel/shorts/cmk9sblpv0000g876p6j4merd`
 
