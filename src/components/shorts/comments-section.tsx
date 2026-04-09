@@ -189,9 +189,10 @@ export function CommentsSection({
     <div className="space-y-4">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h3 className="flex items-center gap-2 text-lg font-semibold">
-          <MessageSquare className="h-5 w-5" />
-          {t.title} {totalCount > 0 && <span className="text-muted-foreground">({titleWithCount})</span>}
+        <h3 className="flex items-center gap-2 text-sm font-semibold">
+          <MessageSquare className="h-4 w-4" />
+          {t.title}
+          {totalCount > 0 && <span className="text-muted-foreground font-normal">{totalCount}</span>}
         </h3>
         <Select value={sort} onValueChange={handleSortChange}>
           <SelectTrigger className="w-[140px] h-8 text-xs">
