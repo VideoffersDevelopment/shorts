@@ -48,7 +48,7 @@ export interface PaymentProvider {
 /**
  * Payment providers enum matching Prisma schema
  */
-export type PaymentProviderType = "PRZELEWY24" | "TPAY"
+export type PaymentProviderType = "PRZELEWY24" | "TPAY" | "OTHER"
 
 /**
  * Format amount from grosze to PLN display

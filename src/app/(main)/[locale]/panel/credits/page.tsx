@@ -4,11 +4,9 @@ import { getTranslations } from "next-intl/server"
 import { prisma } from "@/lib/prisma"
 import { Coins, Package } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { WalletBalanceDisplay } from "@/components/payments/wallet-balance-display"
 import { CreditsManagement } from "@/components/payments/credits-management"
-import { POINT_PACKAGES } from "@/lib/wallet/wallet-constants"
-import Link from "next/link"
+import { CreditsPackages } from "@/components/payments/credits-packages"
 import { getWalletBalance } from "@/lib/wallet/wallet-service"
 
 interface CreditsPageProps {
@@ -122,29 +120,7 @@ export default async function CreditsPage({ params, searchParams }: CreditsPageP
           <CardDescription>{t("packages.description")}</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {POINT_PACKAGES.map((pkg) => (
-              <div
-                key={pkg.id}
-                className="relative rounded-lg border p-4 hover:border-primary transition-colors"
-              >
-                <div className="text-center">
-                  <div className="text-2xl font-bold">{pkg.label}</div>
-                  <div className="text-xs text-muted-foreground mb-3">
-                    {pkg.description}
-                  </div>
-                  <div className="text-lg font-semibold text-primary mb-3">
-                    {(pkg.pricePLN / 100).toFixed(2)} PLN
-                  </div>
-                  <Button variant="outline" className="w-full" asChild>
-                    <Link href={`/${locale}/panel/credits/buy?package=${pkg.id}`}>
-                      {t("packages.buy")}
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
+          <CreditsPackages />
         </CardContent>
       </Card>
 

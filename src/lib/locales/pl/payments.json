@@ -85,7 +85,8 @@
   },
   "providers": {
     "p24Description": "Przelew, BLIK, karty",
-    "tpayDescription": "Karty, BLIK, Apple Pay"
+    "tpayDescription": "Karty, BLIK, Apple Pay",
+    "testingDescription": "Symulacja platnosci"
   },
   "publish": {
     "title": "Publikuj shorta",

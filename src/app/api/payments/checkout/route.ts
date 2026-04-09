@@ -15,7 +15,7 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"
  * Checkout request schema — point package purchase
  */
 const checkoutRequestSchema = z.object({
-  provider: z.enum(["PRZELEWY24", "TPAY"]),
+  provider: z.enum(["PRZELEWY24", "TPAY", "OTHER"]),
   packageId: z.enum(["starter", "standard", "premium", "business"]),
   returnUrl: z.string().url().optional(),
   locale: z.string().default("pl")
@@ -121,34 +121,39 @@ export async function POST(
     // 8. Create checkout with provider
     let checkoutUrl: string
 
-    const checkoutOptions = {
-      sessionId,
-      amount: pkg.pricePLN,
-      currency: "PLN",
-      description: `${pkg.label} - VideoShorts`,
-      email: user.email,
-      returnUrl: finalReturnUrl,
-      notifyUrl
-    }
-
-    try {
-      if (provider === "PRZELEWY24") {
-        checkoutUrl = await createPrzelewy24Checkout(checkoutOptions)
-      } else {
-        checkoutUrl = await createTpayCheckout(checkoutOptions)
+    if (provider === "OTHER") {
+      // Testing Gate — no external provider, return paymentId for inline simulation
+      checkoutUrl = `__testing__:${payment.id}`
+    } else {
+      const checkoutOptions = {
+        sessionId,
+        amount: pkg.pricePLN,
+        currency: "PLN",
+        description: `${pkg.label} - VideoShorts`,
+        email: user.email,
+        returnUrl: finalReturnUrl,
+        notifyUrl
       }
-    } catch (providerError) {
-      console.error(`${provider} checkout error:`, providerError)
 
-      await prisma.payment.update({
-        where: { id: payment.id },
-        data: { status: "FAILED" }
-      })
+      try {
+        if (provider === "PRZELEWY24") {
+          checkoutUrl = await createPrzelewy24Checkout(checkoutOptions)
+        } else {
+          checkoutUrl = await createTpayCheckout(checkoutOptions)
+        }
+      } catch (providerError) {
+        console.error(`${provider} checkout error:`, providerError)
 
-      return NextResponse.json(
-        { error: "Failed to create checkout session" },
-        { status: 500 }
-      )
+        await prisma.payment.update({
+          where: { id: payment.id },
+          data: { status: "FAILED" }
+        })
+
+        return NextResponse.json(
+          { error: "Failed to create checkout session" },
+          { status: 500 }
+        )
+      }
     }
 
     // 9. Update Payment with provider session ID
