@@ -63,10 +63,10 @@ export default async function CreditsPage({ params, searchParams }: CreditsPageP
   const paymentSuccess = status === "completed" && paymentId
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 max-w-4xl mx-auto">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">{t("page.title")}</h1>
+        <h1 className="text-2xl font-bold tracking-tight">{t("page.title")}</h1>
         <p className="text-muted-foreground">{t("page.description")}</p>
       </div>
 
@@ -129,11 +129,11 @@ export default async function CreditsPage({ params, searchParams }: CreditsPageP
                 className="relative rounded-lg border p-4 hover:border-primary transition-colors"
               >
                 <div className="text-center">
-                  <div className="text-3xl font-bold">{pkg.label}</div>
-                  <div className="text-sm text-muted-foreground mb-4">
+                  <div className="text-2xl font-bold">{pkg.label}</div>
+                  <div className="text-xs text-muted-foreground mb-3">
                     {pkg.description}
                   </div>
-                  <div className="text-xl font-semibold text-primary mb-4">
+                  <div className="text-lg font-semibold text-primary mb-3">
                     {(pkg.pricePLN / 100).toFixed(2)} PLN
                   </div>
                   <Button variant="outline" className="w-full" asChild>

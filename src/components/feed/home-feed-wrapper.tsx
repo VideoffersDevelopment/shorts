@@ -43,7 +43,7 @@ export function HomeFeedWrapper({ initialData, filters, defaultViewMode = 'grid'
   // List mode: full-bleed layout (removes parent padding), snap-scroll viewport
   if (viewMode === 'list') {
     return (
-      <div data-full-bleed>
+      <div data-full-bleed className="h-full">
         <FeedList
           initialData={initialData ?? undefined}
           filters={currentFilters}

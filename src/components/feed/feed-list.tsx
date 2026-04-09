@@ -73,8 +73,7 @@ export function FeedList({
   const [activeIndex, setActiveIndex] = useState(0)
   const containerRef = useRef<HTMLDivElement>(null)
   const slideRefs = useRef<Map<number, HTMLDivElement>>(new Map())
-  const headerRef = useRef<HTMLDivElement>(null)
-  const [headerHeight, setHeaderHeight] = useState(0)
+  const [scrollAreaHeight, setScrollAreaHeight] = useState(0)
 
   const {
     data,
@@ -96,13 +95,13 @@ export function FeedList({
 
   const allShorts = data?.pages.flatMap((page) => page.shorts) ?? []
 
-  // Measure header height for dynamic slide sizing
+  // Measure the actual scroll area height so slides match exactly
   useEffect(() => {
-    if (!headerRef.current) return
+    if (!containerRef.current) return
     const ro = new ResizeObserver(([entry]) => {
-      setHeaderHeight(entry.contentRect.height)
+      setScrollAreaHeight(entry.contentRect.height)
     })
-    ro.observe(headerRef.current)
+    ro.observe(containerRef.current)
     return () => ro.disconnect()
   }, [])
 
@@ -155,17 +154,12 @@ export function FeedList({
     }
   }, [])
 
-  // Header = 4rem, slide height = viewport - header - category header
   const hasHeader = !!header
-  // Use CSS calc with measured header height for pixel-perfect slide sizing
-  const slideHeight = hasHeader && headerHeight > 0
-    ? `calc(100vh - 4rem - ${headerHeight}px)`
-    : 'calc(100vh - 4rem)'
 
   // Loading state
   if (isLoading && !initialData) {
     return (
-      <div className="flex items-center justify-center h-[calc(100vh-4rem)]">
+      <div className="flex items-center justify-center h-full">
         <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
       </div>
     )
@@ -174,7 +168,7 @@ export function FeedList({
   // Error state
   if (isError) {
     return (
-      <div className="flex items-center justify-center h-[calc(100vh-4rem)]">
+      <div className="flex items-center justify-center h-full">
         <EmptyState variant="no-shorts" onClearFilters={onClearFilters} />
       </div>
     )
@@ -183,7 +177,7 @@ export function FeedList({
   // Empty state
   if (allShorts.length === 0) {
     return (
-      <div className="flex items-center justify-center h-[calc(100vh-4rem)]">
+      <div className="flex items-center justify-center h-full">
         {filters.sort === 'following' ? (
           <EmptyState variant="no-following" />
         ) : (
@@ -198,13 +192,10 @@ export function FeedList({
   }
 
   return (
-    <div className="h-[calc(100vh-4rem)] flex flex-col overflow-hidden">
+    <div className="h-full flex flex-col overflow-hidden">
       {/* Sticky header bar — breadcrumb, title, subcategories, toggle */}
       {(hasHeader || viewModeToggle) && (
-        <div
-          ref={headerRef}
-          className="flex-shrink-0 border-b border-border bg-background z-20"
-        >
+        <div className="flex-shrink-0 border-b border-border bg-background z-20">
           <div className="flex items-start justify-between gap-4 px-4 md:px-6 lg:px-8 py-3">
             <div className="flex-1 min-w-0">
               {header}
@@ -229,7 +220,7 @@ export function FeedList({
             ref={setSlideRef(index)}
             data-slide-index={index}
             className="snap-start snap-always"
-            style={{ height: slideHeight }}
+            style={{ height: scrollAreaHeight > 0 ? `${scrollAreaHeight}px` : '100%' }}
           >
             <FeedListItem
               short={short}

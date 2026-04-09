@@ -14,14 +14,13 @@ export function FooterWrapper({ children }: FooterWrapperProps) {
   return (
     <div
       className={cn(
-        "transition-[padding] duration-200 ease-in-out",
-        // Desktop: padding based on sidebar state
-        isDesktop && state === "expanded" && "pl-60",
-        isDesktop && state === "collapsed" && "pl-16",
-        // Tablet: always collapsed width
-        isTablet && "pl-16",
-        // Mobile: no padding (sidebar is overlay)
-        isMobile && "pl-0"
+        "transition-[margin-left] duration-200 ease-in-out",
+        // Base: reserve sidebar space via CSS (matches MainContent)
+        "lg:ml-60",
+        // JS-driven overrides after hydration
+        isDesktop && state === "collapsed" && "!ml-16",
+        isTablet && "!ml-16",
+        isMobile && "!ml-0"
       )}
     >
       {children}

@@ -3,9 +3,7 @@ import { getTranslations } from "next-intl/server"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { HeroSection } from "@/components/home/hero-section"
-import { CategoryFilter } from "@/components/home/category-filter"
 import { HomeFeedWrapper } from "@/components/feed/home-feed-wrapper"
-import { getMainCategories } from "@/app/actions/categories/get-categories"
 import type { FeedFilters, FeedResponse } from "@/lib/types/feed"
 
 interface HomePageProps {
@@ -71,46 +69,23 @@ export default async function HomePage({ params, searchParams }: HomePageProps) 
 
   const isLoggedIn = !!session?.user
   const filters = parseFilters(resolvedSearchParams)
-  const [initialData, categories] = await Promise.all([
-    getInitialFeed(filters),
-    getMainCategories(),
-  ])
+  const initialData = await getInitialFeed(filters)
 
-  const categoryFilterEl = (
-    <CategoryFilter
-      categories={categories.map(c => ({
-        id: c.id,
-        name: c.name,
-        slug: c.slug,
-        icon: c.icon,
-      }))}
-      labels={{
-        discover: t("filter.discover"),
-        nearby: t("filter.nearby"),
-        following: t("filter.following"),
-        more: t("filter.more"),
-      }}
-    />
-  )
-
-  // For logged-in users: list mode is default, CategoryFilter goes into the header slot
-  // For guests: grid mode with hero + category filter above
   if (isLoggedIn) {
     return (
       <HomeFeedWrapper
         initialData={initialData}
         filters={filters}
         defaultViewMode="list"
-        header={categoryFilterEl}
       />
     )
   }
 
-  // Guest users: always grid, standard layout
+  // Guest users: grid layout with hero
   return (
     <div className="flex min-h-screen flex-col">
       <Header locale={locale} />
-      <main className="flex-1 w-full max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 py-6">
+      <main className="flex-1 w-full max-w-[1600px] mx-auto px-4 md:px-6 lg:px-8 py-6 pb-16">
         <div className="flex flex-col gap-8">
           <HeroSection
             title={t("hero.title")}
@@ -119,7 +94,6 @@ export default async function HomePage({ params, searchParams }: HomePageProps) 
             ctaPrimary={t("hero.ctaPrimary")}
             ctaSecondary={t("hero.ctaSecondary")}
           />
-          {categoryFilterEl}
           <HomeFeedWrapper
             initialData={initialData}
             filters={filters}

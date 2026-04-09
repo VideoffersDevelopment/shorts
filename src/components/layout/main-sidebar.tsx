@@ -250,7 +250,7 @@ export function MainSidebar({ locale, categories, user: initialUser }: MainSideb
     <aside
       data-state={state}
       className={cn(
-        "fixed left-0 top-16 bottom-0 z-40 flex flex-col border-r bg-background transition-[width] duration-200 ease-in-out overflow-x-hidden",
+        "fixed left-0 top-16 bottom-[53px] z-40 flex flex-col border-r bg-background transition-[width] duration-200 ease-in-out overflow-x-hidden",
         state === "expanded" ? "w-60" : "w-16"
       )}
     >

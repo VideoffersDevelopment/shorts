@@ -56,9 +56,9 @@ export function WalletBalanceDisplay({
     <div className={cn("space-y-4", className)}>
       {/* Total balance header */}
       <div className="text-center pb-4 border-b">
-        <div className="flex items-center justify-center gap-3 mb-1">
-          <Coins className="h-8 w-8 text-primary" />
-          <span className="text-4xl font-bold">{total.toLocaleString()}</span>
+        <div className="flex items-center justify-center gap-2 mb-1">
+          <Coins className="h-6 w-6 text-primary" />
+          <span className="text-3xl font-bold">{total.toLocaleString()}</span>
         </div>
         <p className="text-sm text-muted-foreground">
           {t("wallet.totalBalance")} (~{pointsToApproxPLN(total)} PLN)
@@ -79,7 +79,7 @@ export function WalletBalanceDisplay({
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
-            <div className="text-2xl font-bold">
+            <div className="text-xl font-bold">
               {promo.balance.toLocaleString()}
               <span className="text-sm font-normal text-muted-foreground ml-1">
                 {t("wallet.points")}
@@ -137,7 +137,7 @@ export function WalletBalanceDisplay({
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
-            <div className="text-2xl font-bold">
+            <div className="text-xl font-bold">
               {main.balance.toLocaleString()}
               <span className="text-sm font-normal text-muted-foreground ml-1">
                 {t("wallet.points")}

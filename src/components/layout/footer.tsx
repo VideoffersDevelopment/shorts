@@ -11,8 +11,8 @@ export async function Footer({ locale }: FooterProps) {
   const t = await getTranslations("home")
 
   return (
-    <footer className="border-t border-border py-8 bg-background">
-      <div className="w-full px-4 md:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+    <footer className="fixed bottom-0 left-0 right-0 z-40 h-[53px] border-t border-border bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
+      <div className="w-full h-full px-4 md:px-6 lg:px-8 flex flex-row justify-between items-center gap-4">
         {/* Logo & Copyright */}
         <div className="flex items-center gap-2 text-foreground">
           <div className="size-6 flex items-center justify-center bg-primary rounded-md text-primary-foreground">
