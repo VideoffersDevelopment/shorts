@@ -55,7 +55,7 @@ async function getInitialFeed(filters: FeedFilters): Promise<FeedResponse | null
 
     const response = await fetch(
       `${baseUrl}/api/feed?${params.toString()}`,
-      { next: { revalidate: 60 } }
+      { next: { revalidate: 10 } }
     )
 
     if (!response.ok) return null

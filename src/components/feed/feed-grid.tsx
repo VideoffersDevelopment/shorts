@@ -74,7 +74,7 @@ export function FeedGrid({
     initialData: initialData
       ? { pages: [initialData], pageParams: [1] }
       : undefined,
-    staleTime: 1000 * 60 * 5, // 5 minutes
+    staleTime: 1000 * 30, // 30 seconds — keep feed fresh for likes/comments updates
   })
 
   const handleLoadMore = useCallback(() => {

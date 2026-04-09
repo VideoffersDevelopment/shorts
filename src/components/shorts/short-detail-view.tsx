@@ -371,14 +371,14 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
 
   // Header = h-16 = 4rem
   return (
-    <>
+    <div data-full-bleed>
       {/* ─── DESKTOP LAYOUT (lg+) ───────────────────────────── */}
       <div className="hidden lg:flex h-[calc(100vh-4rem)] overflow-hidden">
 
         {/* Video area — fills remaining space, centers video */}
-        <div className="flex-1 flex items-center justify-center gap-3 px-4 min-w-0 relative">
+        <div className="flex-1 flex items-center justify-center gap-3 min-w-0 relative">
           {/* Back button — top-left corner */}
-          <div className="absolute top-3 left-4 z-10">
+          <div className="absolute top-2 left-3 z-10">
             <Button variant="ghost" size="sm" asChild>
               <Link href={`/${locale}`}>
                 <ArrowLeft className="h-4 w-4 mr-2" />
@@ -387,14 +387,12 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
             </Button>
           </div>
 
-          {/* Video — takes full available height, capped at 720px */}
-          <div className="h-full py-2 flex items-center" style={{ maxHeight: '720px' }}>
+          {/* Video + Side actions — grouped so actions align to video bottom */}
+          <div className="h-full py-2 flex items-center gap-3" style={{ maxHeight: '720px' }}>
             {videoPlayer}
-          </div>
-
-          {/* Side actions — aligned to bottom */}
-          <div className="self-end pb-2">
-            {sideActions}
+            <div className="h-full flex items-end">
+              {sideActions}
+            </div>
           </div>
         </div>
 
@@ -483,6 +481,6 @@ export function ShortDetailView({ short }: ShortDetailViewProps) {
           </div>
         </section>
       )}
-    </>
+    </div>
   )
 }
