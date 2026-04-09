@@ -1,62 +1,43 @@
 import { getRequestConfig } from 'next-intl/server'
 import { type Locale } from './config'
 
-export default getRequestConfig(async ({ locale }) => {
-  // Load all translation namespaces and merge them
-  const [
-    auth,
-    common,
-    settings,
-    preferences,
-    profile,
-    sidebar,
-    companies,
-    admin,
-    adminCategories,
-    categories,
-    home,
-    following,
-    shorts,
-    feed,
-    search,
-    payments
-  ] = await Promise.all([
-    import(`../locales/${locale}/auth.json`),
-    import(`../locales/${locale}/common.json`),
-    import(`../locales/${locale}/settings.json`),
-    import(`../locales/${locale}/preferences.json`),
-    import(`../locales/${locale}/profile.json`),
-    import(`../locales/${locale}/sidebar.json`),
-    import(`../locales/${locale}/companies.json`),
-    import(`../locales/${locale}/admin.json`),
-    import(`../locales/${locale}/admin-categories.json`),
-    import(`../locales/${locale}/categories.json`),
-    import(`../locales/${locale}/home.json`),
-    import(`../locales/${locale}/following.json`),
-    import(`../locales/${locale}/shorts.json`),
-    import(`../locales/${locale}/feed.json`),
-    import(`../locales/${locale}/search.json`),
-    import(`../locales/${locale}/payments.json`)
-  ])
-
-  return {
-    messages: {
-      auth: auth.default,
-      common: common.default,
-      settings: settings.default,
-      preferences: preferences.default,
-      profile: profile.default,
-      sidebar: sidebar.default,
-      companies: companies.default,
-      admin: admin.default,
-      'admin-categories': adminCategories.default,
-      categories: categories.default,
-      home: home.default,
-      following: following.default,
-      shorts: shorts.default,
-      feed: feed.default,
-      search: search.default,
-      payments: payments.default
-    }
+async function loadNamespace(locale: string, ns: string) {
+  try {
+    const mod = await import(`../locales/${locale}/${ns}.json`)
+    return mod.default
+  } catch {
+    return {}
   }
+}
+
+const NAMESPACES = [
+  'auth',
+  'common',
+  'settings',
+  'preferences',
+  'profile',
+  'sidebar',
+  'companies',
+  'admin',
+  'admin-categories',
+  'categories',
+  'home',
+  'following',
+  'shorts',
+  'feed',
+  'search',
+  'payments',
+] as const
+
+export default getRequestConfig(async ({ locale }) => {
+  const results = await Promise.all(
+    NAMESPACES.map((ns) => loadNamespace(locale as string, ns))
+  )
+
+  const messages: Record<string, Record<string, unknown>> = {}
+  NAMESPACES.forEach((ns, i) => {
+    messages[ns] = results[i]
+  })
+
+  return { messages }
 })

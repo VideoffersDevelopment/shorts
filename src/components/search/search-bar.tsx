@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useLocale } from 'next-intl'
-import { Search, X } from 'lucide-react'
+import { X } from 'lucide-react'
 import {
   Command,
   CommandInput,
@@ -154,17 +154,16 @@ export function SearchBar({ className, defaultValue = '' }: SearchBarProps) {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverAnchor asChild>
         <div className={cn('relative', className)}>
-          <Command className="rounded-lg border shadow-sm" shouldFilter={false}>
-            <div className="flex items-center border-b px-3">
-              <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
-              <CommandInput
-                placeholder={t('bar.placeholder')}
-                value={query}
-                onValueChange={setQuery}
-                onFocus={() => setOpen(true)}
-                onKeyDown={handleKeyDown}
-                className="flex-1"
-              />
+          <Command className="rounded-lg border shadow-sm [&_[cmdk-input-wrapper]]:border-b-0" shouldFilter={false}>
+            <CommandInput
+              placeholder={t('bar.placeholder')}
+              value={query}
+              onValueChange={setQuery}
+              onFocus={() => setOpen(true)}
+              onKeyDown={handleKeyDown}
+            />
+            {/* Clear + Kbd overlay — positioned inside the input area */}
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
               {query && (
                 <Button
                   variant="ghost"
@@ -173,12 +172,14 @@ export function SearchBar({ className, defaultValue = '' }: SearchBarProps) {
                   className="h-6 w-6 p-0"
                   aria-label={t('bar.clear')}
                 >
-                  <X className="h-4 w-4" />
+                  <X className="h-3.5 w-3.5" />
                 </Button>
               )}
-              <kbd className="hidden sm:inline-flex ml-2 pointer-events-none h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-50">
-                <span className="text-xs">Ctrl</span>K
-              </kbd>
+              {!query && (
+                <kbd className="hidden sm:inline-flex pointer-events-none h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-50">
+                  <span className="text-xs">Ctrl</span>K
+                </kbd>
+              )}
             </div>
           </Command>
         </div>

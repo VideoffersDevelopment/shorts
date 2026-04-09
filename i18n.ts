@@ -26,7 +26,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
     shorts,
     payments,
     feed,
-    search
+    search,
+    following
   ] = await Promise.all([
     import(`./src/lib/locales/${locale}/auth.json`),
     import(`./src/lib/locales/${locale}/common.json`),
@@ -42,7 +43,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
     import(`./src/lib/locales/${locale}/shorts.json`),
     import(`./src/lib/locales/${locale}/payments.json`),
     import(`./src/lib/locales/${locale}/feed.json`),
-    import(`./src/lib/locales/${locale}/search.json`)
+    import(`./src/lib/locales/${locale}/search.json`),
+    import(`./src/lib/locales/${locale}/following.json`)
   ])
 
   return {
@@ -62,7 +64,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
       shorts: shorts.default,
       payments: payments.default,
       feed: feed.default,
-      search: search.default
+      search: search.default,
+      following: following.default
     }
   }
 })
